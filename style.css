@@ -1,0 +1,499 @@
+* {
+    //border: 0.05px dashed red;
+    --data-image: url('./Assets/images/data-image.jpg');
+    --teaching-image: url('./Assets/images/teaching-image.jpg');
+    --border-color: #d88b62;
+    --header-background: rgb(255, 241, 208);
+}
+
+a:visited {
+    color: maroon;
+}
+
+html,
+body {
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(rgba(255, 251, 242), rgb(255, 237, 196));
+}
+
+.header {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    font-family: 'Raleway', 'Rubik', sans-serif;
+    background-color: var(--header-background);
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 1 auto;
+    border-bottom: 2px groove #016BBC;
+    z-index: 10;
+}
+
+#name {
+    white-space: nowrap;
+    position: relative;
+}
+
+h1 {
+    font-size: 52px;
+    font-weight: bolder;
+    text-align: left;
+    margin: 0 0 0 30px;
+    color: #016BBC;
+}
+
+h3 {
+    color: #2C606D;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+h4 {
+    color: #2C606D;
+    font-size: 1.2em;
+    font-weight: 500;
+    font-style: italic;
+    padding-top: 0px;
+}
+
+.header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.header li {
+    margin-right: 15px;
+    padding: 0px;   
+}
+
+.nav {
+    justify-content: center;
+}
+
+.nav-link {
+    transition: all linear;
+}
+
+#nav-link-about {
+    display: ;
+}
+
+a {
+    color: #2C606D;
+}
+
+a:hover {
+    color: black;
+    font-weight: 650;
+    cursor: pointer;
+    text-decoration: overline;
+}
+
+#about-text a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    font-weight: 900;
+    color: #016BBC;
+}
+
+#nav-link-active {
+    font-weight: 800;;
+}
+
+.about-container {
+    display: flex;
+    padding-top: 100px;
+    height: 100%;
+}
+
+.about-text-container {
+    width: 60%;
+    margin: 0 30px;
+}
+
+#about-text {
+    font-size: 1.3em;
+    font-family: 'Chivo', sans-serif;
+    line-height: 1.7;
+    padding: 15px;
+    margin: 0 15px 15px 30px;
+    text-align: left;
+}
+
+.biopic-container {
+    background: #D16666;
+    
+}
+
+#bio-pic {
+    max-width: 100%;
+    height: auto;
+    margin-top: 100px;
+    border: 36px solid var(--border-color);
+    border-radius: 7px;
+}
+
+.pub-container {
+    padding-top: 110px;
+    display: flex;
+}
+
+.pub-text {
+    text-align: left;
+    padding: 0 50px;
+    font-family: 'Chivo', sans-serif;
+    letter-spacing: .12ch;
+    line-height: 2.2ch;
+}
+
+.pub-title {
+    font-style: italic;
+}
+
+.pub-text a {
+    text-decoration: underline;
+}
+
+h2 {
+    font-family: 'Raleway', 'Rubik', sans-serif;
+    font-size: 32px;    
+    padding: 0px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-top: 10px;
+}
+
+#book-pic {
+    max-width: 500px;
+    margin: 10px 15px 15px 50px;
+    border: 36px solid var(--border-color);
+    border-radius: 7px;
+    padding: 0 auto;
+}
+
+.data-container {
+    padding-top: 110px;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+
+.data-container h2 {
+    font-size: 44px;
+    justify-content: center;
+    padding-top: 40px;
+    margin: 0px;
+   
+}
+
+#data-right {
+    margin: 0px;
+    height: 100%;
+    width: 400px;
+    background-image: var(--data-image);
+    border-left: 18px solid var(--border-color);
+}
+
+#data-left {
+    align-content: space-around;
+    text-align: left;
+    padding: 0 50px;
+    font-family: 'Chivo', sans-serif;
+    letter-spacing: .12ch;
+    line-height: 2ch;
+    height: 100%;
+    width: 500px;
+    font-size: 1em;
+    margin-right: 0px;
+}
+
+.data-container ul {
+    list-style-type:disc;
+    white-space: nowrap;
+}
+
+.data-container a {
+    text-decoration: underline;
+}
+
+.data-block {
+    display: flex;
+    flex-flow: row;
+    border: 18px solid var(--border-color);
+    border-radius: 7px;
+}
+
+.data-underline,
+.teaching-underline {
+    text-decoration: underline;
+}
+
+#teaching-left {
+    margin: 0px;
+    width: 400px;
+    background-image: var(--teaching-image);
+    border-right: 18px solid var(--border-color);
+    flex-flow: row-reverse;
+}
+
+#teaching-right {
+    align-content: space-around;
+    text-align: left;
+    padding: 0 50px;
+    font-family: 'Chivo', sans-serif;
+    letter-spacing: .12ch;
+    line-height: 2ch;
+    height: 100%;
+    width: 500px;
+    font-size: 1em;
+    margin-right: 0px;
+}
+
+.teaching-container ul {
+    list-style-type: disc;
+    white-space: nowrap;
+}
+
+.teaching-container a {
+    text-decoration: underline;
+}
+
+.teaching-block {
+    display: flex;
+    flex-flow: row;
+    border: 18px solid var(--border-color);
+    border-radius: 7px;
+    height: 100%;
+}
+
+.teaching-container {
+    padding-top: 110px;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.teaching-container h2 {
+    font-size: 44px;
+    justify-content: center;
+    margin: 0px;
+    padding-top: 210px;
+}
+
+/*RESEARCH page*/
+
+.research-container {
+    padding-top: 100px;
+    height: 100%;
+}
+
+.research-text {
+    font-size: 1.3em;
+    font-family: 'Chivo', sans-serif;
+    line-height: 1.7;
+    padding: 15px;
+    margin: 0 50px 15px 50px;
+    text-align: left;
+}
+
+.research-text h2 {
+    border: 18px solid var(--border-color);
+    border-radius: 7px;
+    padding: 5px 10px;
+    font-size: 36px;
+}
+
+.research-text h3 {
+    padding-top: 30px;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.research-other {
+    text-align: left;
+    margin: 0 50px;
+    font-size: 1.3em;
+    font-family: 'Chivo', sans-serif;
+    line-height: 1.7;
+    padding: 15px;
+}
+
+.research-other h5 {
+    font-weight: 500;
+    color: #2C606D;
+    font-size: 1.2em;
+    text-transform: capitalize;
+}
+
+.research-other a:hover {
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.research-other h2 {
+    border: 18px solid var(--border-color);
+    border-radius: 7px;
+    padding: 5px 10px;
+}
+
+/*FOOTER - universal*/
+.footer {
+    display: flex;
+    flex-flow: row;
+    height: 100px;
+    width: 100%;  
+    font-family: 'Raleway', 'Rubik', sans-serif;
+    background-color: var(--header-background);
+    align-items: center;
+    flex: 0 1 auto;
+    border-top: 2px groove #016BBC;
+    z-index: 10;
+    justify-content: space-between;
+}
+
+#credits {
+    margin: 15px;
+    padding: 15px 30px;
+    text-align: left;
+}
+
+h6 {
+    font-family: 'Chivo', sans-serif;
+    padding: 0px;
+    padding-top: 15px;
+    margin: 0px;
+    margin-top: 15px;
+    font-weight: 400;
+    font-size: 0.65em;
+    letter-spacing: 0.14ch;    
+    text-align: center;
+    line-height: 1.5;
+}
+
+h6:hover {
+    opacity: 0;
+}
+
+#contact {
+    display: flex;
+    align-items: center;
+    padding-right: 30px;
+    margin-right: 70px;
+}
+
+#contact p {
+    line-height: 2;
+    margin-right: 30px;
+}
+
+#contact h1 {
+    margin-bottom: 0px;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: overline;
+}
+
+/* MEDIA INQ */
+
+/*medium*/
+@media only screen and (max-width: 1000px) {
+    
+    .header h1 {
+       font-size: 44px;
+    }   
+
+    .header h3 {
+        font-size: 13px;
+    }
+    
+    header {
+        justify-content: space-around;
+    }
+
+    #about-text {
+        font-size: 16px;
+    }
+
+    #book-pic {
+        max-width: 260px;
+    }
+
+}
+
+/*small*/
+@media only screen and (max-width: 810px) {
+    .header h1 {
+        
+    }
+
+    .header {
+        flex-flow: row wrap;
+    }
+
+    .about-container {
+        columns: 1;
+    }
+
+    #about-text {
+        font-size: 14px;
+    }
+
+    #book-pic {
+        max-width: 245px;
+    }
+
+    .pub-container {
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    h2 {
+        padding: 8px 0;
+        font-size: 26px;
+    }
+
+    .pub-text {
+        font-size: 14px;
+    }
+}
+
+/*extra small*/
+@media only screen and (max-width: 776px) {
+    .header {
+        justify-content: space-evenly;
+    }
+
+    #name {
+        padding-top: 10px;
+        padding-bottom: 0px;
+    }
+
+    .nav ul {
+        margin: 0 0 0 0;
+    }
+
+}
