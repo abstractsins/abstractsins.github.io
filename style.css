@@ -2,12 +2,10 @@
     //border: 0.05px dashed red;
     --data-image: url('./Assets/images/data-image.jpg');
     --teaching-image: url('./Assets/images/teaching-image.jpg');
+    --chicago-image: url('./Assets/images/chicago-skyline.jpg');
+    --chicagoMap-image: url('./Assets/images/chicago-map.jpg');
     --border-color: #d88b62;
     --header-background: rgb(255, 241, 208);
-}
-
-a:visited {
-    color: maroon;
 }
 
 html,
@@ -22,6 +20,44 @@ body {
     background-image: linear-gradient(rgba(255, 251, 242), rgb(255, 237, 196));
 }
 
+a {
+    color: #2C606D;
+}
+
+a:visited {
+    color: maroon;
+}
+
+a:hover {
+    color: black;
+    font-weight: 650;
+    cursor: pointer;
+    text-decoration: overline;
+}
+
+a:active {
+    font-weight: 900;
+    color: #016BBC;
+}
+
+h2 {
+    font-family: 'Raleway', 'Rubik', sans-serif;
+    font-size: 32px;    
+    padding: 0px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-top: 10px;
+}
+
+h4 {
+    color: #2C606D;
+    font-size: 1.2em;
+    font-weight: 500;
+    font-style: italic;
+    padding-top: 0px;
+}
+
+/*HEADER SECTION*/
 .header {
     height: 100px;
     width: 100%;
@@ -57,14 +93,6 @@ h3 {
     text-transform: uppercase;
 }
 
-h4 {
-    color: #2C606D;
-    font-size: 1.2em;
-    font-weight: 500;
-    font-style: italic;
-    padding-top: 0px;
-}
-
 .header a {
     text-decoration: none;
     color: inherit;
@@ -73,7 +101,6 @@ h4 {
 .header ul {
     list-style-type: none;
     display: flex;
-    justify-content: center;
     white-space: nowrap;
 }
 
@@ -83,45 +110,37 @@ h4 {
 }
 
 .nav {
-    justify-content: center;
+    margin-right: 30px;
 }
 
 .nav-link {
     transition: all linear;
 }
 
-#nav-link-about {
-    display: ;
-}
-
-a {
-    color: #2C606D;
-}
-
-a:hover {
-    color: black;
-    font-weight: 650;
-    cursor: pointer;
-    text-decoration: overline;
-}
-
-#about-text a:hover {
-    text-decoration: none;
-}
-
-a:active {
-    font-weight: 900;
-    color: #016BBC;
-}
-
 #nav-link-active {
     font-weight: 800;;
 }
 
+#nav-link-active:hover {
+    cursor: pointer;
+}
+
+/*ABOUT SECTION*/
+#about-text a:hover {
+    text-decoration: none;
+}
+
 .about-container {
-    display: flex;
     padding-top: 100px;
     height: 100%;
+}
+
+.about-block {
+    display: flex;
+    flex-flow: row;
+    height: 100%;
+    width: fit-content;
+    margin-top: 15px;
 }
 
 .about-text-container {
@@ -132,7 +151,7 @@ a:active {
 #about-text {
     font-size: 1.3em;
     font-family: 'Chivo', sans-serif;
-    line-height: 1.7;
+    line-height: 1.5;
     padding: 15px;
     margin: 0 15px 15px 30px;
     text-align: left;
@@ -140,8 +159,7 @@ a:active {
 
 .biopic-container {
     background: #D16666;
-    
-}
+ }
 
 #bio-pic {
     max-width: 100%;
@@ -151,6 +169,7 @@ a:active {
     border-radius: 7px;
 }
 
+/*PUBLICATIONS SECTION*/
 .pub-container {
     padding-top: 110px;
     display: flex;
@@ -172,14 +191,6 @@ a:active {
     text-decoration: underline;
 }
 
-h2 {
-    font-family: 'Raleway', 'Rubik', sans-serif;
-    font-size: 32px;    
-    padding: 0px;
-    font-weight: 700;
-    line-height: 1.25;
-    margin-top: 10px;
-}
 
 #book-pic {
     max-width: 500px;
@@ -189,6 +200,79 @@ h2 {
     padding: 0 auto;
 }
 
+/*RESEARCH-PREVIEW SECTION*/
+.research-preview-container {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Chivo', sans-serif;
+    padding-top: 110px;
+    margin: 15px 50px 0px 50px;
+    align-items: center;
+}
+
+.research-block {
+    display: flex;
+    flex-flow: row;
+    border: 18px solid var(--border-color);
+    border-radius: 7px;
+    height: 100%;
+    width: fit-content;
+    margin-top: 15px;
+}
+
+#research-left {
+    background-image: var(--chicagoMap-image);
+    background-size: cover;
+    background-position: top;
+    width: 400px;
+    margin: 0px;
+    border-right: 18px solid var(--border-color);
+}
+
+#research-right {
+    text-align: left;
+    padding: 30px 50px;
+    letter-spacing: .08ch;
+    line-height: 2.5ch;
+    height: 100%;
+    width: 500px;
+    font-size: 1em;
+    margin-right: 0px;
+}
+
+.research-preview-container a {
+    text-decoration: underline;
+}
+
+.research-preview-container h2 {
+    font-size: 44px;
+}
+
+.research-preview-container  {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#current-research-preview-title-1 {
+    font-family: 'Chivo', sans-serif;
+    color: #2C606D;
+    text-transform: uppercase;
+    padding-top: 30px;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+#current-research-preview-1 {
+    font-family: 'Chivo', sans-serif;
+}
+
+.lead-text {
+    //font-family: 'Raleway', 'Rubik', sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+/*DATA SECTION*/
 .data-container {
     padding-top: 110px;
     display: flex;
@@ -201,7 +285,6 @@ h2 {
     justify-content: center;
     padding-top: 40px;
     margin: 0px;
-   
 }
 
 #data-right {
@@ -246,6 +329,7 @@ h2 {
     text-decoration: underline;
 }
 
+/*TEACHING SECTION*/
 #teaching-left {
     margin: 0px;
     width: 400px;
@@ -300,7 +384,6 @@ h2 {
 }
 
 /*RESEARCH page*/
-
 .research-container {
     padding-top: 100px;
     height: 100%;
@@ -417,7 +500,7 @@ h6:hover {
     text-decoration: overline;
 }
 
-/* MEDIA INQ */
+/*MEDIA INQUIRIES*/
 
 /*medium*/
 @media only screen and (max-width: 1000px) {
