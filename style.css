@@ -1,11 +1,15 @@
 * {
-    //border: 0.05px dashed red;
+    //border: 1px solid red;
     --data-image: url('./Assets/images/data-image.jpg');
     --teaching-image: url('./Assets/images/teaching-image.jpg');
     --chicago-image: url('./Assets/images/chicago-skyline.jpg');
     --chicagoMap-image: url('./Assets/images/chicago-map.jpg');
     --border-color: #d88b62;
     --header-background: rgb(255, 241, 208);
+    --button-color: rgb(223, 250, 223);
+    --button-color-active: rgb(255, 241, 208);
+    --button-color-hover: azure;
+    --h3-color: #2C606D;
 }
 
 html,
@@ -66,8 +70,8 @@ h4 {
     font-family: 'Raleway', 'Rubik', sans-serif;
     background-color: var(--header-background);
     position: fixed;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     flex: 0 1 auto;
     border-bottom: 2px groove #016BBC;
     z-index: 10;
@@ -75,7 +79,6 @@ h4 {
 
 #name {
     white-space: nowrap;
-    position: relative;
 }
 
 h1 {
@@ -87,7 +90,7 @@ h1 {
 }
 
 h3 {
-    color: #2C606D;
+    color: var(--h3-color);
     font-size: 1.2em;
     font-weight: 500;
     text-transform: uppercase;
@@ -117,6 +120,10 @@ h3 {
     transition: all linear;
 }
 
+.nav-link-about {
+    font-weight: 800;
+}
+
 #nav-link-active {
     font-weight: 800;;
 }
@@ -125,27 +132,34 @@ h3 {
     cursor: pointer;
 }
 
-/*ABOUT SECTION*/
-#about-text a:hover {
-    text-decoration: none;
+.dropdown {
+    display: none;
 }
 
+/*ABOUT SECTION*/
 .about-container {
+    display: flex;
+    flex-direction: column;
     padding-top: 100px;
-    height: 100%;
+    margin: 0 50px 0 50px;
+    width: 80%;
 }
 
 .about-block {
     display: flex;
     flex-flow: row;
     height: 100%;
-    width: fit-content;
+    width: auto;
     margin-top: 15px;
 }
 
+#about-text a:hover {
+    text-decoration: none;
+}
+
 .about-text-container {
-    width: 60%;
-    margin: 0 30px;
+    width: 70%;
+    margin: 0 15px;
 }
 
 #about-text {
@@ -157,16 +171,23 @@ h3 {
     text-align: left;
 }
 
-.biopic-container {
-    background: #D16666;
- }
+.bio-pic-container {
+    align-items: flex-start;
+    display: flex;
+    max-width: 40%;
+    justify-content: flex-start;    
+}
 
 #bio-pic {
+    position: -webkit-sticky;
     max-width: 100%;
-    height: auto;
-    margin-top: 100px;
+    height: auto; 
+    margin-top: 25px;
+    margin-right: 15px;
+    margin-left: 15px;
     border: 36px solid var(--border-color);
     border-radius: 7px;
+    transition: border 500ms ease-in-out, max-width 500ms ease-in-out;
 }
 
 /*PUBLICATIONS SECTION*/
@@ -179,7 +200,7 @@ h3 {
     text-align: left;
     padding: 0 50px;
     font-family: 'Chivo', sans-serif;
-    letter-spacing: .12ch;
+    letter-spacing: 0.07ch;
     line-height: 2.2ch;
 }
 
@@ -191,13 +212,148 @@ h3 {
     text-decoration: underline;
 }
 
-
 #book-pic {
     max-width: 500px;
     margin: 10px 15px 15px 50px;
     border: 36px solid var(--border-color);
     border-radius: 7px;
     padding: 0 auto;
+    transition: border 500ms ease-in-out;
+}
+
+/*DATA SECTION*/
+.data-container {
+    padding-top: 110px;
+    display: flex;
+    justify-content: center;
+    margin: 0px 50px 0px 50px;
+}
+
+.data-block {
+    display: flex;
+    border: 18px solid var(--border-color);
+    border-radius: 7px;
+}
+
+.data-container h2 {
+    font-size: 44px;
+    justify-content: center;
+    padding-top: 25%;
+    margin: 0px;
+}
+
+#data-right {
+    margin: 0px;
+    height: 100%;
+    width: 45%;
+    background-image: var(--data-image);
+    border-left: 18px solid var(--border-color);
+}
+
+#data-left {
+    align-content: space-around;
+    text-align: left;
+    padding: 0 4%;
+    font-family: 'Chivo', sans-serif;
+    letter-spacing: 0.07ch;
+    line-height: 2ch;
+    height: 100%;
+    width: 55%;
+    font-size: 1em;
+    margin-right: 0px;
+}
+
+.data-container ul {
+    list-style-type:disc;
+    white-space: ;
+}
+
+.data-container a {
+    text-decoration: underline;
+}
+
+.data-underline,
+.teaching-underline {
+    text-decoration: underline;
+}
+
+/*TEACHING SECTION*/
+.teaching-container {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Chivo', sans-serif;
+    padding-top: 110px;
+    margin: 0px 50px 0px 50px;
+    align-items: center;
+}
+
+.teaching-block {
+    display: flex;
+    flex-flow: row;
+    border: 18px solid var(--border-color);
+    border-radius: 7px;
+    height: 100%;
+    width: auto;
+    margin-top: 15px;
+}
+
+#teaching-left {
+    display: flex;
+    position: relative;
+    margin: 0;
+    width: 45%;
+    border-right: 18px solid var(--border-color);
+    background-image: var(--teaching-image);
+    justify-content: center;
+}
+
+#teaching-left:before {
+    content: "";
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+#teaching-image {
+    display: none;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    opacity: 0.75;
+}
+
+#teaching-right {
+    align-content: space-around;
+    text-align: left;
+    padding: 0 4%;
+    font-family: 'Chivo', sans-serif;
+    letter-spacing: 0.07ch;
+    line-height: 2ch;
+    height: 100%;
+    width: 55%;
+    font-size: 1em;
+    margin-right: 0px;
+}
+
+.teaching-container ul {
+    list-style-type: disc;
+    white-space: ;
+}
+
+.teaching-container a {
+    text-decoration: underline;
+}
+
+.teaching-container h2 {
+    font-size: 44px;
+    justify-content: center;
+    margin: 0px;
+    padding-top: 25%;
+    position: relative;
 }
 
 /*RESEARCH-PREVIEW SECTION*/
@@ -206,7 +362,7 @@ h3 {
     flex-direction: column;
     font-family: 'Chivo', sans-serif;
     padding-top: 110px;
-    margin: 15px 50px 0px 50px;
+    margin: 0px 50px 60px 50px;
     align-items: center;
 }
 
@@ -216,26 +372,29 @@ h3 {
     border: 18px solid var(--border-color);
     border-radius: 7px;
     height: 100%;
-    width: fit-content;
+    width: auto;
     margin-top: 15px;
 }
 
 #research-left {
-    background-image: var(--chicagoMap-image);
-    background-size: cover;
-    background-position: top;
-    width: 400px;
+    width: 45%;
     margin: 0px;
     border-right: 18px solid var(--border-color);
+}
+
+#chicago-map-image {
+    max-width: 100%;
+    height: auto;
+    position: fixed;
 }
 
 #research-right {
     text-align: left;
     padding: 30px 50px;
-    letter-spacing: .08ch;
+    letter-spacing: 0.07ch;
     line-height: 2.5ch;
     height: 100%;
-    width: 500px;
+    width: 55%;
     font-size: 1em;
     margin-right: 0px;
 }
@@ -246,6 +405,7 @@ h3 {
 
 .research-preview-container h2 {
     font-size: 44px;
+    margin-top: 0px;
 }
 
 .research-preview-container  {
@@ -267,126 +427,86 @@ h3 {
 }
 
 .lead-text {
-    //font-family: 'Raleway', 'Rubik', sans-serif;
     font-weight: 600;
     font-style: italic;
 }
 
-/*DATA SECTION*/
-.data-container {
-    padding-top: 110px;
+/*RESEARCH-PREVIEW SECTION*/
+.research-preview-container {
     display: flex;
-    flex-flow: row;
-    justify-content: center;
-}
-
-.data-container h2 {
-    font-size: 44px;
-    justify-content: center;
-    padding-top: 40px;
-    margin: 0px;
-}
-
-#data-right {
-    margin: 0px;
-    height: 100%;
-    width: 400px;
-    background-image: var(--data-image);
-    border-left: 18px solid var(--border-color);
-}
-
-#data-left {
-    align-content: space-around;
-    text-align: left;
-    padding: 0 50px;
+    flex-direction: column;
     font-family: 'Chivo', sans-serif;
-    letter-spacing: .12ch;
-    line-height: 2ch;
-    height: 100%;
-    width: 500px;
-    font-size: 1em;
-    margin-right: 0px;
+    padding-top: 110px;
+    margin: 0px 50px 60px 50px;
+    align-items: center;
 }
 
-.data-container ul {
-    list-style-type:disc;
-    white-space: nowrap;
-}
-
-.data-container a {
-    text-decoration: underline;
-}
-
-.data-block {
+.research-block {
     display: flex;
     flex-flow: row;
     border: 18px solid var(--border-color);
     border-radius: 7px;
+    height: 100%;
+    width: auto;
+    margin-top: 15px;
 }
 
-.data-underline,
-.teaching-underline {
-    text-decoration: underline;
-}
-
-/*TEACHING SECTION*/
-#teaching-left {
+#research-left {
+    background-image: var(--chicagoMap-image);
+    background-size: cover;
+    background-position: top;
+    width: 45%;
     margin: 0px;
-    width: 400px;
-    background-image: var(--teaching-image);
     border-right: 18px solid var(--border-color);
-    flex-flow: row-reverse;
 }
 
-#teaching-right {
-    align-content: space-around;
+#research-right {
     text-align: left;
-    padding: 0 50px;
-    font-family: 'Chivo', sans-serif;
-    letter-spacing: .12ch;
-    line-height: 2ch;
+    padding: 30px 4%;
+    letter-spacing: 0.07ch;
+    line-height: 2.5ch;
     height: 100%;
-    width: 500px;
+    width: 55%;
     font-size: 1em;
     margin-right: 0px;
 }
 
-.teaching-container ul {
-    list-style-type: disc;
-    white-space: nowrap;
-}
-
-.teaching-container a {
+.research-preview-container a {
     text-decoration: underline;
 }
 
-.teaching-block {
-    display: flex;
-    flex-flow: row;
-    border: 18px solid var(--border-color);
-    border-radius: 7px;
-    height: 100%;
-}
-
-.teaching-container {
-    padding-top: 110px;
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    margin-bottom: 100px;
-}
-
-.teaching-container h2 {
+.research-preview-container h2 {
     font-size: 44px;
-    justify-content: center;
-    margin: 0px;
-    padding-top: 210px;
+    margin-top: 0px;
+}
+
+.research-preview-container  {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#current-research-preview-title-1 {
+    font-family: 'Chivo', sans-serif;
+    color: #2C606D;
+    text-transform: uppercase;
+    padding-top: 30px;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+#current-research-preview-1 {
+    font-family: 'Chivo', sans-serif;
+}
+
+.lead-text {
+    font-weight: 600;
+    font-style: italic;
 }
 
 /*RESEARCH page*/
 .research-container {
-    padding-top: 100px;
     height: 100%;
+    padding: 100px 3% 60px 3%;
 }
 
 .research-text {
@@ -398,17 +518,24 @@ h3 {
     text-align: left;
 }
 
-.research-text h2 {
+.research-text h2,
+.research-other h2 {
     border: 18px solid var(--border-color);
     border-radius: 7px;
     padding: 5px 10px;
     font-size: 36px;
+    margin-top: 30px;
 }
 
-.research-text h3 {
-    padding-top: 30px;
+.research-text h3,
+.research-other h3 {
+    padding-top: 0;
     font-weight: 700;
     font-size: 36px;
+}
+
+.research-other a {
+    text-decoration: none;
 }
 
 .research-other {
@@ -438,16 +565,49 @@ h3 {
     padding: 5px 10px;
 }
 
+.return-button {
+    font-family: 'Raleway', 'Rubik', sans-serif;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 7px;
+    background-color: var(--button-color);
+    transition: background-color 450ms ease-out 150ms, padding 450ms ease-out 150ms;
+}
+
+.return-button a {
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    transition: color 450ms ease-in-out 150ms;
+}
+
+.return-button:hover {
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+    background-color: var(--button-color-hover);
+    padding: 10px 18px;
+}
+
+.return-button:active {
+    transition: background-color;
+    background-color: var(--button-color-active);
+}
+
+#nav-link-null {
+    cursor: text;
+    font-weight: 800;
+}
+
 /*FOOTER - universal*/
 .footer {
     display: flex;
     flex-flow: row;
-    height: 100px;
+    max-height: 100%;
     width: 100%;  
     font-family: 'Raleway', 'Rubik', sans-serif;
     background-color: var(--header-background);
     align-items: center;
-    flex: 0 1 auto;
     border-top: 2px groove #016BBC;
     z-index: 10;
     justify-content: space-between;
@@ -455,7 +615,8 @@ h3 {
 
 #credits {
     margin: 15px;
-    padding: 15px 30px;
+    margin-top: 0;
+    padding: 0 30px 15px 30px;
     text-align: left;
 }
 
@@ -479,8 +640,8 @@ h6:hover {
 #contact {
     display: flex;
     align-items: center;
-    padding-right: 30px;
-    margin-right: 70px;
+    padding-right: 0;
+    margin-right: 30px;
 }
 
 #contact p {
@@ -503,18 +664,28 @@ h6:hover {
 /*MEDIA INQUIRIES*/
 
 /*medium*/
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1020px) {
     
-    .header h1 {
+    .header h1,
+    .footerh1 {
        font-size: 44px;
     }   
 
+    #name {
+        text-align: left;
+    }
+
     .header h3 {
-        font-size: 13px;
+        font-size: 15px;
     }
     
-    header {
-        justify-content: space-around;
+    .header {
+        justify-content: space-between;
+    }
+
+    .about-text-container {
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     #about-text {
@@ -525,28 +696,59 @@ h6:hover {
         max-width: 260px;
     }
 
+
 }
 
 /*small*/
-@media only screen and (max-width: 810px) {
+@media only screen and (max-width: 865px) {
+    
     .header h1 {
-        
+        padding-top: 10px;
     }
 
+    #name {
+        margin-left: 0;
+    }
+    
     .header {
         flex-flow: row wrap;
+        align-content: space-around;
+        justify-content: space-evenly;
+        height: 100px;
     }
 
-    .about-container {
-        columns: 1;
+    .research-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .research-text {
+        font-size: 1em;
+        letter-spacing: 0ch;
+    }
+
+    .research-text h3,
+    .research-other h3 {
+        font-size: 26px;
+    }
+
+    .nav ul {
+        margin: 0px;
+    }
+
+    .about-text-container {
+        width: 90%;
     }
 
     #about-text {
         font-size: 14px;
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
 
     #book-pic {
         max-width: 245px;
+        margin: 10px 15px;
     }
 
     .pub-container {
@@ -557,26 +759,251 @@ h6:hover {
     h2 {
         padding: 8px 0;
         font-size: 26px;
+        text-align: center;
+    }
+
+    .research-text h2,
+    .research-other h2 {
+        text-align: left;
     }
 
     .pub-text {
         font-size: 14px;
     }
+
+    .data-container {
+        margin-bottom: 0;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    #credits {
+        display: none;
+    }
+
+    #contact {
+        padding-right: 0;
+        margin-right: 0;
+    }
 }
+
 
 /*extra small*/
 @media only screen and (max-width: 776px) {
-    .header {
-        justify-content: space-evenly;
-    }
-
-    #name {
-        padding-top: 10px;
-        padding-bottom: 0px;
+    .header, 
+    .footer {
+        justify-content: space-around;
     }
 
     .nav ul {
-        margin: 0 0 0 0;
+        margin: 0px;
+    }
+
+    .about-block {
+        flex-flow: column-reverse;
+        align-items: center;
+    }
+    
+    .bio-pic-container {
+        justify-content: center;
+    }
+
+    #bio-pic {
+        border-width: 18px;
+        max-width: 300px;
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 15px;
+        margin-top: 30px;
+    }
+    
+    .about-text-container {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    #about-text {
+        text-align: center;
+    }
+}
+
+/*mobile*/
+@media only screen and (max-width: 600px) {
+    #book-pic {
+        border-width: 18px;
+    }
+
+    #bio-pic {
+        margin-right: 0px;
+    }
+
+    .about-text-container {
+        margin: 0px auto;
+        max-width: 400px;
+    }
+
+    #about-text {
+        margin: 0px auto;
+        padding: 15px 0 0 0;
+        min-width: 250px;
+    }
+
+    #data-left h4, 
+    #teaching-right h4 {
+        font-size: 16px;
+        letter-spacing: 0ch;
+    }
+
+    #data-left ul,
+    #teaching-right ul {
+        font-size: 16px;
+        letter-spacing: 0ch;
+    }
+
+    .data-block {
+        flex-flow: column-reverse;
+        align-items: center;
+        border: 9px solid var(--border-color);
+    }
+
+    .teaching-block {
+        flex-flow: column;
+        align-items: center;
+        border: 9px solid var(--border-color);
+    }
+
+    #data-right,
+    #teaching-left {
+        width: 100%;
+        max-height: 110px;
+        border-right: 0;
+        border-left: 0;
+        border-bottom: 9px solid var(--border-color);
+        background-size: cover;
+    }
+
+    #data-left,
+    #teaching-right {
+        width: 90%;
+        margin: 4%;
+    }
+
+    .teaching-container h2,
+    .data-container h2 {
+        padding-top: 40px;
+        position: relative;
+    }
+    
+    #contact h1 {
+        font-size: 40px;
+    }
+
+    #contact p {
+        line-height: 1.35;
+        font-weight: 500;
+    }
+
+    .data-container,
+    .teaching-container,
+    .research-preview-container {
+        padding-top: 110px;
+    }
+
+    .research-preview-container h2 {
+        margin-bottom: 18px;
+    }
+
+    #research-right {
+        letter-spacing: 0;
+    }
+
+    .research-block {
+        border: 9px solid var(--border-color);
+    }
+
+    #research-left {
+        border-right: 9px solid var(--border-color);
+    }
+}
+
+/*540*/
+@media only screen and (max-width: 540px) {
+    .header {
+        flex-flow: row nowrap;
+    }
+
+    .header h1 {
+        font-size: 36px;
+    }
+    
+    .header h3 {
+        display: none;
+    }
+  
+    .dropdown {
+        display: inline;
+        float: right;
+        overflow: hidden;
+    }
+    
+    .dropdown .dropbtn {
+        font-size: 16px;
+        font-weight: 500;  
+        color: var(--h3-color);
+        border: none;
+        outline: none;
+        padding: 14px 8px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: var(--button-color-hover);
+        font-weight: 800;
+      }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 15;
+    }
+
+    .dropdown-content a {
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    #name {
+        padding-top: 0;
+        margin-left: 0;
+        padding-left: 30px;
+    }
+
+    .nav {
+        max-width: 100%;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .research-text h2,
+    .research-other h2 {
+        font-size: 32px;
     }
 
 }
+
+

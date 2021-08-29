@@ -10,7 +10,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Raleway:wght@300;400;500;700;800&family=Rubik:wght@300;400;500;700;800&display=swap" rel="stylesheet"><title>Mark S. Berlin</title>
         <script src="main.js" async></script> 
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js" async></script>
     </head>
     <body>
         
@@ -19,21 +19,36 @@
                 <h1 id="name">Mark S. Berlin</h1>
             </div>
             <div class="nav">
+
+                <div class="dropdown">
+                    <button class="dropbtn">Navigation >>
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a id="nav-link" href="index.html#about">about me</a>
+                        <a id="nav-link-publications" href="index.html#publications">publications</a>
+                        <a id="nav-link-data" href="index.html#data">data</a>
+                        <a id="nav-link-teaching" href="index.html#teaching">teaching</a>
+                        <a id="nav-link-null">research</a>
+                        <a id="nav-link-cv" href="https://www.marksberlin.com/uploads/5/2/2/4/52249639/berlin_cv.pdf" target="new">CV</a>
+                    </div> 
+                </div>
+
                 <ul>
                     <li class="nav-link">
-                        <h3 id="nav-link-about"><a href="index.html#about">about me</a></h3>
+                        <h3 id="nav-link-about"><a href="index.html#about-me">about me</a></h3>
                     </li>
                     <li class="nav-link">
                         <h3 id="nav-link-publications"><a href="index.html#publications">publications</a></h3>
-                    </a></li>
-                    <li class="nav-link">
-                        <h3 id="nav-link-active">research</a></h3>
                     </a></li>
                     <li class="nav-link">
                         <h3 id="nav-link-data"><a href="index.html#data">data</a></h3>
                     </a></li>
                     <li class="nav-link">
                         <h3 id="nav-link-teaching"><a href="index.html#teaching">teaching</a></h3>
+                    </a></li>
+                    <li class="nav-link">
+                        <h3 id="nav-link-null">research</a></h3>
                     </a></li>                
                     <li class="nav-link">
                         <h3 id="nav-link-cv"><a href="https://www.marksberlin.com/uploads/5/2/2/4/52249639/berlin_cv.pdf" target="new">CV</a></h3>
@@ -42,8 +57,12 @@
             </div>
         </div>
 
+
         <div class="research-container" id="research">
             <div class="research-text">
+                <a href="index.html#research"><button class="return-button" alt="Click to return to main page" title="Main Page">
+                    << Return to Main Page
+                </button></a>
                 <h2>Current Research</h2>
                 <h3><span id="research-title-1">Police Torture in Chicago</span></h3>
                    <p>
@@ -58,8 +77,11 @@
                 </p>
             </div>
             <div class="research-other">
+                <a href="index.html#research"><button class="return-button" alt="Click to return to main page" title="Main Page">
+                    << Return to Main Page
+                </button></a>
                 <h2>Other Working Papers</h2>
-                <h5><a href="https://ssrn.com/abstract=3606304" target="new">"Does Criminalizing Torture Deter Police Torture?"</a></h5>
+                <h3><a href="https://ssrn.com/abstract=3606304" target="new">"Does Criminalizing Torture Deter Police Torture?"</a></h3>
             </div>
         </div>
 
