@@ -917,6 +917,7 @@ h6:hover {
 
     #research-right {
         letter-spacing: 0;
+        font-size: 14px;
     }
 
     .research-block {
@@ -925,6 +926,10 @@ h6:hover {
 
     #research-left {
         border-right: 9px solid var(--border-color);
+    }
+    
+    #research-title-1 {
+        font-size: 26px;
     }
 }
 
@@ -1004,6 +1009,9 @@ h6:hover {
         font-size: 32px;
     }
 
+    .research-text {
+        letter-spacing: 0ch;
+    }
 }
 
 

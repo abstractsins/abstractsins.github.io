@@ -7,11 +7,10 @@
 
 jQuery(function async($){
 	$('#current-research-preview-1').load('research.html #research-preview-1');
+    $('#current-research-preview-title-1').load('research.html #research-title-1');
 });
 
-jQuery(function async($){
-	$('#current-research-preview-title-1').load('research.html #research-title-1');
-});
+
 
 /*GLOBAL VARIABLES*/
 //for nav link items
