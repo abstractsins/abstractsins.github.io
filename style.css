@@ -602,7 +602,7 @@ h3 {
 /*FOOTER - universal*/
 .footer {
     display: flex;
-    flex-flow: row;
+    flex-direction: row;
     max-height: 100%;
     width: 100%;  
     font-family: 'Raleway', 'Rubik', sans-serif;
@@ -614,9 +614,13 @@ h3 {
 }
 
 #credits {
+    width: 100%;
     margin: 15px;
     margin-top: 0;
     padding: 0 30px 15px 30px;
+}
+
+#credits h6 {
     text-align: left;
 }
 
@@ -642,6 +646,7 @@ h6:hover {
     align-items: center;
     padding-right: 0;
     margin-right: 30px;
+    text-align: left;
 }
 
 #contact p {
@@ -695,8 +700,6 @@ h6:hover {
     #book-pic {
         max-width: 260px;
     }
-
-
 }
 
 /*small*/
@@ -776,7 +779,7 @@ h6:hover {
     }
 
     .footer {
-        flex-direction: column;
+      justify-content: center;
     }
 
     #credits {
@@ -792,9 +795,12 @@ h6:hover {
 
 /*extra small*/
 @media only screen and (max-width: 776px) {
-    .header, 
-    .footer {
+    .header {
         justify-content: space-around;
+    }
+
+    .footer {
+        justify-content: center;
     }
 
     .nav ul {
@@ -829,6 +835,36 @@ h6:hover {
     }
 }
 
+/*685*/
+@media only screen and (max-width: 685px) {
+    #research-left {
+        width: 100%;
+        max-height: 110px;
+        border-right: 0;
+        border-left: 0;
+        border-bottom: 9px solid var(--border-color);
+        background-size: cover;
+        height: 110px;
+    }
+
+    #research-right {
+        letter-spacing: 0;
+        font-size: 16px;
+        width: 90%
+    }
+
+    .research-block {
+        flex-flow: column;
+        border: 9px solid var(--border-color);
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .research-preview-container {
+        padding-top: 110px;
+    }
+}
+
 /*mobile*/
 @media only screen and (max-width: 600px) {
     #book-pic {
@@ -850,28 +886,29 @@ h6:hover {
         min-width: 250px;
     }
 
-    #data-left h4, 
-    #teaching-right h4 {
-        font-size: 16px;
-        letter-spacing: 0ch;
-    }
-
-    #data-left ul,
-    #teaching-right ul {
-        font-size: 16px;
-        letter-spacing: 0ch;
-    }
-
     .data-block {
         flex-flow: column-reverse;
-        align-items: center;
         border: 9px solid var(--border-color);
+        margin-top: 0;
     }
 
+    .data-container,
+    .teaching-container {
+        padding-top: 110px;
+    }
+    
+    .teaching-container h2,
+    .data-container h2 {
+        padding-top: 40px;
+        position: relative;
+        //width: 1000px;
+    }
+    
     .teaching-block {
         flex-flow: column;
-        align-items: center;
         border: 9px solid var(--border-color);
+        align-items: center;
+        margin-top: 0;
     }
 
     #data-right,
@@ -884,18 +921,35 @@ h6:hover {
         background-size: cover;
     }
 
-    #data-left,
-    #teaching-right {
-        width: 90%;
-        margin: 4%;
+    #research-right {
+        font-size: 14px;
     }
 
-    .teaching-container h2,
-    .data-container h2 {
-        padding-top: 40px;
-        position: relative;
+    #teaching-right,
+    #data-left {
+        width: 90%;
     }
-    
+
+    #data-left h4, 
+    #teaching-right h4 {
+        font-size: 16px;
+        letter-spacing: 0ch;
+    }
+
+    #data-left ul,
+    #teaching-right ul {
+        font-size: 16px;
+        letter-spacing: 0ch;
+    }
+
+    .research-preview-container h2 {
+        margin-bottom: 18px;
+    }
+
+    #research-title-1 {
+        font-size: 26px;
+    }
+
     #contact h1 {
         font-size: 40px;
     }
@@ -903,33 +957,6 @@ h6:hover {
     #contact p {
         line-height: 1.35;
         font-weight: 500;
-    }
-
-    .data-container,
-    .teaching-container,
-    .research-preview-container {
-        padding-top: 110px;
-    }
-
-    .research-preview-container h2 {
-        margin-bottom: 18px;
-    }
-
-    #research-right {
-        letter-spacing: 0;
-        font-size: 14px;
-    }
-
-    .research-block {
-        border: 9px solid var(--border-color);
-    }
-
-    #research-left {
-        border-right: 9px solid var(--border-color);
-    }
-    
-    #research-title-1 {
-        font-size: 26px;
     }
 }
 
@@ -946,7 +973,7 @@ h6:hover {
     .header h3 {
         display: none;
     }
-  
+
     .dropdown {
         display: inline;
         float: right;
@@ -1015,3 +1042,28 @@ h6:hover {
 }
 
 
+/*475*/
+@media only screen and (max-width: 486px) {
+
+    #contact {
+        margin-left: 0;
+    }
+
+    .contact-info {
+        padding-bottom: 0;
+        margin-left: 0;
+    }
+
+    .footer {
+        max-height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer p {
+        margin-bottom: 0;
+        margin-top: 5px;
+        line-height: 1.5;
+    }
+}
