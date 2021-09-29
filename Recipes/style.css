@@ -1,0 +1,339 @@
+* {
+    /* border: 1px solid red; */
+    margin: 0;
+    padding: 0;
+    /* Custom Colors */
+    --charcoal: rgb(49, 49, 49);
+    --beef-red: rgb(168, 0, 0);
+    --index-card-bg: #E0C9A6;
+    --lettuce: #CDE6A5;
+    /* Global colors */
+    --link-hover-color: rgba(255, 68, 0, 0.856);
+    --link-active-color: rgba(255, 163, 130, 0.856);
+    /* Background Images */
+    --hero-bg-1: url('./assets/sweet-pot-1.jpg');
+    --hero-bg-2: url('./assets/sweet-pot-2.jpg');
+    --hero-bg-3: url('./assets/sweet-pot-3.jpg');
+    --hero-bg-4: url('./assets/shrimp-tostada-1.jpg');
+    --hero-bg-5: url('./assets/shrimp-tostada-2.jpg');
+    /* RECIPE PICS */
+    --beef-1-pic: url('./assets/recipes/meatloaf-1.jpg');
+    --beef-2-pic: url('./assets/recipes/chili-1.jpg');
+    --beef-3-pic: url('./assets/recipes/short-ribs-1.jpg');
+    /* Background Colors */
+    --header-bg: var(--lettuce);
+    --categories-bg: var(--header-bg);
+    --title-bg: #568203;
+    --beef-bg: var(--beef-red);
+    --seafood-bg: #006994 ;
+    --marinades-bg: #F0CA28;
+    --breads-bg: #b78b43;
+    /* Card Colors */
+    --more-card-bg: var(--title-bg);
+    --beef-card-bg: #c8a57d;;
+    --beef-card-border: var(--charcoal);
+    --beef-card-sections: rgb(236, 218, 183);
+}
+
+#no-display {
+    display: none;
+}
+
+/* TAB TESTING */
+.tab-panel {
+    display: none;
+}
+.tab-panel.active {
+    display: block;
+}
+
+/* Up Button */
+#upBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 20px;
+    right: 30px;
+    z-index: 10;
+    border: 3px solid var(--charcoal);
+    outline: none;
+    background-color: var(--beef-red);
+    color: whitesmoke;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#upBtn:hover {
+    background-color: var(--link-hover-color);
+}
+
+#upBtn:active {
+    background-color: var(--link-active-color);
+}
+
+/* Header Section */
+.header {
+    color: var(--charcoal);
+    padding: 35px;
+    padding-bottom: 0;
+    background-color: var(--header-bg);
+    align-content: flex-end;
+}
+
+.header a {
+    text-decoration: none;
+    color: initial;
+}
+
+.header a:hover {
+    text-decoration: overline;
+    font-weight: bolder;
+    color: var(--link-hover-color);
+}
+
+.header a:active {
+    color: var(--link-active-color);
+}
+
+ul {
+    list-style: none;
+}
+
+.header li {
+    font-family: monospace;
+    display: inline;
+    padding: 10px auto;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.tab-list {
+    margin-left: 5%;
+}
+
+ul.tab-list li {
+    display: inline-block;
+    width: auto;
+    padding: 20px 10px;
+    background-color: var(--title-bg);    
+    border-radius: 15px 15px 0 0;
+    margin: 0 5px;
+}
+
+#beef-tab {
+    background-color: var(--beef-bg);
+}
+
+#beef-tab a,
+#breads-tab a,
+#seafood-tab a {
+    color: white;
+}
+
+#breads-tab {
+    background-color: var(--breads-bg);
+}
+
+#marinades-tab {
+    background-color: var(--marinades-bg);
+}
+
+#seafood-tab {
+    background-color: var(--seafood-bg);
+}
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    background-color: var(--index-card-bg);
+}
+
+h1.title {
+    color: whitesmoke;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 50px;
+    letter-spacing: 0.10ch;
+    background-color: var(--title-bg);
+    padding: 40px 0;
+}
+
+#hero-image {
+    background-image: var(--hero-bg-5);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 530px;
+}
+
+/* Main Body */
+.categories {
+    background-color: var(--categories-bg);
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.beef,
+.breads,
+.marinades,
+.seafood {
+    border-radius: 15px 15px 0 0;;
+    padding: 25px;
+    width: 90%;
+    overflow: auto;
+}
+
+/* Category Backgrounds */
+.beef {
+    background-color: var(--beef-bg);
+}
+
+.breads {
+    background-color: var(--breads-bg);
+}
+
+.marinades {
+    background-color: var(--marinades-bg);
+}
+
+.seafood {
+    background-color: var(--seafood-bg);
+}
+
+/* Cards Templace*/
+.cat-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cat-header {
+    align-self: flex-start;
+    margin-left: 15px;
+    padding-bottom: 15px;
+}
+
+.cat-header h2 {
+    text-align: left;
+    justify-content: flex-end;
+    font-family: monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.5ch;
+    font-size: 3em;
+    color: whitesmoke;
+}
+
+.beef-card,
+.more-card {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: var(--beef-card-bg);
+    border: 3px solid var(--beef-card-border);
+    border-radius: 20px 20px 0 0;
+    width: 375px;
+    height: 525px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.more-card {
+    display: none;
+    width: 20%;
+    height: 150px;
+    align-self: center;   
+    background-color: var(--more-card-bg);
+    text-align: center;
+    border-radius: 20px;
+    border-color: black;
+}
+
+.more-card h4 {
+    font-family: monospace;
+    font-size: 2em;
+    padding: 25% 0;
+    color: whitesmoke;
+}
+
+.recipe-title {
+    font-family: sans-serif;
+    text-align: center;
+    letter-spacing: 0.15ch;
+    padding: 10px;
+}
+
+.marinades h2 {
+    color: var(--charcoal);
+}
+
+
+.recipe-detail {
+    color: maroon;
+    padding-right: 10px;
+}
+
+.recipe-details {
+    padding: 15px;
+    background-color: blanchedalmond;
+}
+
+.recipe-details li {
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: 600;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.ingredients {
+    /* background-color: var(--beef-card-sections); */
+    background-color: blanchedalmond;
+    padding: 10px; 
+    height: 25%;  
+}
+
+.ingredients li {
+    display: inline;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+
+li.shopping-item {
+    display: block;
+    flex-flow: row wrap;
+    font-family: serif;
+    font-weight: 400;
+    font-size: 1.75em;
+    line-height: 1.25;
+    /* padding-right: 15px; */
+}
+
+.recipe-pic {
+    width: 100%;
+    height: 650px;
+    background-size: 90%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: blanchedalmond;
+    /* margin: 20px 10px; */
+    /* border-top: 3px solid var(--charcoal); */
+    /* border-bottom: 3px solid var(--charcoal); */
+}
+
+/* RECIPE PICS */
+#beef-1-pic {
+    background-image: var(--beef-1-pic);
+}
+
+#beef-2-pic {
+    background-image: var(--beef-2-pic);
+}
+
+#beef-3-pic {
+    background-image: var(--beef-3-pic);
+}
