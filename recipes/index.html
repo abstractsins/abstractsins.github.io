@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- from lightSlider github -->
+    <link type="text/css" rel="stylesheet" href="css/lightslider.css" />                  
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/lightslider.js"></script>
+    <!-- Do not include both lightslider.js and lightslider.min.js -->
+
+    <!-- CSS SHEETS -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <!-- JavaScript -->
+    <script type="text/javascript" src="js/main.js" async></script>
+
+    <title>Dan's Favorite Recipes</title>
+
+</head>
+<body>
+
+    <!-- Up Button
+    <button onclick="topFunction()" id="upBtn" title="Go to top">Top</button> -->
+
+<!-- Header Section -->
+        
+    <!-- Title -->
+    <div class="header">
+        <h1 class="title">Dan's Recipes</h1>
+    </div>
+
+<!-- Main Section -->
+    <div class="main-section">
+
+        <!-- Tabs list / Nav -->
+        <div class="tabs-header">
+            <ul class="tab-list">
+                <li id="welcome-tab" class="active tab"><a class="tab-control" href="#welcome">Welcome!</a></li>
+                <li id="beef-tab" class="tab"><a class="tab-control" href="#beef">Beef</a></li>
+                <li id="breads-tab"><a class="tab-control" href="#breads">Breads</a></li>
+                <li id="marinades-tab"><a class="tab-control" href="#marinades">Marinades</a></li>
+                <li id="seafood-tab"><a class="tab-control" href="#seafood">Seafood</a></li>
+            </ul>
+        </div>
+
+        <!-- Categories -->
+        <div class="panel-container">
+
+            <!-- Welcome -->
+            <div class="tab-panel panel active" id="welcome">
+                <div id="welcome-text">
+                    <h3>Welcome to my kitchen!</h3>
+                </div>
+            </div>
+
+            <!-- Beef -->
+            <div class="tab-panel" id="beef">
+
+                <!-- lightSlider UL -->
+                    <ul id="autoWidth">
+                        <li>
+                            <h3>1st Slide</h3>
+                            <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
+                        </li>
+                        <li>
+                            <h3>second Slide</h3>
+                            <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
+                        </li>
+                        <li>
+                            <h3>3rd Slide</h3>
+                            <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
+                        </li>
+                        <li>
+                            <h3>Fourth Slide</h3>
+                            <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
+                        </li>
+                        <li>
+                            <h3>Fifth Slide</h3>
+                            <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
+                        </li>
+                    </ul>
+                    
+            </div>
+
+                <!-- Breads -->
+            <div class="tab-panel" id="breads">
+                <!-- <div class="cat-cards"> -->
+                    <ul id="autoWidth">
+                        <li>
+                            <h3>1st Slide</h3>
+                            <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
+                        </li>
+                        <li>
+                            <h3>second Slide</h3>
+                            <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
+                        </li>
+                        <li>
+                            <h3>3rd Slide</h3>
+                            <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
+                        </li>
+                        <li>
+                            <h3>Fourth Slide</h3>
+                            <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
+                        </li>
+                        <li>
+                            <h3>Fifth Slide</h3>
+                            <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
+                        </li>
+                    </ul>
+                <!-- </div> -->
+            </div>
+
+                <!-- Marinades -->
+            <div class="tab-panel panel" id="marinades">
+                <div class="cat-cards">
+                    
+                </div>
+            </div>
+
+                <!-- Seafood -->
+            <div class="tab-panel panel" id="seafood">
+                <div class="cat-cards">
+                    
+                </div>
+            </div>
+
+        </div>
+
+
+</body>
+</html>
