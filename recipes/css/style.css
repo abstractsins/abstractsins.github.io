@@ -1,14 +1,17 @@
 /* 100% hand-coded on Planet Earth */
 
 * {
-    /* border: 1px solid red; */
+    /* border: 1px solid red; */ */
     margin: 0;
     padding: 0;
     /* Custom Colors */
     --charcoal: rgb(49, 49, 49);
     --charcoal-2: #36454F;
     --beef-red: rgb(168, 0, 0);
-    --index-card-bg: #e9d7be;
+    --index-card-bg: #d6bd9a;
+    --charcoal-2: #36454F;
+    --beef-red: rgb(168, 0, 0);
+    --index-card-bg: #d6bd9a;
     --lettuce: #CDE6A5;
     --avocado: #568203;
     /* Global colors */
@@ -19,9 +22,18 @@
     --hero-bg-2: url('../assets/sweet-pot-2.jpg');
     --hero-bg-3: url('../assets/sweet-pot-3.jpg');
     --hero-bg-4: url('../assets/shrimp-tostada-1.jpg');
+    --hero-bg-2: url('../assets/sweet-pot-2.jpg');
+    --hero-bg-3: url('../assets/sweet-pot-3.jpg');
+    --hero-bg-4: url('../assets/shrimp-tostada-1.jpg');
     --hero-bg-5: url('../assets/shrimp-tostada-2.jpg');
     /* RECIPE PICS */
     --beef-1-pic: url('/assets/recipes/meatloaf-1.jpg');
+    --hero-bg-5: url('../assets/shrimp-tostada-2.jpg');
+    /* RECIPE PICS */
+    --beef-1-pic: url('/assets/recipes/meatloaf-1.jpg');
+    --beef-2-pic: url('/assets/recipes/chili-1.jpg');
+    --beef-3-pic: url('/assets/recipes/short-ribs-1.jpg');
+    /* Background Colors */
     --beef-2-pic: url('/assets/recipes/chili-1.jpg');
     --beef-3-pic: url('/assets/recipes/short-ribs-1.jpg');
     /* Background Colors */
@@ -34,7 +46,7 @@
     --breads-bg: #b78b43;
     /* Card Colors */
     --more-card-bg: var(--title-bg);
-    --beef-card-bg: var(--charcoal-2);
+    --beef-card-bg: var(--index-card-bg);
     --beef-card-border: var(--charcoal);
     --beef-card-sections: rgb(236, 218, 183);
     /* GLOBAL Variables */
@@ -42,9 +54,81 @@
     --index-card-shadow-2: drop-shadow(3px 5px 2px #000000);
     --index-card-shadow-3: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.4));
 }
+    --index-card-shadow-2: drop-shadow(3px 5px 2px #000000);
+    --index-card-shadow-3: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.4));
+}
 
 #no-display {
     display: none;
+}
+
+/* Slider Section */
+.slide-viewer {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    width: calc(100vw - 180px);
+}
+
+.slide-group {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    font-family: sans-serif;
+    padding: 2% 5%;
+}
+
+    padding: 2% 5%;
+}
+
+.slide:first-child {
+    display: block;
+}
+
+.slider {
+    margin: 2%;
+    /* position: relative; */
+    display: flex;
+    margin: 2%;
+    /* position: relative; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider-container {
+    width: 100%;
+    background-color: lightcoral;
+}
+
+.slide-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 20px;
+}
+
+.slide-btn {
+    background-color: var(--avocado);
+    align-self: center;
+    height: 10px;
+    width: 15px;
+}
+
+.slide-btn.active {
+    background-color: limegreen;
+    transform: scale(2);
+}
+
+    transform: scale(2);
 }
 
 /* Up Button */
@@ -95,7 +179,7 @@ h1.title {
     align-items: center;
 }
 
-/* TABS */
+    /* TABS */
 .tabs-header {
     padding-top: 30px;
     width: 90%;
@@ -113,6 +197,9 @@ h1.title {
     padding: 20px 15px;
     border-radius: 8px 8px 0 0;
     margin: 0 7px 0 0;
+    filter: var(--index-card-shadow-2);
+}
+
     filter: var(--index-card-shadow-2);
 }
 
@@ -162,41 +249,37 @@ li.active a {
     font-size: 120%;
 }
 
-/* PANELS */
-.panel-container {
-    width: 90%;
-    background-color: var(--index-card-bg);
-    border-radius: 0 10px 10px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.panel {
-
-}
-
-.panel ul {
-    list-style: none;
-}
-
-.panel li {
-    display: inline-flex;
-}
-
 .tab-panel {
     display: none;
-    padding: 0 50px;
-    filter: var(--index-card-shadow); 
-    justify-content: center;
-    border-radius: 10px 10px 10px 10px;
-    width: 100%;
-    height: 80vh;
-    align-items: center;
 }
 
 .tab-panel.active {
-    display: inline-flex;
+    display: block;
+    position: relative;
+    width: 90vw;
+    height: 70vh;
+    border-radius: 10px;
+}
+
+#beef-slide-1,
+#bread-slide-1 {
+    background-color: white;
+}
+#beef-slide-2,
+#bread-slide-2 {
+    background-color: green;
+}
+#beef-slide-3,
+#bread-slide-3 {
+    background-color: blue;
+}
+#beef-slide-4,
+#bread-slide-3 {
+    background-color: yellow;
+}
+#beef-slide-5,
+#bread-slide-3 {
+    background-color: purple;
 }
 
 /* Category Backgrounds */
@@ -240,12 +323,12 @@ li.active a {
 }
 
 /* Card template */
-.card {
+.recipe-card {
     background-color: var(--beef-card-bg);
-    /* display: flex; */
-    /* flex-flow: column; */
-    /* width: 350px; */
-    height: 300px;
+    display: flex;
+    position: relative;
+    flex-flow: row;
+    height: 100%;
     color: black;
     margin: 0 10px;
     filter: var(--index-card-shadow-3);
@@ -362,6 +445,9 @@ li.shopping-item {
     box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
 }
 
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+}
+
 .open-recipe-btn:hover {
     color: #FFF;
     background-color: rgba(255, 68, 0, 0.6);
@@ -381,13 +467,21 @@ li.shopping-item {
     background-image: var(--beef-2-pic);
 }
 
+#beef-2-pic {
+    background-image: var(--beef-2-pic);
+}
+
 #beef-3-pic {
     background-image: var(--beef-3-pic);
 }
 
 /* SLIDER */
-.slider {
-    height: fit-content;
-    padding-top: 2%;
+#marinades h3 {
+    color: var(--charcoal);
 }
+#seafood h3 {
+    color: whitesmoke;
+}
+
+
 

@@ -18,10 +18,11 @@
 
     <!-- CSS SHEETS -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/style2.css" /> -->
     <!-- JavaScript -->
     <script type="text/javascript" src="js/main.js" async></script>
 
-    <title>Dan's Favorite Recipes</title>
+    <title>Daniel's Kitchen</title>
 
 </head>
 <body>
@@ -36,7 +37,7 @@
         <h1 class="title">Dan's Recipes</h1>
     </div>
 
-<!-- Main Section -->
+    <!-- Main Section -->
     <div class="main-section">
 
         <!-- Tabs list / Nav -->
@@ -50,88 +51,167 @@
             </ul>
         </div>
 
-        <!-- Categories -->
-        <div class="panel-container">
+        <!-- Panel Container -->
 
-            <!-- Welcome -->
-            <div class="tab-panel panel active" id="welcome">
+
+            <!-- Welcome Panel -->
+            <div class="tab-panel active" id="welcome">
                 <div id="welcome-text">
                     <h3>Welcome to my kitchen!</h3>
                 </div>
             </div>
 
-            <!-- Beef -->
-            <div class="tab-panel" id="beef">
+            <!-- Beef Panel -->
+            <div class="tab-panel slider-container" id="beef">
 
-                <!-- lightSlider UL -->
-                    <ul id="autoWidth">
-                        <li>
-                            <h3>1st Slide</h3>
-                            <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
-                        </li>
-                        <li>
-                            <h3>second Slide</h3>
-                            <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
-                        </li>
-                        <li>
-                            <h3>3rd Slide</h3>
-                            <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
-                        </li>
-                        <li>
-                            <h3>Fourth Slide</h3>
-                            <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
-                        </li>
-                        <li>
-                            <h3>Fifth Slide</h3>
-                            <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
-                        </li>
-                    </ul>
+                <!-- Slider -->
+                <div class="slider" id="beef-slider">
+
+                    <!-- Slider Buttons -->
+                    <div class="slide-buttons"></div>
+
+                    <!-- Slide Viewer -->
+                    <div class="slide-viewer">
+                        <div class="slide-group">
+                            
+                            <!-- Slides -->
+                            
+                            <!-- Beef Slide 1 -->
+                            <div class="slide" id="beef-slide-1">
+                                <div class="recipe-card" id="recipe-card-beef-1">
+
+                                    <!-- Name -->
+                                    <div class="recipe-title">
+                                        <h3 id="beef-1-title"></h3>
+                                    </div>
+                                    <!-- Details -->
+                                    <div class="recipe-details" id="beef-1-details">
+                                        <ul>
+                                            <li>Prep: <span class="recipe-detail" id="beef-1-prep-time"></span></li>
+                                            <li>Cook: <span class="recipe-detail" id="beef-1-cook-time"></span></li>
+                                            <li>Calories: <span class="recipe-detail" id="beef-1-calories"></span></li>
+                                            <li>Protein: <span class="recipe-detail" id="beef-1-protein"></span></li>
+                                            <li>Carbs: <span class="recipe-detail" id="beef-1-carbs"></span></li>
+                                            <li>Fat: <span class="recipe-detail" id="beef-1-fat"></span></li>
+                                        </ul>
+                                    </div>
+                                    <!-- Picture -->
+                                    <div class="recipe-pic" id="beef-1-pic">
+
+                                        <!-- Overlay -->
+                                        <div class="overlay">
+                                            <a href="#" class="open-recipe-btn">Open Recipe</a>
+                                        </div>
+
+                                    </div>
+                                    <!-- Ingredients -->
+                                    <div class="ingredients">
+                                        <ul>
+                                            <li>Ingredients: <span id="beef-1-ingredients"></span></li>
+                                        </ul>
+                                    </div>
+            
+                                </div>
+                            </div>
+                            
+                            <!-- Beef Slide 2 -->
+                            <div class="slide" id="beef-slide-2">
+                                <h2>Beef 2</h2>
+                            </div>
+
+                            <!-- Beef Slide 3 -->
+                            <div class="slide" id="beef-slide-3">
+                                <h2>Beef 3</h2>
+                            </div>
+                            
+                            <!-- Beef Slide 4 -->
+                            <div class="slide" id="beef-slide-4">
+                                <h2>Beef 4</h2>
+                            </div>                                                    
+
+                        </div>
+                    </div>
+
+                </div>
                     
             </div>
 
-                <!-- Breads -->
+            <!-- Breads -->
             <div class="tab-panel" id="breads">
-                <!-- <div class="cat-cards"> -->
-                    <ul id="autoWidth">
-                        <li>
-                            <h3>1st Slide</h3>
-                            <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
-                        </li>
-                        <li>
-                            <h3>second Slide</h3>
-                            <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
-                        </li>
-                        <li>
-                            <h3>3rd Slide</h3>
-                            <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
-                        </li>
-                        <li>
-                            <h3>Fourth Slide</h3>
-                            <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
-                        </li>
-                        <li>
-                            <h3>Fifth Slide</h3>
-                            <p>Lorem ipsum Excepteur amet adipisicing fugiat velit nisi.</p>
-                        </li>
-                    </ul>
-                <!-- </div> -->
+
+                <!-- Slider -->
+                <div class="slider slider-breads">
+
+                    <!-- Slider Buttons -->
+                    <div class="slide-buttons"></div>
+
+                    <!-- Slide Viewer -->
+                    <div class="slide-viewer">
+                        <div class="slide-group">
+
+                            <!-- Slides -->
+
+                            <!-- Slide 1 -->
+                            <div class="slide" id="bread-slide-1">
+                                <h2>Challah</h2>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="slide" id="bread-slide-2">
+                                <h2>Italian Bread</h2>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="slide" id="bread-slide-3">
+                                <h2>Biscuits</h2>
+                            </div>
+
+                            <!-- Slide 4 -->
+                            <div class="slide" id="bread-slide-4">
+                                <h2>Langos</h2>
+                            </div>
+                            
+                            <!-- Slide 5 -->
+                            <div class="slide" id="bread-slide-5">
+                                <h2>Cornbread</h2>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                    
             </div>
 
-                <!-- Marinades -->
+            <!-- Marinades -->
             <div class="tab-panel panel" id="marinades">
-                <div class="cat-cards">
-                    
-                </div>
+                <!-- lightSlider UL -->
+                <ul id="lightSlider-marinades">
+
+                    <li>MARINADES 1</li>
+                    <li>MARINADES 2</li>
+                    <li>MARINADES 3</li>
+                    <li>MARINADES 4</li>
+                    <li>MARINADES 5</li>
+
+                </ul>
             </div>
 
-                <!-- Seafood -->
+            <!-- Seafood -->
             <div class="tab-panel panel" id="seafood">
-                <div class="cat-cards">
-                    
-                </div>
+                <!-- lightSlider UL -->
+                <ul id="lightSlider-seafood">
+
+                    <li>SEAFOOD 1</li>
+                    <li>SEAFOOD 2</li>
+                    <li>SEAFOOD 3</li>
+                    <li>SEAFOOD 4</li>
+                    <li>SEAFOOD 5</li>
+
+                </ul>
             </div>
 
-        </div>
+
 
 
 </body>

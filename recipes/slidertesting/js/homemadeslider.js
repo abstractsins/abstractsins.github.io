@@ -1,76 +1,6 @@
-// 100% hand-coded on Planet Earth
-
-// TO-DO
-// -- Make array(?) or slider IDs to refactor the unique lightslider calls below, into one.
-
 /* Slider Function */
 // as described on page 516 of "JavaScript and JQuery," by Jon Duckett
-$('#beef-slider').each(function() {
-	let $this = $(this);
-	let $group = $this.find('.slide-group');
-	let $slides = $this.find('.slide');
-	let buttonArray = [];
-	let currentIndex = 0;
-	let timeout;
-
-	// MOVE() GOES HERE
-	function move(newIndex) {
-		let animateLeft, slideLeft;
-
-		advance();
-
-		if ($group.is(':animated') || currentIndex === newIndex) {
-			return;
-		}
-
-		buttonArray[currentIndex].removeClass('active');
-		buttonArray[newIndex].addClass('active');
-
-		if (newIndex > currentIndex) {
-			slideLeft = '100%';
-			animateLeft = '-100%';
-		} else {
-			slideLeft = '-100%';
-			animateLeft = '100%';
-		}
-
-		$slides.eq(newIndex).css( {left: slideLeft, display: 'block'} );
-		$group.animate( {left: animateLeft} , function() {
-			$slides.eq(currentIndex).css( {display: 'none'} );
-			$slides.eq(newIndex).css( {left: 0} );
-			$group.css( {left: 0} );
-			currentIndex = newIndex;
-		});
-	}
-
-	function advance() {
-		clearTimeout(timeout);
-		timeout = setTimeout(function() {
-			if (currentIndex < ($slides.length - 1)) {
-				move(currentIndex + 1);
-			} else {
-				move(0);
-			}
-		}, 4000);
-	}
-
-	$.each($slides, function(index) {
-		let $button = $('<button type="button" class="slide-btn"></button>');
-		if (index === currentIndex) {
-			$button.addClass('active');
-		}
-		$button.on('click', function() {
-			move(index);
-		}).appendTo($this.find('.slide-buttons'));
-		buttonArray.push($button);
-	});
-
-
-	advance(); // COMMENT OR UNCOMMENT THIS to toggle the timed advance
-
-});
-
-$('.slider-breads').each(function() {
+$('.slider').each(function() {
 	let $this = $(this);
 	let $group = $this.find('.slide-group');
 	let $slides = $this.find('.slide');
@@ -134,34 +64,69 @@ $('.slider-breads').each(function() {
 
 });
 
-/* Tab Browsing Function */
-// as described on page 499 of "JavaScript and JQuery," by Jon Duckett
-$('.tab-list').each(function() {
+$('.slider').each(function() {
 	let $this = $(this);
-	let $tab = $this.find('li.active');
-	let $link = $tab.find('a');
-	let $panel = $($link.attr('href'));
+	let $group = $this.find('.slide-group');
+	let $slides = $this.find('.slide');
+	let buttonArray = [];
+	let currentIndex = 0;
+	let timeout;
 
-	$this.on('click', '.tab-control', function(e) {
-		e.preventDefault();
-		let $link = $(this);
-		let id = this.hash;
+	// MOVE() GOES HERE
+	function move(newIndex) {
+		let animateLeft, slideLeft;
 
-		if (id && !$link.is('.active')) {
-			$panel.removeClass('active');
-			$tab.removeClass('active');
+		advance();
 
-			$panel = $(id).addClass('active');
-			$tab = $link.parent().addClass('active');
+		if ($group.is(':animated') || currentIndex === newIndex) {
+			return;
 		}
+
+		buttonArray[currentIndex].removeClass('active');
+		buttonArray[newIndex].addClass('active');
+
+		if (newIndex > currentIndex) {
+			slideLeft = '100%';
+			animateLeft = '-100%';
+		} else {
+			slideLeft = '-100%';
+			animateLeft = '100%';
+		}
+
+		$slides.eq(newIndex).css( {left: slideLeft, display: 'block'} );
+		$group.animate( {left: animateLeft} , function() {
+			$slides.eq(currentIndex).css( {display: 'none'} );
+			$slides.eq(newIndex).css( {left: 0} );
+			$group.css( {left: 0} );
+			currentIndex = newIndex;
+		});
+	}
+
+	function advance() {
+		clearTimeout(timeout);
+		timeout = setTimeout(function() {
+			if (currentIndex < ($slides.length - 1)) {
+				move(currentIndex + 1);
+			} else {
+				move(0);
+			}
+		}, 1000);
+	}
+
+	$.each($slides, function(index) {
+		let $button = $('<button type="button" class="slide-btn"></button>');
+		if (index === currentIndex) {
+			$button.addClass('active');
+		}
+		$button.on('click', function() {
+			move(index);
+		}).appendTo($this.find('.slide-buttons'));
+		buttonArray.push($button);
 	});
+
+	advance();
+
 });
-
-/* RECIPE CARD INFO FUNCTION */
-// Takes information from the recipe pages and displays it in the homepage cards
-
-//In Memory of John -- (jscheuer1) -- Global Moderator at Dynamic Drive Forums
-//who is still helping people, even after his death
 
 jQuery(function async($){
 	// Beef 1
@@ -208,24 +173,3 @@ jQuery(function async($){
     // Seafood 3
 
 });
-
-// // Function for Up-Button
-// const upBtn = document.getElementById('upBtn');
-
-// const topFunction = () => {
-//     document.body.scrollTop = 0; // For Safari
-//     document.documentElement.scrollTop = 0; // For real browsers
-// }
-
-// const scrollFunction = () => {
-//     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-//         upBtn.style.display = "block";
-//     } else {
-//         upBtn.style.display = "none";
-//     }
-// }
-
-// window.onscroll = () => { scrollFunction() };
-
-
-
