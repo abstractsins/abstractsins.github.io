@@ -17,7 +17,7 @@ $('#beef-slider').each(function() {
 	function move(newIndex) {
 		let animateLeft, slideLeft;
 
-		// advance();
+		advance();
 
 		if ($group.is(':animated') || currentIndex === newIndex) {
 			return;
@@ -66,7 +66,7 @@ $('#beef-slider').each(function() {
 	});
 
 
-	// advance(); // COMMENT OR UNCOMMENT THIS to toggle the timed advance
+	advance(); // COMMENT OR UNCOMMENT THIS to toggle the timed advance
 
 });
 
