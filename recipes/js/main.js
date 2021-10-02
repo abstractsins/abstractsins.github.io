@@ -17,7 +17,7 @@ $('#beef-slider').each(function() {
 	function move(newIndex) {
 		let animateLeft, slideLeft;
 
-		advance();
+		// advance();
 
 		if ($group.is(':animated') || currentIndex === newIndex) {
 			return;
@@ -51,7 +51,7 @@ $('#beef-slider').each(function() {
 			} else {
 				move(0);
 			}
-		}, 4000);
+		}, 2000);
 	}
 
 	$.each($slides, function(index) {
@@ -66,7 +66,7 @@ $('#beef-slider').each(function() {
 	});
 
 
-	advance(); // COMMENT OR UNCOMMENT THIS to toggle the timed advance
+	// advance(); // COMMENT OR UNCOMMENT THIS to toggle the timed advance
 
 });
 
@@ -173,6 +173,7 @@ jQuery(function async($){
 	$('#beef-1-carbs').load('assets/recipes/meatloaf.html #carbs');
 	$('#beef-1-fat').load('assets/recipes/meatloaf.html #fat');
 	$('#beef-1-ingredients').load('assets/recipes/meatloaf.html #shopping-list');
+	$('#beef-1-hardware').load('assets/recipes/meatloaf.html #hardware-list');
 	// $('#beef-1-pic').load('assets/recipes/meatloaf.html #recipe-pic');
     // Beef 2
     $('#beef-2-title').load('assets/recipes/chili.html #recipe-name');
@@ -183,6 +184,7 @@ jQuery(function async($){
 	$('#beef-2-carbs').load('assets/recipes/chili.html #carbs');
 	$('#beef-2-fat').load('assets/recipes/chili.html #fat');
 	$('#beef-2-ingredients').load('assets/recipes/chili.html #shopping-list');
+	$('#beef-2-hardware').load('assets/recipes/chili.html #hardware-list');
 	// $('#beef-2-pic').load('assets/recipes/chili.html #recipe-pic');
     // Beef 3 
     $('#beef-3-title').load('assets/recipes/short-ribs.html #recipe-name');
@@ -193,6 +195,7 @@ jQuery(function async($){
 	$('#beef-3-carbs').load('assets/recipes/short-ribs.html #carbs');
 	$('#beef-3-fat').load('assets/recipes/short-ribs.html #fat');
 	$('#beef-3-ingredients').load('assets/recipes/short-ribs.html #shopping-list');
+	$('#beef-3-hardware').load('assets/recipes/short-ribs.html #hardware-list');
 	// $('#beef-3-pic').load('assets/recipes/short-ribs.html #recipe-pic');
 
     // Breads 1

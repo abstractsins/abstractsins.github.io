@@ -1,20 +1,35 @@
 /* 100% hand-coded on Planet Earth */
 
-* {
-    /* border: 1px solid red; */ */
+/* TABLE OF CONTENTS */
+/*  1 -- Global Selections
+        1-A -- variables
+        1-B -- up button
+    2 -- General Slide selectors
+    3 -- Tabs and Panels
+    4 -- Recipe Card Template
+        4-A -- overlay
+    5 -- Header
+    6 -- Main Section 
+        6-A -- Category Backgrounds
+        6-B -- Welcome Card*/
+
+/* 1 -- Global Selections */
+/* 1-A -- variables */
+*, 
+html, 
+body {
+    /* border: 1px solid red; */
     margin: 0;
     padding: 0;
     /* Custom Colors */
     --charcoal: rgb(49, 49, 49);
     --charcoal-2: #36454F;
     --beef-red: rgb(168, 0, 0);
-    --index-card-bg: #d6bd9a;
-    --charcoal-2: #36454F;
-    --beef-red: rgb(168, 0, 0);
-    --index-card-bg: #d6bd9a;
+    --index-card-bg: #E0C9A6;
     --lettuce: #CDE6A5;
     --avocado: #568203;
     /* Global colors */
+    --universal-slide-bg-color: whitesmoke;
     --link-hover-color: rgba(255, 68, 0, 0.856);
     --link-active-color: rgba(255, 163, 130, 0.856);
     /* Background Images */
@@ -52,86 +67,14 @@
     /* GLOBAL Variables */
     --index-card-shadow: drop-shadow(10px 15px 5px #000000);
     --index-card-shadow-2: drop-shadow(3px 5px 2px #000000);
-    --index-card-shadow-3: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.4));
-}
-    --index-card-shadow-2: drop-shadow(3px 5px 2px #000000);
-    --index-card-shadow-3: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.4));
+    --index-card-shadow-3: drop-shadow(8px 8px 2px rgba(0, 0, 0, 0.4));
 }
 
 #no-display {
     display: none;
 }
 
-/* Slider Section */
-.slide-viewer {
-    position: relative;
-    overflow: hidden;
-    height: 300px;
-    width: calc(100vw - 180px);
-}
-
-.slide-group {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.slide {
-    width: 100%;
-    height: 100%;
-    display: none;
-    position: absolute;
-    font-family: sans-serif;
-    padding: 2% 5%;
-}
-
-    padding: 2% 5%;
-}
-
-.slide:first-child {
-    display: block;
-}
-
-.slider {
-    margin: 2%;
-    /* position: relative; */
-    display: flex;
-    margin: 2%;
-    /* position: relative; */
-    display: flex;
-    justify-content: space-between;
-}
-
-.slider-container {
-    width: 100%;
-    background-color: lightcoral;
-}
-
-.slide-buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    align-items: center;
-    width: 20px;
-}
-
-.slide-btn {
-    background-color: var(--avocado);
-    align-self: center;
-    height: 10px;
-    width: 15px;
-}
-
-.slide-btn.active {
-    background-color: limegreen;
-    transform: scale(2);
-}
-
-    transform: scale(2);
-}
-
-/* Up Button */
+/* 1-B -- Up Button */
 #upBtn {
     display: none; 
     position: fixed; 
@@ -154,32 +97,73 @@
     background-color: var(--link-active-color);
 }
 
-/* Header Section */
-.header {
-    display: none;
-}
-
-h1.title {
-    color: whitesmoke;
-    text-align: center;
-    font-family: sans-serif;
-    font-size: 50px;
-    letter-spacing: 0.10ch;
-    background-color: var(--title-bg);
-    padding: 20px 0;
-}
-
-/* Main Body */
-.main-section {
-    background-color: var(--categories-bg);
-    height: 100vh;
+/* 2 -- General Slide Selectors */
+.slide-viewer {
+    position: relative;
+    overflow: hidden;
+    height: 63vh;
+    width: calc(100vw - 180px);
     display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
 }
 
-    /* TABS */
+.slide-group {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+}
+
+.slide {
+    width: 60vw;
+    height: 90%;
+    background-color: var(--universal-slide-bg-color);
+    /* width: 100%;
+    height: 100%; */
+    display: none;
+    position: absolute;
+    font-family: sans-serif;
+    padding: 1% 2%;
+    border-radius: 10px;
+    filter: var(--index-card-shadow-3);
+}
+
+.slide:first-child {
+    display: block;
+}
+
+.slider {
+    margin: 2%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.slider-container {
+    width: 100%;
+}
+
+.slide-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 20px;
+    margin-right: 100px;;
+}
+
+.slide-btn {
+    background-color: var(--avocado);
+    align-self: center;
+    height: 10px;
+    width: 15px;
+}
+
+.slide-btn.active {
+    background-color: limegreen;
+    transform: scale(2);
+}
+
+/* 3 -- Tabs and Panels */
 .tabs-header {
     padding-top: 30px;
     width: 90%;
@@ -197,9 +181,6 @@ h1.title {
     padding: 20px 15px;
     border-radius: 8px 8px 0 0;
     margin: 0 7px 0 0;
-    filter: var(--index-card-shadow-2);
-}
-
     filter: var(--index-card-shadow-2);
 }
 
@@ -261,146 +242,137 @@ li.active a {
     border-radius: 10px;
 }
 
-#beef-slide-1,
-#bread-slide-1 {
-    background-color: white;
-}
-#beef-slide-2,
-#bread-slide-2 {
-    background-color: green;
-}
-#beef-slide-3,
-#bread-slide-3 {
-    background-color: blue;
-}
-#beef-slide-4,
-#bread-slide-3 {
-    background-color: yellow;
-}
-#beef-slide-5,
-#bread-slide-3 {
-    background-color: purple;
-}
-
-/* Category Backgrounds */
-#welcome {
-    background-color: var(--index-card-bg);
-}
-#beef {
-    background-color: var(--beef-bg);
-}
-#breads {
-    background-color: var(--breads-bg);
-}
-#marinades {
-    background-color: var(--marinades-bg);
-}
-#marinades h2 {
-    color: var(--charcoal);
-}
-#seafood {
-    background-color: var(--seafood-bg);
-}
-
-/* Welcome Card */
-#welcome-text {
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-#welcome-text h3 {
-    font-family: "Roboto Slab", serif;
-    color: var(--avocado);
-    font-size: 5em;
-    margin: 25px;
-    text-align: center;
-    filter: var(--index-card-shadow-3);
-    font-weight: 700;
-    justify-content: center;
-}
-
-/* Card template */
+/* 4 -- Recipe Card Template */
 .recipe-card {
-    background-color: var(--beef-card-bg);
+    /* background-color: var(--beef-card-bg); */
     display: flex;
+    flex-flow: column;
     position: relative;
-    flex-flow: row;
     height: 100%;
+    width: 100%;
     color: black;
-    margin: 0 10px;
-    filter: var(--index-card-shadow-3);
     border-radius: 10px;
+    align-items: flex-start;
+    /* justify-content: space-between; */
 } 
 
+.recipe-header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
 .recipe-title {
-    color: whitesmoke;
+    color: black;
     font-family: sans-serif;
-    text-align: center;
     letter-spacing: 0.15ch;
-    padding: 10px;
+    margin-left: 10px;  
+}
+
+.recipe-title h3 {
+    font-size: 1.75em;
+    font-family: "Roboto Slab", sans-serif;
+    letter-spacing: 0.15ch;
 }
 
 .recipe-details {
-    padding: 10px;
-    background-color: blanchedalmond;
+    /* padding: 10px; */
+    /* background-color: rgb(197, 177, 148); */
 }
 
 .recipe-details li {
     font-size: 12px;
-    font-family: sans-serif;
+    font-family: "Roboto Slab", sans-serif;
     font-weight: 600;
     display: inline-flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    padding: 5px;
+    padding: 5px 5px 5px 20px;
+    letter-spacing: 0.15ch;
 }
 
 .recipe-detail {
     color: maroon;
+    padding: 0 0.75ch;
+}
+
+.recipe-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
 .recipe-pic {
-    width: 100%;
-    min-height: 240px;
-    max-height: 300px;
-    background-size: 85%;
+    width: 50%;
+    height: 90%;
+    /* min-height: 240px;
+    max-height: 300px; */
+    background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: blanchedalmond;
+    filter: var(--index-card-shadow-2);
+    /* border: 4px dashed black; */
+    /* : 15px 0; */
+    /* background-color: blanchedalmond; */
 }
 
-.ingredients {
+.ingredients-hardware {
     display: flex;
-    height: 150px;
-    background-color: blanchedalmond;
-    padding: 10px;
-    border-radius: 0 0 10px 10px; 
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    /* background-color: blanchedalmond; */
+    padding: 0 20px;
+    justify-content: center;
 }
 
-.ingredients li {
+.ingredients-hardware h3 {
     display: inline;
+    font-family: "Roboto Slab", sans-serif;
+}
+
+.ingredients-hardware ul {
+    height: 100%;
+    display: inline;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.ingredients-hardware li {
+    display: inline-flex;
     font-family: sans-serif;
     font-weight: 600;
+    font-size: 1.5em;
 }
 
-.ingredients h4 {
+.ingredients li,
+.hardware li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ingredients-hardware h4 {
     display: block;
     width: 100%;
 }
 
-li.shopping-item {
-    padding-right: 1px;
+li.shopping-item,
+li.hardware-item {
     display: inline;
-    flex-flow: row wrap;
-    font-family: sans-serif;
+    font-size: 1em;
     font-weight: 400;
-    font-size: 0.8em;
     line-height: 1.5;
 }
 
+.hardware {
+    margin-top: 20px;
+}
+
+/* 4-A -- overlay */
 .overlay {
     visibility: hidden;
     position: absolute;
@@ -457,6 +429,80 @@ li.shopping-item {
 .open-recipe-btn:active {
     background-color: deeppink;
 }
+
+/* 5 -- Header Section */
+.header {
+    display: none;
+}
+
+h1.title {
+    color: whitesmoke;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 50px;
+    letter-spacing: 0.10ch;
+    background-color: var(--title-bg);
+    padding: 20px 0;
+}
+
+/* 6 -- Main Body */
+.main-section {
+    background-color: var(--categories-bg);
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 6-A -- Category Backgrounds */
+#welcome {
+    background-color: var(--index-card-bg);
+}
+#beef {
+    background-color: var(--beef-bg);
+}
+#breads {
+    background-color: var(--breads-bg);
+}
+#marinades {
+    background-color: var(--marinades-bg);
+}
+#marinades h2 {
+    color: var(--charcoal);
+}
+#seafood {
+    background-color: var(--seafood-bg);
+}
+
+/* 6-B -- Welcome Card */
+#welcome-text {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#welcome-text h3 {
+    font-family: "Roboto Slab", serif;
+    color: var(--avocado);
+    font-size: 5em;
+    margin: 25px;
+    text-align: center;
+    filter: var(--index-card-shadow-3);
+    font-weight: 700;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
 
 /* RECIPE PICS */
 #beef-1-pic {

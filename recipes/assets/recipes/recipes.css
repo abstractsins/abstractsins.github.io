@@ -45,7 +45,8 @@ li {
     line-height: 1.5;;
 }
 
-.shopping-item {
+.shopping-item,
+.hardware-item {
     font-family: serif;
 }
 
