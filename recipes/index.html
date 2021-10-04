@@ -9,12 +9,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <!-- from lightSlider github -->
-    <link type="text/css" rel="stylesheet" href="css/lightslider.css" />                  
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Single+Day&display=swap" rel="stylesheet">    <!-- from lightSlider github -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">    
+    
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/lightslider.js"></script>
-    <!-- Do not include both lightslider.js and lightslider.min.js -->
 
     <!-- CSS SHEETS -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -27,13 +26,12 @@
 </head>
 <body>
 
-    <!-- Up Button
-    <button onclick="topFunction()" id="upBtn" title="Go to top">Top</button> -->
+    <!-- Up Button -->
+    <button onclick="topFunction()" id="upBtn" title="Go to top">Top</button>
 
-<!-- Header Section -->
-        
-    <!-- Title -->
-    <div class="header">
+    <!-- Header Section -->
+    <div class="header">        
+        <!-- Title -->
         <h1 class="title">Dan's Recipes</h1>
     </div>
 
@@ -46,18 +44,20 @@
                 <li id="welcome-tab" class="active tab"><a class="tab-control" href="#welcome">Welcome!</a></li>
                 <li id="beef-tab" class="tab"><a class="tab-control" href="#beef">Beef</a></li>
                 <li id="breads-tab"><a class="tab-control" href="#breads">Breads</a></li>
-                <li id="marinades-tab"><a class="tab-control" href="#marinades">Marinades</a></li>
+                <li id="desserts-tab"><a class="tab-control" href="#desserts">Desserts</a></li>
                 <li id="seafood-tab"><a class="tab-control" href="#seafood">Seafood</a></li>
+                <li id="soups-tab"><a class="tab-control" href="#soups">Soups</a></li>
+                <li id="secrets-tab"><a class="tab-control" href="#secrets">Secrets</a></li>
             </ul>
         </div>
 
         <!-- Panel Container -->
 
-
             <!-- Welcome Panel -->
             <div class="tab-panel active" id="welcome">
                 <div id="welcome-text">
-                    <h3>Welcome to my kitchen!</h3>
+                    <h3>Daniel's Kitchen</h3>
+                    <h4>I can never find my recipes when I need them, so I decided to put my favorites right here</h4>
                 </div>
             </div>
 
@@ -68,7 +68,11 @@
                 <div class="slider" id="beef-slider">
 
                     <!-- Slider Buttons -->
-                    <div class="slide-buttons"></div>
+                    <div class="slide-buttons-container">
+                        <div class="slide-buttons">
+                            <h2>Recipe Directory</h2>
+                        </div>
+                    </div>
 
                     <!-- Slide Viewer -->
                     <div class="slide-viewer">
@@ -79,6 +83,12 @@
                             <!-- Beef Slide 1 -->
                             <div class="slide" id="beef-slide-1">
                                 <div class="recipe-card" id="recipe-card-beef-1">
+                                    
+                                    <!-- Overlay -->
+                                    <div class="overlay">
+                                        <a href="#recipe-display-section" class="open-recipe-btn" id="open-recipe-btn">Open Recipe</a>
+                                    </div>
+
                                     <div class="recipe-header">
                                          <!-- Name -->
                                         <div class="recipe-title">
@@ -96,24 +106,34 @@
                                             </ul>
                                         </div>
                                     </div>
+                                    <!-- TAGS -->
+                                    <div class="tags-container">
+                                        <div class="tags">
+                                            <h4>FYI...</h4>
+                                            <ul>
+                                                <li class=tag id="beef-1-tag-1"></li>
+                                                <li class=tag id="beef-1-tag-2"></li>
+                                                <li class=tag id="beef-1-tag-3"></li>
+                                                <li class=tag id="beef-1-tag-4"></li>
+                                                <li class=tag id="beef-1-tag-5"></li>
+                                            </ul>
+                                        </div>  
+                                    </div>
+                                    <!-- Recipe Body -->
                                     <div class="recipe-body">
                                         <!-- Picture -->
                                         <div class="recipe-pic" id="beef-1-pic">
-
-                                            <!-- Overlay -->
-                                            <div class="overlay">
-                                            <a href="#" class="open-recipe-btn">Open Recipe</a>
-                                            </div>
-
                                         </div>
                                         <!-- Ingredients / Hardware -->
                                         <div class="ingredients-hardware">
                                             <div class="ingredients"> 
-                                                <h3>Ingredients:</h3> <span class="shopping-item" id="beef-1-ingredients"></span>
+                                                <h4>Ingredients:</h4> <span class="shopping-item" id="beef-1-ingredients"></span>
                                             </div>
                                             <div class="hardware">
-                                                <h3>Hardware:</h3> <span class="hardware-item" id="beef-1-hardware"></span>                                            </div>
+                                                <h4>Hardware:</h4> <span class="hardware-item" id="beef-1-hardware"></span>                                            
+                                            </div>
                                         </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -121,6 +141,13 @@
                             <!-- Beef Slide 2 -->
                             <div class="slide" id="beef-slide-2">
                                 <div class="recipe-card" id="recipe-card-beef-2">
+
+                                    <!-- Overlay -->
+                                    <div class="overlay">
+                                        <a href="#recipe-display-section" class="open-recipe-btn" id="open-recipe-btn">Open Recipe</a>
+                                    </div>
+
+
                                     <div class="recipe-header">
                                          <!-- Name -->
                                         <div class="recipe-title">
@@ -138,24 +165,40 @@
                                             </ul>
                                         </div>
                                     </div>
+
+                                    <!-- TAGS -->
+                                    <div class="tags-container">
+                                        <div class="tags">
+                                            <h4>FYI...</h4>
+                                            <ul>
+                                                <li class=tag id="beef-2-tag-1"></li>
+                                                <li class=tag id="beef-2-tag-2"></li>
+                                                <li class=tag id="beef-2-tag-3"></li>
+                                                <li class=tag id="beef-2-tag-4"></li>
+                                                <li class=tag id="beef-2-tag-5"></li>
+                                            </ul>
+                                        </div>  
+                                    </div>                                    
+
+                                    <!-- Recipe Body -->
                                     <div class="recipe-body">
                                         <!-- Picture -->
                                         <div class="recipe-pic" id="beef-2-pic">
 
-                                            <!-- Overlay -->
-                                            <div class="overlay">
-                                            <a href="#" class="open-recipe-btn">Open Recipe</a>
-                                            </div>
-
                                         </div>
                                         <!-- Ingredients / Hardware -->
                                         <div class="ingredients-hardware">
+
                                             <div class="ingredients"> 
-                                                <h3>Ingredients:</h3> <span class="shopping-item" id="beef-2-ingredients"></span>
+                                                <h4>Ingredients:</h4> <span class="shopping-item" id="beef-2-ingredients"></span>
                                             </div>
+
                                             <div class="hardware">
-                                                <h3>Hardware:</h3> <span class="hardware-item" id="beef-2-hardware"></span>                                            </div>
+                                                <h4>Hardware:</h4> <span class="hardware-item" id="beef-2-hardware"></span>                                           
+                                            </div>
+
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -163,6 +206,13 @@
                             <!-- Beef Slide 3 -->
                             <div class="slide" id="beef-slide-3">
                                 <div class="recipe-card" id="recipe-card-beef-3">
+                                    
+                                    <!-- Overlay -->
+                                    <div class="overlay">
+                                        <a href="#recipe-display-section" class="open-recipe-btn" id="open-recipe-btn">Open Recipe</a>
+                                    </div>
+                                    
+
                                     <div class="recipe-header">
                                          <!-- Name -->
                                         <div class="recipe-title">
@@ -180,23 +230,32 @@
                                             </ul>
                                         </div>
                                     </div>
+
+                                    <!-- TAGS -->
+                                    <div class="tags-container">
+                                        <div class="tags">
+                                            <h4>FYI...</h4>
+                                            <ul>
+                                                <li class=tag id="beef-3-tag-1"></li>
+                                                <li class=tag id="beef-3-tag-2"></li>
+                                                <li class=tag id="beef-3-tag-3"></li>
+                                                <li class=tag id="beef-3-tag-4"></li>
+                                                <li class=tag id="beef-3-tag-5"></li>
+                                            </ul>
+                                        </div>  
+                                    </div>     
+
                                     <div class="recipe-body">
                                         <!-- Picture -->
                                         <div class="recipe-pic" id="beef-3-pic">
-
-                                            <!-- Overlay -->
-                                            <div class="overlay">
-                                            <a href="#" class="open-recipe-btn">Open Recipe</a>
-                                            </div>
-
                                         </div>
                                         <!-- Ingredients / Hardware -->
                                         <div class="ingredients-hardware">
                                             <div class="ingredients"> 
-                                                <h3>Ingredients:</h3> <span class="shopping-item" id="beef-3-ingredients"></span>
+                                                <h4>Ingredients:</h4> <span class="shopping-item" id="beef-3-ingredients"></span>
                                             </div>
                                             <div class="hardware">
-                                                <h3>Hardware:</h3> <span class="hardware-item" id="beef-3-hardware"></span>                                            </div>
+                                                <h4>Hardware:</h4> <span class="hardware-item" id="beef-3-hardware"></span>                                            </div>
                                         </div>
 
                                     </div>
@@ -210,46 +269,207 @@
                     
             </div>
 
-            <!-- Breads -->
-            <div class="tab-panel" id="breads">
+            <!-- Breads Panel -->
+            <div class="tab-panel slider-container" id="breads">
 
                 <!-- Slider -->
-                <div class="slider slider-breads">
+                <div class="slider" id="breads-slider">
 
                     <!-- Slider Buttons -->
-                    <div class="slide-buttons"></div>
+                    <div class="slide-buttons-container">
+                        <div class="slide-buttons">
+                            <h2>Recipe Directory</h2>
+                        </div>
+                    </div>
 
                     <!-- Slide Viewer -->
                     <div class="slide-viewer">
                         <div class="slide-group">
-
+                            
                             <!-- Slides -->
-
-                            <!-- Slide 1 -->
+                            
+                            <!-- Bread Slide 1 -->
                             <div class="slide" id="bread-slide-1">
-                                <h2>Challah</h2>
-                            </div>
+                                <div class="recipe-card" id="recipe-card-bread-1">
 
-                            <!-- Slide 2 -->
-                            <div class="slide" id="bread-slide-2">
-                                <h2>Italian Bread</h2>
-                            </div>
+                                    <!-- Overlay -->
+                                    <div class="overlay">
+                                        <a href="#recipe-display-section" class="open-recipe-btn" id="open-recipe-btn">Open Recipe</a>
+                                    </div>
 
-                            <!-- Slide 3 -->
-                            <div class="slide" id="bread-slide-3">
-                                <h2>Biscuits</h2>
-                            </div>
 
-                            <!-- Slide 4 -->
-                            <div class="slide" id="bread-slide-4">
-                                <h2>Langos</h2>
+                                    <div class="recipe-header">
+                                         <!-- Name -->
+                                        <div class="recipe-title">
+                                            <h3 id="bread-1-title"></h3>
+                                        </div>
+                                        <!-- Details -->
+                                        <div class="recipe-details" id="bread-1-details">
+                                            <ul>
+                                                <li>Prep: <span class="recipe-detail" id="bread-1-prep-time"></span></li>
+                                                <li>Cook: <span class="recipe-detail" id="bread-1-cook-time"></span></li>
+                                                <li>Calories: <span class="recipe-detail" id="bread-1-calories"></span></li>
+                                                <li>Protein: <span class="recipe-detail" id="bread-1-protein"></span></li>
+                                                <li>Carbs: <span class="recipe-detail" id="bread-1-carbs"></span></li>
+                                                <li>Fat: <span class="recipe-detail" id="bread-1-fat"></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- TAGS -->
+                                    <div class="tags-container">
+                                        <div class="tags">
+                                            <h4>FYI...</h4>
+                                            <ul>
+                                                <li class=tag id="bread-1-tag-1"></li>
+                                                <li class=tag id="bread-1-tag-2"></li>
+                                                <li class=tag id="bread-1-tag-3"></li>
+                                                <li class=tag id="bread-1-tag-4"></li>
+                                                <li class=tag id="bread-1-tag-5"></li>
+                                            </ul>
+                                        </div>  
+                                    </div>
+                                    <!-- Recipe Body -->
+                                    <div class="recipe-body">
+                                        <!-- Picture -->
+                                        <div class="recipe-pic" id="bread-1-pic">
+                                        </div>
+                                        <!-- Ingredients / Hardware -->
+                                        <div class="ingredients-hardware">
+                                            <div class="ingredients"> 
+                                                <h4>Ingredients:</h4> <span class="shopping-item" id="bread-1-ingredients"></span>
+                                            </div>
+                                            <div class="hardware">
+                                                <h4>Hardware:</h4> <span class="hardware-item" id="bread-1-hardware"></span>                                            
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
                             </div>
                             
-                            <!-- Slide 5 -->
-                            <div class="slide" id="bread-slide-5">
-                                <h2>Cornbread</h2>
+                            <!-- Bread Slide 2 -->
+                            <div class="slide" id="bread-slide-2">
+                                <div class="recipe-card" id="recipe-card-bread-2">
+                                    
+                                    <!-- Overlay -->
+                                    <div class="overlay">
+                                        <a href="#recipe-display-section" class="open-recipe-btn" id="open-recipe-btn">Open Recipe</a>
+                                    </div>
+                                    
+                                    
+                                    <div class="recipe-header">
+                                         <!-- Name -->
+                                        <div class="recipe-title">
+                                            <h3 id="bread-2-title"></h3>
+                                        </div>
+                                        <!-- Details -->
+                                        <div class="recipe-details" id="bread-2-details">
+                                            <ul>
+                                                <li>Prep: <span class="recipe-detail" id="bread-2-prep-time"></span></li>
+                                                <li>Cook: <span class="recipe-detail" id="bread-2-cook-time"></span></li>
+                                                <li>Calories: <span class="recipe-detail" id="bread-2-calories"></span></li>
+                                                <li>Protein: <span class="recipe-detail" id="bread-2-protein"></span></li>
+                                                <li>Carbs: <span class="recipe-detail" id="bread-2-carbs"></span></li>
+                                                <li>Fat: <span class="recipe-detail" id="bread-2-fat"></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- TAGS -->
+                                    <div class="tags-container">
+                                        <div class="tags">
+                                            <h4>FYI...</h4>
+                                            <ul>
+                                                <li class=tag id="bread-2-tag-1"></li>
+                                                <li class=tag id="bread-2-tag-2"></li>
+                                                <li class=tag id="bread-2-tag-3"></li>
+                                                <li class=tag id="bread-2-tag-4"></li>
+                                                <li class=tag id="bread-2-tag-5"></li>
+                                            </ul>
+                                        </div>  
+                                    </div>                                    
+
+                                    <!-- Recipe Body -->
+                                    <div class="recipe-body">
+                                        <!-- Picture -->
+                                        <div class="recipe-pic" id="bread-2-pic">
+                                        </div>
+                                        <!-- Ingredients / Hardware -->
+                                        <div class="ingredients-hardware">
+
+                                            <div class="ingredients"> 
+                                                <h4>Ingredients:</h4> <span class="shopping-item" id="bread-2-ingredients"></span>
+                                            </div>
+
+                                            <div class="hardware">
+                                                <h4>Hardware:</h4> <span class="hardware-item" id="bread-2-hardware"></span>                                           
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
 
+                            <!-- Bread Slide 3 -->
+                            <div class="slide" id="bread-slide-3">
+                                <div class="recipe-card" id="recipe-card-bread-3">
+
+                                    <!-- Overlay -->
+                                    <div class="overlay">
+                                        <a href="#recipe-display-section" class="open-recipe-btn" id="open-recipe-btn">Open Recipe</a>
+                                    </div>
+
+
+                                    <div class="recipe-header">
+                                         <!-- Name -->
+                                        <div class="recipe-title">
+                                            <h3 id="bread-3-title"></h3>
+                                        </div>
+                                        <!-- Details -->
+                                        <div class="recipe-details" id="bread-3-details">
+                                            <ul>
+                                                <li>Prep: <span class="recipe-detail" id="bread-3-prep-time"></span></li>
+                                                <li>Cook: <span class="recipe-detail" id="bread-3-cook-time"></span></li>
+                                                <li>Calories: <span class="recipe-detail" id="bread-3-calories"></span></li>
+                                                <li>Protein: <span class="recipe-detail" id="bread-3-protein"></span></li>
+                                                <li>Carbs: <span class="recipe-detail" id="bread-3-carbs"></span></li>
+                                                <li>Fat: <span class="recipe-detail" id="bread-3-fat"></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- TAGS -->
+                                    <div class="tags-container">
+                                        <div class="tags">
+                                            <h4>FYI...</h4>
+                                            <ul>
+                                                <li class=tag id="bread-3-tag-1"></li>
+                                                <li class=tag id="bread-3-tag-2"></li>
+                                                <li class=tag id="bread-3-tag-3"></li>
+                                                <li class=tag id="bread-3-tag-4"></li>
+                                                <li class=tag id="bread-3-tag-5"></li>
+                                            </ul>
+                                        </div>  
+                                    </div>     
+
+                                    <div class="recipe-body">
+                                        <!-- Picture -->
+                                        <div class="recipe-pic" id="bread-3-pic">
+                                        </div>
+                                        <!-- Ingredients / Hardware -->
+                                        <div class="ingredients-hardware">
+                                            <div class="ingredients"> 
+                                                <h4>Ingredients:</h4> <span class="shopping-item" id="bread-3-ingredients"></span>
+                                            </div>
+                                            <div class="hardware">
+                                                <h4>Hardware:</h4> <span class="hardware-item" id="bread-3-hardware"></span>                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
 
@@ -257,34 +477,749 @@
                     
             </div>
 
-            <!-- Marinades -->
-            <div class="tab-panel panel" id="marinades">
-                <!-- lightSlider UL -->
-                <ul id="lightSlider-marinades">
+            <!-- Desserts -->
+            <div class="tab-panel panel" id="desserts">
 
-                    <li>MARINADES 1</li>
-                    <li>MARINADES 2</li>
-                    <li>MARINADES 3</li>
-                    <li>MARINADES 4</li>
-                    <li>MARINADES 5</li>
+                <!-- Slider -->
+                <div class="slider" id="desserts-slider">
 
-                </ul>
+                    <!-- Slider Buttons -->
+                    <div class="slide-buttons-container">
+                        <div class="slide-buttons">
+                            <h2>Recipe Directory</h2>
+                        </div>
+                    </div>
+
+                    <!-- Slide Viewer -->
+                    <div class="slide-viewer">
+                        <div class="slide-group">
+                            
+                            <!-- Slides -->
+                            
+                            <!-- Dessert Slide 1 -->
+                            <div class="slide" id="dessert-slide-1">
+                                <div class="recipe-card" id="recipe-card-dessert-1">
+
+                                    <!-- Overlay -->
+                                    <div class="overlay">
+                                        <a href="#recipe-display-section" class="open-recipe-btn" id="open-recipe-btn">Open Recipe</a>
+                                    </div>
+
+                                    <div class="recipe-header">
+                                            <!-- Name -->
+                                        <div class="recipe-title">
+                                            <h3 id="dessert-1-title"></h3>
+                                        </div>
+                                        <!-- Details -->
+                                        <div class="recipe-details" id="dessert-1-details">
+                                            <ul>
+                                                <li>Prep: <span class="recipe-detail" id="dessert-1-prep-time"></span></li>
+                                                <li>Cook: <span class="recipe-detail" id="dessert-1-cook-time"></span></li>
+                                                <li>Calories: <span class="recipe-detail" id="dessert-1-calories"></span></li>
+                                                <li>Protein: <span class="recipe-detail" id="dessert-1-protein"></span></li>
+                                                <li>Carbs: <span class="recipe-detail" id="dessert-1-carbs"></span></li>
+                                                <li>Fat: <span class="recipe-detail" id="dessert-1-fat"></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- TAGS -->
+                                    <div class="tags-container">
+                                        <div class="tags">
+                                            <h4>FYI...</h4>
+                                            <ul>
+                                                <li class=tag id="dessert-1-tag-1"></li>
+                                                <li class=tag id="dessert-1-tag-2"></li>
+                                                <li class=tag id="dessert-1-tag-3"></li>
+                                                <li class=tag id="dessert-1-tag-4"></li>
+                                                <li class=tag id="dessert-1-tag-5"></li>
+                                            </ul>
+                                        </div>  
+                                    </div>
+                                    <!-- Recipe Body -->
+                                    <div class="recipe-body">
+                                        <!-- Picture -->
+                                        <div class="recipe-pic" id="dessert-1-pic">
+                                        </div>
+                                        <!-- Ingredients / Hardware -->
+                                        <div class="ingredients-hardware">
+                                            <div class="ingredients"> 
+                                                <h4>Ingredients:</h4> <span class="shopping-item" id="dessert-1-ingredients"></span>
+                                            </div>
+                                            <div class="hardware">
+                                                <h4>Hardware:</h4> <span class="hardware-item" id="dessert-1-hardware"></span>                                            
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Dessert Slide 2 -->
+                            <div class="slide" id="dessert-slide-2">
+                                <div class="recipe-card" id="recipe-card-dessert-2">
+
+                                    <!-- Overlay -->
+                                    <div class="overlay">
+                                        <a href="#recipe-display-section" class="open-recipe-btn" id="open-recipe-btn">Open Recipe</a>
+                                    </div>
+
+
+                                    <div class="recipe-header">
+                                            <!-- Name -->
+                                        <div class="recipe-title">
+                                            <h3 id="dessert-2-title"></h3>
+                                        </div>
+                                        <!-- Details -->
+                                        <div class="recipe-details" id="dessert-2-details">
+                                            <ul>
+                                                <li>Prep: <span class="recipe-detail" id="dessert-2-prep-time"></span></li>
+                                                <li>Cook: <span class="recipe-detail" id="dessert-2-cook-time"></span></li>
+                                                <li>Calories: <span class="recipe-detail" id="dessert-2-calories"></span></li>
+                                                <li>Protein: <span class="recipe-detail" id="dessert-2-protein"></span></li>
+                                                <li>Carbs: <span class="recipe-detail" id="dessert-2-carbs"></span></li>
+                                                <li>Fat: <span class="recipe-detail" id="dessert-2-fat"></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- TAGS -->
+                                    <div class="tags-container">
+                                        <div class="tags">
+                                            <h4>FYI...</h4>
+                                            <ul>
+                                                <li class=tag id="dessert-2-tag-1"></li>
+                                                <li class=tag id="dessert-2-tag-2"></li>
+                                                <li class=tag id="dessert-2-tag-3"></li>
+                                                <li class=tag id="dessert-2-tag-4"></li>
+                                                <li class=tag id="dessert-2-tag-5"></li>
+                                            </ul>
+                                        </div>  
+                                    </div>                                    
+
+                                    <!-- Recipe Body -->
+                                    <div class="recipe-body">
+                                        <!-- Picture -->
+                                        <div class="recipe-pic" id="dessert-2-pic">
+                                        </div>
+                                        <!-- Ingredients / Hardware -->
+                                        <div class="ingredients-hardware">
+
+                                            <div class="ingredients"> 
+                                                <h4>Ingredients:</h4> <span class="shopping-item" id="dessert-2-ingredients"></span>
+                                            </div>
+
+                                            <div class="hardware">
+                                                <h4>Hardware:</h4> <span class="hardware-item" id="dessert-2-hardware"></span>                                           
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Dessert Slide 3 -->
+                            <div class="slide" id="dessert-slide-3">
+                                <div class="recipe-card" id="recipe-card-dessert-3">
+
+                                    <!-- Overlay -->
+                                    <div class="overlay">
+                                        <a href="#recipe-display-section" class="open-recipe-btn" id="open-recipe-btn">Open Recipe</a>
+                                    </div>
+
+                                    <div class="recipe-header">
+                                            <!-- Name -->
+                                        <div class="recipe-title">
+                                            <h3 id="dessert-3-title"></h3>
+                                        </div>
+                                        <!-- Details -->
+                                        <div class="recipe-details" id="dessert-3-details">
+                                            <ul>
+                                                <li>Prep: <span class="recipe-detail" id="dessert-3-prep-time"></span></li>
+                                                <li>Cook: <span class="recipe-detail" id="dessert-3-cook-time"></span></li>
+                                                <li>Calories: <span class="recipe-detail" id="dessert-3-calories"></span></li>
+                                                <li>Protein: <span class="recipe-detail" id="dessert-3-protein"></span></li>
+                                                <li>Carbs: <span class="recipe-detail" id="dessert-3-carbs"></span></li>
+                                                <li>Fat: <span class="recipe-detail" id="dessert-3-fat"></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- TAGS -->
+                                    <div class="tags-container">
+                                        <div class="tags">
+                                            <h4>FYI...</h4>
+                                            <ul>
+                                                <li class=tag id="dessert-3-tag-1"></li>
+                                                <li class=tag id="dessert-3-tag-2"></li>
+                                                <li class=tag id="dessert-3-tag-3"></li>
+                                                <li class=tag id="dessert-3-tag-4"></li>
+                                                <li class=tag id="dessert-3-tag-5"></li>
+                                            </ul>
+                                        </div>  
+                                    </div>     
+
+                                    <div class="recipe-body">
+                                        <!-- Picture -->
+                                        <div class="recipe-pic" id="dessert-3-pic">
+
+                                            <!-- Overlay -->
+                                            <div class="overlay">
+                                            <a href="#" class="open-recipe-btn">Open Recipe</a>
+                                            </div>
+
+                                        </div>
+                                        <!-- Ingredients / Hardware -->
+                                        <div class="ingredients-hardware">
+                                            <div class="ingredients"> 
+                                                <h4>Ingredients:</h4> <span class="shopping-item" id="dessert-3-ingredients"></span>
+                                            </div>
+                                            <div class="hardware">
+                                                <h4>Hardware:</h4> <span class="hardware-item" id="dessert-3-hardware"></span>                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
 
             <!-- Seafood -->
             <div class="tab-panel panel" id="seafood">
-                <!-- lightSlider UL -->
-                <ul id="lightSlider-seafood">
 
-                    <li>SEAFOOD 1</li>
-                    <li>SEAFOOD 2</li>
-                    <li>SEAFOOD 3</li>
-                    <li>SEAFOOD 4</li>
-                    <li>SEAFOOD 5</li>
+                <!-- Slider -->
+                <div class="slider" id="seafood-slider">
 
-                </ul>
+                    <!-- Slider Buttons -->
+                    <div class="slide-buttons-container">
+                        <div class="slide-buttons">
+                            <h2>Recipe Directory</h2>
+                        </div>
+                    </div>
+
+                    <!-- Slide Viewer -->
+                    <div class="slide-viewer">
+                        <div class="slide-group">
+                            
+                            <!-- Slides -->
+                            
+                            <!-- Dessert Slide 1 -->
+                            <div class="slide" id="seafood-slide-1">
+                                <div class="recipe-card" id="recipe-card-seafood-1">
+
+                                    <!-- Overlay -->
+                                    <div class="overlay">
+                                        <a href="#recipe-display-section" class="open-recipe-btn" id="open-recipe-btn">Open Recipe</a>
+                                    </div>
+
+                                    <div class="recipe-header">
+                                            <!-- Name -->
+                                        <div class="recipe-title">
+                                            <h3 id="seafood-1-title"></h3>
+                                        </div>
+                                        <!-- Details -->
+                                        <div class="recipe-details" id="seafood-1-details">
+                                            <ul>
+                                                <li>Prep: <span class="recipe-detail" id="seafood-1-prep-time"></span></li>
+                                                <li>Cook: <span class="recipe-detail" id="seafood-1-cook-time"></span></li>
+                                                <li>Calories: <span class="recipe-detail" id="seafood-1-calories"></span></li>
+                                                <li>Protein: <span class="recipe-detail" id="seafood-1-protein"></span></li>
+                                                <li>Carbs: <span class="recipe-detail" id="seafood-1-carbs"></span></li>
+                                                <li>Fat: <span class="recipe-detail" id="seafood-1-fat"></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- TAGS -->
+                                    <div class="tags-container">
+                                        <div class="tags">
+                                            <h4>FYI...</h4>
+                                            <ul>
+                                                <li class=tag id="seafood-1-tag-1"></li>
+                                                <li class=tag id="seafood-1-tag-2"></li>
+                                                <li class=tag id="seafood-1-tag-3"></li>
+                                                <li class=tag id="seafood-1-tag-4"></li>
+                                                <li class=tag id="seafood-1-tag-5"></li>
+                                            </ul>
+                                        </div>  
+                                    </div>
+                                    <!-- Recipe Body -->
+                                    <div class="recipe-body">
+                                        <!-- Picture -->
+                                        <div class="recipe-pic" id="seafood-1-pic">
+                                        </div>
+                                        <!-- Ingredients / Hardware -->
+                                        <div class="ingredients-hardware">
+                                            <div class="ingredients"> 
+                                                <h4>Ingredients:</h4> <span class="shopping-item" id="seafood-1-ingredients"></span>
+                                            </div>
+                                            <div class="hardware">
+                                                <h4>Hardware:</h4> <span class="hardware-item" id="seafood-1-hardware"></span>                                            
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Dessert Slide 2 -->
+                            <div class="slide" id="seafood-slide-2">
+                                <div class="recipe-card" id="recipe-card-seafood-2">
+
+                                    <!-- Overlay -->
+                                    <div class="overlay">
+                                        <a href="#recipe-display-section" class="open-recipe-btn" id="open-recipe-btn">Open Recipe</a>
+                                    </div>
+
+                                    <div class="recipe-header">
+                                            <!-- Name -->
+                                        <div class="recipe-title">
+                                            <h3 id="seafood-2-title"></h3>
+                                        </div>
+                                        <!-- Details -->
+                                        <div class="recipe-details" id="seafood-2-details">
+                                            <ul>
+                                                <li>Prep: <span class="recipe-detail" id="seafood-2-prep-time"></span></li>
+                                                <li>Cook: <span class="recipe-detail" id="seafood-2-cook-time"></span></li>
+                                                <li>Calories: <span class="recipe-detail" id="seafood-2-calories"></span></li>
+                                                <li>Protein: <span class="recipe-detail" id="seafood-2-protein"></span></li>
+                                                <li>Carbs: <span class="recipe-detail" id="seafood-2-carbs"></span></li>
+                                                <li>Fat: <span class="recipe-detail" id="seafood-2-fat"></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- TAGS -->
+                                    <div class="tags-container">
+                                        <div class="tags">
+                                            <h4>FYI...</h4>
+                                            <ul>
+                                                <li class=tag id="seafood-2-tag-1"></li>
+                                                <li class=tag id="seafood-2-tag-2"></li>
+                                                <li class=tag id="seafood-2-tag-3"></li>
+                                                <li class=tag id="seafood-2-tag-4"></li>
+                                                <li class=tag id="seafood-2-tag-5"></li>
+                                            </ul>
+                                        </div>  
+                                    </div>                                    
+
+                                    <!-- Recipe Body -->
+                                    <div class="recipe-body">
+                                        <!-- Picture -->
+                                        <div class="recipe-pic" id="seafood-2-pic">
+                                        </div>
+                                        <!-- Ingredients / Hardware -->
+                                        <div class="ingredients-hardware">
+
+                                            <div class="ingredients"> 
+                                                <h4>Ingredients:</h4> <span class="shopping-item" id="seafood-2-ingredients"></span>
+                                            </div>
+
+                                            <div class="hardware">
+                                                <h4>Hardware:</h4> <span class="hardware-item" id="seafood-2-hardware"></span>                                           
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Dessert Slide 3 -->
+                            <div class="slide" id="seafood-slide-3">
+                                <div class="recipe-card" id="recipe-card-seafood-3">
+
+                                    <!-- Overlay -->
+                                    <div class="overlay">
+                                        <a href="#recipe-display-section" class="open-recipe-btn" id="open-recipe-btn">Open Recipe</a>
+                                    </div>
+
+                                    <div class="recipe-header">
+                                            <!-- Name -->
+                                        <div class="recipe-title">
+                                            <h3 id="seafood-3-title"></h3>
+                                        </div>
+                                        <!-- Details -->
+                                        <div class="recipe-details" id="seafood-3-details">
+                                            <ul>
+                                                <li>Prep: <span class="recipe-detail" id="seafood-3-prep-time"></span></li>
+                                                <li>Cook: <span class="recipe-detail" id="seafood-3-cook-time"></span></li>
+                                                <li>Calories: <span class="recipe-detail" id="seafood-3-calories"></span></li>
+                                                <li>Protein: <span class="recipe-detail" id="seafood-3-protein"></span></li>
+                                                <li>Carbs: <span class="recipe-detail" id="seafood-3-carbs"></span></li>
+                                                <li>Fat: <span class="recipe-detail" id="seafood-3-fat"></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- TAGS -->
+                                    <div class="tags-container">
+                                        <div class="tags">
+                                            <h4>FYI...</h4>
+                                            <ul>
+                                                <li class=tag id="seafood-3-tag-1"></li>
+                                                <li class=tag id="seafood-3-tag-2"></li>
+                                                <li class=tag id="seafood-3-tag-3"></li>
+                                                <li class=tag id="seafood-3-tag-4"></li>
+                                                <li class=tag id="seafood-3-tag-5"></li>
+                                            </ul>
+                                        </div>  
+                                    </div>     
+
+                                    <div class="recipe-body">
+                                        <!-- Picture -->
+                                        <div class="recipe-pic" id="seafood-3-pic">
+                                        </div>
+                                        <!-- Ingredients / Hardware -->
+                                        <div class="ingredients-hardware">
+                                            <div class="ingredients"> 
+                                                <h4>Ingredients:</h4> <span class="shopping-item" id="seafood-3-ingredients"></span>
+                                            </div>
+                                            <div class="hardware">
+                                                <h4>Hardware:</h4> <span class="hardware-item" id="seafood-3-hardware"></span>                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
 
+            <!-- Soups Panel -->
+            <div class="tab-panel slider-container" id="soups">
+
+                <!-- Slider -->
+                <div class="slider" id="soups-slider">
+
+                    <!-- Slider Buttons -->
+                    <div class="slide-buttons-container">
+                        <div class="slide-buttons">
+                            <h2>Recipe Directory</h2>
+                        </div>
+                    </div>
+
+                    <!-- Slide Viewer -->
+                    <div class="slide-viewer">
+                        <div class="slide-group">
+                            
+                            <!-- Slides -->
+                            
+                            <!-- Soup Slide 1 -->
+                            <div class="slide" id="soup-slide-1">
+                                <div class="recipe-card" id="recipe-card-soup-1">
+
+                                    <!-- Overlay -->
+                                    <div class="overlay">
+                                        <a href="#recipe-display-section" class="open-recipe-btn" id="open-recipe-btn">Open Recipe</a>
+                                    </div>
+                                    
+                                    <div class="recipe-header">
+                                            <!-- Name -->
+                                        <div class="recipe-title">
+                                            <h3 id="soup-1-title"></h3>
+                                        </div>
+                                        <!-- Details -->
+                                        <div class="recipe-details" id="soup-1-details">
+                                            <ul>
+                                                <li>Prep: <span class="recipe-detail" id="soup-1-prep-time"></span></li>
+                                                <li>Cook: <span class="recipe-detail" id="soup-1-cook-time"></span></li>
+                                                <li>Calories: <span class="recipe-detail" id="soup-1-calories"></span></li>
+                                                <li>Protein: <span class="recipe-detail" id="soup-1-protein"></span></li>
+                                                <li>Carbs: <span class="recipe-detail" id="soup-1-carbs"></span></li>
+                                                <li>Fat: <span class="recipe-detail" id="soup-1-fat"></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- TAGS -->
+                                    <div class="tags-container">
+                                        <div class="tags">
+                                            <h4>FYI...</h4>
+                                            <ul>
+                                                <li class=tag id="soup-1-tag-1"></li>
+                                                <li class=tag id="soup-1-tag-2"></li>
+                                                <li class=tag id="soup-1-tag-3"></li>
+                                                <li class=tag id="soup-1-tag-4"></li>
+                                                <li class=tag id="soup-1-tag-5"></li>
+                                            </ul>
+                                        </div>  
+                                    </div>
+                                    <!-- Recipe Body -->
+                                    <div class="recipe-body">
+                                        <!-- Picture -->
+                                        <div class="recipe-pic" id="soup-1-pic">
+                                        </div>
+                                        <!-- Ingredients / Hardware -->
+                                        <div class="ingredients-hardware">
+                                            <div class="ingredients"> 
+                                                <h4>Ingredients:</h4> <span class="shopping-item" id="soup-1-ingredients"></span>
+                                            </div>
+                                            <div class="hardware">
+                                                <h4>Hardware:</h4> <span class="hardware-item" id="soup-1-hardware"></span>                                            
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Soup Slide 2 -->
+                            <div class="slide" id="soup-slide-2">
+                                <div class="recipe-card" id="recipe-card-soup-2">
+
+                                    <!-- Overlay -->
+                                    <div class="overlay">
+                                        <a href="#recipe-display-section" class="open-recipe-btn" id="open-recipe-btn">Open Recipe</a>
+                                    </div>
+
+                                    <div class="recipe-header">
+                                            <!-- Name -->
+                                        <div class="recipe-title">
+                                            <h3 id="soup-2-title"></h3>
+                                        </div>
+                                        <!-- Details -->
+                                        <div class="recipe-details" id="soup-2-details">
+                                            <ul>
+                                                <li>Prep: <span class="recipe-detail" id="soup-2-prep-time"></span></li>
+                                                <li>Cook: <span class="recipe-detail" id="soup-2-cook-time"></span></li>
+                                                <li>Calories: <span class="recipe-detail" id="soup-2-calories"></span></li>
+                                                <li>Protein: <span class="recipe-detail" id="soup-2-protein"></span></li>
+                                                <li>Carbs: <span class="recipe-detail" id="soup-2-carbs"></span></li>
+                                                <li>Fat: <span class="recipe-detail" id="soup-2-fat"></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- TAGS -->
+                                    <div class="tags-container">
+                                        <div class="tags">
+                                            <h4>FYI...</h4>
+                                            <ul>
+                                                <li class=tag id="soup-2-tag-1"></li>
+                                                <li class=tag id="soup-2-tag-2"></li>
+                                                <li class=tag id="soup-2-tag-3"></li>
+                                                <li class=tag id="soup-2-tag-4"></li>
+                                                <li class=tag id="soup-2-tag-5"></li>
+                                            </ul>
+                                        </div>  
+                                    </div>                                    
+
+                                    <!-- Recipe Body -->
+                                    <div class="recipe-body">
+                                        <!-- Picture -->
+                                        <div class="recipe-pic" id="soup-2-pic">
+                                        </div>
+                                        <!-- Ingredients / Hardware -->
+                                        <div class="ingredients-hardware">
+
+                                            <div class="ingredients"> 
+                                                <h4>Ingredients:</h4> <span class="shopping-item" id="soup-2-ingredients"></span>
+                                            </div>
+
+                                            <div class="hardware">
+                                                <h4>Hardware:</h4> <span class="hardware-item" id="soup-2-hardware"></span>                                           
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Soup Slide 3 -->
+                            <div class="slide" id="soup-slide-3">
+                                <div class="recipe-card" id="recipe-card-soup-3">
+
+                                    <!-- Overlay -->
+                                    <div class="overlay">
+                                        <a href="#recipe-display-section" class="open-recipe-btn" id="open-recipe-btn">Open Recipe</a>
+                                    </div>
+
+                                    <div class="recipe-header">
+                                            <!-- Name -->
+                                        <div class="recipe-title">
+                                            <h3 id="soup-3-title"></h3>
+                                        </div>
+                                        <!-- Details -->
+                                        <div class="recipe-details" id="soup-3-details">
+                                            <ul>
+                                                <li>Prep: <span class="recipe-detail" id="soup-3-prep-time"></span></li>
+                                                <li>Cook: <span class="recipe-detail" id="soup-3-cook-time"></span></li>
+                                                <li>Calories: <span class="recipe-detail" id="soup-3-calories"></span></li>
+                                                <li>Protein: <span class="recipe-detail" id="soup-3-protein"></span></li>
+                                                <li>Carbs: <span class="recipe-detail" id="soup-3-carbs"></span></li>
+                                                <li>Fat: <span class="recipe-detail" id="soup-3-fat"></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- TAGS -->
+                                    <div class="tags-container">
+                                        <div class="tags">
+                                            <h4>FYI...</h4>
+                                            <ul>
+                                                <li class=tag id="soup-3-tag-1"></li>
+                                                <li class=tag id="soup-3-tag-2"></li>
+                                                <li class=tag id="soup-3-tag-3"></li>
+                                                <li class=tag id="soup-3-tag-4"></li>
+                                                <li class=tag id="soup-3-tag-5"></li>
+                                            </ul>
+                                        </div>  
+                                    </div>     
+
+                                    <div class="recipe-body">
+                                        <!-- Picture -->
+                                        <div class="recipe-pic" id="soup-3-pic">
+                                        </div>
+                                        <!-- Ingredients / Hardware -->
+                                        <div class="ingredients-hardware">
+                                            <div class="ingredients"> 
+                                                <h4>Ingredients:</h4> <span class="shopping-item" id="soup-3-ingredients"></span>
+                                            </div>
+                                            <div class="hardware">
+                                                <h4>Hardware:</h4> <span class="hardware-item" id="soup-3-hardware"></span>                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+                    
+            </div>
+
+            <!-- Secrets Panel -->
+            <div class="tab-panel" id="secrets">
+
+                <!-- Secrets body -->
+                <div class="secrets-body">
+
+                    <!-- Secrets list -->
+                    <h1 id="secrets-header">A word to the wise...</h1>
+                    <ul class="secrets-list">
+                        <li class="secret">😮 Paprika is not water soluble</li>
+                        <li class="secret">🧠 Mustard seeds contain antioxidants, and have anti-inflammatory and antimicrobial properties</li>
+                        <li class="secret">🍞 Unbleached All-Purpose flour can be used in place of typical 'bread flour'</li>
+                        <li class="secret">🍄 Mushrooms are rich in selenium and vitamins B and D</li>
+                        <li class="secret">🌱 1 cup of cooked split-peas contains 15g each of fiber and protein</li>
+                    </ul>
+
+                </div>
+                    
+            </div>            
+    </div>
+
+    <!-- Recipe Display Section -->
+    <div class="recipe-display-section" id="recipe-display-section">
+
+        <!-- Recipe Display Container -->
+        <div class="recipe-display-container" id="recipe-display-container">
+
+            <!-- Recipe Display -->
+            <div class="recipe-display" id="recipe-display">
+
+                <!-- Recipe Display Header -->
+                <div class="recipe-display-header" id="recipe-display-header">
+
+                    <!-- Recipe Display Title -->
+                    <div class="recipe-display-title" id="recipe-display-title">
+                        <h1 class="title">Recipe Title</h1>
+                    </div>
+
+                    <!-- Recipe Display Details: prep and nutrition etc -->
+                    <div class="recipe-display-details" id="recipe-display-details">
+                    
+                        <div class="recipe-display-details" id="recipe-display-details">
+                            <ul>
+                                <li>Prep: <span class="recipe-detail" id="beef-1-prep-time"></span></li>
+                                <li>Cook: <span class="recipe-detail" id="beef-1-cook-time"></span></li>
+                                <li>Calories: <span class="recipe-detail" id="beef-1-calories"></span></li>
+                                <li>Protein: <span class="recipe-detail" id="beef-1-protein"></span></li>
+                                <li>Carbs: <span class="recipe-detail" id="beef-1-carbs"></span></li>
+                                <li>Fat: <span class="recipe-detail" id="beef-1-fat"></span></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Recipe Display Body: 3 columns -->
+                <div class="recipe-display-body" id="recipe-display-body">
+
+                    <!-- Recipe Display - column 1: 3 rows -->
+                    <div class="recipe-display-body-col" id="recipe-display-col-1">
+
+                        <!-- Row 1 -->
+                        <div class="recipe-display-servings" id="recipe-display-servings">
+                            <h2 class="test-header">Servings Info</h2>
+                        </div>
+
+                        <!-- Row 2 -->
+                        <div class="recipe-display-blurb" id="recipe-display-blurb">
+                            <h2 class="test-header">Blurb</h2>
+                        </div>
+
+                        <!-- Row 3 -->
+                        <div class="recipe-display-hardware" id="recipe-display-hardware">
+                            <h2 class="test-header">Hardware</h2>
+                        </div>
+
+                    </div>
+
+                    <!-- Recipe Display - column 2: 2 rows -->
+                    <div class="recipe-display-body-col" id="recipe-display-col-2">
+                        
+                        <!-- Row 1 -->
+                        <div class="recipe-display-servings" id="recipe-display-servings">
+                            <h2 class="test-header">Ingredients/Quantities</h2>
+                        </div>
+                        
+                        <!-- Row 2 -->
+                        <div class="recipe-display-servings" id="recipe-display-servings">
+                            <h2 class="test-header">Procedure / Instructions</h2>
+                        </div>
+
+                    </div>
+
+                    <!-- Recipe Display - column 3: 3 rows -->
+                    <div class="recipe-display-body-col" id="recipe-display-col-3">
+
+                        <!-- Row 1 -->
+                        <div class="recipe-display-servings" id="recipe-display-tags">
+                            <h2 class="test-header">Tags</h2>
+                        </div>
+
+                        <!-- Row 2 -->
+                        <div class="recipe-display-blurb" id="recipe-display-picture">
+                            <h2 class="test-header">Picture</h2>
+                        </div>
+
+                        <!-- Row 3 -->
+                        <div class="recipe-display-hardware" id="recipe-display-variations">
+                            <h2 class="test-header">Variations</h2>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 
 
