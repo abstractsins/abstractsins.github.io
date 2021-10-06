@@ -32,8 +32,8 @@ body {
     --index-card-bg-2: #a59276;
     --lettuce: #CDE6A5;
     --avocado: #568203;
-    --pink-frosting: #fd8791;
-    --pink-frosting-2: #ad5860;
+    --pink-frosting: #db7179;
+    --pink-frosting-2: #9c4d55;
     --ocean: #006994;
     --ocean-2: #004d6b;
     --bread: #eee1cf;
@@ -81,6 +81,9 @@ body {
     --index-card-shadow-2: drop-shadow(3px 5px 2px #000000);
     --index-card-shadow-3: drop-shadow(8px 8px 2px rgba(0, 0, 0, 0.4));
     --index-card-shadow-4: drop-shadow(8px 8px 2px rgba(78, 78, 78, 0.4));
+    --open-recipe-btn-active: rgb(98, 0, 98);
+    --open-recipe-btn-hover: rgba(255, 68, 0, 0.7);
+    --open-recipe-btn: rgba(173, 216, 230, 1);
 }
 
 a {
@@ -223,26 +226,47 @@ a {
     filter: var(--index-card-shadow);
 }
 
-#welcome-tab, #welcome {
+#welcome-tab {
+background-color: var(--index-card-bg)
+}
+#beef-tab {
+    background-color: var(--beef-bg)
+}
+#breads-tab {
+    background-color: var(--breads-bg)
+}
+#desserts-tab {
+    background-color: var(--desserts-bg)
+}
+#seafood-tab {
+    background-color: var(--seafood-bg)
+}
+#soups-tab {
+    background-color: var(--soups-bg)
+}
+#secrets-tab {
+    background-color: var(--secrets-bg);
+    color: whitesmoke;
+}
+#welcome {
     background-image: linear-gradient(var(--index-card-bg), var(--index-card-bg-2));
 }
-
-#beef-tab, #beef {
+#beef {
     background-image: linear-gradient(var(--beef-red), var(--beef-red-2));
 }
-#breads-tab, #breads {
+#breads {
     background-image: linear-gradient(var(--breads-bg), var(--breads-bg-2));
 }
-#desserts-tab, #desserts {
+#desserts {
     background-image: linear-gradient(var(--desserts-bg), var(--desserts-bg-2));
 }
-#seafood-tab, #seafood{
+#seafood{
     background-image: linear-gradient(var(--seafood-bg), var(--seafood-bg-2));
 }
-#soups-tab, #soups{
+#soups{
     background-image: linear-gradient(var(--soups-bg), var(--soups-bg-2));
 }
-#secrets-tab, #secrets {
+#secrets {
     background-image: linear-gradient(var(--secrets-bg), black);
     color: whitesmoke;
 }
@@ -493,22 +517,22 @@ li.hardware-item {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: lightblue;
+    background-color: var(--open-recipe-btn);
     color: blue;
     font-family: sans-serif;
     letter-spacing: 0.1ch;
     border-radius: 20px;
-    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 1);
 }
 
 .open-recipe-btn:hover {
-    color: #FFF;
-    background-color: rgba(255, 68, 0, 0.6);
+    color: whitesmoke;
+    background-color: var(--open-recipe-btn-hover);
     transition: all ease 300ms;
 }
 
 .open-recipe-btn:active {
-    background-color: deeppink;
+    background-color: var(--open-recipe-btn-active);
 }
 
 /* 5 -- Header Section */
@@ -584,7 +608,7 @@ h1.title {
 
 #bread-2-pic {
     background-image: var(--bread-2-pic);
-    background-size: 70%;
+    background-size: 80%;
 }
 
 #bread-3-pic {
@@ -647,6 +671,7 @@ ul.secrets-list {
 }
 
 .recipe-display {
+    display: grid;
     width: 100%;
     height: 85%;
 }

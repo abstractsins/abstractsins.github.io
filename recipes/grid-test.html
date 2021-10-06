@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Single+Day&display=swap" rel="stylesheet">    <!-- from lightSlider github -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">    
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <!-- CSS SHEETS -->
+    <link rel="stylesheet" type="text/css" href="css/grid-test.css" />
+    <!-- JavaScript -->
+    <script type="text/javascript" src="js/main.js" async></script>
+    
+    <title>CSS Grid Test</title>
+</head>
+<body>
+    
+    <!-- Recipe Display Section -->
+    <div class="recipe-display-section" id="recipe-display-section">
+
+        <!-- Recipe Display Container -->
+        <div class="recipe-display-container" id="recipe-display-container">
+
+            <!-- Recipe Display Title -->
+            <div class="recipe-display-title" id="beef-1-title">
+                <h1 class="title">Recipe Title</h1>
+            </div>
+
+            <!-- Recipe Display Details: prep and nutrition etc -->
+            <div class="recipe-display-details" id="recipe-display-details">
+
+                <div class="recipe-display-details" id="recipe-display-details">
+                    <ul>
+                        <li>Prep: <span class="recipe-detail" id="beef-1-prep-time"></span></li>
+                        <li>Cook: <span class="recipe-detail" id="beef-1-cook-time"></span></li>
+                        <li>Calories: <span class="recipe-detail" id="beef-1-calories"></span></li>
+                        <li>Protein: <span class="recipe-detail" id="beef-1-protein"></span></li>
+                        <li>Carbs: <span class="recipe-detail" id="beef-1-carbs"></span></li>
+                        <li>Fat: <span class="recipe-detail" id="beef-1-fat"></span></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Recipe Display: servings info  -->
+            <div class="recipe-display-servings" id="recipe-display-servings">
+                <h2 class="test-header">Servings Info</h2>
+            </div>
+
+            <!-- Recipe Display: blurb -->
+            <div class="recipe-display-blurb" id="recipe-display-blurb">
+                <h2 class="test-header">Blurb</h2>
+            </div>
+
+            <!-- Recipe Display: hardware -->
+            <div class="recipe-display-hardware">
+                <h2 class="test-header">Hardware</h2>
+                <p id="beef-1-hardware"></p>
+            </div>
+
+            <!-- Recipe Display: Ingredients -->
+            <div class="recipe-display-ingredients">
+                <h2 class="test-header">Ingredients/Quantities</h2>
+                <p id="beef-1-ingredients"></p>
+            </div>
+            
+            <!-- Recipe Display: procedure -->
+            <div class="recipe-display-procedure">
+                <h2 class="test-header">Procedure / Instructions</h2>
+                <p id="recipe-display-procedure"></p>
+            </div>
+
+            <!-- Recipe Display: tags -->
+            <div class="recipe-display-tags" id="recipe-display-tags">
+                <h2 class="test-header">Tags</h2>
+                <ul>
+                    <li><span class=tag id="beef-1-tag-1"></span> - <span class="tag-count" id="tag-1-count">X other recipes</span></li>
+                    <li><span class=tag id="beef-1-tag-2"></span> - <span class="tag-count" id="tag-2-count">X other recipes</span></li>
+                    <li><span class=tag id="beef-1-tag-3"></span> - <span class="tag-count" id="tag-3-count">X other recipes</span></li>
+                    <li><span class=tag id="beef-1-tag-4"></span> - <span class="tag-count" id="tag-4-count">X other recipes</span></li>
+                    <li><span class=tag id="beef-1-tag-5"></span> - <span class="tag-count" id="tag-5-count">X other recipes</span></li>
+                </ul>
+            </div>
+
+            <!-- Recipe Display: pic -->
+            <div class="recipe-display-pic">
+                <img src="assets/recipes/short-ribs-1.jpg">
+            </div>
+
+            <!-- Recipe Display: variations -->
+            <div class="recipe-display-variations" id="recipe-display-variations">
+                <h2 class="test-header">Variations</h2>
+            </div>
+
+        </div>
+
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,147 @@
+*, html, body {
+    /* border: 1px solid red; */
+    padding: 0;
+    margin: 0;
+}
+
+/* 7 -- Recipe Display Section */
+.recipe-display-section {
+    display: flex;
+    /* width: 100%;
+    height: 100vh; */
+    justify-content: center;
+    align-items: center;
+    background-color: lightcoral;
+}
+
+.recipe-display-section.active {
+    display: flex;
+    background-color: var(--lettuce);
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipe-display-container {
+    display: grid;
+    grid-template: 1fr 2fr 2fr 2fr / 1fr 1fr 1fr;
+    grid-gap: 10px 15px;
+    width: 90%;
+    height: 100vh;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 1%;
+}
+
+.recipe-display-title {
+    background-color: lightskyblue;
+    grid-area: 1 / 1 / span 1 / span 2;
+    text-align: left;
+    color: black;
+    font-family: "Roboto Slab";
+    letter-spacing: 0.2ch;
+    font-size: 3.5em;
+    padding: 15px;
+    text-align: center;
+}
+
+.recipe-display-title h2 {
+
+}
+
+h2 {
+    font-family: "Roboto Slab";;
+}
+
+p {
+    font-family: "Roboto Condensed";
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline;
+}
+
+.recipe-display-tags li {
+    font-family: "Indie Flower";
+}
+
+.tag-count {
+    padding-right: 30px;
+    font-family: sans-serif;
+}
+
+.recipe-display-details {
+    background-color: indigo;
+    grid-area: 1 / 3 / span 1 / span 1;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.recipe-display-details li {
+    font-size: 1.25em;
+    font-family: "Roboto Slab", sans-serif;
+    font-weight: 600;
+    display: inline-flex;
+    justify-content: space-between;
+    letter-spacing: 0.15ch;
+}
+
+.recipe-display-servings {
+    background-color: limegreen;
+    grid-area: 2 / 1 / span 1 / span 1;
+    padding: 15px;
+}
+
+.recipe-display-blurb {
+    background-color: maroon;
+    grid-area: 3 / 1 / span 1 / span 1;  
+    padding: 15px;
+}
+
+.recipe-display-hardware {
+    background-color: deeppink;
+    grid-area: 4 / 1 / span 1 / span 1;
+    padding: 15px;
+}
+
+.recipe-display-ingredients {
+    background-color: cornflowerblue;
+    grid-area: 2 / 2 / span 1 / span 1;
+    padding: 15px;
+}
+
+.recipe-display-procedure {
+    background-color: cyan;
+    grid-area: 3 / 2 / span 2 / span 1;
+    padding: 15px;
+}
+
+.recipe-display-tags {
+    background-color: fuchsia;
+    grid-area: 2 / 3 / span 1 / span 1;
+    padding: 15px;
+}
+
+.recipe-display-pic {
+    background-color: gold;
+    grid-area: 3 / 3 / span 1 / span 1;
+    padding: 15px;
+}
+
+.recipe-display-pic img {
+    width: 100%;
+    height: 100%;
+}
+
+.recipe-display-variations {
+    background-color: greenyellow;
+    grid-area: 4 / 3 / span 1 / span 1;
+    padding: 15px;
+}
+
