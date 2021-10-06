@@ -475,7 +475,7 @@ li.hardware-item {
     font-size: 1.25em;
     font-weight: bold;
     margin: 3px 5px 0 10px; 
-    background-color: yellow;
+    background-color: rgb(255, 255, 0);
 }
 
 /* 4-A -- overlay */
@@ -655,32 +655,142 @@ ul.secrets-list {
 .recipe-display-section.active {
     display: flex;
     background-color: var(--lettuce);
-    height: 100vh;
+    height: 100%;
     width: 100%;
     justify-content: center;
     align-items: center;
 }
 
-.recipe-display-container {
+/* Search Window */
+.search-window {
+    display:  flex;
+    flex-direction: column;
+    position: fixed;
+    left: -315px;
+    transition: left 200ms ease-in-out 500ms;
+    background-color: var(--avocado);
+    height: 100%;
+    padding: 10px 30px 10px 15px;
+    align-items: flex-start;
+    z-index: 100;
+}
+
+.search-window:hover {
+    left: 0;
+}
+
+.search-tab {
+    position: absolute;
+    right: 5px;
+    top: 40%;
+    padding-right: 3px;
+}
+
+.search-tab h6 {
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+    letter-spacing: 0.5ch;
+    font-family: "roboto slab";
+    font-size: 18px;
+    font-weight: 600;
+    color: whitesmoke;
+}
+
+.search-tab img {
+    transform: translate(-50% -50%);
+    width: 28px;
+    height: auto;
+}
+
+#recipe-search {
+    background-color: var(--lettuce);
+    background-image: url('/css/search-icon-3.png');
+    font-family: "Roboto Slab";
+    background-blend-mode: soft-light;
+    background-position: 15px 18px;
+    background-repeat: no-repeat;
+    background-size: 10%;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 60%;
+    height: 40px;   
+    font-size: 18px;
+    padding: 12px 20px 12px 60px;
+    margin: 0 0 12px 0;
+}
+
+#recipe-search:active {
+    border: 0px;
+}
+
+#recipe-list {
     display: flex;
+    flex-direction: column;
+    list-style: none;
+    height: 100%;
+    width: 300px;
+    font-family: "Roboto Slab";
+    align-items: flex-start;
+}
+
+#recipe-list li {
+    text-align: center;
+    height: max-content;
+    width: 80%;
+    letter-spacing: 0ch;
+    font-weight: 400;
+    padding: 0;
+    filter: drop-shadow(0px 0px 0px black);
+    transition:     width 350ms, 
+                    height 350ms,
+                    letter-spacing 350ms, 
+                    font-weight 350ms,
+                    filter 350ms,
+                    padding 350ms;
+}
+
+#recipe-list li:hover {
     width: 90%;
-    height: 90%;
+    letter-spacing: 0.2ch;
+    font-weight: 800;
+    padding: 8px;
+    filter: var(--index-card-shadow-3);
+}
+
+#recipe-list li a {
+    border: 1px solid black;
+    border-radius: 10px;
+    display: block;
+    margin-top: -1px;
+    background-color: honeydew;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    /* margin-bottom: 2px; */
+}
+
+#recipe-list li a:hover:not(.header) {
+    background-color: rgb(255, 255, 0);
+}
+
+/* Recipe Display Container */
+
+h2.test-header {
+    font-family: "roboto slab";
+}
+
+.recipe-display-container {
+    display: grid;
+    grid-template: 1fr 2fr 2fr 2fr / 1fr 1fr 1fr;
+    grid-gap: 5px 8px;
+    width: 90%;
+    height: max-content;
     background-color: whitesmoke;
     border-radius: 10px;
-    padding: 0.5% 3%;
-}
-
-.recipe-display {
-    display: grid;
-    width: 100%;
-    height: 85%;
-}
-
-/* 7-A -- Recipe Header */
-.recipe-display-header {
-    display: inline-flex;
-    justify-content: flex-end;
-    width: 100%;
+    padding: 1%;
+    margin-top: 25px;
+    margin-bottom: 50px;
 }
 
 .recipe-display-container h1.title {
@@ -688,26 +798,30 @@ ul.secrets-list {
     color: black;
     font-family: "Roboto Slab";
     letter-spacing: 0.2ch;
-    font-size: 3.5em;
-}
-
-.recipe-display-title {
-    display: flex;
-    align-items: flex-start;
-    width: 100%;
-}
-
-.recipe-display-title h1.title {
+    font-size: 1em;
     padding: 0;
     width: 100%;
     text-align: left;
 }
 
+.recipe-display-title {
+    background-color: lightskyblue;
+    grid-area: 1 / 1 / span 1 / span 2;
+    text-align: left;
+    color: black;
+    font-family: "Roboto Slab";
+    letter-spacing: 0.2ch;
+    font-size: 3.5em;
+    padding: 15px;
+    text-align: center;
+}
+
 .recipe-display-details {
-    display: flex;
+    background-color: indigo;
+    grid-area: 1 / 3 / span 1 / span 1;
     align-items: center;
     justify-content: center;
-    width: max-content;
+    padding: 15px;
 }
 .recipe-display-details li {
     font-size: 1.25em;
@@ -715,31 +829,63 @@ ul.secrets-list {
     font-weight: 600;
     display: inline-flex;
     justify-content: space-between;
-    padding: 0;
     letter-spacing: 0.15ch;
 }
 
-/* 7-B -- Body: 3 columns */
-.recipe-display-body {
-    display: flex;
-    height: 100%;
+.recipe-display-servings {
+    background-color: limegreen;
+    grid-area: 2 / 1 / span 1 / span 1;
+    padding: 15px;
 }
 
-.recipe-display-body-col {
-    display: flex;
-    flex-flow: column;
-    margin-top: 15px;
+.recipe-display-blurb {
+    background-color: maroon;
+    grid-area: 3 / 1 / span 1 / span 1;  
+    padding: 15px;
+}
+
+.recipe-display-hardware {
+    background-color: deeppink;
+    grid-area: 4 / 1 / span 1 / span 1;
+    padding: 15px;
+}
+
+.recipe-display-ingredients {
+    background-color: cornflowerblue;
+    grid-area: 2 / 2 / span 1 / span 1;
+    padding: 15px;
+}
+
+.recipe-display-procedure {
+    background-color: cyan;
+    grid-area: 3 / 2 / span 2 / span 1;
+    padding: 15px;
+}
+
+.recipe-display-tags {
+    background-color: fuchsia;
+    grid-area: 2 / 3 / span 1 / span 1;
+    padding: 15px;
+}
+
+.recipe-display-pic {
+    /* background-color: gold; */
+    border: 3px dashed var(--charcoal);
+    grid-area: 3 / 3 / span 1 / span 1;
+    padding: 15px;
+}
+
+.recipe-display-pic img {
     width: 100%;
     height: auto;
-    /* background-color: lightskyblue; */
-    justify-content: space-around;
- }
-
-h2.test-header {
-    font-size: 2em;
-    padding: 10px;
-    font-family: sans-serif;
 }
+
+.recipe-display-variations {
+    background-color: greenyellow;
+    grid-area: 4 / 3 / span 1 / span 1;
+    padding: 15px;
+}
+
 
 /* SLIDER */
 #desserts h3 {

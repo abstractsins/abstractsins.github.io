@@ -29,6 +29,58 @@
     <!-- Up Button -->
     <button onclick="topFunction()" id="upBtn" title="Go to top">Top</button>
 
+    <div class="search-window">
+
+        <!-- Search tab for hovering over -->
+        <div class="search-tab">
+            <h6>&lt&lt Search &gt&gt</h6>
+        </div>
+    
+        <!-- Search box -->
+        <input type="text" id="recipe-search" onkeyup="search()" placeholder="Find a recipe..." title="Recipe Search"/>
+    
+        <!-- Recipe List -->
+        <ul id="recipe-list">
+            <!-- A -->
+            <!-- B -->
+            <li><a href="#">Best Biscuits</a></li>
+            <!-- C -->
+            <li><a href="#">Challah</a></li>
+            <!-- D -->
+            <!-- E -->
+            <!-- F -->
+            <!-- G -->
+            <li><a href="#">Gas Station Chili</a></li>
+            <!-- H -->
+            <!-- I -->
+            <!-- J -->
+            <!-- K -->
+            <!-- L -->
+            <li><a href="#">Langos</a></li>
+            <!-- M -->
+            <li><a href="#">Mashed Potatoes</a></li>
+            <li><a href="#">Moroccan Cauliflower</a></li>
+            <li><a href="#">Mushy Peas</a></li>
+            <li><a href="#">My Meatloaf</a></li>
+            <!-- N -->
+            <!-- N -->
+            <!-- O -->
+            <!-- P -->
+            <!-- Q -->
+            <!-- R -->
+            <li><a href="#">Red Wine Short Ribs</a></li>
+            <!-- S -->
+            <!-- T -->
+            <!-- U -->
+            <!-- V -->
+            <!-- W -->
+            <!-- X -->
+            <!-- Y -->
+            <!-- Z -->
+        </ul>
+    
+    </div>
+
     <!-- Header Section -->
     <div class="header">        
         <!-- Title -->
@@ -1126,95 +1178,75 @@
         <!-- Recipe Display Container -->
         <div class="recipe-display-container" id="recipe-display-container">
 
-            <!-- Recipe Display -->
-            <div class="recipe-display" id="recipe-display">
+            <!-- Recipe Display Title -->
+            <div class="recipe-display-title" id="beef-1-title">
+                <h1 class="title">Recipe Title</h1>
+            </div>
 
-                <!-- Recipe Display Header -->
-                <div class="recipe-display-header" id="recipe-display-header">
+            <!-- Recipe Display Details: prep and nutrition etc -->
+            <div class="recipe-display-details" id="recipe-display-details">
 
-                    <!-- Recipe Display Title -->
-                    <div class="recipe-display-title" id="recipe-display-title">
-                        <h1 class="title">Recipe Title</h1>
-                    </div>
-
-                    <!-- Recipe Display Details: prep and nutrition etc -->
-                    <div class="recipe-display-details" id="recipe-display-details">
-                    
-                        <div class="recipe-display-details" id="recipe-display-details">
-                            <ul>
-                                <li>Prep: <span class="recipe-detail" id="beef-1-prep-time"></span></li>
-                                <li>Cook: <span class="recipe-detail" id="beef-1-cook-time"></span></li>
-                                <li>Calories: <span class="recipe-detail" id="beef-1-calories"></span></li>
-                                <li>Protein: <span class="recipe-detail" id="beef-1-protein"></span></li>
-                                <li>Carbs: <span class="recipe-detail" id="beef-1-carbs"></span></li>
-                                <li>Fat: <span class="recipe-detail" id="beef-1-fat"></span></li>
-                            </ul>
-                        </div>
-
-                    </div>
-
+                <div class="recipe-display-details" id="recipe-display-details">
+                    <ul>
+                        <li>Prep: <span class="recipe-detail" id="beef-1-prep-time"></span></li>
+                        <li>Cook: <span class="recipe-detail" id="beef-1-cook-time"></span></li>
+                        <li>Calories: <span class="recipe-detail" id="beef-1-calories"></span></li>
+                        <li>Protein: <span class="recipe-detail" id="beef-1-protein"></span></li>
+                        <li>Carbs: <span class="recipe-detail" id="beef-1-carbs"></span></li>
+                        <li>Fat: <span class="recipe-detail" id="beef-1-fat"></span></li>
+                    </ul>
                 </div>
 
-                <!-- Recipe Display Body: 3 columns -->
-                <div class="recipe-display-body" id="recipe-display-body">
+            </div>
 
-                    <!-- Recipe Display - column 1: 3 rows -->
-                    <div class="recipe-display-body-col" id="recipe-display-col-1">
+            <!-- Recipe Display: servings info  -->
+            <div class="recipe-display-servings" id="recipe-display-servings">
+                <h2 class="test-header">Servings Info</h2>
+            </div>
 
-                        <!-- Row 1 -->
-                        <div class="recipe-display-servings" id="recipe-display-servings">
-                            <h2 class="test-header">Servings Info</h2>
-                        </div>
+            <!-- Recipe Display: blurb -->
+            <div class="recipe-display-blurb" id="recipe-display-blurb">
+                <h2 class="test-header">Blurb</h2>
+            </div>
 
-                        <!-- Row 2 -->
-                        <div class="recipe-display-blurb" id="recipe-display-blurb">
-                            <h2 class="test-header">Blurb</h2>
-                        </div>
+            <!-- Recipe Display: hardware -->
+            <div class="recipe-display-hardware">
+                <h2 class="test-header">Hardware</h2>
+                <p id="beef-1-hardware"></p>
+            </div>
 
-                        <!-- Row 3 -->
-                        <div class="recipe-display-hardware" id="recipe-display-hardware">
-                            <h2 class="test-header">Hardware</h2>
-                        </div>
+            <!-- Recipe Display: Ingredients -->
+            <div class="recipe-display-ingredients">
+                <h2 class="test-header">Ingredients/Quantities</h2>
+                <p id="beef-1-ingredients"></p>
+            </div>
+            
+            <!-- Recipe Display: procedure -->
+            <div class="recipe-display-procedure">
+                <h2 class="test-header">Procedure / Instructions</h2>
+                <p id="recipe-display-procedure"></p>
+            </div>
 
-                    </div>
+            <!-- Recipe Display: tags -->
+            <div class="recipe-display-tags" id="recipe-display-tags">
+                <h2 class="test-header">Tags</h2>
+                <ul>
+                    <li><span class=tag id="beef-1-tag-1"></span> - <span class="tag-count" id="tag-1-count">X other recipes</span></li>
+                    <li><span class=tag id="beef-1-tag-2"></span> - <span class="tag-count" id="tag-2-count">X other recipes</span></li>
+                    <li><span class=tag id="beef-1-tag-3"></span> - <span class="tag-count" id="tag-3-count">X other recipes</span></li>
+                    <li><span class=tag id="beef-1-tag-4"></span> - <span class="tag-count" id="tag-4-count">X other recipes</span></li>
+                    <li><span class=tag id="beef-1-tag-5"></span> - <span class="tag-count" id="tag-5-count">X other recipes</span></li>
+                </ul>
+            </div>
 
-                    <!-- Recipe Display - column 2: 2 rows -->
-                    <div class="recipe-display-body-col" id="recipe-display-col-2">
-                        
-                        <!-- Row 1 -->
-                        <div class="recipe-display-ingredients" id="recipe-display-ingredients">
-                            <h2 class="test-header">Ingredients/Quantities</h2>
-                        </div>
-                        
-                        <!-- Row 2 -->
-                        <div class="recipe-display-procedure" id="recipe-display-procedure">
-                            <h2 class="test-header">Procedure / Instructions</h2>
-                        </div>
+            <!-- Recipe Display: pic -->
+            <div class="recipe-display-pic">
+                <img src="assets/recipes/short-ribs-1.jpg">
+            </div>
 
-                    </div>
-
-                    <!-- Recipe Display - column 3: 3 rows -->
-                    <div class="recipe-display-body-col" id="recipe-display-col-3">
-
-                        <!-- Row 1 -->
-                        <div class="recipe-display-servings" id="recipe-display-tags">
-                            <h2 class="test-header">Tags</h2>
-                        </div>
-
-                        <!-- Row 2 -->
-                        <div class="recipe-display-blurb" id="recipe-display-picture">
-                            <h2 class="test-header">Picture</h2>
-                        </div>
-
-                        <!-- Row 3 -->
-                        <div class="recipe-display-hardware" id="recipe-display-variations">
-                            <h2 class="test-header">Variations</h2>
-                        </div>
-
-                    </div>
-
-                </div>
-
+            <!-- Recipe Display: variations -->
+            <div class="recipe-display-variations" id="recipe-display-variations">
+                <h2 class="test-header">Variations</h2>
             </div>
 
         </div>
