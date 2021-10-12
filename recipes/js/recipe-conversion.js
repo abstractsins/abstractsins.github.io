@@ -1,25 +1,31 @@
-const recipeConversion = (oldYield, newYield) => {
-    let factor = (newYield / oldYield);
-    let mis = {
-        groundBeef: 2,
-        breadCrumbs: 1,
-        eggs: 1,
-    }
+$('select').change(function() {
+    let $oldMeasurements = $('.amount');
+    let $newYield = $('select option:selected').html();
+    let $oldYield = $('#old-yield').html();
+    let factor = ($newYield / $oldYield);
+        // CONSOLE TESTING
+        console.log(`$oldMeasurements.html(): ${$oldMeasurements.html()}`);
+        console.log(`Old Yield: ${$oldYield} servings.`);
+        console.log(`New Yield: ${$newYield} servings.`);
+        console.log(`Conversion factor: ${factor}x`)
+})
+                                    
 
-    let ingredientMeasurements = Object.values(mis);
-        // Console Testing
-        console.log('Recipe measurements: ' + JSON.stringify(mis));
-        console.log('Recipe Conversion Factor: ' + factor + 'x'); 
-        console.log('Measurements array: ' + ingredientMeasurements);
-    ingredientMeasurements.forEach( value => {
-        let newValue = (value * factor);
-            // Console Testing 
-            console.log('New Measurement Value: ' + newValue);
-        return newValue;
-    })
-}
+// $( "select" )
+//   .change(function () {
+//     var str = "";
+//     $( "select option:selected" ).each(function() {
+//       str += $( this ).text() + " ";
+//     });
+//     $( "div" ).text( str );
+//   })
+//   .change();
+    
+//     .each( function() { 
+//         let $newYield = $(this).attr("value");
 
-let oldYield = 2;
-let newYield = 10;
-// Test Call
-recipeConversion(oldYield, newYield);
+//     $('.amount').each( function(index, value) {
+
+//     let newMeasurements = value.innerHTML * factor; 
+//                     console.log(`New Measurements: ${newMeasurements}`)
+// });   

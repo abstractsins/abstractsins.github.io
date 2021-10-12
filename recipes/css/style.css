@@ -1,23 +1,30 @@
 /* 100% hand-coded on Planet Earth */
 
 /* TABLE OF CONTENTS */
-/*  1 -- Global Selections
-        1-A -- variables
-        1-B -- up button
-    2 -- General Slide selectors
-    3 -- Tabs and Panels
-    4 -- Recipe Card Template
-        4-A -- overlay
-    5 -- Header
-    6 -- Main Section 
-        6-A -- Welcome Card
-        6-B -- Recipe images
-        6-C -- Secrets panel
-    7 -- Recipe Display Section*/
+    /* 1 -- Global Concerns */
+    /* 1-A -- Global Variables */
+    /* 1-B -- Index Bar */
+    /* 1-C -- Up Button */
+    /* 2 - Header Section */
+    /* 3 -- General Slide Selectors */
+    /* 4 -- Tabs & Panels */
+    /* 5 -- Recipe Card Preview Template */
+    /* 5-A -- Recipe Card Preview Container */
+    /* 5-B -- Recipe Card Header */
+    /* 5-C -- Recipe Card Body */
+    /* 5-D -- Overlay */
+    /* 6 -- Main Preview Section  */
+    /* 6-A -- Welcome Card */
+    /* 6-B -- Recipe images */
+    /* 6-C -- Secrets panel */
+    /* 7 -- Recipe Display Section */
+    /* 7-A -- Recipe Display Container */
+    /* 7-B -- Recipe Header Row 1 */
+    /* 7-C -- Recipe Body Rows 2-4 */
 /* END TABLE OF CONTENTS */
 
-/* 1 -- Global Selections */
-/* 1-A -- variables */
+/* 1 -- GLOBAL SELECTORS */
+/* 1-A -- Variables */
 *, 
 html, 
 body {
@@ -41,6 +48,8 @@ body {
     --bread-2: #a38047;
     --soup: #F0CA28;
     --soup-2: #a78d1b;
+    --grape: rgb(187, 125, 231);
+    --salmon: rgb(253, 146, 134);
 
     /* Global colors */
     --universal-slide-bg-color: whitesmoke;
@@ -96,6 +105,12 @@ body {
     --open-recipe-btn: rgba(173, 216, 230, 1);
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 a {
     color: inherit;
 }
@@ -103,585 +118,18 @@ a {
 #no-display {
     display: none;
 }
+/* END 1-A -- GLOBAL VARIABLES */
 
-/* 1-B -- Up Button */
-#upBtn {
-    display: none; 
-    position: fixed; 
-    bottom: 20px;
-    right: 10px;
-    z-index: 10;
-    border: 3px solid var(--charcoal);
-    outline: none;
-    background-color: var(--beef-red);
-    color: whitesmoke;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 18px;
-}
-#upBtn:hover {
-    background-color: var(--link-hover-color);
-}
-#upBtn:active {
-    background-color: var(--link-active-color);
-}
-
-/* 2 -- General Slide Selectors */
-.slide-viewer {
-    display: flex;
-    position: relative;
-    overflow: hidden;
-    height: 100%;
-    width: 80vw;
-    justify-content: center;
-}
-
-.slide-group {
-    display: flex;
-    width: 100%;
-    /* height: 100%; */
-    position: relative;
-    align-items: center;
-    justify-content: center;
-}
-
-.slide {
-    width: 60vw;
-    height: 85%;
-    background-color: var(--universal-slide-bg-color);
-    display: none;
-    position: absolute;
-    font-family: sans-serif;
-    padding: 1% 2%;
-    border-radius: 10px;
-    filter: var(--index-card-shadow-3);
-}
-
-.slide:first-child {
-    display: block;
-}
-
-.slider {
-    display: flex;
-    height: 100%;
-    width: fit-content;
-    align-items: center;
-}
-
-.slider-container {
-    width: 100%;
-    display: flex;
-    justify-content: ;
-}
-
-.slide-buttons-container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.slide-buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    /* justify-content: flex-start; */
-
-}
-
-.slide-buttons h2 {
-    text-align: center;
-    font-family: monospace;
-}
-
-.slide-btn {
-    background-color: var(--avocado);
-    align-self: center;
-    height: 10px;
-    width: 15px;
-}
-
-.slide-btn.active {
-    background-color: limegreen;
-    transform: scale(2);
-}
-
-/* 3 -- Tabs and Panels */
-.tabs-header {
-    /* padding-top: 30px; */
-    width: 90%;
-}
-
-.tab-list {
-    margin-bottom: -10px;
-}
-
-.tab-list li {
-    font-family: "Roboto Slab", sans-serif;
-    letter-spacing: 0.2ch;
-    display: inline-flex;
-    padding: 20px 15px;
-    border-radius: 8px 8px 0 0;
-    margin: 0 7px 0 0;
-    filter: var(--index-card-shadow-2);
-    font-size: 1.5em;
-}
-
-.tab-list .active {
-    filter: var(--index-card-shadow);
-}
-
-#welcome-tab {
-background-color: var(--index-card-bg)
-}
-#beef-tab {
-    background-color: var(--beef-bg)
-}
-#breads-tab {
-    background-color: var(--breads-bg)
-}
-#desserts-tab {
-    background-color: var(--desserts-bg)
-}
-#seafood-tab {
-    background-color: var(--seafood-bg)
-}
-#soups-tab {
-    background-color: var(--soups-bg)
-}
-#secrets-tab {
-    background-color: var(--secrets-bg);
-    color: whitesmoke;
-    margin-left: 5%;
-}
-#welcome {
-    background-image: linear-gradient(var(--index-card-bg), var(--index-card-bg-2));
-}
-#beef {
-    background-image: linear-gradient(var(--beef-red), var(--beef-red-2));
-}
-#breads {
-    background-image: linear-gradient(var(--breads-bg), var(--breads-bg-2));
-}
-#desserts {
-    background-image: linear-gradient(var(--desserts-bg), var(--desserts-bg-2));
-}
-#seafood{
-    background-image: linear-gradient(var(--seafood-bg), var(--seafood-bg-2));
-}
-#soups{
-    background-image: linear-gradient(var(--soups-bg), var(--soups-bg-2));
-}
-#secrets {
-    background-image: linear-gradient(var(--secrets-bg), black);
-    color: whitesmoke;
-}
-
-
-#beef-tab a,
-#desserts-tab a,
-#seafood-tab a {
-    color: white;
-}
-#welcome-tab a,
-#breads-tab a,
-#soups-tab a {
-    color: var(--charcoal);
-}
-
-.tab-list a:hover {
-    text-decoration: overline;
-    color: var(--link-hover-color);
-}
-
-.tab-list a:active {
-    color: var(--link-active-color);
-    text-decoration: none;
-}
-
-li.active a {
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 120%;
-}
-
-.tab-panel {
-    display: none;
-}
-
-.tab-panel.active {
-    display: flex;
-    position: relative;
-    width: 90%;
-    height: 83vh;
-    border-radius: 10px;
-    filter: var(--index-card-shadow);
-    margin-bottom: 30px;
-}
-
-/* 4 -- Recipe Card Template */
-.recipe-card {
-    display: flex;
-    flex-flow: column;
-    position: relative;
-    height: 100%;
-    width: 100%;
-    color: black;
-    border-radius: 10px;
-    align-items: flex-start;
-} 
-
-.recipe-header {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-}
-
-.recipe-title {
-    color: black;
-    font-family: sans-serif;
-    letter-spacing: 0.15ch;
-    margin-left: 10px; 
-}
-
-.recipe-title h3 {
-    font-size: 2em;
-    font-family: "Roboto Slab", sans-serif;
-    letter-spacing: 0.15ch;
-}
-
-.recipe-details {
-    /* padding: 10px; */
-    /* background-color: rgb(197, 177, 148); */
-    /* border-bottom: 3px dotted black; */
-    /* border-top: 3px dashed black; */
-}
-
-.recipe-details li {
-    font-size: 1em;
-    font-family: "Roboto Slab", sans-serif;
-    font-weight: 600;
-    display: inline-flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    padding: 5px 5px 5px 20px;
-    letter-spacing: 0.15ch;
-}
-
-.recipe-detail {
-    color: maroon;
-    padding: 0 0.75ch;
-}
-
-.recipe-body {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    height: 100%;
-    width: 100%;
-}
-
-.recipe-pic {
-    width: 50%;
-    height: 90%;
-    /* min-height: 240px;
-    max-height: 300px; */
-    background-size: 90%;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: var(--index-card-shadow-2);
-    align-self: center;
-}
-
-.ingredients-hardware {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    height: 100%;
-    padding: 0 20px 0 0;
-    justify-content: center;
-}
-
-.ingredients-hardware h4 {
-    display: inline;
-    color: var(--avocado);
-    font-size: 2.25em;
-    padding-right: 8px;
-    font-family: "Roboto Slab", sans-serif;
-}
-
-.ingredients-hardware ul {
-    height: 100%;
-    display: inline;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.ingredients-hardware li {
-    display: inline-flex;
-    font-family: "Roboto Condensed";
-    font-weight: 600;
-}
-
-.ingredients li,
-.hardware li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* .ingredients-hardware h4 {
-    display: block;
-    width: 100%;
-} */
-
-li.shopping-item,
-li.hardware-item {
-    display: inline;
-    font-size: 1.5em;
-    font-weight: 400;
-    line-height: 1.5;
-}
-
-.hardware {
-    margin-top: 20px;
-}
-
-.tags-container {
-    width: 100%;
-    display: flex;
-    border-top: 3px dotted black;
-    justify-content: flex-end;
-}
-
-.tags {
-    display: flex;
-    height: max-content;
-    float: right;
-    /* padding-top: 5px ; */
-}
-
-.tags h4 {
-    font-family: "Indie Flower";
-    font-size: 2em;
-    color: black;
-    letter-spacing: 1ch;
-}
-
-.tags ul {
-    list-style: none;
-    display: inline-flex;
-    width: 100%;
-}   
-
-.tag {
-    display: flex;
-    font-family: "Indie Flower";
-    font-size: 1.25em;
-    font-weight: bold;
-    margin: 3px 5px 0 10px; 
-    background-color: rgb(255, 255, 0);
-}
-
-/* 4-A -- overlay */
-.overlay {
-    visibility: hidden;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 179, 0, 0.25);
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-    /* padding: 15px 30px; */
-}
-
-.recipe-card:hover .overlay {
-    visibility: visible;
-    animation: fade 500ms;
-}
-
-@keyframes fade {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.open-recipe-btn {
-    text-decoration: none;
-    width: 160px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--open-recipe-btn);
-    color: blue;
-    font-family: sans-serif;
-    letter-spacing: 0.1ch;
-    border-radius: 20px;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 1);
-}
-
-.open-recipe-btn:hover {
-    color: whitesmoke;
-    background-color: var(--open-recipe-btn-hover);
-    transition: all ease 300ms;
-}
-
-.open-recipe-btn:active {
-    background-color: var(--open-recipe-btn-active);
-}
-
-/* 5 -- Header Section */
-.header {
-    display: none;
-}
-
-h1.title {
-    color: whitesmoke;
-    text-align: center;
-    font-family: sans-serif;
-    font-size: 50px;
-    letter-spacing: 0.10ch;
-    background-color: var(--title-bg);
-    padding: 20px 0;
-}
-
-/* 6 -- Main Body */
-.main-section {
-    background-color: var(--categories-bg);
-    height: 100vh;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* 6-A -- Welcome Card */
-#welcome-text {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-}
-
-#welcome-text h3 {
-    font-family: "Lobster", serif;
-    color: var(--avocado);
-    font-size: 5em;
-    letter-spacing: 0.5ch;
-    margin: 1%;
-    padding: 1%;
-    text-align: center;
-    filter: var(--index-card-shadow-4);
-    font-weight: 700;
-    justify-content: center;
-}
-
-#welcome-text h4 {
-    font-family: "Roboto Slab";
-    font-size: 1.5em;
-}
-
-/* 6-B -- RECIPE PICS */
-#beef-1-pic {
-    background-image: var(--beef-1-pic);
-}
-
-#beef-2-pic {
-    background-image: var(--beef-2-pic);
-}
-
-#beef-3-pic {
-    background-image: var(--beef-3-pic);
-}
-
-#bread-1-pic {
-    background-image: var(--bread-1-pic);
-    background-size: 80%;
-}
-
-#bread-2-pic {
-    background-image: var(--bread-2-pic);
-    background-size: 80%;
-}
-
-#bread-3-pic {
-    background-image: var(--bread-3-pic);
-    background-size: 70%;
-}
-
-/* 6-C -- Secrets Panel */
-#secrets {
-    justify-content: center;
-}
-
-.secrets-body {
-    margin: 1% 5%;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    padding: 0 auto;
-}
-
-#secrets-header {
-    font-family: "Indie Flower";
-    letter-spacing: 0.3ch;
-    width: 100%;
-    font-size: 3em;
-}
-
-ul.secrets-list {
-    padding: 0 30px;
-}
-
-.secrets-list li {
-    font-family: "Roboto Condensed";
-    font-size: 1.25em;
-    line-height: 2;
-}
-
-
-/* 7 -- Recipe Display Section */
-.recipe-display-section {
-    display: none;
-}
-
-.recipe-display-section.active {
-    display: flex;
-    background-color: var(--lettuce);
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Search Window */
+/* 1-B -- INDEX BAR */
 .index-window {
     display:  flex;
     flex-direction: column;
     position: fixed;
-    left: -315px;
+    left: -330px;
     transition: left 500ms ease-in-out 200ms;
     background-color: var(--avocado);
     height: 100%;
-    padding: 10px 30px 10px 15px;
+    padding: 30px 30px 10px 30px;
     align-items: flex-start;
     z-index: 100;
 }
@@ -769,10 +217,10 @@ ul.secrets-list {
 }
 
 #recipe-list li a {
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 10px;
     display: block;
-    margin-top: -1px;
+    margin-top: -2px;
     background-color: honeydew;
     padding: 12px;
     text-decoration: none;
@@ -784,24 +232,642 @@ ul.secrets-list {
 #recipe-list li a:hover:not(.header) {
     background-color: rgb(255, 255, 0);
 }
+/* END 1-B -- INDEX BAR */
 
-/* Recipe Display Container */
+/* 1-C -- UP BUTTON */
+#upBtn {
+    display: none; 
+    position: fixed; 
+    top: 0;
+    /* left: 50vw; */
+    z-index: 100;
+    border: 3px solid var(--charcoal);
+    outline: none;
+    background-color: var(--beef-red);
+    color: whitesmoke;
+    cursor: pointer;
+    padding: 1px 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    letter-spacing: 0.25ch;
+}
+#upBtn:hover {
+    background-color: var(--link-hover-color);
+    font-weight: 600;
+}
+#upBtn:active {
+    background-color: var(--link-active-color);
+}
+/* END 1-C -- UP BUTTON */
 
+/* END 1 -- GLOBAL CONCERNS */
+
+/* 2 -- HEADER SECTION */
+.header {
+    display: none;
+}
+
+h1.title {
+    text-align: left;
+    font-family: "Roboto Slab";
+    font-size: 50px;
+    letter-spacing: 0.10ch;
+    border-bottom: none;
+}
+/* END 2 -- HEADER SECTION */
+
+/* 3 -- General Slide Selectors */
+.slide-viewer {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 80vw;
+    justify-content: center;
+}
+
+.slide-group {
+    display: flex;
+    width: 100%;
+    /* height: 100%; */
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide {
+    width: 60vw;
+    height: 85%;
+    background-color: var(--universal-slide-bg-color);
+    display: none;
+    position: absolute;
+    font-family: sans-serif;
+    padding: 1% 2%;
+    border-radius: 10px;
+    filter: var(--index-card-shadow-3);
+}
+
+.slide:first-child {
+    display: block;
+}
+
+.slider {
+    display: flex;
+    height: 100%;
+    width: fit-content;
+    align-items: center;
+}
+
+.slider-container {
+    width: 100%;
+    display: flex;
+    justify-content: ;
+}
+
+.slide-buttons-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slide-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* justify-content: flex-start; */
+
+}
+
+.slide-buttons h2 {
+    text-align: center;
+    font-family: monospace;
+}
+
+.slide-btn {
+    background-color: var(--avocado);
+    align-self: center;
+    height: 30px;
+    width: 50px;
+}
+
+.slide-btn.active {
+    background-color: limegreen;
+    /* transform: scale(2); */
+    /* transform: scale(0.25); */
+}
+/* END 3 -- GENERAL SLIDE SELECTORS */
+
+/* 4 -- TABS AND PANELS */
+.tabs-header {
+    /* padding-top: 30px; */
+    width: 90%;
+}
+
+.tab-list {
+    margin-bottom: -10px;
+}
+
+.tab-list li {
+    font-family: "Roboto Slab", sans-serif;
+    letter-spacing: 0.2ch;
+    display: inline-flex;
+    padding: 20px 15px;
+    border-radius: 8px 8px 0 0;
+    margin: 0 7px 0 0;
+    filter: var(--index-card-shadow-2);
+    font-size: 1.5em;
+}
+
+.tab-list .active {
+    filter: var(--index-card-shadow);
+}
+
+#welcome-tab {
+background-color: var(--index-card-bg)
+}
+#beef-tab {
+    background-color: var(--beef-bg)
+}
+#breads-tab {
+    background-color: var(--breads-bg)
+}
+#desserts-tab {
+    background-color: var(--desserts-bg)
+}
+#seafood-tab {
+    background-color: var(--seafood-bg)
+}
+#soups-tab {
+    background-color: var(--soups-bg)
+}
+#secrets-tab {
+    background-color: var(--secrets-bg);
+    color: whitesmoke;
+    margin-left: 5%;
+}
+#welcome {
+    background-image: linear-gradient(var(--index-card-bg), var(--index-card-bg-2));
+}
+#beef {
+    background-image: linear-gradient(var(--beef-red), var(--beef-red-2));
+}
+#breads {
+    background-image: linear-gradient(var(--breads-bg), var(--breads-bg-2));
+}
+#desserts {
+    background-image: linear-gradient(var(--desserts-bg), var(--desserts-bg-2));
+}
+#seafood{
+    background-image: linear-gradient(var(--seafood-bg), var(--seafood-bg-2));
+}
+#soups{
+    background-image: linear-gradient(var(--soups-bg), var(--soups-bg-2));
+}
+#secrets {
+    background-image: linear-gradient(var(--secrets-bg), black);
+    color: whitesmoke;
+}
+
+#beef-tab a,
+#desserts-tab a,
+#seafood-tab a {
+    color: white;
+}
+#welcome-tab a,
+#breads-tab a,
+#soups-tab a {
+    color: var(--charcoal);
+}
+
+.tab-list a:hover {
+    text-decoration: overline;
+    color: var(--link-hover-color);
+}
+
+.tab-list a:active {
+    color: var(--link-active-color);
+    text-decoration: none;
+}
+
+.tabs-header li.active a {
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 120%;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: flex;
+    position: relative;
+    width: 90%;
+    height: 83vh;
+    border-radius: 10px;
+    filter: var(--index-card-shadow);
+    margin-bottom: 30px;
+}
+/* END 4 -- TABS & PANELS */
+
+/* 5 -- RECIPE CARD PREVIEW TEMPLATE */
+/* 5-A -- RECIPE CARD PREVIEW CONTAINER */
+.recipe-card {
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    color: black;
+    border-radius: 10px;
+    align-items: flex-start;
+} 
+/* END 5-A -- RECIPE CARD PREVIEW CONTAINER */
+
+/* 5-B -- RECIPE CARD HEADER */
+.recipe-header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.recipe-title h3 {
+    color: black;
+    font-family: sans-serif;
+    letter-spacing: 0.15ch;
+    margin-left: 10px; 
+}
+
+#recipe-name.title {
+    background-color: black; 
+    border-bottom: none;
+}
+
+#recipe-name.recipe-display-title {
+    padding: 0;
+    border-bottom: unset;
+}
+
+.recipe-title h3 {
+    font-size: 2em;
+    font-family: "Roboto Slab", sans-serif;
+    letter-spacing: 0.15ch;
+}
+
+.recipe-details li {
+    font-size: 1em;
+    font-family: "Roboto Slab", sans-serif;
+    font-weight: 600;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 5px 5px 5px 20px;
+    letter-spacing: 0.15ch;
+}
+
+.recipe-detail {
+    color: maroon;
+    padding: 0 0.75ch;
+}
+/* END 5-B -- RECIPE CARD HEADER */
+
+/* 5-C -- RECIPE CARD BODY */
+.recipe-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+}
+
+.recipe-pic {
+    width: 50%;
+    height: 90%;
+    /* min-height: 240px;
+    max-height: 300px; */
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: var(--index-card-shadow-2);
+    align-self: center;
+}
+
+.ingredients-hardware {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    padding: 0 20px 0 0;
+    justify-content: center;
+}
+
+.ingredients-hardware h4 {
+    display: inline;
+    color: var(--avocado);
+    font-size: 2.25em;
+    padding-right: 8px;
+    font-family: "Roboto Slab", sans-serif;
+}
+
+.ingredients-hardware ul {
+    height: 100%;
+    display: inline;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.ingredients-hardware li {
+    display: inline-flex;
+    font-family: "Roboto Condensed";
+    font-weight: 600;
+}
+
+.hardware {
+    display: flex;
+}
+
+.hardware ul {
+    display: inline;
+}
+
+.ingredients li,
+.hardware li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* .ingredients-hardware h4 {
+    display: block;
+    width: 100%;
+} */
+
+li.shopping-item,
+li.hardware-item {
+    display: inline;
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.hardware {
+    margin-top: 20px;
+}
+
+.tags-container {
+    width: 100%;
+    display: flex;
+    border-top: 3px dotted black;
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+#tags {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#tags h4 {
+    align-self: flex-start;
+    padding-left: 10%;
+    padding-bottom: 5%;
+}
+
+.tags h4 {
+    font-family: "Indie Flower";
+    font-size: 2em;
+    color: black;
+    letter-spacing: 1ch;
+    padding: 0;
+}
+
+.tags ul {
+    list-style: none;
+    display: flex;
+    width: max-content;
+}   
+
+.tag {
+    display: flex;
+    font-family: "Indie Flower";
+    font-size: 1.25em;
+    font-weight: bold;
+    margin: 5px 5px 0 10px;
+    background-color: rgb(255, 255, 0);
+    width: max-content;
+}
+/* END 5-C -- RECIPE CARD BODY */
+
+/* 5-D -- OVERLAY */
+.overlay {
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 179, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    /* padding: 15px 30px; */
+}
+
+.recipe-card:hover .overlay {
+    visibility: visible;
+    animation: fade 500ms;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.open-recipe-btn {
+    text-decoration: none;
+    width: 160px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--open-recipe-btn);
+    color: blue;
+    font-family: sans-serif;
+    letter-spacing: 0.1ch;
+    border-radius: 20px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 1);
+}
+
+.open-recipe-btn:hover {
+    color: whitesmoke;
+    background-color: var(--open-recipe-btn-hover);
+    transition: all ease 300ms;
+}
+
+.open-recipe-btn:active {
+    background-color: var(--open-recipe-btn-active);
+}
+/* END 5-D -- OVERLAY
+
+/* END 5 -- MAIN PREVIEW SECTION */
+
+/* 6 -- MAIN PREVIEW SECTION */
+.main-section {
+    background-color: var(--categories-bg);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 6-A -- WELCOME CARD */
+#welcome-text {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+#welcome-text h3 {
+    font-family: "Lobster", serif;
+    color: var(--avocado);
+    font-size: 5em;
+    letter-spacing: 0.5ch;
+    margin: 1%;
+    padding: 1%;
+    text-align: center;
+    filter: var(--index-card-shadow-4);
+    font-weight: 700;
+    justify-content: center;
+}
+
+#welcome-text h4 {
+    font-family: "Roboto Slab";
+    font-size: 1.5em;
+}
+
+/* 6-B -- RECIPE IMAGES */
+#beef-1-pic {
+    background-image: var(--beef-1-pic);
+}
+
+#beef-2-pic {
+    background-image: var(--beef-2-pic);
+}
+
+#beef-3-pic {
+    background-image: var(--beef-3-pic);
+}
+
+#bread-1-pic {
+    background-image: var(--bread-1-pic);
+    background-size: 80%;
+}
+
+#bread-2-pic {
+    background-image: var(--bread-2-pic);
+    background-size: 80%;
+}
+
+#bread-3-pic {
+    background-image: var(--bread-3-pic);
+    background-size: 70%;
+}
+
+/* 6-C -- SECRETS PANEL */
+#secrets {
+    justify-content: center;
+}
+
+.secrets-body {
+    margin: 1% 5%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 0 auto;
+}
+
+#secrets-header {
+    font-family: "Indie Flower";
+    letter-spacing: 0.3ch;
+    width: 100%;
+    font-size: 3em;
+}
+
+ul.secrets-list {
+    padding: 0 30px;
+}
+
+.secrets-list li {
+    font-family: "Roboto Condensed";
+    font-size: 1.25em;
+    line-height: 2;
+}
+/* END 6-C -- SECRETS PANEL */
+
+/* END 6 -- MAIN PREVIEW SECTION */
+
+/* 7 -- RECIPE DISPLAY SECTION */
+/* 7-A -- RECIPE DISPLAY CONTAINER */
+.recipe-display-section {
+    display: none;
+    background-color: var(--lettuce);
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipe-display-section.active {
+    display: flex;
+}
+/* END 7-A RECIPE DISPLAY CONTAINER */
+
+/* 7-B -- RECIPE HEADER ROW 1 */
 h2.test-header {
     font-family: "roboto slab";
+    letter-spacing: 0.25ch;
+    margin-bottom: 15px;
 }
 
 .recipe-display-container {
     display: grid;
-    grid-template: 1fr 2fr 2fr 2fr / 1fr 1fr 1fr;
-    grid-gap: 5px 8px;
+    grid-template: 125px 400px 2fr 2fr / 32% 32% 32%;
+    grid-gap: 15px 15px;
     width: 90%;
     height: max-content;
-    background-color: whitesmoke;
+    background-color: white;
     border-radius: 10px;
     padding: 1%;
     margin-top: 25px;
     margin-bottom: 50px;
+    padding-bottom: 50px;
+    justify-content: center;
 }
 
 .recipe-display-container h1.title {
@@ -809,31 +875,37 @@ h2.test-header {
     color: black;
     font-family: "Roboto Slab";
     letter-spacing: 0.2ch;
-    font-size: 1em;
+    font-size: 1.5em;
     padding: 0;
     width: 100%;
     text-align: left;
 }
 
 .recipe-display-title {
-    background-color: lightskyblue;
-    grid-area: 1 / 1 / span 1 / span 2;
+    /* background-color: whitesmoke; */
+    display: flex;
+    align-items: center;
+    grid-area: 1 / 1 / span 1 / span 3;
     text-align: left;
     color: black;
     font-family: "Roboto Slab";
     letter-spacing: 0.2ch;
-    font-size: 3.5em;
-    padding: 15px;
-    text-align: center;
+    font-size: 3em;
+    padding: 15px 0 15px 30px;
+    text-align: left;
+    border-bottom: 5px dotted black;
+    z-index: 10;
 }
 
 .recipe-display-details {
-    background-color: indigo;
+    /* background-color: whitesmoke; */
+    display: flex;
     grid-area: 1 / 3 / span 1 / span 1;
     align-items: center;
     justify-content: center;
-    padding: 15px;
+    padding-left: 10px;
 }
+
 .recipe-display-details li {
     font-size: 1.25em;
     font-family: "Roboto Slab", sans-serif;
@@ -842,48 +914,166 @@ h2.test-header {
     justify-content: space-between;
     letter-spacing: 0.15ch;
 }
+/* END 7-B -- RECIPE HEADER ROW 1*/
 
-.recipe-display-servings {
-    background-color: limegreen;
-    grid-area: 2 / 1 / span 1 / span 1;
-    padding: 15px;
+/* 7-C -- RECIPE TEMPLATE ROWS 2-4 */
+.servings-measurements-container {
+    /* background-color: limegreen; */
+    display: flex;
+    flex-direction: column;
+    grid-area: 2 / 1 / span 1 / span 2;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 15px 15px 15px;
+}
+
+.emoji {
+    color: gray;
+}
+
+#servings-list {
+    line-height: 2;
+}
+
+#servings-list li {
+    display: block;
+}
+
+#servings.recipe-detail {
+    font-family: "Roboto Slab";
+    font-size: 16px;
+    /* width: fit-content; */
+    height: 100%;
+}
+
+#servings-list option {
+    font-family: "Roboto Slab";
+    font-size: 16px;
+}
+
+.recipe-display-servings li {
+    font-size: 1.25em;
+    font-family: "Roboto Slab", sans-serif;
+    font-weight: 600;
+    display: inline-flex;
+    justify-content: space-between;
+    letter-spacing: 0.15ch;
 }
 
 .recipe-display-blurb {
-    background-color: maroon;
+    background-color: var(--salmon);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     grid-area: 3 / 1 / span 1 / span 1;  
-    padding: 15px;
+    padding: 5%;
+    font-family: "garamond";
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.5;
+    border-radius: 10px;
+    height: min-content;
 }
 
-.recipe-display-hardware {
-    background-color: deeppink;
+.recipe-display-tags {
+    /* background-color: fuchsia; */
+    display: flex;
+    flex-direction: column;
     grid-area: 4 / 1 / span 1 / span 1;
     padding: 15px;
 }
 
+.recipe-display-tags ul {
+    display: block;
+}
+
 .recipe-display-ingredients {
-    background-color: cornflowerblue;
-    grid-area: 2 / 2 / span 1 / span 1;
+    /* background-color: rgb(122, 161, 235); */
+    display: flex;
+    flex-flow: column wrap;
     padding: 15px;
+    width: 100%;
+}
+
+#ingredient-list {
+    display: flex;
+    flex-flow: column wrap;
+    list-style: disc;
+    line-height: 1.5;
+    height: 300px;
+}
+
+.ingredient {
+    font-family: monospace;
+    margin-right: 20px;
+    padding-right: 20px;
+}
+
+.shopping-item {
+    font-family: "roboto condensed";
+    font-size: 18px;
+    padding-right: 2px;
+}
+
+.shopping-items,
+.hardware-item-inline {
+    line-height: 1.5;
 }
 
 .recipe-display-procedure {
-    background-color: cyan;
+    /* background-color: cyan; */
     grid-area: 3 / 2 / span 2 / span 1;
+    padding: 15px 15px 15px 15px;
+}
+
+#instructions-list {
+    margin-left: 30px;
+    font-family: "Roboto Condensed";
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+#instructions-list li {
+    padding-bottom: 15px;
+}
+
+.secret-tip {
+    font-style: italic;
+}
+
+.secret-label {
+    font-weight: 800;
+}
+
+.recipe-display-hardware {
+    /* background-color: deeppink; */
+    grid-area: 3 / 3 / span 1 / span 1;
     padding: 15px;
 }
 
-.recipe-display-tags {
-    background-color: fuchsia;
-    grid-area: 2 / 3 / span 1 / span 1;
-    padding: 15px;
+#hardware-list-main, 
+#additional-hardware {
+    margin-bottom: 15px;
+    display: flex;
+    flex-flow: column wrap;
+    height: 90px;
+}
+
+#hardware-list-main li,
+#additional-hardware li {
+    display: block;
+    font-family: "Roboto Condensed";
+    font-size: 18px;
+    line-height: 1.5;
 }
 
 .recipe-display-pic {
-    /* background-color: gold; */
-    border: 3px dashed var(--charcoal);
-    grid-area: 3 / 3 / span 1 / span 1;
+    border: 5px dashed black;
+    grid-area: 2 / 3 / span 1 / span 1;
     padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .recipe-display-pic img {
@@ -892,10 +1082,32 @@ h2.test-header {
 }
 
 .recipe-display-variations {
-    background-color: greenyellow;
+    background-color: var(--grape);
     grid-area: 4 / 3 / span 1 / span 1;
-    padding: 15px;
+    padding: 30px;
+    border-radius: 10px;
+    height: min-content;
 }
+
+ul#additional-hardware.variations-list {
+    height: max-content;
+    padding: 30px;
+    margin-bottom: 0;
+    list-style: disc;
+}
+
+.variations-list {
+}
+
+.variation {
+    margin-bottom: 15px;
+}
+/* END 7-C -- RECIPE BODY ROWS 2-4 */
+
+/* END 7 -- RECIPE DISPLAY SECTION */
+
+
+
 
 
 /* SLIDER */

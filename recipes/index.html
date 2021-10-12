@@ -13,13 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Single+Day&display=swap" rel="stylesheet">    <!-- from lightSlider github -->
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">    
     
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
     <!-- CSS SHEETS -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <!-- <link rel="stylesheet" type="text/css" href="css/style2.css" /> -->
-    <!-- JavaScript -->
-    <script type="text/javascript" src="js/main.js" async></script>
 
     <title>Daniel's Kitchen</title>
 
@@ -27,8 +23,9 @@
 <body>
 
     <!-- Up Button -->
-    <button onclick="topFunction()" id="upBtn" title="Go to top">Top</button>
+    <button onclick="topFunction()" id="upBtn" title="Go to top">Return</button>
 
+    <!-- Recipe Index -->
     <div class="index-window">
 
         <!-- Search tab for hovering over -->
@@ -43,32 +40,32 @@
         <ul id="recipe-list">
             <!-- A -->
             <!-- B -->
-            <li><a href="#">Best Biscuits</a></li>
+            <li><a href="#recipe-display-section" id="biscuits-link">Best Biscuits</a></li>
             <!-- C -->
-            <li><a href="#">Challah</a></li>
+            <li><a href="#recipe-display-section" id="challah-link">Challah</a></li>
             <!-- D -->
             <!-- E -->
             <!-- F -->
             <!-- G -->
-            <li><a href="#">Gas Station Chili</a></li>
+            <li><a href="#recipe-display-section" id="chili-link">Gas Station Chili</a></li>
             <!-- H -->
             <!-- I -->
             <!-- J -->
             <!-- K -->
             <!-- L -->
-            <li><a href="#">Langos</a></li>
+            <li><a href="#recipe-display-section" id="langos-link">Langos</a></li>
             <!-- M -->
-            <li><a href="#">Mashed Potatoes</a></li>
-            <li><a href="#">Moroccan Cauliflower</a></li>
-            <li><a href="#">Mushy Peas</a></li>
-            <li><a href="#">My Meatloaf</a></li>
+            <li><a href="#recipe-display-section" id="moroccan-cauli-link">Moroccan Cauliflower</a></li>
+            <li><a href="#recipe-display-section" id="mushy-peas-link">Mushy Peas</a></li>
+            <li><a href="#recipe-display-section" id="meatloaf-link">My Meatloaf</a></li>
             <!-- N -->
             <!-- N -->
             <!-- O -->
             <!-- P -->
+            <li><a href="#recipe-display-section" id="purple-mash-link">Purple Mashed Potatoes</a></li>
             <!-- Q -->
             <!-- R -->
-            <li><a href="#">Red Wine Short Ribs</a></li>
+            <li><a href="#recipe-display-section" id="short-ribs-link">Red Wine Short Ribs</a></li>
             <!-- S -->
             <!-- T -->
             <!-- U -->
@@ -138,7 +135,7 @@
                                     
                                     <!-- Overlay -->
                                     <div class="overlay">
-                                        <a href="#recipe-display-section" class="open-recipe-btn" id="open-recipe-btn">Open Recipe</a>
+                                        <a href="#recipe-display-section" class="open-recipe-btn" id="beef-1-link">Open Recipe</a>
                                     </div>
 
                                     <div class="recipe-header">
@@ -179,10 +176,10 @@
                                         <!-- Ingredients / Hardware -->
                                         <div class="ingredients-hardware">
                                             <div class="ingredients"> 
-                                                <h4>Ingredients:</h4> <span class="shopping-item" id="beef-1-ingredients"></span>
+                                                <h4>Ingredients:</h4> <span class="shopping-items" id="beef-1-ingredients"></span>
                                             </div>
                                             <div class="hardware">
-                                                <h4>Hardware:</h4> <span class="hardware-item" id="beef-1-hardware"></span>                                            
+                                                <h4>Hardware:</h4> <span class="hardware-item-inline" id="beef-1-hardware"></span>                                            
                                             </div>
                                         </div>
                                         
@@ -193,12 +190,11 @@
                             <!-- Beef Slide 2 -->
                             <div class="slide" id="beef-slide-2">
                                 <div class="recipe-card" id="recipe-card-beef-2">
-
+                                    
                                     <!-- Overlay -->
                                     <div class="overlay">
-                                        <a href="#recipe-display-section" class="open-recipe-btn" id="open-recipe-btn">Open Recipe</a>
+                                        <a href="#recipe-display-section" class="open-recipe-btn" id="beef-2-link">Open Recipe</a>
                                     </div>
-
 
                                     <div class="recipe-header">
                                          <!-- Name -->
@@ -217,7 +213,6 @@
                                             </ul>
                                         </div>
                                     </div>
-
                                     <!-- TAGS -->
                                     <div class="tags-container">
                                         <div class="tags">
@@ -230,43 +225,38 @@
                                                 <li class=tag id="beef-2-tag-5"></li>
                                             </ul>
                                         </div>  
-                                    </div>                                    
-
+                                    </div>
                                     <!-- Recipe Body -->
                                     <div class="recipe-body">
                                         <!-- Picture -->
                                         <div class="recipe-pic" id="beef-2-pic">
-
                                         </div>
                                         <!-- Ingredients / Hardware -->
                                         <div class="ingredients-hardware">
-
                                             <div class="ingredients"> 
-                                                <h4>Ingredients:</h4> <span class="shopping-item" id="beef-2-ingredients"></span>
+                                                <h4>Ingredients:</h4> <span class="shopping-items" id="beef-2-ingredients"></span>
                                             </div>
-
                                             <div class="hardware">
-                                                <h4>Hardware:</h4> <span class="hardware-item" id="beef-2-hardware"></span>                                           
+                                                <h4>Hardware:</h4> <span class="hardware-item-inline" id="beef-2-hardware"></span>                                            
                                             </div>
-
                                         </div>
-
+                                        
                                     </div>
                                 </div>
                             </div>
-
+                            
                             <!-- Beef Slide 3 -->
                             <div class="slide" id="beef-slide-3">
                                 <div class="recipe-card" id="recipe-card-beef-3">
                                     
                                     <!-- Overlay -->
                                     <div class="overlay">
-                                        <a href="#recipe-display-section" class="open-recipe-btn" id="open-recipe-btn">Open Recipe</a>
+                                        <a href="#recipe-display-section" class="open-recipe-btn" id="beef-3-link">Open Recipe</a>
                                     </div>
                                     
 
                                     <div class="recipe-header">
-                                         <!-- Name -->
+                                        <!-- Name -->
                                         <div class="recipe-title">
                                             <h3 id="beef-3-title"></h3>
                                         </div>
@@ -304,7 +294,7 @@
                                         <!-- Ingredients / Hardware -->
                                         <div class="ingredients-hardware">
                                             <div class="ingredients"> 
-                                                <h4>Ingredients:</h4> <span class="shopping-item" id="beef-3-ingredients"></span>
+                                                <h4>Ingredients:</h4> <span class="shopping-items" id="beef-3-ingredients"></span>
                                             </div>
                                             <div class="hardware">
                                                 <h4>Hardware:</h4> <span class="hardware-item" id="beef-3-hardware"></span>                                            </div>
@@ -388,7 +378,7 @@
                                         <!-- Ingredients / Hardware -->
                                         <div class="ingredients-hardware">
                                             <div class="ingredients"> 
-                                                <h4>Ingredients:</h4> <span class="shopping-item" id="bread-1-ingredients"></span>
+                                                <h4>Ingredients:</h4> <span class="shopping-items" id="bread-1-ingredients"></span>
                                             </div>
                                             <div class="hardware">
                                                 <h4>Hardware:</h4> <span class="hardware-item" id="bread-1-hardware"></span>                                            
@@ -450,7 +440,7 @@
                                         <div class="ingredients-hardware">
 
                                             <div class="ingredients"> 
-                                                <h4>Ingredients:</h4> <span class="shopping-item" id="bread-2-ingredients"></span>
+                                                <h4>Ingredients:</h4> <span class="shopping-items" id="bread-2-ingredients"></span>
                                             </div>
 
                                             <div class="hardware">
@@ -512,10 +502,11 @@
                                         <!-- Ingredients / Hardware -->
                                         <div class="ingredients-hardware">
                                             <div class="ingredients"> 
-                                                <h4>Ingredients:</h4> <span class="shopping-item" id="bread-3-ingredients"></span>
+                                                <h4>Ingredients:</h4> <span class="shopping-items" id="bread-3-ingredients"></span>
                                             </div>
                                             <div class="hardware">
-                                                <h4>Hardware:</h4> <span class="hardware-item" id="bread-3-hardware"></span>                                            </div>
+                                                <h4>Hardware:</h4> <span class="hardware-item" id="bread-3-hardware"></span>
+                                            </div>
                                         </div>
 
                                     </div>
@@ -595,7 +586,7 @@
                                         <!-- Ingredients / Hardware -->
                                         <div class="ingredients-hardware">
                                             <div class="ingredients"> 
-                                                <h4>Ingredients:</h4> <span class="shopping-item" id="dessert-1-ingredients"></span>
+                                                <h4>Ingredients:</h4> <span class="shopping-items" id="dessert-1-ingredients"></span>
                                             </div>
                                             <div class="hardware">
                                                 <h4>Hardware:</h4> <span class="hardware-item" id="dessert-1-hardware"></span>                                            
@@ -657,7 +648,7 @@
                                         <div class="ingredients-hardware">
 
                                             <div class="ingredients"> 
-                                                <h4>Ingredients:</h4> <span class="shopping-item" id="dessert-2-ingredients"></span>
+                                                <h4>Ingredients:</h4> <span class="shopping-items" id="dessert-2-ingredients"></span>
                                             </div>
 
                                             <div class="hardware">
@@ -724,7 +715,7 @@
                                         <!-- Ingredients / Hardware -->
                                         <div class="ingredients-hardware">
                                             <div class="ingredients"> 
-                                                <h4>Ingredients:</h4> <span class="shopping-item" id="dessert-3-ingredients"></span>
+                                                <h4>Ingredients:</h4> <span class="shopping-items" id="dessert-3-ingredients"></span>
                                             </div>
                                             <div class="hardware">
                                                 <h4>Hardware:</h4> <span class="hardware-item" id="dessert-3-hardware"></span>                                            </div>
@@ -807,7 +798,7 @@
                                         <!-- Ingredients / Hardware -->
                                         <div class="ingredients-hardware">
                                             <div class="ingredients"> 
-                                                <h4>Ingredients:</h4> <span class="shopping-item" id="seafood-1-ingredients"></span>
+                                                <h4>Ingredients:</h4> <span class="shopping-items" id="seafood-1-ingredients"></span>
                                             </div>
                                             <div class="hardware">
                                                 <h4>Hardware:</h4> <span class="hardware-item" id="seafood-1-hardware"></span>                                            
@@ -868,7 +859,7 @@
                                         <div class="ingredients-hardware">
 
                                             <div class="ingredients"> 
-                                                <h4>Ingredients:</h4> <span class="shopping-item" id="seafood-2-ingredients"></span>
+                                                <h4>Ingredients:</h4> <span class="shopping-items" id="seafood-2-ingredients"></span>
                                             </div>
 
                                             <div class="hardware">
@@ -929,7 +920,7 @@
                                         <!-- Ingredients / Hardware -->
                                         <div class="ingredients-hardware">
                                             <div class="ingredients"> 
-                                                <h4>Ingredients:</h4> <span class="shopping-item" id="seafood-3-ingredients"></span>
+                                                <h4>Ingredients:</h4> <span class="shopping-items" id="seafood-3-ingredients"></span>
                                             </div>
                                             <div class="hardware">
                                                 <h4>Hardware:</h4> <span class="hardware-item" id="seafood-3-hardware"></span>                                            </div>
@@ -1012,7 +1003,7 @@
                                         <!-- Ingredients / Hardware -->
                                         <div class="ingredients-hardware">
                                             <div class="ingredients"> 
-                                                <h4>Ingredients:</h4> <span class="shopping-item" id="soup-1-ingredients"></span>
+                                                <h4>Ingredients:</h4> <span class="shopping-items" id="soup-1-ingredients"></span>
                                             </div>
                                             <div class="hardware">
                                                 <h4>Hardware:</h4> <span class="hardware-item" id="soup-1-hardware"></span>                                            
@@ -1073,7 +1064,7 @@
                                         <div class="ingredients-hardware">
 
                                             <div class="ingredients"> 
-                                                <h4>Ingredients:</h4> <span class="shopping-item" id="soup-2-ingredients"></span>
+                                                <h4>Ingredients:</h4> <span class="shopping-items" id="soup-2-ingredients"></span>
                                             </div>
 
                                             <div class="hardware">
@@ -1134,7 +1125,7 @@
                                         <!-- Ingredients / Hardware -->
                                         <div class="ingredients-hardware">
                                             <div class="ingredients"> 
-                                                <h4>Ingredients:</h4> <span class="shopping-item" id="soup-3-ingredients"></span>
+                                                <h4>Ingredients:</h4> <span class="shopping-items" id="soup-3-ingredients"></span>
                                             </div>
                                             <div class="hardware">
                                                 <h4>Hardware:</h4> <span class="hardware-item" id="soup-3-hardware"></span>                                            </div>
@@ -1180,7 +1171,7 @@
 
             <!-- Recipe Display Title -->
             <div class="recipe-display-title" id="beef-1-title">
-                <h1 class="title">Recipe Title</h1>
+                <h1 class="title"></h1>
             </div>
 
             <!-- Recipe Display Details: prep and nutrition etc -->
@@ -1201,59 +1192,47 @@
 
             <!-- Recipe Display: servings info  -->
             <div class="recipe-display-servings" id="recipe-display-servings">
-                <h2 class="test-header">Servings Info</h2>
             </div>
 
             <!-- Recipe Display: blurb -->
             <div class="recipe-display-blurb" id="recipe-display-blurb">
-                <h2 class="test-header">Blurb</h2>
             </div>
 
             <!-- Recipe Display: hardware -->
             <div class="recipe-display-hardware">
-                <h2 class="test-header">Hardware</h2>
                 <p id="beef-1-hardware"></p>
             </div>
 
             <!-- Recipe Display: Ingredients -->
             <div class="recipe-display-ingredients">
-                <h2 class="test-header">Ingredients/Quantities</h2>
                 <p id="beef-1-ingredients"></p>
             </div>
             
             <!-- Recipe Display: procedure -->
             <div class="recipe-display-procedure">
-                <h2 class="test-header">Procedure / Instructions</h2>
                 <p id="recipe-display-procedure"></p>
             </div>
 
             <!-- Recipe Display: tags -->
             <div class="recipe-display-tags" id="recipe-display-tags">
-                <h2 class="test-header">Tags</h2>
-                <ul>
-                    <li><span class=tag id="beef-1-tag-1"></span> - <span class="tag-count" id="tag-1-count">X other recipes</span></li>
-                    <li><span class=tag id="beef-1-tag-2"></span> - <span class="tag-count" id="tag-2-count">X other recipes</span></li>
-                    <li><span class=tag id="beef-1-tag-3"></span> - <span class="tag-count" id="tag-3-count">X other recipes</span></li>
-                    <li><span class=tag id="beef-1-tag-4"></span> - <span class="tag-count" id="tag-4-count">X other recipes</span></li>
-                    <li><span class=tag id="beef-1-tag-5"></span> - <span class="tag-count" id="tag-5-count">X other recipes</span></li>
-                </ul>
             </div>
 
             <!-- Recipe Display: pic -->
             <div class="recipe-display-pic">
-                <img src="assets/recipes/short-ribs-1.jpg">
             </div>
 
             <!-- Recipe Display: variations -->
             <div class="recipe-display-variations" id="recipe-display-variations">
-                <h2 class="test-header">Variations</h2>
             </div>
 
         </div>
 
     </div>
 
-
+    <!-- JQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- JavaScript -->
+    <script type="text/javascript" src="js/main.js"></script>
 
 </body>
 </html>
