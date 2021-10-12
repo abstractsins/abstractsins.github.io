@@ -14,6 +14,7 @@
         6-B -- Recipe images
         6-C -- Secrets panel
     7 -- Recipe Display Section*/
+/* END TABLE OF CONTENTS */
 
 /* 1 -- Global Selections */
 /* 1-A -- variables */
@@ -40,16 +41,22 @@ body {
     --bread-2: #a38047;
     --soup: #F0CA28;
     --soup-2: #a78d1b;
+
     /* Global colors */
     --universal-slide-bg-color: whitesmoke;
     --link-hover-color: rgba(255, 68, 0, 0.856);
     --link-active-color: rgba(255, 163, 130, 0.856);
+
     /* Background Images */
     --hero-bg-1: url('../assets/sweet-pot-1.jpg');
     --hero-bg-2: url('../assets/sweet-pot-2.jpg');
     --hero-bg-3: url('../assets/sweet-pot-3.jpg');
     --hero-bg-4: url('../assets/shrimp-tostada-1.jpg');
     --hero-bg-5: url('../assets/shrimp-tostada-2.jpg');
+    --search-icon-1: url('/css/search-icon.png');
+    --search-icon-2: url('/css/search-icon-2.svg');
+    --search-icon-3: url('/css/search-icon-3.png');
+
     /* RECIPE PICS */
     --beef-1-pic: url('../assets/recipes/meatloaf-1.jpg');
     --beef-2-pic: url('../assets/recipes/chili-1.jpg');
@@ -57,6 +64,7 @@ body {
     --bread-2-pic: url('../assets/recipes/challah-1.jpg');
     --bread-1-pic: url('../assets/recipes/biscuits-1.jpg');
     --bread-3-pic: url('../assets/recipes/langos-1.jpg');
+
     /* Background Colors */
     --header-bg: var(--lettuce);
     --categories-bg: var(--header-bg);
@@ -71,11 +79,13 @@ body {
     --breads-bg: var(--bread);
     --breads-bg-2: var(--bread-2);
     --secrets-bg: var(--charcoal);
+
     /* Card Colors */
     --more-card-bg: var(--title-bg);
     --beef-card-bg: var(--index-card-bg);
     --beef-card-border: var(--charcoal);
     --beef-card-sections: rgb(236, 218, 183);
+
     /* GLOBAL Variables */
     --index-card-shadow: drop-shadow(10px 15px 5px #000000);
     --index-card-shadow-2: drop-shadow(3px 5px 2px #000000);
@@ -247,6 +257,7 @@ background-color: var(--index-card-bg)
 #secrets-tab {
     background-color: var(--secrets-bg);
     color: whitesmoke;
+    margin-left: 5%;
 }
 #welcome {
     background-image: linear-gradient(var(--index-card-bg), var(--index-card-bg-2));
@@ -662,12 +673,12 @@ ul.secrets-list {
 }
 
 /* Search Window */
-.search-window {
+.index-window {
     display:  flex;
     flex-direction: column;
     position: fixed;
     left: -315px;
-    transition: left 200ms ease-in-out 500ms;
+    transition: left 500ms ease-in-out 200ms;
     background-color: var(--avocado);
     height: 100%;
     padding: 10px 30px 10px 15px;
@@ -675,18 +686,18 @@ ul.secrets-list {
     z-index: 100;
 }
 
-.search-window:hover {
+.index-window:hover {
     left: 0;
 }
 
-.search-tab {
+.index-tab {
     position: absolute;
     right: 5px;
-    top: 40%;
+    top: 30%;
     padding-right: 3px;
 }
 
-.search-tab h6 {
+.index-tab h6 {
     writing-mode: vertical-lr;
     text-orientation: sideways;
     letter-spacing: 0.5ch;
@@ -696,7 +707,7 @@ ul.secrets-list {
     color: whitesmoke;
 }
 
-.search-tab img {
+.index-tab img {
     transform: translate(-50% -50%);
     width: 28px;
     height: auto;
@@ -704,7 +715,7 @@ ul.secrets-list {
 
 #recipe-search {
     background-color: var(--lettuce);
-    background-image: url('/css/search-icon-3.png');
+    background-image: var(--search-icon-3);
     font-family: "Roboto Slab";
     background-blend-mode: soft-light;
     background-position: 15px 18px;
