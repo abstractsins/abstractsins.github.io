@@ -66,7 +66,7 @@ body {
     --search-icon-1: url('/css/search-icon.png');
     --search-icon-2: url('/css/search-icon-2.svg');
     --search-icon-3: url('/css/search-icon-3.png');
-    --welcome-bg: url('../assets/welcome.png');
+    --welcome-bg: url('./assets/welcome.png');
 
     /* RECIPE PICS */
     --beef-1-pic: url('../assets/recipes/meatloaf-1.jpg');
