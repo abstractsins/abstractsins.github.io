@@ -63,9 +63,9 @@ body {
     --hero-bg-3: url('../assets/sweet-pot-3.jpg');
     --hero-bg-4: url('../assets/shrimp-tostada-1.jpg');
     --hero-bg-5: url('../assets/shrimp-tostada-2.jpg');
-    --search-icon-1: url('/css/search-icon.png');
-    --search-icon-2: url('/css/search-icon-2.svg');
-    --search-icon-3: url('/css/search-icon-3.png');
+    --search-icon-1: url('../css/search-icon.png');
+    --search-icon-2: url('../css/search-icon-2.svg');
+    --search-icon-3: url('../css/search-icon-3.png');
     --welcome-bg: url('../assets/welcome.png');
 
     /* RECIPE PICS */
@@ -190,7 +190,9 @@ a {
 }
 
 #recipe-search:active {
-    border: 0px;
+}
+#recipe-search:focus {
+    border: 5px solid var(--seafood-bg);
 }
 
 #recipe-list {
