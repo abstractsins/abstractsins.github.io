@@ -69,7 +69,7 @@ console.log(breadsArray)
 let desserts = {
 	dessert1: 'cannoli',
 	dessert2: 'cookies',
-	dessert3: 'dessert-3'
+	dessert3: 'panna-cotta'
 }
 let dessertsArray = Object.values(desserts);
 console.log(dessertsArray)
@@ -87,7 +87,7 @@ console.log(seafoodArray)
 let soups = {
 	soup1: 'cauliflower-soup',
 	soup2: 'potato-leek',
-	soup3: 'mushroom-barley'
+	soup3: 'shrimp-bisque'
 }
 let soupsArray = Object.values(soups);
 console.log(soupsArray)
@@ -158,7 +158,7 @@ $('#langos-link').on('click', function() {
 	// Moroccan Cauliflower
 $('#moroccan-cauli-link').on('click', function() {
 	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load('moroccan-cauli.html');
+	$('#recipe-display-container').load('cauliflower-soup.html');
 })
 	// Mushy Peas
 $('#mushy-peas-link').on('click', function() {
@@ -173,6 +173,11 @@ $('#meatloaf-link').on('click', function() {
 // N
 // O
 // P
+	// Potato Leek Soup
+$('#potato-leek-link').on('click', function() {
+	$('.recipe-display-section').addClass('active');
+	$('#recipe-display-container').load('potato-leek.html');
+})
 	// Purple Mashed Potatoes
 $('#purple-mash-link').on('click', function() {
 	$('.recipe-display-section').addClass('active');
@@ -186,6 +191,11 @@ $('#short-ribs-link').on('click', function() {
 	$('#recipe-display-container').load('short-ribs.html');
 })
 // S
+	// Shrimp Bisque
+$('#shrimp-bisque-link').on('click', function() {
+	$('.recipe-display-section').addClass('active');
+	$('#recipe-display-container').load('shrimp-bisque.html');
+})
 // T
 // U
 // V
@@ -438,7 +448,7 @@ $('.tab-list').each(function() {
 
 /* 4-A Category Sliders */
 	/* 4-A-1 -- Beef Slider */
-$('#beef-slider').each(function() {
+$('.slider').each(function() {
 	let $this = $(this);
 	let $group = $this.find('.slide-group');
 	let $slides = $this.find('.slide');
@@ -452,7 +462,7 @@ $('#beef-slider').each(function() {
 
 		advance();
 
-		if ($group.is(':animated') || currentIndex === newIndex || $group.is(':hover')) {
+		if ($group.is(':animated') || currentIndex === newIndex ) { //|| $group.is(':hover')
 			return;
 		}
 
@@ -484,36 +494,30 @@ $('#beef-slider').each(function() {
 			} else {
 				move(0);
 			}
-		}, 2500);
+		}, 7000);
 	}
 
-
 	$.each($slides, (index) => {
-		let $button = $('<button type="button" class="slide-btn"></button>');
 
-		for (let i = 0; i < beefArray.length; i++) {
-			$('.slide-btn').each( () => {							// TRYING TO FIGURE OUT BUTTON TEXT
-
-			})
-		}
+		let $button = $('<button type="button" class="slide-btn"> </button>');
 
 		if (index === currentIndex) {
 			$button.addClass('active');
 		}
 
-		buttonArray.push($button);
-		
-		
-		
 		$button.on('click', () => {
 			move(index);
 		}).appendTo($this.find('.slide-buttons'));
-		
-	});
+		buttonArray.push($button);
+
+	})
 
 	advance(); // COMMENT OR UNCOMMENT THIS to toggle the timed advance
 
+	$('button .prev').on('click', advance())
+
 });
+
 	/* END 4-A-1 -- Beef Slider */
 
 /* END 4-A Category Sliders */
@@ -536,7 +540,7 @@ jQuery(function async($){
 	$('#beef-1-carbs').load(beefArray[0] + '.html #carbs');
 	$('#beef-1-fat').load(beefArray[0] + '.html #fat');
 	$('#beef-1-ingredients').load(beefArray[0] + '.html .shopping-item');
-	$('#beef-1-hardware').load(beefArray[0] + '.html #hardware-list-main');
+	$('#beef-1-hardware').load(beefArray[0] + '.html .hardware-item');
 	$('#beef-1-tag-1').load(beefArray[0] + '.html #tag-1');
 	$('#beef-1-tag-2').load(beefArray[0] + '.html #tag-2');
 	$('#beef-1-tag-3').load(beefArray[0] + '.html #tag-3');
@@ -556,7 +560,7 @@ jQuery(function async($){
 	$('#beef-2-carbs').load(beefArray[1] + '.html #carbs');
 	$('#beef-2-fat').load(beefArray[1] + '.html #fat');
 	$('#beef-2-ingredients').load(beefArray[1] + '.html .shopping-item');
-	$('#beef-2-hardware').load(beefArray[1] + '.html #hardware-list-main');
+	$('#beef-2-hardware').load(beefArray[1] + '.html .hardware-item');
 	$('#beef-2-tag-1').load(beefArray[1] + '.html #tag-1');
 	$('#beef-2-tag-2').load(beefArray[1] + '.html #tag-2');
 	$('#beef-2-tag-3').load(beefArray[1] + '.html #tag-3');
@@ -576,7 +580,7 @@ jQuery(function async($){
 	$('#beef-3-carbs').load(beefArray[2] + '.html #carbs');
 	$('#beef-3-fat').load(beefArray[2] + '.html #fat');
 	$('#beef-3-ingredients').load(beefArray[2] + '.html .shopping-item');
-	$('#beef-3-hardware').load(beefArray[2] + '.html #hardware-list-main');
+	$('#beef-3-hardware').load(beefArray[2] + '.html .hardware-item');
 	$('#beef-3-tag-1').load(beefArray[2] + '.html #tag-1');
 	$('#beef-3-tag-2').load(beefArray[2] + '.html #tag-2');
 	$('#beef-3-tag-3').load(beefArray[2] + '.html #tag-3');
@@ -598,7 +602,7 @@ jQuery(function async($){
 	$('#bread-1-carbs').load(breadsArray[0] + '.html #carbs');
 	$('#bread-1-fat').load(breadsArray[0] + '.html #fat');
 	$('#bread-1-ingredients').load(breadsArray[0] + '.html .shopping-item');
-	$('#bread-1-hardware').load(breadsArray[0] + '.html #hardware-list-main');
+	$('#bread-1-hardware').load(breadsArray[0] + '.html .hardware-item');
 	$('#bread-1-tag-1').load(breadsArray[0] + '.html #tag-1');
 	$('#bread-1-tag-2').load(breadsArray[0] + '.html #tag-2');
 	$('#bread-1-tag-3').load(breadsArray[0] + '.html #tag-3');
@@ -618,7 +622,7 @@ jQuery(function async($){
 	$('#bread-2-carbs').load(breadsArray[1] + '.html #carbs');
 	$('#bread-2-fat').load(breadsArray[1] + '.html #fat');
 	$('#bread-2-ingredients').load(breadsArray[1] + '.html .shopping-item');
-	$('#bread-2-hardware').load(breadsArray[1] + '.html #hardware-list-main');
+	$('#bread-2-hardware').load(breadsArray[1] + '.html .hardware-item');
 	$('#bread-2-tag-1').load(breadsArray[1] + '.html #tag-1');
 	$('#bread-2-tag-2').load(breadsArray[1] + '.html #tag-2');
 	$('#bread-2-tag-3').load(breadsArray[1] + '.html #tag-3');
@@ -638,7 +642,7 @@ jQuery(function async($){
 	$('#bread-3-carbs').load(breadsArray[2] + '.html #carbs');
 	$('#bread-3-fat').load(breadsArray[2] + '.html #fat');
 	$('#bread-3-ingredients').load(breadsArray[2] + '.html .shopping-item');
-	$('#bread-3-hardware').load(breadsArray[2] + '.html #hardware-list-main');
+	$('#bread-3-hardware').load(breadsArray[2] + '.html .hardware-item');
 	$('#bread-3-tag-1').load(breadsArray[2] + '.html #tag-1');
 	$('#bread-3-tag-2').load(breadsArray[2] + '.html #tag-2');
 	$('#bread-3-tag-3').load(breadsArray[2] + '.html #tag-3');
@@ -660,17 +664,17 @@ jQuery(function async($){
 	$('#dessert-1-carbs').load(dessertsArray[0] + '.html #carbs');
 	$('#dessert-1-fat').load(dessertsArray[0] + '.html #fat');
 	$('#dessert-1-ingredients').load(dessertsArray[0] + '.html .shopping-item');
-	$('#dessert-1-hardware').load(dessertsArray[0] + '.html #hardware-list-main');
-	$('#dessert-1-tag-1').load(dessertsArray[2] + '.html #tag-1');
-	$('#dessert-1-tag-2').load(dessertsArray[2] + '.html #tag-2');
-	$('#dessert-1-tag-3').load(dessertsArray[2] + '.html #tag-1');
-	$('#dessert-1-tag-4').load(dessertsArray[2] + '.html #tag-4');
-	$('#dessert-1-tag-5').load(dessertsArray[2] + '.html #tag-5');
-	$('#dessert-1-tag-6').load(dessertsArray[2] + '.html #tag-6');
-	$('#dessert-1-tag-7').load(dessertsArray[2] + '.html #tag-7');
-	$('#dessert-1-tag-8').load(dessertsArray[2] + '.html #tag-8');
-	$('#dessert-1-tag-9').load(dessertsArray[2] + '.html #tag-9');
-	$('#dessert-1-tag-10').load(dessertsArray[2] + '.html #tag-10');
+	$('#dessert-1-hardware').load(dessertsArray[0] + '.html .hardware-item');
+	$('#dessert-1-tag-1').load(dessertsArray[0] + '.html #tag-1');
+	$('#dessert-1-tag-2').load(dessertsArray[0] + '.html #tag-2');
+	$('#dessert-1-tag-3').load(dessertsArray[0] + '.html #tag-1');
+	$('#dessert-1-tag-4').load(dessertsArray[0] + '.html #tag-4');
+	$('#dessert-1-tag-5').load(dessertsArray[0] + '.html #tag-5');
+	$('#dessert-1-tag-6').load(dessertsArray[0] + '.html #tag-6');
+	$('#dessert-1-tag-7').load(dessertsArray[0] + '.html #tag-7');
+	$('#dessert-1-tag-8').load(dessertsArray[0] + '.html #tag-8');
+	$('#dessert-1-tag-9').load(dessertsArray[0] + '.html #tag-9');
+	$('#dessert-1-tag-10').load(dessertsArray[0] + '.html #tag-10');
 	// Dessert 2
 	$('#dessert-2-title').load(dessertsArray[1] + '.html #recipe-name');
 	$('#dessert-2-prep-time').load(dessertsArray[1] + '.html #prep-time');
@@ -680,7 +684,7 @@ jQuery(function async($){
 	$('#dessert-2-carbs').load(dessertsArray[1] + '.html #carbs');
 	$('#dessert-2-fat').load(dessertsArray[1] + '.html #fat');
 	$('#dessert-2-ingredients').load(dessertsArray[1] + '.html .shopping-item');
-	$('#dessert-2-hardware').load(dessertsArray[1] + '.html #hardware-list-main');
+	$('#dessert-2-hardware').load(dessertsArray[1] + '.html .hardware-item');
 	$('#dessert-2-tag-1').load(dessertsArray[1] + '.html #tag-2');
 	$('#dessert-2-tag-2').load(dessertsArray[1] + '.html #tag-2');
 	$('#dessert-2-tag-3').load(dessertsArray[1] + '.html #tag-2');
@@ -710,7 +714,7 @@ jQuery(function async($){
 	$('#dessert-3-carbs').load(dessertsArray[2] + '.html #carbs');
 	$('#dessert-3-fat').load(dessertsArray[2] + '.html #fat');
 	$('#dessert-3-ingredients').load(dessertsArray[2] + '.html .shopping-item');
-	$('#dessert-3-hardware').load(dessertsArray[2] + '.html #hardware-list-main');
+	$('#dessert-3-hardware').load(dessertsArray[2] + '.html .hardware-item');
 
 	/* Seafood */
     // Seafood 1
@@ -722,17 +726,17 @@ jQuery(function async($){
 	$('#seafood-1-carbs').load(seafoodArray[0] + '.html #carbs');
 	$('#seafood-1-fat').load(seafoodArray[0] + '.html #fat');
 	$('#seafood-1-ingredients').load(seafoodArray[0] + '.html .shopping-item');
-	$('#seafood-1-hardware').load(seafoodArray[0] + '.html #hardware-list-main');
-	$('#seafood-3-tag-1').load(seafoodArray[2] + '.html #tag-1');
-	$('#seafood-3-tag-2').load(seafoodArray[2] + '.html #tag-2');
-	$('#seafood-3-tag-3').load(seafoodArray[2] + '.html #tag-3');
-	$('#seafood-3-tag-4').load(seafoodArray[2] + '.html #tag-4');
-	$('#seafood-3-tag-5').load(seafoodArray[2] + '.html #tag-5');
-	$('#seafood-3-tag-6').load(seafoodArray[2] + '.html #tag-6');
-	$('#seafood-3-tag-7').load(seafoodArray[2] + '.html #tag-7');
-	$('#seafood-3-tag-8').load(seafoodArray[2] + '.html #tag-8');
-	$('#seafood-3-tag-9').load(seafoodArray[2] + '.html #tag-9');
-	$('#seafood-3-tag-10').load(seafoodArray[2] + '.html #tag-10');
+	$('#seafood-1-hardware').load(seafoodArray[0] + '.html .hardware-item');
+	$('#seafood-1-tag-1').load(seafoodArray[0] + '.html #tag-1');
+	$('#seafood-1-tag-2').load(seafoodArray[0] + '.html #tag-2');
+	$('#seafood-1-tag-3').load(seafoodArray[0] + '.html #tag-3');
+	$('#seafood-1-tag-4').load(seafoodArray[0] + '.html #tag-4');
+	$('#seafood-1-tag-5').load(seafoodArray[0] + '.html #tag-5');
+	$('#seafood-1-tag-6').load(seafoodArray[0] + '.html #tag-6');
+	$('#seafood-1-tag-7').load(seafoodArray[0] + '.html #tag-7');
+	$('#seafood-1-tag-8').load(seafoodArray[0] + '.html #tag-8');
+	$('#seafood-1-tag-9').load(seafoodArray[0] + '.html #tag-9');
+	$('#seafood-1-tag-10').load(seafoodArray[0] + '.html #tag-10');
 	// Seafood 2
 	$('#seafood-2-title').load(seafoodArray[1] + '.html #recipe-name');
 	$('#seafood-2-prep-time').load(seafoodArray[1] + '.html #prep-time');
@@ -742,17 +746,17 @@ jQuery(function async($){
 	$('#seafood-2-carbs').load(seafoodArray[1] + '.html #carbs');
 	$('#seafood-2-fat').load(seafoodArray[1] + '.html #fat');
 	$('#seafood-2-ingredients').load(seafoodArray[1] + '.html .shopping-item');
-	$('#seafood-2-hardware').load(seafoodArray[1] + '.html #hardware-list-main');
-	$('#seafood-3-tag-1').load(seafoodArray[2] + '.html #tag-1');
-	$('#seafood-3-tag-2').load(seafoodArray[2] + '.html #tag-2');
-	$('#seafood-3-tag-3').load(seafoodArray[2] + '.html #tag-3');
-	$('#seafood-3-tag-4').load(seafoodArray[2] + '.html #tag-4');
-	$('#seafood-3-tag-5').load(seafoodArray[2] + '.html #tag-5');
-	$('#seafood-3-tag-6').load(seafoodArray[2] + '.html #tag-6');
-	$('#seafood-3-tag-7').load(seafoodArray[2] + '.html #tag-7');
-	$('#seafood-3-tag-8').load(seafoodArray[2] + '.html #tag-8');
-	$('#seafood-3-tag-9').load(seafoodArray[2] + '.html #tag-9');
-	$('#seafood-3-tag-10').load(seafoodArray[2] + '.html #tag-10');
+	$('#seafood-2-hardware').load(seafoodArray[1] + '.html .hardware-item');
+	$('#seafood-2-tag-1').load(seafoodArray[1] + '.html #tag-1');
+	$('#seafood-2-tag-2').load(seafoodArray[1] + '.html #tag-2');
+	$('#seafood-2-tag-3').load(seafoodArray[1] + '.html #tag-3');
+	$('#seafood-2-tag-4').load(seafoodArray[1] + '.html #tag-4');
+	$('#seafood-2-tag-5').load(seafoodArray[1] + '.html #tag-5');
+	$('#seafood-2-tag-6').load(seafoodArray[1] + '.html #tag-6');
+	$('#seafood-2-tag-7').load(seafoodArray[1] + '.html #tag-7');
+	$('#seafood-2-tag-8').load(seafoodArray[1] + '.html #tag-8');
+	$('#seafood-2-tag-9').load(seafoodArray[1] + '.html #tag-9');
+	$('#seafood-2-tag-10').load(seafoodArray[1] + '.html #tag-10');
 	// Seafood 3
 	$('#seafood-3-title').load(seafoodArray[2] + '.html #recipe-name');
 	$('#seafood-3-prep-time').load(seafoodArray[2] + '.html #prep-time');
@@ -762,7 +766,7 @@ jQuery(function async($){
 	$('#seafood-3-carbs').load(seafoodArray[2] + '.html #carbs');
 	$('#seafood-3-fat').load(seafoodArray[2] + '.html #fat');
 	$('#seafood-3-ingredients').load(seafoodArray[2] + '.html .shopping-item');
-	$('#seafood-3-hardware').load(seafoodArray[2] + '.html #hardware-list-main');
+	$('#seafood-3-hardware').load(seafoodArray[2] + '.html .hardware-item');
 	$('#seafood-3-tag-1').load(seafoodArray[2] + '.html #tag-1');
 	$('#seafood-3-tag-2').load(seafoodArray[2] + '.html #tag-2');
 	$('#seafood-3-tag-3').load(seafoodArray[2] + '.html #tag-3');
@@ -784,17 +788,17 @@ jQuery(function async($){
 	$('#soup-1-carbs').load(soupsArray[0] + '.html #carbs');
 	$('#soup-1-fat').load(soupsArray[0] + '.html #fat');
 	$('#soup-1-ingredients').load(soupsArray[0] + '.html .shopping-item');
-	$('#soup-1-hardware').load(soupsArray[0] + '.html #hardware-list-main');
-	$('#soup-3-tag-1').load(soupsArray[2] + '.html #tag-1');
-	$('#soup-3-tag-2').load(soupsArray[2] + '.html #tag-2');
-	$('#soup-3-tag-3').load(soupsArray[2] + '.html #tag-3');
-	$('#soup-3-tag-4').load(soupsArray[2] + '.html #tag-4');
-	$('#soup-3-tag-5').load(soupsArray[2] + '.html #tag-5');
-	$('#soup-3-tag-6').load(soupsArray[2] + '.html #tag-6');
-	$('#soup-3-tag-7').load(soupsArray[2] + '.html #tag-7');
-	$('#soup-3-tag-8').load(soupsArray[2] + '.html #tag-8');
-	$('#soup-3-tag-9').load(soupsArray[2] + '.html #tag-9');
-	$('#soup-3-tag-10').load(soupsArray[2] + '.html #tag-10');
+	$('#soup-1-hardware').load(soupsArray[0] + '.html .hardware-item');
+	$('#soup-1-tag-1').load(soupsArray[0] + '.html #tag-1');
+	$('#soup-1-tag-2').load(soupsArray[0] + '.html #tag-2');
+	$('#soup-1-tag-3').load(soupsArray[0] + '.html #tag-3');
+	$('#soup-1-tag-4').load(soupsArray[0] + '.html #tag-4');
+	$('#soup-1-tag-5').load(soupsArray[0] + '.html #tag-5');
+	$('#soup-1-tag-6').load(soupsArray[0] + '.html #tag-6');
+	$('#soup-1-tag-7').load(soupsArray[0] + '.html #tag-7');
+	$('#soup-1-tag-8').load(soupsArray[0] + '.html #tag-8');
+	$('#soup-1-tag-9').load(soupsArray[0] + '.html #tag-9');
+	$('#soup-1-tag-10').load(soupsArray[0] + '.html #tag-10');
 	// Soup 2
 	$('#soup-2-title').load(soupsArray[1] + '.html #recipe-name');
 	$('#soup-2-prep-time').load(soupsArray[1] + '.html #prep-time');
@@ -804,17 +808,17 @@ jQuery(function async($){
 	$('#soup-2-carbs').load(soupsArray[1] + '.html #carbs');
 	$('#soup-2-fat').load(soupsArray[1] + '.html #fat');
 	$('#soup-2-ingredients').load(soupsArray[1] + '.html .shopping-item');
-	$('#soup-2-hardware').load(soupsArray[1] + '.html #hardware-list-main');
-	$('#soup-3-tag-1').load(soupsArray[2] + '.html #tag-1');
-	$('#soup-3-tag-2').load(soupsArray[2] + '.html #tag-2');
-	$('#soup-3-tag-3').load(soupsArray[2] + '.html #tag-3');
-	$('#soup-3-tag-4').load(soupsArray[2] + '.html #tag-4');
-	$('#soup-3-tag-5').load(soupsArray[2] + '.html #tag-5');
-	$('#soup-3-tag-6').load(soupsArray[2] + '.html #tag-6');
-	$('#soup-3-tag-7').load(soupsArray[2] + '.html #tag-7');
-	$('#soup-3-tag-8').load(soupsArray[2] + '.html #tag-8');
-	$('#soup-3-tag-9').load(soupsArray[2] + '.html #tag-9');
-	$('#soup-3-tag-10').load(soupsArray[2] + '.html #tag-10');
+	$('#soup-2-hardware').load(soupsArray[1] + '.html .hardware-item');
+	$('#soup-2-tag-1').load(soupsArray[1] + '.html #tag-1');
+	$('#soup-2-tag-2').load(soupsArray[1] + '.html #tag-2');
+	$('#soup-2-tag-3').load(soupsArray[1] + '.html #tag-3');
+	$('#soup-2-tag-4').load(soupsArray[1] + '.html #tag-4');
+	$('#soup-2-tag-5').load(soupsArray[1] + '.html #tag-5');
+	$('#soup-2-tag-6').load(soupsArray[1] + '.html #tag-6');
+	$('#soup-2-tag-7').load(soupsArray[1] + '.html #tag-7');
+	$('#soup-2-tag-8').load(soupsArray[1] + '.html #tag-8');
+	$('#soup-2-tag-9').load(soupsArray[1] + '.html #tag-9');
+	$('#soup-2-tag-10').load(soupsArray[1] + '.html #tag-10');
 	// Soup 3
 	$('#soup-3-title').load(soupsArray[2] + '.html #recipe-name');
 	$('#soup-3-prep-time').load(soupsArray[2] + '.html #prep-time');
@@ -824,7 +828,7 @@ jQuery(function async($){
 	$('#soup-3-carbs').load(soupsArray[2] + '.html #carbs');
 	$('#soup-3-fat').load(soupsArray[2] + '.html #fat');
 	$('#soup-3-ingredients').load(soupsArray[2] + '.html .shopping-item');
-	$('#soup-3-hardware').load(soupsArray[2] + '.html #hardware-list-main');
+	$('#soup-3-hardware').load(soupsArray[2] + '.html .hardware-item');
 	$('#soup-3-tag-1').load(soupsArray[2] + '.html #tag-1');
 	$('#soup-3-tag-2').load(soupsArray[2] + '.html #tag-2');
 	$('#soup-3-tag-3').load(soupsArray[2] + '.html #tag-3');
@@ -839,6 +843,9 @@ jQuery(function async($){
 /* END 4-B -- SLIDER INFO FUNCTIONS */
 
 /* END 4 -- SLIDERS */
+
+
+
 
 
 /* THIS SPACE INTENTIONALLY LEFT BLANK */

@@ -5,7 +5,7 @@
     /* 1-A -- Global Variables */
     /* 1-B -- Index Bar */
     /* 1-C -- Up Button */
-    /* 2 - Header Section */
+    /* 2 -- Header Section */
     /* 3 -- General Slide Selectors */
     /* 4 -- Tabs & Panels */
     /* 5 -- Recipe Card Preview Template */
@@ -31,6 +31,7 @@ body {
     /* border: 1px solid red; */
     margin: 0;
     padding: 0;
+    box-sizing: content-box;
     /* Custom Colors */
     --charcoal: rgb(49, 49, 49);
     --charcoal-2: #36454F;
@@ -65,14 +66,24 @@ body {
     --search-icon-1: url('/css/search-icon.png');
     --search-icon-2: url('/css/search-icon-2.svg');
     --search-icon-3: url('/css/search-icon-3.png');
+    --welcome-bg: url('/assets/welcome.png');
 
     /* RECIPE PICS */
     --beef-1-pic: url('../assets/recipes/meatloaf-1.jpg');
     --beef-2-pic: url('../assets/recipes/chili-1.jpg');
     --beef-3-pic: url('../assets/recipes/short-ribs-1.jpg');
-    --bread-2-pic: url('../assets/recipes/challah-1.jpg');
     --bread-1-pic: url('../assets/recipes/biscuits-1.jpg');
+    --bread-2-pic: url('../assets/recipes/challah-1.jpg');
     --bread-3-pic: url('../assets/recipes/langos-1.jpg');
+    --dessert-1-pic: url('../assets/recipes/jpg');
+    --dessert-2-pic: url('../assets/recipes/-1.jpg');
+    --dessert-3-pic: url('../assets/recipes/-1.jpg');
+    --seafood-1-pic: url('../assets/recipes/-1.jpg');
+    --seafood-2-pic: url('../assets/recipes/-1.jpg');
+    --seafood-3-pic: url('../assets/recipes/-1.jpg');
+    --soup-1-pic: url('../assets/recipes/cauliflower-soup.jpg');
+    --soup-2-pic: url('../assets/recipes/potato-leek.jpg');
+    --soup-3-pic: url('../assets/recipes/shrimp-bisque.jpg');
 
     /* Background Colors */
     --header-bg: var(--lettuce);
@@ -140,9 +151,8 @@ a {
 
 .index-tab {
     position: absolute;
-    right: 5px;
+    right: 8px;
     top: 30%;
-    padding-right: 3px;
 }
 
 .index-tab h6 {
@@ -153,6 +163,7 @@ a {
     font-size: 18px;
     font-weight: 600;
     color: whitesmoke;
+    /* margin-right: 20px; */
 }
 
 .index-tab img {
@@ -270,7 +281,7 @@ a {
 h1.title {
     text-align: left;
     font-family: "Roboto Slab";
-    font-size: 50px;
+    /* font-size: 50px; */
     letter-spacing: 0.10ch;
     border-bottom: none;
 }
@@ -282,22 +293,18 @@ h1.title {
     position: relative;
     overflow: hidden;
     height: 100%;
-    width: 80vw;
-    justify-content: center;
+    width: 70vw;
 }
 
 .slide-group {
     display: flex;
     width: 100%;
-    /* height: 100%; */
     position: relative;
-    align-items: center;
-    justify-content: center;
 }
 
 .slide {
-    width: 60vw;
-    height: 85%;
+    width: 65vw;
+    height: 90%;
     background-color: var(--universal-slide-bg-color);
     display: none;
     position: absolute;
@@ -313,34 +320,30 @@ h1.title {
 
 .slider {
     display: flex;
-    height: 100%;
+    height: 95%;
     width: fit-content;
-    align-items: center;
+    justify-content: center;
+    flex-flow: column;
 }
 
 .slider-container {
     width: 100%;
     display: flex;
-    justify-content: ;
+    align-items: flex-end;
 }
 
 .slide-buttons-container {
-    height: 100%;
+    height: max-content;
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
 .slide-buttons {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: nowrap;
     align-items: center;
     width: 100%;
-    height: 100%;
-    /* justify-content: flex-start; */
-
 }
 
 .slide-buttons h2 {
@@ -349,14 +352,16 @@ h1.title {
 }
 
 .slide-btn {
-    background-color: var(--avocado);
+    background-color: var(--charcoal);
     align-self: center;
-    height: 30px;
-    width: 50px;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin: 10px;
 }
 
 .slide-btn.active {
-    background-color: limegreen;
+    background-color: whitesmoke;
     /* transform: scale(2); */
     /* transform: scale(0.25); */
 }
@@ -388,7 +393,7 @@ h1.title {
 }
 
 #welcome-tab {
-background-color: var(--index-card-bg)
+    background-color: var(--index-card-bg);
 }
 #beef-tab {
     background-color: var(--beef-bg)
@@ -400,6 +405,7 @@ background-color: var(--index-card-bg)
     background-color: var(--desserts-bg)
 }
 #seafood-tab {
+    display: none;
     background-color: var(--seafood-bg)
 }
 #soups-tab {
@@ -412,6 +418,15 @@ background-color: var(--index-card-bg)
 }
 #welcome {
     background-image: linear-gradient(var(--index-card-bg), var(--index-card-bg-2));
+}
+#welcome-img {
+    background-image: var(--welcome-bg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+    width: 100%;
+    height: auto;
 }
 #beef {
     background-image: linear-gradient(var(--beef-red), var(--beef-red-2));
@@ -472,6 +487,7 @@ background-color: var(--index-card-bg)
     border-radius: 10px;
     filter: var(--index-card-shadow);
     margin-bottom: 30px;
+    justify-content: center;
 }
 /* END 4 -- TABS & PANELS */
 
@@ -509,14 +525,18 @@ background-color: var(--index-card-bg)
 }
 
 #recipe-name.recipe-display-title {
+    display: flex;
+    flex-wrap: wrap;
+    width: fit-content;
     padding: 0;
     border-bottom: unset;
+    justify-self: center;
 }
 
 .recipe-title h3 {
     font-size: 2em;
     font-family: "Roboto Slab", sans-serif;
-    letter-spacing: 0.15ch;
+    /* letter-spacing: 0ch; */
 }
 
 .recipe-details li {
@@ -526,7 +546,7 @@ background-color: var(--index-card-bg)
     display: inline-flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    padding: 5px 5px 5px 20px;
+    padding: 5px 5px 5px 10px;
     letter-spacing: 0.15ch;
 }
 
@@ -577,47 +597,17 @@ background-color: var(--index-card-bg)
 
 .ingredients-hardware ul {
     height: 100%;
-    display: inline;
-    flex-direction: column;
     flex-wrap: wrap;
-}
-
-.ingredients-hardware li {
-    display: inline-flex;
-    font-family: "Roboto Condensed";
-    font-weight: 600;
-}
-
-.hardware {
-    display: flex;
-}
-
-.hardware ul {
-    display: inline;
-}
-
-.ingredients li,
-.hardware li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* .ingredients-hardware h4 {
-    display: block;
-    width: 100%;
-} */
-
-li.shopping-item,
-li.hardware-item {
-    display: inline;
-    font-size: 1.5em;
-    font-weight: 400;
-    line-height: 1.5;
 }
 
 .hardware {
     margin-top: 20px;
+}
+
+li.shopping-item,
+li.hardware-item {
+    line-height: 1.5;
+    
 }
 
 .tags-container {
@@ -741,37 +731,52 @@ li.hardware-item {
     flex-flow: column;
     justify-content: center;
     align-items: center;
+    /* position: absolute; */
+    left: 2%;
 }
 
 /* 6-A -- WELCOME CARD */
 #welcome-text {
     display: flex;
     flex-direction: column;
-    height: 100%;
     align-items: center;
-    justify-content: flex-start;
-    width: 100%;
+    justify-content: space-between;
+    height: 65%; 
+    width: auto;
+    position: absolute;
+    /* background-color: white; */
+    align-self: center;
+    -webkit-text-stroke: 2px whitesmoke;
 }
 
 #welcome-text h3 {
-    font-family: "Lobster", serif;
-    color: var(--avocado);
-    font-size: 5em;
+    font-family: "Shrikhand", serif;
+    color: var(--charcoal);
+    /* color: var(--avocado); */
+    color: brown;
+    font-size: 6.5em;
     letter-spacing: 0.5ch;
     margin: 1%;
     padding: 1%;
     text-align: center;
-    filter: var(--index-card-shadow-4);
-    font-weight: 700;
+    filter: var(--index-card-shadow);
+    font-weight: 400;
     justify-content: center;
 }
 
 #welcome-text h4 {
     font-family: "Roboto Slab";
-    font-size: 1.5em;
+    font-size: 3em;
+    -webkit-text-stroke: 0;
+    text-transform: uppercase;
+    /* font-weight: bold; */
+    letter-spacing: 0.25ch;
+    color: whitesmoke;
+    filter: var(--index-card-shadow-2);
 }
 
 /* 6-B -- RECIPE IMAGES */
+/* BEEF */
 #beef-1-pic {
     background-image: var(--beef-1-pic);
 }
@@ -783,7 +788,7 @@ li.hardware-item {
 #beef-3-pic {
     background-image: var(--beef-3-pic);
 }
-
+/* BREAD */
 #bread-1-pic {
     background-image: var(--bread-1-pic);
     background-size: 80%;
@@ -798,6 +803,46 @@ li.hardware-item {
     background-image: var(--bread-3-pic);
     background-size: 70%;
 }
+/* DESSERTS */
+#dessert-1-pic {
+    background-image: var(--dessert-1-pic);
+    background-size: 70%;
+}
+#dessert-2-pic {
+    background-image: var(--dessert-2-pic);
+    background-size: 70%;
+}
+#dessert-3-pic {
+    background-image: var(--desssert-3-pic);
+    background-size: 70%;
+}
+/* SEAFOOD */
+#seafood-1-pic {
+    background-image: var(--seafood-1-pic);
+    background-size: 70%;
+}
+#seafood-2-pic {
+    background-image: var(--seafood-2-pic);
+    background-size: 70%;
+}
+#seafood-3-pic {
+    background-image: var(--seafood-3-pic);
+    background-size: 70%;
+}
+/* SOUPS */
+#soup-1-pic {
+    background-image: var(--soup-1-pic);
+    background-size: 70%;
+}
+#soup-2-pic {
+    background-image: var(--soup-2-pic);
+    background-size: 70%;
+}
+#soup-3-pic {
+    background-image: var(--soup-3-pic);
+    background-size: 70%;
+}
+/* END 6-B -- RECIPE IMAGES */
 
 /* 6-C -- SECRETS PANEL */
 #secrets {
@@ -837,10 +882,11 @@ ul.secrets-list {
 .recipe-display-section {
     display: none;
     background-color: var(--lettuce);
-    height: 100%;
+    height: fit-content;
     width: 100%;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    padding-top: 1%;
 }
 
 .recipe-display-section.active {
@@ -857,10 +903,12 @@ h2.test-header {
 
 .recipe-display-container {
     display: grid;
-    grid-template: 125px 400px 2fr 2fr / 32% 32% 32%;
-    grid-gap: 15px 15px;
+    grid-template: repeat(4 min-content) / 25% 50% 25%;
+    /* grid-template: minmax(50px 300px) minmax(fit-content 400px) 1fr 1fr / 25% 50% 25%; */
+    /* grid-template: minmax(20px 30px) minmax(max-content 400px) 1fr 1fr / 25% 50% 25%; */
+    /* grid-gap: 15px 15px; */
     width: 90%;
-    height: max-content;
+    height: 100%;
     background-color: white;
     border-radius: 10px;
     padding: 1%;
@@ -875,35 +923,41 @@ h2.test-header {
     color: black;
     font-family: "Roboto Slab";
     letter-spacing: 0.2ch;
-    font-size: 1.5em;
+    font-size: 70px;
     padding: 0;
     width: 100%;
-    text-align: left;
+    text-align: center;
 }
 
 .recipe-display-title {
     /* background-color: whitesmoke; */
     display: flex;
     align-items: center;
-    grid-area: 1 / 1 / span 1 / span 3;
+    grid-area: 1 / 1 / span 1 / span 2;
     text-align: left;
     color: black;
     font-family: "Roboto Slab";
     letter-spacing: 0.2ch;
-    font-size: 3em;
-    padding: 15px 0 15px 30px;
+    /* font-size: 3em; */
     text-align: left;
     border-bottom: 5px dotted black;
     z-index: 10;
+    min-height: 10px;
+    max-height: 500px;
+    align-self: center;
+    /* margin-bottom: 30px; */
 }
 
 .recipe-display-details {
-    /* background-color: whitesmoke; */
+    background-color: rgb(159, 215, 250);
+    border-radius: 10px;
     display: flex;
     grid-area: 1 / 3 / span 1 / span 1;
     align-items: center;
     justify-content: center;
-    padding-left: 10px;
+    padding: 10px;
+    height: 100%;
+    line-height: 3;
 }
 
 .recipe-display-details li {
@@ -924,7 +978,9 @@ h2.test-header {
     grid-area: 2 / 1 / span 1 / span 2;
     align-items: flex-start;
     justify-content: center;
-    padding: 0 15px 15px 15px;
+    padding-left: 50px;
+    /* margin: 50px; */
+    /* padding: 50px; */
 }
 
 .emoji {
@@ -933,10 +989,13 @@ h2.test-header {
 
 #servings-list {
     line-height: 2;
+    display: flex;
+    justify-content: center;
 }
 
 #servings-list li {
     display: block;
+    margin-right: 30px;
 }
 
 #servings.recipe-detail {
@@ -955,8 +1014,8 @@ h2.test-header {
     font-size: 1.25em;
     font-family: "Roboto Slab", sans-serif;
     font-weight: 600;
-    display: inline-flex;
-    justify-content: space-between;
+    display: flex;
+    justify-content: center;
     letter-spacing: 0.15ch;
 }
 
@@ -973,6 +1032,7 @@ h2.test-header {
     line-height: 1.5;
     border-radius: 10px;
     height: min-content;
+    margin-top: 15px;
 }
 
 .recipe-display-tags {
@@ -991,8 +1051,12 @@ h2.test-header {
     /* background-color: rgb(122, 161, 235); */
     display: flex;
     flex-flow: column wrap;
+    justify-content: center;
     padding: 15px;
-    width: 100%;
+    width: max-content;
+    min-height: min-content;
+    max-height: 500px;
+    align-items: space-around;
 }
 
 #ingredient-list {
@@ -1000,19 +1064,29 @@ h2.test-header {
     flex-flow: column wrap;
     list-style: disc;
     line-height: 1.5;
-    height: 300px;
+    min-height: min-content;
+    max-height: 360px;
+    /* justify-content: ; */
 }
 
-.ingredient {
+.ingredient,
+.hardware-items {
     font-family: monospace;
+    font-size: 20px;
     margin-right: 20px;
     padding-right: 20px;
 }
 
-.shopping-item {
+.shopping-item,
+.hardware-item {
     font-family: "roboto condensed";
-    font-size: 18px;
+    font-size: 20px;
     padding-right: 2px;
+}
+
+.shopping-item ~ .shopping-item:before,
+.hardware-item ~ .hardware-item:before {
+    content: ",  ";
 }
 
 .shopping-items,
@@ -1024,6 +1098,9 @@ h2.test-header {
     /* background-color: cyan; */
     grid-area: 3 / 2 / span 2 / span 1;
     padding: 15px 15px 15px 15px;
+    min-height: min-content;
+    max-height: max-content;
+    width: 100%;
 }
 
 #instructions-list {
@@ -1049,6 +1126,7 @@ h2.test-header {
     /* background-color: deeppink; */
     grid-area: 3 / 3 / span 1 / span 1;
     padding: 15px;
+    margin-left: 50px;
 }
 
 #hardware-list-main, 
@@ -1068,23 +1146,32 @@ h2.test-header {
 }
 
 .recipe-display-pic {
-    border: 5px dashed black;
+    /* border: 5px dashed black; */
     grid-area: 2 / 3 / span 1 / span 1;
+    margin-top: 2%;
     padding: 15px;
     border-radius: 10px;
+    height: 500px;
+    width: min-content;
     display: flex;
-    align-items: center;
+    justify-self: center;
+    align-self: center;
 }
 
 .recipe-display-pic img {
-    width: 100%;
-    height: auto;
+    max-height: 70%;
+    min-width: 50%;
+    padding: 15px;
+    border: 5px dashed var(--charcoal);
+    border-radius: 10px;
+    align-self: center;
 }
 
 .recipe-display-variations {
     background-color: var(--grape);
     grid-area: 4 / 3 / span 1 / span 1;
     padding: 30px;
+    margin: 50px;
     border-radius: 10px;
     height: min-content;
 }
@@ -1118,5 +1205,136 @@ ul#additional-hardware.variations-list {
     color: whitesmoke;
 }
 
+/* MAIN RECIPE DISPLAY PICTURE TWEAKS */
+/* BEEF */
+#meatloaf-pic {
+    /* transform: scale(0.6); */
+    height: 100%;
+}
+#short-rib-pic {
+    /* transform: scale(0.75); */
+    height: 100%;
+}
+/* BREADS */
+#challah-pic {
+    /* transform: rotate(90deg) scale(1); */
+    height: 100%;
+}
+#biscuits-pic {
+    /* transform: scale(0.9); */
+    height: 100%;
+}
+#langos-pic {
+    /* transform: scale(0.9); */
+    height: 100%;
+}
+/* SOUPS */
+#shrimp-bisque-pic {
+    /* transform: scale(0.85); */
+    height: 100%;
+}
+#potato-leek-pic {
+    transform: scale(0.9);
+    height: 100%;
+}
+
+/* Next & previous buttons */
+.prev, #next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  filter: var(--index-card-shadow-2);
+  transition: filter 0 linear;
+}
+
+.prev:active,
+#next:active {
+    color:rgb(255, 255, 0);
+    filter: none;
+}
+
+/* Position the "next button" to the right */
+#next {
+  right: 5%;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 5%;
+}
 
 
+/* MEDIA QUERIES */
+
+/* 1000px wide */
+@media screen and (max-width: 1000px)  {
+    /* TABS */
+    .tab-control,
+    .tab.active,
+    .active {
+        font-size: 16px;
+    }
+}
+/* END 1000px wide */
+
+/* 800px wide */
+@media screen and (max-width: 800px)  {
+    /* TABS */
+    .tab-control,
+    .tab.active,
+    .active {
+        font-size: 16px;
+    }
+
+    .tab {
+        display: flex;
+        text-orientation: sideways;
+        writing-mode: vertical-lr;
+        height: 100px;
+        width: 40px;
+        align-items: center;
+    }
+
+    .index-window {
+        display: none;
+    }
+}
+/* END 800px WIDE */
+
+/* 650px wide */
+@media screen and (max-width: 650px)  {
+    /* TABS */
+    .tab-control,
+    .tab.active,
+    .active {
+        font-size: 12px;
+    }
+
+    .tab {
+        display: flex;
+        text-orientation: sideways;
+        writing-mode: vertical-lr;
+        height: 75px;
+        width: 25px;
+        align-items: center;
+    }
+}
+/* END 650px WIDE */
+
+/* 460px wide */
+@media screen and (max-width: 460px)  {
+    /* TABS */
+    .tab-list {
+        display: none;
+    }
+}
+/* END 460px WIDE */

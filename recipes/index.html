@@ -11,8 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Single+Day&display=swap" rel="stylesheet">    <!-- from lightSlider github -->
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">    
-    
+
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Shrikhand&display=swap" rel="stylesheet">
+
     <!-- CSS SHEETS -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <!-- <link rel="stylesheet" type="text/css" href="css/style2.css" /> -->
@@ -55,18 +56,20 @@
             <!-- L -->
             <li><a href="#recipe-display-section" id="langos-link">Langos</a></li>
             <!-- M -->
-            <li><a href="#recipe-display-section" id="moroccan-cauli-link">Moroccan Cauliflower</a></li>
-            <li><a href="#recipe-display-section" id="mushy-peas-link">Mushy Peas</a></li>
+            <li><a href="#recipe-display-section" id="moroccan-cauli-link">Moroccan Cauliflower Soup</a></li>
+            <!-- <li><a href="#recipe-display-section" id="mushy-peas-link">Mushy Peas</a></li> -->
             <li><a href="#recipe-display-section" id="meatloaf-link">My Meatloaf</a></li>
             <!-- N -->
             <!-- N -->
             <!-- O -->
             <!-- P -->
-            <li><a href="#recipe-display-section" id="purple-mash-link">Purple Mashed Potatoes</a></li>
+            <li><a href="#recipe-display-section" id="potato-leek-link">Potato Leek Soup</a></li>
+            <!-- <li><a href="#recipe-display-section" id="purple-mash-link">Purple Mashed Potatoes</a></li> -->
             <!-- Q -->
             <!-- R -->
             <li><a href="#recipe-display-section" id="short-ribs-link">Red Wine Short Ribs</a></li>
             <!-- S -->
+            <li><a href="#recipe-display-section" id="shrimp-bisque-link">Shrimp Bisque</a></li>
             <!-- T -->
             <!-- U -->
             <!-- V -->
@@ -92,11 +95,11 @@
             <ul class="tab-list">
                 <li id="welcome-tab" class="active tab"><a class="tab-control" href="#welcome">Welcome!</a></li>
                 <li id="beef-tab" class="tab"><a class="tab-control" href="#beef">Beef</a></li>
-                <li id="breads-tab"><a class="tab-control" href="#breads">Breads</a></li>
-                <li id="desserts-tab"><a class="tab-control" href="#desserts">Desserts</a></li>
-                <li id="seafood-tab"><a class="tab-control" href="#seafood">Seafood</a></li>
-                <li id="soups-tab"><a class="tab-control" href="#soups">Soups</a></li>
-                <li id="secrets-tab"><a class="tab-control" href="#secrets">Secrets</a></li>
+                <li id="breads-tab" class="tab"><a class="tab-control" href="#breads">Breads</a></li>
+                <li id="desserts-tab" class="tab"><a class="tab-control" href="#desserts">Desserts</a></li>
+                <li id="seafood-tab" class="tab"><a class="tab-control" href="#seafood">Seafood</a></li>
+                <li id="soups-tab" class="tab"><a class="tab-control" href="#soups">Soups</a></li>
+                <li id="secrets-tab" class="tab"><a class="tab-control" href="#secrets">Secrets</a></li>
             </ul>
         </div>
 
@@ -104,9 +107,11 @@
 
             <!-- Welcome Panel -->
             <div class="tab-panel active" id="welcome">
+                <div id="welcome-img">
+                </div>
                 <div id="welcome-text">
-                    <h3>Daniel's Kitchen</h3>
-                    <h4>I can never find my recipes when I need them, so I decided to put my favorites right here</h4>
+                    <h3>Recipe Box</h3>
+                    <h4>signature dishes</h4>
                 </div>
             </div>
 
@@ -115,17 +120,25 @@
 
                 <!-- Slider -->
                 <div class="slider" id="beef-slider">
+                            
+                    <!-- SKIP BUTTONS
+                    <div class="skip-buttons">
+                        <button class="prev">◀</h1>
+                        <button id="next">▶</h1>
+                    </div> -->
+
 
                     <!-- Slider Buttons -->
                     <div class="slide-buttons-container">
                         <div class="slide-buttons">
-                            <h2>Recipe Directory</h2>
                         </div>
                     </div>
 
                     <!-- Slide Viewer -->
                     <div class="slide-viewer">
                         <div class="slide-group">
+
+
                             
                             <!-- Slides -->
                             
@@ -320,7 +333,6 @@
                     <!-- Slider Buttons -->
                     <div class="slide-buttons-container">
                         <div class="slide-buttons">
-                            <h2>Recipe Directory</h2>
                         </div>
                     </div>
 
@@ -336,7 +348,7 @@
 
                                     <!-- Overlay -->
                                     <div class="overlay">
-                                        <a href="#recipe-display-section" class="open-recipe-btn" id="open-recipe-btn">Open Recipe</a>
+                                        <a href="#recipe-display-section" class="open-recipe-btn" id="bread-1-link">Open Recipe</a>
                                     </div>
 
 
@@ -395,7 +407,7 @@
                                     
                                     <!-- Overlay -->
                                     <div class="overlay">
-                                        <a href="#recipe-display-section" class="open-recipe-btn" id="open-recipe-btn">Open Recipe</a>
+                                        <a href="#recipe-display-section" class="open-recipe-btn" id="bread-2-link">Open Recipe</a>
                                     </div>
                                     
                                     
@@ -459,7 +471,7 @@
 
                                     <!-- Overlay -->
                                     <div class="overlay">
-                                        <a href="#recipe-display-section" class="open-recipe-btn" id="open-recipe-btn">Open Recipe</a>
+                                        <a href="#recipe-display-section" class="open-recipe-btn" id="bread-3-link">Open Recipe</a>
                                     </div>
 
 
@@ -520,8 +532,8 @@
                     
             </div>
 
-            <!-- Desserts -->
-            <div class="tab-panel panel" id="desserts">
+            <!-- Desserts Panel -->
+            <div class="tab-panel slider-container" id="desserts">
 
                 <!-- Slider -->
                 <div class="slider" id="desserts-slider">
@@ -529,7 +541,6 @@
                     <!-- Slider Buttons -->
                     <div class="slide-buttons-container">
                         <div class="slide-buttons">
-                            <h2>Recipe Directory</h2>
                         </div>
                     </div>
 
@@ -545,11 +556,12 @@
 
                                     <!-- Overlay -->
                                     <div class="overlay">
-                                        <a href="#recipe-display-section" class="open-recipe-btn" id="open-recipe-btn">Open Recipe</a>
+                                        <a href="#recipe-display-section" class="open-recipe-btn" id="dessert-1-link">Open Recipe</a>
                                     </div>
 
+
                                     <div class="recipe-header">
-                                            <!-- Name -->
+                                         <!-- Name -->
                                         <div class="recipe-title">
                                             <h3 id="dessert-1-title"></h3>
                                         </div>
@@ -597,18 +609,18 @@
                                 </div>
                             </div>
                             
-                            <!-- Dessert Slide 2 -->
+                            <!-- dessert Slide 2 -->
                             <div class="slide" id="dessert-slide-2">
                                 <div class="recipe-card" id="recipe-card-dessert-2">
-
+                                    
                                     <!-- Overlay -->
                                     <div class="overlay">
-                                        <a href="#recipe-display-section" class="open-recipe-btn" id="open-recipe-btn">Open Recipe</a>
+                                        <a href="#recipe-display-section" class="open-recipe-btn" id="dessert-2-link">Open Recipe</a>
                                     </div>
-
-
+                                    
+                                    
                                     <div class="recipe-header">
-                                            <!-- Name -->
+                                         <!-- Name -->
                                         <div class="recipe-title">
                                             <h3 id="dessert-2-title"></h3>
                                         </div>
@@ -661,17 +673,18 @@
                                 </div>
                             </div>
 
-                            <!-- Dessert Slide 3 -->
+                            <!-- dessert Slide 3 -->
                             <div class="slide" id="dessert-slide-3">
                                 <div class="recipe-card" id="recipe-card-dessert-3">
 
                                     <!-- Overlay -->
                                     <div class="overlay">
-                                        <a href="#recipe-display-section" class="open-recipe-btn" id="open-recipe-btn">Open Recipe</a>
+                                        <a href="#recipe-display-section" class="open-recipe-btn" id="dessert-3-link">Open Recipe</a>
                                     </div>
 
+
                                     <div class="recipe-header">
-                                            <!-- Name -->
+                                         <!-- Name -->
                                         <div class="recipe-title">
                                             <h3 id="dessert-3-title"></h3>
                                         </div>
@@ -705,12 +718,6 @@
                                     <div class="recipe-body">
                                         <!-- Picture -->
                                         <div class="recipe-pic" id="dessert-3-pic">
-
-                                            <!-- Overlay -->
-                                            <div class="overlay">
-                                            <a href="#" class="open-recipe-btn">Open Recipe</a>
-                                            </div>
-
                                         </div>
                                         <!-- Ingredients / Hardware -->
                                         <div class="ingredients-hardware">
@@ -718,7 +725,8 @@
                                                 <h4>Ingredients:</h4> <span class="shopping-items" id="dessert-3-ingredients"></span>
                                             </div>
                                             <div class="hardware">
-                                                <h4>Hardware:</h4> <span class="hardware-item" id="dessert-3-hardware"></span>                                            </div>
+                                                <h4>Hardware:</h4> <span class="hardware-item" id="dessert-3-hardware"></span>
+                                            </div>
                                         </div>
 
                                     </div>
@@ -729,10 +737,10 @@
                     </div>
 
                 </div>
-
+                    
             </div>
 
-            <!-- Seafood -->
+            <!-- Seafood Panel -->
             <div class="tab-panel panel" id="seafood">
 
                 <!-- Slider -->
@@ -741,7 +749,6 @@
                     <!-- Slider Buttons -->
                     <div class="slide-buttons-container">
                         <div class="slide-buttons">
-                            <h2>Recipe Directory</h2>
                         </div>
                     </div>
 
@@ -751,13 +758,13 @@
                             
                             <!-- Slides -->
                             
-                            <!-- Dessert Slide 1 -->
+                            <!-- Seafood Slide 1 -->
                             <div class="slide" id="seafood-slide-1">
                                 <div class="recipe-card" id="recipe-card-seafood-1">
 
                                     <!-- Overlay -->
                                     <div class="overlay">
-                                        <a href="#recipe-display-section" class="open-recipe-btn" id="open-recipe-btn">Open Recipe</a>
+                                        <a href="#recipe-display-section" class="open-recipe-btn" id="seafood-1-link">Open Recipe</a>
                                     </div>
 
                                     <div class="recipe-header">
@@ -809,13 +816,13 @@
                                 </div>
                             </div>
                             
-                            <!-- Dessert Slide 2 -->
+                            <!-- Seafood Slide 2 -->
                             <div class="slide" id="seafood-slide-2">
                                 <div class="recipe-card" id="recipe-card-seafood-2">
 
                                     <!-- Overlay -->
                                     <div class="overlay">
-                                        <a href="#recipe-display-section" class="open-recipe-btn" id="open-recipe-btn">Open Recipe</a>
+                                        <a href="#recipe-display-section" class="open-recipe-btn" id="seafood-2-link">Open Recipe</a>
                                     </div>
 
                                     <div class="recipe-header">
@@ -872,13 +879,13 @@
                                 </div>
                             </div>
 
-                            <!-- Dessert Slide 3 -->
+                            <!-- seafood Slide 3 -->
                             <div class="slide" id="seafood-slide-3">
                                 <div class="recipe-card" id="recipe-card-seafood-3">
 
                                     <!-- Overlay -->
                                     <div class="overlay">
-                                        <a href="#recipe-display-section" class="open-recipe-btn" id="open-recipe-btn">Open Recipe</a>
+                                        <a href="#recipe-display-section" class="open-recipe-btn" id="seafood-3-link">Open Recipe</a>
                                     </div>
 
                                     <div class="recipe-header">
@@ -923,7 +930,8 @@
                                                 <h4>Ingredients:</h4> <span class="shopping-items" id="seafood-3-ingredients"></span>
                                             </div>
                                             <div class="hardware">
-                                                <h4>Hardware:</h4> <span class="hardware-item" id="seafood-3-hardware"></span>                                            </div>
+                                                <h4>Hardware:</h4> <span class="hardware-item" id="seafood-3-hardware"></span>                                            
+                                            </div>
                                         </div>
 
                                     </div>
@@ -946,7 +954,6 @@
                     <!-- Slider Buttons -->
                     <div class="slide-buttons-container">
                         <div class="slide-buttons">
-                            <h2>Recipe Directory</h2>
                         </div>
                     </div>
 
@@ -962,7 +969,7 @@
 
                                     <!-- Overlay -->
                                     <div class="overlay">
-                                        <a href="#recipe-display-section" class="open-recipe-btn" id="open-recipe-btn">Open Recipe</a>
+                                        <a href="#recipe-display-section" class="open-recipe-btn" id="soup-1-link">Open Recipe</a>
                                     </div>
                                     
                                     <div class="recipe-header">
@@ -1020,7 +1027,7 @@
 
                                     <!-- Overlay -->
                                     <div class="overlay">
-                                        <a href="#recipe-display-section" class="open-recipe-btn" id="open-recipe-btn">Open Recipe</a>
+                                        <a href="#recipe-display-section" class="open-recipe-btn" id="soup-2-link">Open Recipe</a>
                                     </div>
 
                                     <div class="recipe-header">
@@ -1083,7 +1090,7 @@
 
                                     <!-- Overlay -->
                                     <div class="overlay">
-                                        <a href="#recipe-display-section" class="open-recipe-btn" id="open-recipe-btn">Open Recipe</a>
+                                        <a href="#recipe-display-section" class="open-recipe-btn" id="soup-3-link">Open Recipe</a>
                                     </div>
 
                                     <div class="recipe-header">
