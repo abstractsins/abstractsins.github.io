@@ -24,7 +24,7 @@
 <body>
 
     <!-- Up Button -->
-    <button onclick="topFunction()" id="upBtn" title="Go to top">Return</button>
+    <button onclick="topFunction()" id="upBtn" title="Go to top"><h1>&lt&lt</h1></button>
 
     <!-- Recipe Index -->
     <div class="index-window">
@@ -43,33 +43,34 @@
             <!-- B -->
             <li><a href="#recipe-display-section" id="biscuits-link">Best Biscuits</a></li>
             <!-- C -->
+            <li><a href="#recipe-display-section" id="cookies-link">CCPB Cookies</a></li>
             <li><a href="#recipe-display-section" id="challah-link">Challah</a></li>
             <!-- D -->
             <!-- E -->
             <!-- F -->
             <!-- G -->
-            <li><a href="#recipe-display-section" id="chili-link">Gas Station Chili</a></li>
             <!-- H -->
             <!-- I -->
             <!-- J -->
             <!-- K -->
+            <li><a href="#recipe-display-section" id="chili-link">Kwiki-Mart Chili</a></li>
             <!-- L -->
             <li><a href="#recipe-display-section" id="langos-link">Langos</a></li>
             <!-- M -->
             <li><a href="#recipe-display-section" id="moroccan-cauli-link">Moroccan Cauliflower Soup</a></li>
-            <!-- <li><a href="#recipe-display-section" id="mushy-peas-link">Mushy Peas</a></li> -->
             <li><a href="#recipe-display-section" id="meatloaf-link">My Meatloaf</a></li>
             <!-- N -->
             <!-- N -->
             <!-- O -->
             <!-- P -->
+            <li><a href="#recipe-display-section" id="panna-cotta-link">Panna Cotta w/ Caramel Sauce</a></li>
             <li><a href="#recipe-display-section" id="potato-leek-link">Potato Leek Soup</a></li>
-            <!-- <li><a href="#recipe-display-section" id="purple-mash-link">Purple Mashed Potatoes</a></li> -->
             <!-- Q -->
             <!-- R -->
             <li><a href="#recipe-display-section" id="short-ribs-link">Red Wine Short Ribs</a></li>
             <!-- S -->
             <li><a href="#recipe-display-section" id="shrimp-bisque-link">Shrimp Bisque</a></li>
+            <li><a href="#recipe-display-section" id="cannoli-link">Stout Malted Cannoli</a></li>
             <!-- T -->
             <!-- U -->
             <!-- V -->
@@ -83,8 +84,63 @@
 
     <!-- Header Section -->
     <div class="header">        
-        <!-- Title -->
-        <h1 class="title">Dan's Recipes</h1>
+
+        <!-- Recipe Index @ 700px -->
+        <div class="index-window-700">
+
+            <!-- Search tab for hovering over -->
+            <!-- <div class="index-tab-700">
+                <h6>&lt&lt Recipe Index &gt&gt</h6>
+            </div> -->
+        
+            <!-- Search box -->
+            <input type="text" id="recipe-search-700" onkeyup="search700()" placeholder="Find a recipe..." title="Recipe Search"/>
+        
+            <!-- Recipe List -->
+            <ul id="recipe-list-700">
+                <!-- A -->
+                <!-- B -->
+                <li><a href="#recipe-display-section" id="biscuits-link-700">Best Biscuits</a></li>
+                <!-- C -->
+                <li><a href="#recipe-display-section" id="cookies-link-700">CCPB Cookies</a></li>
+                <li><a href="#recipe-display-section" id="challah-link-700">Challah</a></li>
+                <!-- D -->
+                <!-- E -->
+                <!-- F -->
+                <!-- G -->
+                <!-- H -->
+                <!-- I -->
+                <!-- J -->
+                <!-- K -->
+                <li><a href="#recipe-display-section" id="chili-link-700">Kwiki-Mart Chili</a></li>
+                <!-- L -->
+                <li><a href="#recipe-display-section" id="langos-link-700">Langos</a></li>
+                <!-- M -->
+                <li><a href="#recipe-display-section" id="moroccan-cauli-link-700">Moroccan Cauliflower Soup</a></li>
+                <li><a href="#recipe-display-section" id="meatloaf-link-700">My Meatloaf</a></li>
+                <!-- N -->
+                <!-- N -->
+                <!-- O -->
+                <!-- P -->
+                <li><a href="#recipe-display-section" id="panna-cotta-link-700">Panna Cotta w/ Caramel</a></li>
+                <li><a href="#recipe-display-section" id="potato-leek-link-700">Potato Leek Soup</a></li>
+                <!-- Q -->
+                <!-- R -->
+                <li><a href="#recipe-display-section" id="short-ribs-link-700">Red Wine Short Ribs</a></li>
+                <!-- S -->
+                <li><a href="#recipe-display-section" id="shrimp-bisque-link-700">Shrimp Bisque</a></li>
+                <li><a href="#recipe-display-section" id="cannoli-link-700">Stout Malted Cannoli</a></li>
+                <!-- T -->
+                <!-- U -->
+                <!-- V -->
+                <!-- W -->
+                <!-- X -->
+                <!-- Y -->
+                <!-- Z -->
+            </ul>
+        
+        </div>
+
     </div>
 
     <!-- Main Section -->
@@ -97,7 +153,7 @@
                 <li id="beef-tab" class="tab"><a class="tab-control" href="#beef">Beef</a></li>
                 <li id="breads-tab" class="tab"><a class="tab-control" href="#breads">Breads</a></li>
                 <li id="desserts-tab" class="tab"><a class="tab-control" href="#desserts">Desserts</a></li>
-                <li id="seafood-tab" class="tab"><a class="tab-control" href="#seafood">Seafood</a></li>
+                <li id="seafood-tab" class="tab construction"><a class="tab-control" href="#seafood">Seafood</a></li>
                 <li id="soups-tab" class="tab"><a class="tab-control" href="#soups">Soups</a></li>
                 <li id="secrets-tab" class="tab"><a class="tab-control" href="#secrets">Secrets</a></li>
             </ul>
@@ -111,7 +167,7 @@
                 </div>
                 <div id="welcome-text">
                     <h3>Recipe Box</h3>
-                    <h4>signature dishes</h4>
+                    <h4>my signature dishes</h4>
                 </div>
             </div>
 
@@ -171,13 +227,14 @@
                                     <!-- TAGS -->
                                     <div class="tags-container">
                                         <div class="tags">
-                                            <h4>FYI...</h4>
+                                            <h4>#FYI...</h4>
                                             <ul>
-                                                <li class=tag id="beef-1-tag-1"></li>
-                                                <li class=tag id="beef-1-tag-2"></li>
-                                                <li class=tag id="beef-1-tag-3"></li>
-                                                <li class=tag id="beef-1-tag-4"></li>
-                                                <li class=tag id="beef-1-tag-5"></li>
+                                                <li class="tagly" id="beef-1-tag-0"></li>
+                                                <li class="tagly" id="beef-1-tag-1"></li>
+                                                <li class="tagly" id="beef-1-tag-2"></li>
+                                                <li class="tagly" id="beef-1-tag-3"></li>
+                                                <li class="tagly" id="beef-1-tag-4"></li>
+                                                <li class="tagly" id="beef-1-tag-5"></li>
                                             </ul>
                                         </div>  
                                     </div>
@@ -229,13 +286,14 @@
                                     <!-- TAGS -->
                                     <div class="tags-container">
                                         <div class="tags">
-                                            <h4>FYI...</h4>
+                                            <h4>#FYI...</h4>
                                             <ul>
-                                                <li class=tag id="beef-2-tag-1"></li>
-                                                <li class=tag id="beef-2-tag-2"></li>
-                                                <li class=tag id="beef-2-tag-3"></li>
-                                                <li class=tag id="beef-2-tag-4"></li>
-                                                <li class=tag id="beef-2-tag-5"></li>
+                                                <li class="tagly" id="beef-2-tag-0"></li>
+                                                <li class="tagly" id="beef-2-tag-1"></li>
+                                                <li class="tagly" id="beef-2-tag-2"></li>
+                                                <li class="tagly" id="beef-2-tag-3"></li>
+                                                <li class="tagly" id="beef-2-tag-4"></li>
+                                                <li class="tagly" id="beef-2-tag-5"></li>
                                             </ul>
                                         </div>  
                                     </div>
@@ -289,13 +347,14 @@
                                     <!-- TAGS -->
                                     <div class="tags-container">
                                         <div class="tags">
-                                            <h4>FYI...</h4>
+                                            <h4>#FYI...</h4>
                                             <ul>
-                                                <li class=tag id="beef-3-tag-1"></li>
-                                                <li class=tag id="beef-3-tag-2"></li>
-                                                <li class=tag id="beef-3-tag-3"></li>
-                                                <li class=tag id="beef-3-tag-4"></li>
-                                                <li class=tag id="beef-3-tag-5"></li>
+                                                <li class="tagly" id="beef-3-tag-0"></li>
+                                                <li class="tagly" id="beef-3-tag-1"></li>
+                                                <li class="tagly" id="beef-3-tag-2"></li>
+                                                <li class="tagly" id="beef-3-tag-3"></li>
+                                                <li class="tagly" id="beef-3-tag-4"></li>
+                                                <li class="tagly" id="beef-3-tag-5"></li>
                                             </ul>
                                         </div>  
                                     </div>     
@@ -351,7 +410,6 @@
                                         <a href="#recipe-display-section" class="open-recipe-btn" id="bread-1-link">Open Recipe</a>
                                     </div>
 
-
                                     <div class="recipe-header">
                                          <!-- Name -->
                                         <div class="recipe-title">
@@ -372,13 +430,14 @@
                                     <!-- TAGS -->
                                     <div class="tags-container">
                                         <div class="tags">
-                                            <h4>FYI...</h4>
+                                            <h4>#FYI...</h4>
                                             <ul>
-                                                <li class=tag id="bread-1-tag-1"></li>
-                                                <li class=tag id="bread-1-tag-2"></li>
-                                                <li class=tag id="bread-1-tag-3"></li>
-                                                <li class=tag id="bread-1-tag-4"></li>
-                                                <li class=tag id="bread-1-tag-5"></li>
+                                                <li class="tagly" id="bread-1-tag-0"></li>
+                                                <li class="tagly" id="bread-1-tag-1"></li>
+                                                <li class="tagly" id="bread-1-tag-2"></li>
+                                                <li class="tagly" id="bread-1-tag-3"></li>
+                                                <li class="tagly" id="bread-1-tag-4"></li>
+                                                <li class="tagly" id="bread-1-tag-5"></li>
                                             </ul>
                                         </div>  
                                     </div>
@@ -410,7 +469,6 @@
                                         <a href="#recipe-display-section" class="open-recipe-btn" id="bread-2-link">Open Recipe</a>
                                     </div>
                                     
-                                    
                                     <div class="recipe-header">
                                          <!-- Name -->
                                         <div class="recipe-title">
@@ -432,13 +490,14 @@
                                     <!-- TAGS -->
                                     <div class="tags-container">
                                         <div class="tags">
-                                            <h4>FYI...</h4>
+                                            <h4>#FYI...</h4>
                                             <ul>
-                                                <li class=tag id="bread-2-tag-1"></li>
-                                                <li class=tag id="bread-2-tag-2"></li>
-                                                <li class=tag id="bread-2-tag-3"></li>
-                                                <li class=tag id="bread-2-tag-4"></li>
-                                                <li class=tag id="bread-2-tag-5"></li>
+                                                <li class="tagly" id="bread-2-tag-0"></li>
+                                                <li class="tagly" id="bread-2-tag-1"></li>
+                                                <li class="tagly" id="bread-2-tag-2"></li>
+                                                <li class="tagly" id="bread-2-tag-3"></li>
+                                                <li class="tagly" id="bread-2-tag-4"></li>
+                                                <li class="tagly" id="bread-2-tag-5"></li>
                                             </ul>
                                         </div>  
                                     </div>                                    
@@ -496,13 +555,14 @@
                                     <!-- TAGS -->
                                     <div class="tags-container">
                                         <div class="tags">
-                                            <h4>FYI...</h4>
+                                            <h4>#FYI...</h4>
                                             <ul>
-                                                <li class=tag id="bread-3-tag-1"></li>
-                                                <li class=tag id="bread-3-tag-2"></li>
-                                                <li class=tag id="bread-3-tag-3"></li>
-                                                <li class=tag id="bread-3-tag-4"></li>
-                                                <li class=tag id="bread-3-tag-5"></li>
+                                                <li class="tagly" id="bread-3-tag-0"></li>
+                                                <li class="tagly" id="bread-3-tag-1"></li>
+                                                <li class="tagly" id="bread-3-tag-2"></li>
+                                                <li class="tagly" id="bread-3-tag-3"></li>
+                                                <li class="tagly" id="bread-3-tag-4"></li>
+                                                <li class="tagly" id="bread-3-tag-5"></li>
                                             </ul>
                                         </div>  
                                     </div>     
@@ -580,13 +640,14 @@
                                     <!-- TAGS -->
                                     <div class="tags-container">
                                         <div class="tags">
-                                            <h4>FYI...</h4>
+                                            <h4>#FYI...</h4>
                                             <ul>
-                                                <li class=tag id="dessert-1-tag-1"></li>
-                                                <li class=tag id="dessert-1-tag-2"></li>
-                                                <li class=tag id="dessert-1-tag-3"></li>
-                                                <li class=tag id="dessert-1-tag-4"></li>
-                                                <li class=tag id="dessert-1-tag-5"></li>
+                                                <li class="tagly" id="dessert-1-tag-0"></li>
+                                                <li class="tagly" id="dessert-1-tag-1"></li>
+                                                <li class="tagly" id="dessert-1-tag-2"></li>
+                                                <li class="tagly" id="dessert-1-tag-3"></li>
+                                                <li class="tagly" id="dessert-1-tag-4"></li>
+                                                <li class="tagly" id="dessert-1-tag-5"></li>
                                             </ul>
                                         </div>  
                                     </div>
@@ -640,13 +701,14 @@
                                     <!-- TAGS -->
                                     <div class="tags-container">
                                         <div class="tags">
-                                            <h4>FYI...</h4>
+                                            <h4>#FYI...</h4>
                                             <ul>
-                                                <li class=tag id="dessert-2-tag-1"></li>
-                                                <li class=tag id="dessert-2-tag-2"></li>
-                                                <li class=tag id="dessert-2-tag-3"></li>
-                                                <li class=tag id="dessert-2-tag-4"></li>
-                                                <li class=tag id="dessert-2-tag-5"></li>
+                                                <li class="tagly" id="dessert-2-tag-0"></li>
+                                                <li class="tagly" id="dessert-2-tag-1"></li>
+                                                <li class="tagly" id="dessert-2-tag-2"></li>
+                                                <li class="tagly" id="dessert-2-tag-3"></li>
+                                                <li class="tagly" id="dessert-2-tag-4"></li>
+                                                <li class="tagly" id="dessert-2-tag-5"></li>
                                             </ul>
                                         </div>  
                                     </div>                                    
@@ -704,13 +766,14 @@
                                     <!-- TAGS -->
                                     <div class="tags-container">
                                         <div class="tags">
-                                            <h4>FYI...</h4>
+                                            <h4>#FYI...</h4>
                                             <ul>
-                                                <li class=tag id="dessert-3-tag-1"></li>
-                                                <li class=tag id="dessert-3-tag-2"></li>
-                                                <li class=tag id="dessert-3-tag-3"></li>
-                                                <li class=tag id="dessert-3-tag-4"></li>
-                                                <li class=tag id="dessert-3-tag-5"></li>
+                                                <li class="tagly" id="dessert-3-tag-0"></li>
+                                                <li class="tagly" id="dessert-3-tag-1"></li>
+                                                <li class="tagly" id="dessert-3-tag-2"></li>
+                                                <li class="tagly" id="dessert-3-tag-3"></li>
+                                                <li class="tagly" id="dessert-3-tag-4"></li>
+                                                <li class="tagly" id="dessert-3-tag-5"></li>
                                             </ul>
                                         </div>  
                                     </div>     
@@ -741,207 +804,12 @@
             </div>
 
             <!-- Seafood Panel -->
-            <div class="tab-panel panel" id="seafood">
-
-                <!-- Slider -->
-                <div class="slider" id="seafood-slider">
-
-                    <!-- Slider Buttons -->
-                    <div class="slide-buttons-container">
-                        <div class="slide-buttons">
-                        </div>
-                    </div>
-
-                    <!-- Slide Viewer -->
-                    <div class="slide-viewer">
-                        <div class="slide-group">
-                            
-                            <!-- Slides -->
-                            
-                            <!-- Seafood Slide 1 -->
-                            <div class="slide" id="seafood-slide-1">
-                                <div class="recipe-card" id="recipe-card-seafood-1">
-
-                                    <!-- Overlay -->
-                                    <div class="overlay">
-                                        <a href="#recipe-display-section" class="open-recipe-btn" id="seafood-1-link">Open Recipe</a>
-                                    </div>
-
-                                    <div class="recipe-header">
-                                            <!-- Name -->
-                                        <div class="recipe-title">
-                                            <h3 id="seafood-1-title"></h3>
-                                        </div>
-                                        <!-- Details -->
-                                        <div class="recipe-details" id="seafood-1-details">
-                                            <ul>
-                                                <li>Prep: <span class="recipe-detail" id="seafood-1-prep-time"></span></li>
-                                                <li>Cook: <span class="recipe-detail" id="seafood-1-cook-time"></span></li>
-                                                <li>Calories: <span class="recipe-detail" id="seafood-1-calories"></span></li>
-                                                <li>Protein: <span class="recipe-detail" id="seafood-1-protein"></span></li>
-                                                <li>Carbs: <span class="recipe-detail" id="seafood-1-carbs"></span></li>
-                                                <li>Fat: <span class="recipe-detail" id="seafood-1-fat"></span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- TAGS -->
-                                    <div class="tags-container">
-                                        <div class="tags">
-                                            <h4>FYI...</h4>
-                                            <ul>
-                                                <li class=tag id="seafood-1-tag-1"></li>
-                                                <li class=tag id="seafood-1-tag-2"></li>
-                                                <li class=tag id="seafood-1-tag-3"></li>
-                                                <li class=tag id="seafood-1-tag-4"></li>
-                                                <li class=tag id="seafood-1-tag-5"></li>
-                                            </ul>
-                                        </div>  
-                                    </div>
-                                    <!-- Recipe Body -->
-                                    <div class="recipe-body">
-                                        <!-- Picture -->
-                                        <div class="recipe-pic" id="seafood-1-pic">
-                                        </div>
-                                        <!-- Ingredients / Hardware -->
-                                        <div class="ingredients-hardware">
-                                            <div class="ingredients"> 
-                                                <h4>Ingredients:</h4> <span class="shopping-items" id="seafood-1-ingredients"></span>
-                                            </div>
-                                            <div class="hardware">
-                                                <h4>Hardware:</h4> <span class="hardware-item" id="seafood-1-hardware"></span>                                            
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Seafood Slide 2 -->
-                            <div class="slide" id="seafood-slide-2">
-                                <div class="recipe-card" id="recipe-card-seafood-2">
-
-                                    <!-- Overlay -->
-                                    <div class="overlay">
-                                        <a href="#recipe-display-section" class="open-recipe-btn" id="seafood-2-link">Open Recipe</a>
-                                    </div>
-
-                                    <div class="recipe-header">
-                                            <!-- Name -->
-                                        <div class="recipe-title">
-                                            <h3 id="seafood-2-title"></h3>
-                                        </div>
-                                        <!-- Details -->
-                                        <div class="recipe-details" id="seafood-2-details">
-                                            <ul>
-                                                <li>Prep: <span class="recipe-detail" id="seafood-2-prep-time"></span></li>
-                                                <li>Cook: <span class="recipe-detail" id="seafood-2-cook-time"></span></li>
-                                                <li>Calories: <span class="recipe-detail" id="seafood-2-calories"></span></li>
-                                                <li>Protein: <span class="recipe-detail" id="seafood-2-protein"></span></li>
-                                                <li>Carbs: <span class="recipe-detail" id="seafood-2-carbs"></span></li>
-                                                <li>Fat: <span class="recipe-detail" id="seafood-2-fat"></span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- TAGS -->
-                                    <div class="tags-container">
-                                        <div class="tags">
-                                            <h4>FYI...</h4>
-                                            <ul>
-                                                <li class=tag id="seafood-2-tag-1"></li>
-                                                <li class=tag id="seafood-2-tag-2"></li>
-                                                <li class=tag id="seafood-2-tag-3"></li>
-                                                <li class=tag id="seafood-2-tag-4"></li>
-                                                <li class=tag id="seafood-2-tag-5"></li>
-                                            </ul>
-                                        </div>  
-                                    </div>                                    
-
-                                    <!-- Recipe Body -->
-                                    <div class="recipe-body">
-                                        <!-- Picture -->
-                                        <div class="recipe-pic" id="seafood-2-pic">
-                                        </div>
-                                        <!-- Ingredients / Hardware -->
-                                        <div class="ingredients-hardware">
-
-                                            <div class="ingredients"> 
-                                                <h4>Ingredients:</h4> <span class="shopping-items" id="seafood-2-ingredients"></span>
-                                            </div>
-
-                                            <div class="hardware">
-                                                <h4>Hardware:</h4> <span class="hardware-item" id="seafood-2-hardware"></span>                                           
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- seafood Slide 3 -->
-                            <div class="slide" id="seafood-slide-3">
-                                <div class="recipe-card" id="recipe-card-seafood-3">
-
-                                    <!-- Overlay -->
-                                    <div class="overlay">
-                                        <a href="#recipe-display-section" class="open-recipe-btn" id="seafood-3-link">Open Recipe</a>
-                                    </div>
-
-                                    <div class="recipe-header">
-                                            <!-- Name -->
-                                        <div class="recipe-title">
-                                            <h3 id="seafood-3-title"></h3>
-                                        </div>
-                                        <!-- Details -->
-                                        <div class="recipe-details" id="seafood-3-details">
-                                            <ul>
-                                                <li>Prep: <span class="recipe-detail" id="seafood-3-prep-time"></span></li>
-                                                <li>Cook: <span class="recipe-detail" id="seafood-3-cook-time"></span></li>
-                                                <li>Calories: <span class="recipe-detail" id="seafood-3-calories"></span></li>
-                                                <li>Protein: <span class="recipe-detail" id="seafood-3-protein"></span></li>
-                                                <li>Carbs: <span class="recipe-detail" id="seafood-3-carbs"></span></li>
-                                                <li>Fat: <span class="recipe-detail" id="seafood-3-fat"></span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <!-- TAGS -->
-                                    <div class="tags-container">
-                                        <div class="tags">
-                                            <h4>FYI...</h4>
-                                            <ul>
-                                                <li class=tag id="seafood-3-tag-1"></li>
-                                                <li class=tag id="seafood-3-tag-2"></li>
-                                                <li class=tag id="seafood-3-tag-3"></li>
-                                                <li class=tag id="seafood-3-tag-4"></li>
-                                                <li class=tag id="seafood-3-tag-5"></li>
-                                            </ul>
-                                        </div>  
-                                    </div>     
-
-                                    <div class="recipe-body">
-                                        <!-- Picture -->
-                                        <div class="recipe-pic" id="seafood-3-pic">
-                                        </div>
-                                        <!-- Ingredients / Hardware -->
-                                        <div class="ingredients-hardware">
-                                            <div class="ingredients"> 
-                                                <h4>Ingredients:</h4> <span class="shopping-items" id="seafood-3-ingredients"></span>
-                                            </div>
-                                            <div class="hardware">
-                                                <h4>Hardware:</h4> <span class="hardware-item" id="seafood-3-hardware"></span>                                            
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-
-                </div>
+            <div class="tab-panel panel construction" id="seafood">
+                
+                <!-- UNDER CONSTRUCTION -->
+                <div class="construction-panel">
+                    <h1 class="construction-text">Under Construction</h1>
+                </div>                
 
             </div>
 
@@ -992,13 +860,14 @@
                                     <!-- TAGS -->
                                     <div class="tags-container">
                                         <div class="tags">
-                                            <h4>FYI...</h4>
+                                            <h4>#FYI...</h4>
                                             <ul>
-                                                <li class=tag id="soup-1-tag-1"></li>
-                                                <li class=tag id="soup-1-tag-2"></li>
-                                                <li class=tag id="soup-1-tag-3"></li>
-                                                <li class=tag id="soup-1-tag-4"></li>
-                                                <li class=tag id="soup-1-tag-5"></li>
+                                                <li class="tagly" id="soup-1-tag-0"></li>
+                                                <li class="tagly" id="soup-1-tag-1"></li>
+                                                <li class="tagly" id="soup-1-tag-2"></li>
+                                                <li class="tagly" id="soup-1-tag-3"></li>
+                                                <li class="tagly" id="soup-1-tag-4"></li>
+                                                <li class="tagly" id="soup-1-tag-5"></li>
                                             </ul>
                                         </div>  
                                     </div>
@@ -1051,13 +920,14 @@
                                     <!-- TAGS -->
                                     <div class="tags-container">
                                         <div class="tags">
-                                            <h4>FYI...</h4>
+                                            <h4>#FYI...</h4>
                                             <ul>
-                                                <li class=tag id="soup-2-tag-1"></li>
-                                                <li class=tag id="soup-2-tag-2"></li>
-                                                <li class=tag id="soup-2-tag-3"></li>
-                                                <li class=tag id="soup-2-tag-4"></li>
-                                                <li class=tag id="soup-2-tag-5"></li>
+                                                <li class="tagly" id="soup-2-tag-0"></li>
+                                                <li class="tagly" id="soup-2-tag-1"></li>
+                                                <li class="tagly" id="soup-2-tag-2"></li>
+                                                <li class="tagly" id="soup-2-tag-3"></li>
+                                                <li class="tagly" id="soup-2-tag-4"></li>
+                                                <li class="tagly" id="soup-2-tag-5"></li>
                                             </ul>
                                         </div>  
                                     </div>                                    
@@ -1114,13 +984,14 @@
                                     <!-- TAGS -->
                                     <div class="tags-container">
                                         <div class="tags">
-                                            <h4>FYI...</h4>
+                                            <h4>#FYI...</h4>
                                             <ul>
-                                                <li class=tag id="soup-3-tag-1"></li>
-                                                <li class=tag id="soup-3-tag-2"></li>
-                                                <li class=tag id="soup-3-tag-3"></li>
-                                                <li class=tag id="soup-3-tag-4"></li>
-                                                <li class=tag id="soup-3-tag-5"></li>
+                                                <li class="tagly" id="soup-3-tag-0"></li>
+                                                <li class="tagly" id="soup-3-tag-1"></li>
+                                                <li class="tagly" id="soup-3-tag-2"></li>
+                                                <li class="tagly" id="soup-3-tag-3"></li>
+                                                <li class="tagly" id="soup-3-tag-4"></li>
+                                                <li class="tagly" id="soup-3-tag-5"></li>
                                             </ul>
                                         </div>  
                                     </div>     
@@ -1234,6 +1105,13 @@
 
         </div>
 
+    </div>
+
+    <!-- Master Index Section -->
+    <div class="master-index-section" id="master-index-section">
+        <div class="master-index-container" id="master-index-container">
+            <ul id="all-tags"></ul>
+        </div>
     </div>
 
     <!-- JQuery -->

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Index</title>
+
+</head>
+
+<body>
+    
+    <h1>Master Index</h1>
+    <div class="master-index-grid">
+        
+        <!-- TAGS LIST SECTION -->
+        <div class="all-tags">
+            <h2>See Recipes By Tag...</h2>
+            <ul id="all-tags">
+            </ul>
+        </div>    
+
+        <!-- TAGS RESULT SECTION -->
+        <div class="tag-results">
+            <h2>Recipes That Share This Tag...</h2>
+            <ul id="tag-results">
+            </ul>
+        </div>
+
+        <!-- ALPHABETICAL LISTING -->
+        <div class="alpha-listing">
+            <h2>Alphabetical Listing...</h2>
+            <!-- Search box -->
+            <input type="text" id="recipe-search-master" onkeyup="searchMaster()" placeholder="Find a recipe..." title="Recipe Search"/>
+            <ul id="alpha-listing">
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- JQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- JavaScript -->
+    <script type="text/javascript" src="js/tags.js"></script>
+
+    <script>
+        
+    </script>
+
+</body>
+</html>
