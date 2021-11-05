@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dan's Website Design System</title>
+
+    <!-- LINKS -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Racing+Sans+One&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Old+Mincho:wght@400;700;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Up Button -->
+    <button onclick="topFunction()" id="upBtn" title="Go to top">Top</button>
+
+    <!-- Header -->
+    <div class="super-header">
+        <h1 id="project-name">project: Portfolio</h1>
+        <div class="header">
+            <div class="title">
+                <h1>The System</h1>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#colors">&gt&gt Colors</a></li>
+                    <li><a href="#fonts-dark">&gt&gt Fonts in White</a></li>
+                    <li><a href="#fonts-light">&gt&gt Fonts in Black</a></li>
+                    <li><a href="#styles">&gt&gt Text Styles</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Colors Section -->
+    <div id="colors" class="colors">
+
+        <!-- Section Title -->
+        <div class="colors-title">
+            <h2 class="section-title">{ Colors }</h2>
+        </div>
+
+        <div class="color-blocks">
+
+            <!-- Color 1 -->
+            <div class="color-block" id="color-block-1">
+                <h3>Dark Liver</h3>
+                <h4>#483C46</h4>
+                <h4>rgb(72, 60, 70)</h4>
+            </div>
+
+            <!-- Color 2 -->
+            <div class="color-block" id="color-block-2">
+                <h3>Ming</h3>
+                <h4>#3C6E71</h4>
+                <h4>rgb(60, 110, 113)</h4>
+            </div>
+
+            <!-- Color 3 -->
+            <div class="color-block" id="color-block-3">
+                <h3>Bud Green</h3>
+                <h4>#70AE6E</h4>
+                <h4>rgb(112, 174, 110)</h4>
+            </div>
+
+            <!-- Color 4 -->
+            <div class="color-block" id="color-block-4">
+                <h3>Inchworm</h3>
+                <h4>#BEEE62</h4>
+                <h4>rgb(190, 238, 98)</h4>
+            </div>
+
+            <!-- Color 5 -->
+            <div class="color-block" id="color-block-5">
+                <h3>Orange Crayola</h3>
+                <h4>#F4743B</h4>
+                <h4>rgb(244, 116, 59)</h4>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Fonts Dark Section -->
+    <div id="fonts-dark" class="fonts-dark fonts">
+
+        <!-- Section Title -->
+        <div class="fonts-dark-title fonts-title">
+            <h2 class="section-title">{ Fonts in White }</h2>
+        </div>
+
+        <div class="font-blocks">
+
+            <!-- Font 1 -->
+            <div class="font-white-block font-1 font-block" id="font-white-block-1">
+                <h3 id="font-name-1">Fira Sans 1.5em</h3>
+                <h4 class="sample" id="sample-1-regular">This is a sample of regular text</h4>
+                <h4 class="sample" id="sample-1-bold">This is a sample of bold text</h4>
+                <h4 class="sample" id="sample-1-italic">This is a sample of italic text</h4>
+            </div>
+        
+            <!-- Font 2 -->
+            <div class="font-white-block font-2 font-block" id="font-white-block-2">
+                <h3 id="font-name-2">Zen Old Mincho 1.5em</h3>
+                <h4 class="sample" id="sample-2-regular">This is a sample of regular text</h4>
+                <h4 class="sample" id="sample-2-bold">This is a sample of bold text</h4>
+                <h4 class="sample" id="sample-2-italic">This is a sample of italic text</h4>
+            </div>
+
+            <!-- Font 3 -->
+            <div class="font-white-block font-3 font-block" id="font-white-block-3">
+                <h3 id="font-name-3">Raleway 1.5em</h3>
+                <h4 class="sample" id="sample-3-regular">This is a sample of regular text</h4>
+                <h4 class="sample" id="sample-3-bold">This is a sample of bold text</h4>
+                <h4 class="sample" id="sample-3-italic">This is a sample of italic text</h4>
+            </div>
+
+        </div>     
+
+    </div>
+
+    <!-- Fonts Light Section -->
+    <div id="fonts-light" class="fonts-light fonts">
+    
+        <!-- Section Title -->
+        <div class="fonts-light-title fonts-title">
+            <h2 class="section-title">{ Fonts in Black }</h2>
+        </div>
+
+        <div class="font-blocks">
+            <!-- Font 1 -->
+            <div class="font-black-block font-1 font-block" id="font-black-block-1">
+                <h3 id="font-name-1">Fira Sans 1.5em</h3>
+                <h4 class="sample" id="sample-1-regular">This is a sample of regular text</h4>
+                <h4 class="sample" id="sample-1-bold">This is a sample of bold text</h4>
+                <h4 class="sample" id="sample-1-italic">This is a sample of italic text</h4>
+            </div>
+        
+            <!-- Font 2 -->
+            <div class="font-black-block font-2 font-block" id="font-black-block-2">
+                <h3 id="font-name-2">Zen Old Mincho 1.5em</h3>
+                <h4 class="sample" id="sample-2-regular">This is a sample of regular text</h4>
+                <h4 class="sample" id="sample-2-bold">This is a sample of bold text</h4>
+                <h4 class="sample" id="sample-2-italic">This is a sample of italic text</h4>
+            </div>
+
+            <!-- Font 3 -->
+            <div class="font-black-block font-3 font-block" id="font-black-block-3">
+                <h3 id="font-name-3">Raleway 1.5em</h3>
+                <h4 class="sample" id="sample-3-regular">This is a sample of regular text</h4>
+                <h4 class="sample" id="sample-3-bold">This is a sample of bold text</h4>
+                <h4 class="sample" id="sample-3-italic">This is a sample of italic text</h4>
+            </div>
+
+        </div>        
+
+    </div>
+
+    <!-- Text Styles -->
+    <div class="styles" id="styles">
+        
+        <!-- Section Title -->
+        <div class="styles-title">
+            <h2 class="section-title">{ Text Styles }</h2>
+        </div>
+
+        <div class="style-blocks">
+
+            <!-- h1 -->
+            <div class="style-block" id="style-block-h1">
+                <h1 class="style-h1">H1: Main Title </h1>
+                <ul class="style-details">
+                    <li>Font-family: "Racing Sans One"</li>
+                    <li>Font-size: 56px</li>
+                    <li>Use as little as possible</li>
+                </ul>
+            </div>
+
+            <!-- h2 -->
+            <div class="style-block" id="style-block-h2">
+                <h2 class="style-h2">H2: Main headings</h2>
+                <ul class="style-details">
+                    <li>Font-family: "Raleway"</li>
+                    <li>Font-size: 36px</li>
+                    <li>Letter-spacing: 0.25ch</li>
+                </ul>
+            </div>
+
+            <!-- h3 -->
+            <div class="style-block" id="style-block-h3">
+                <h3 class="style-h3">H3: Sub headings</h3>
+                <ul class="style-details">
+                    <li>Font-family: "Fira Sans"</li>
+                    <li>Font-size: 18px</li>
+                    <li>Letter-spacing: 0.25ch</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+    
+</body>
+</html>

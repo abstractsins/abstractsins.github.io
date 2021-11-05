@@ -1,0 +1,270 @@
+/* TABLE OF CONTENTS */
+/* 1 -- Global Styles and Variables */
+/* 2 - Header */
+/* END TABLE OF CONTENTS */
+
+/* 1 -- GLOBAL STYLES AND VARIABLES */
+* {
+    /* border: 1px solid red; */
+    /* GLOBAL PROPERTIES */
+    margin: 0;
+    padding: 0;
+    /* CUSTOM COLORS */
+    --beef-red: rgb(168, 0, 0);
+    --bud-green: rgb(112, 174, 110);
+    --charcoal: rgb(49, 49, 49);
+    --charcoal-2: #36454F;
+    --dark-liver: rgb(72, 60, 70);
+    --inchworm: rgb(190, 238, 98);
+    --ming: rgb(60, 110, 113);
+    --orange-crayola: rgb(244, 116, 59);
+    --shadow-color: rgba(42, 42, 42, 0.6);
+    --shadow-b-color: rgba(21, 21, 21, 0.8);
+    /* CIRCLE IMAGES */
+    --bio-pic: url(/img/bio-pic.jpg);
+    --sammy-pic: url(/img/sammy1.png);
+    --recipes-pic: url(/img/recipes.jpg);
+    /* CIRCLE SHADOWS */
+    --shadow-1: drop-shadow(5vh 5vw 5px var(--shadow-color));
+    --shadow-2: drop-shadow(3vh 3vw 10px var(--shadow-color));
+    --shadow-3: drop-shadow(4vh 8vw 15px var(--shadow-color));
+    --shadow-4: drop-shadow(3vh 5vw 6px var(--shadow-color));
+    --shadow-1b: drop-shadow(3vh 2vw 4px var(--shadow-b-color));
+    --shadow-2b: drop-shadow(2vh 1vw 9px var(--shadow-b-color));
+    --shadow-3b: drop-shadow(3vh 4vw 14px var(--shadow-b-color));
+    --shadow-4b: drop-shadow(2vh 3vw 5px var(--shadow-b-color));
+    /* Global variables */
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: var(--orange-crayola);
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+/* Up Button */
+#upBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 20px;
+    right: 30px;
+    z-index: 10;
+    border: 3px solid whitesmoke;
+    outline: none;
+    background-color: var(--beef-red);
+    color: whitesmoke;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#upBtn:hover {
+    background-color: black;
+}
+
+#upBtn:active {
+    background-color: deeppink;
+}
+/* END 1 -- GLOBAL STYLES AND VARIABLES */
+
+/* 2 -- Header */
+.header {
+    display: block;
+    justify-content: flex-start;
+    /* background-color: var(--orange-crayola); */
+    /* background-color: var(--dark-liver); */
+}
+
+.header h1.title {
+    font-family: "Racing Sans One";
+    /* color: whitesmoke; */
+    color: black;
+    /* color: deeppink; */
+    font-size: 5vw;
+    letter-spacing: 0.15ch;
+    padding: 25px 0 0 50px;
+}
+
+.header h2.sub-title {
+    font-family: "Raleway";
+    font-size: 2.5vw;
+    color: var(--charcoal);
+    letter-spacing: 0.15ch;
+    padding: 0 0 25px 50px;
+    font-style: italic;
+}
+
+/* END 2 -- HEADER */
+
+/* 3 -- MAIN SECTION */
+
+.main-section {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.caption-section {
+    background-color: var(--ming);
+    display: flex;
+    align-items: center;
+    height: 20%;
+    user-select: none;
+}
+
+.caption {
+    display: flex;
+    background-color: black;
+    color: white;
+    transition: 500ms transform ease-in-out 125ms;
+    z-index: -1;
+}
+
+.caption:hover {
+    transform: translate(-20px, 0);
+}
+
+.circle {
+    background-color: var(--bud-green);
+    /* background-color: var(--dark-liver); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    border-radius: 50%;
+    border: 3px solid var(--charcoal);
+    z-index: 1;
+}    
+
+.circle .active {
+    background-color: black;
+}
+
+.circle:hover {
+    border-color: whitesmoke;
+    transform: scale(1.2);
+}
+
+.circle:active {
+    border-color: var(--inchworm);
+    transform: scale(1.175);
+}
+
+#bio {
+    background-image: var(--bio-pic);
+    background-size: cover;
+    width: 15vw;
+    height: 15vw;
+    filter: var(--shadow-1);
+    transition: 350ms filter ease-in-out,
+                350ms transform ease-in-out;    
+}
+
+#bio:hover {
+    transform: scale(1.2);
+    filter: var(--shadow-1b);
+}
+
+#sammy {
+    background-color: var(--inchworm);
+    background-image: var(--sammy-pic);
+    background-size: cover;
+    width: 12vw;
+    height: 12vw;
+    filter: var(--shadow-2);
+    transition: 350ms filter ease-in-out,
+    350ms transform ease-in-out;    
+}
+
+a.sammy {
+    display: flex;
+    align-items: flex-end;
+}
+
+#sammy:hover {
+    transform: scale(1.2);
+    filter: var(--shadow-2b);
+}
+
+#recipes {
+    /* background-color: var(--dark-liver); */
+    background-image: var(--recipes-pic);
+    background-size: cover;
+    background-position: center;
+    width: 20vw;
+    height: 20vw;
+    filter: var(--shadow-3);
+    transition: 350ms filter ease-in-out,
+                350ms transform ease-in-out;    
+}
+
+#recipes:hover {
+    transform: scale(1.2);
+    filter: var(--shadow-3b);
+}
+
+#rando-color {
+    width: 14vw;
+    height: 14vw;
+    align-self: center;
+    filter: var(--shadow-4);
+    transition: 350ms filter ease-in-out,
+                350ms transform ease-in-out;    
+}
+
+#rando-color h3 {
+    font-family: "Fira Sans";
+    font-size: 1.6vw;
+    font-weight: 400;
+}
+
+#rando-color:hover {
+    transform: scale(1.2);
+    filter: unset;
+    cursor: pointer;
+}
+/* END 3 -- MAIN SECTION */
+
+/* 4 -- CAPTION SECTION */
+.caption-load {
+    margin: 50px;
+    padding-left: 50px;
+    color: whitesmoke;
+}
+
+#bio-caption-content,
+#sammy-caption-content,
+#recipes-caption-content,
+#rando-color-caption-content {
+    display: none;
+}
+
+#bio-caption-content.active,
+#sammy-caption-content.active,
+#recipes-caption-content.active,
+#rando-color-caption-content.active {
+    display: block;
+}
+
+.caption-load h3.caption-title {
+    font-family: "Fira Sans";
+    font-size: 2.5vw;
+}
+
+p.caption-p {
+    font-family: "Zen Old Mincho";
+    font-size: 1.75vw;
+}
+/* END 4 -- CAPTION SECTION */

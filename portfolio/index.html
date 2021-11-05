@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Berlin</title>
+
+    <!-- LINKS -->
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Racing+Sans+One&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Old+Mincho:wght@400;700;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Up Button -->
+    <button onclick="topFunction()" id="upBtn" title="Go to top">Top</button>
+    
+    <!-- HEADER -->
+    <div class="header">
+        <h1 class="title">Daniel Berlin</h1>
+        <h2 class="sub-title">code guy, doing web stuff</h2>
+    </div>
+
+
+    <!-- MAIN SECTION -->
+    <div class="main-section">
+
+        <!-- CIRCLE 1: BIO -->
+        <div class="circle" id="bio">
+        </div>
+        
+        <!-- CIRCLE 2: SAMMY -->
+        <a class="sammy" href="http://www.sammyseal.com" target="new">
+            <div class="circle" id="sammy">
+            </div>
+        </a>
+
+        <!-- CIRCLE 3: RECIPES -->
+        <div class="circle" id="recipes">
+        </div>
+
+        <!-- CIRCLE 4: RANDOM COLOR -->
+        <div class="circle" id="rando-color" onclick="randoColor()">
+        </div>
+        
+    </div>
+
+    <!-- CAPTION SECTION -->
+    <div class="caption-section">
+
+        <!-- 1: BIO CAPTION -->
+        <div class="caption-load" id="bio-caption-content">
+            <h3 class="caption-title">about me</h3>
+            <p class="caption-p">Hey hey hey it's me lorem ipsom so fequitor my bros</p>
+        </div>
+
+        <!-- 2: SAMMY -->
+        <div class="caption-load" id="sammy-caption-content">
+            <h3 class="caption-title">sammySeal.com</h3>
+            <p class="caption-p">This is sammy seal reporting live</p>
+        </div>
+
+        <!-- 3: RECIPES -->
+        <div class="caption-load" id="recipes-caption-content">
+            <h3 class="caption-title">my Recipe Box</h3>
+            <p class="caption-p">My big portfolio project. Try the biscuits.</p>
+        </div>
+        
+        <!-- 4: RANDO-COLOR -->
+        <div class="caption-load" id="rando-color-caption-content">
+            <h3 class="caption-title">mystery button</h3>
+            <p class="caption-p">What does it do? Nobody knows...</p>
+        </div>
+
+    </div>
+
+    <!-- JQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- JAVASCRIPT -->
+    <script type="text/JavaScript" src="main.js"></script>
+
+</body>
+</html>
