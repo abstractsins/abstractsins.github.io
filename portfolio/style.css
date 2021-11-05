@@ -21,9 +21,9 @@
     --shadow-color: rgba(42, 42, 42, 0.6);
     --shadow-b-color: rgba(21, 21, 21, 0.8);
     /* CIRCLE IMAGES */
-    --bio-pic: url(/img/bio-pic.jpg);
-    --sammy-pic: url(/img/sammy1.png);
-    --recipes-pic: url(/img/recipes.jpg);
+    --bio-pic: url(./img/bio-pic.jpg);
+    --sammy-pic: url(./img/sammy1.png);
+    --recipes-pic: url(./img/recipes.jpg);
     /* CIRCLE SHADOWS */
     --shadow-1: drop-shadow(5vh 5vw 5px var(--shadow-color));
     --shadow-2: drop-shadow(3vh 3vw 10px var(--shadow-color));
