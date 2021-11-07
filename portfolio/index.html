@@ -22,16 +22,17 @@
     <!-- HEADER -->
     <div class="header">
         <h1 class="title">Daniel Berlin</h1>
-        <h2 class="sub-title">code guy, doing web stuff</h2>
+        <h2 class="sub-title">code guy, with divs4u!</h2>
     </div>
 
 
     <!-- MAIN SECTION -->
-    <div class="main-section">
+    <div class="main-section" id="main-section">
 
         <!-- CIRCLE 1: BIO -->
-        <div class="circle" id="bio">
-        </div>
+        <a href="#sub-section">
+            <div class="circle" id="bio" onclick="bio()"></div>
+        </a>
         
         <!-- CIRCLE 2: SAMMY -->
         <a class="sammy" href="http://www.sammyseal.com" target="new">
@@ -39,18 +40,23 @@
             </div>
         </a>
 
-        <!-- CIRCLE 3: RECIPES -->
+        <!-- CIRCLE 3: CONTACT -->
+        <div class="circle" id="contact" onclick="contactCircle()">
+        </div>
+
+        <!-- CIRCLE 4: RECIPES -->
         <div class="circle" id="recipes">
         </div>
 
-        <!-- CIRCLE 4: RANDOM COLOR -->
+        <!-- CIRCLE 5: RANDOM COLOR -->
         <div class="circle" id="rando-color" onclick="randoColor()">
+            <h3>16.8 Million Colors</h3>
         </div>
         
     </div>
 
     <!-- CAPTION SECTION -->
-    <div class="caption-section">
+    <div class="caption-section" id="caption-section">
 
         <!-- 1: BIO CAPTION -->
         <div class="caption-load" id="bio-caption-content">
@@ -76,7 +82,19 @@
             <p class="caption-p">What does it do? Nobody knows...</p>
         </div>
 
-    </div>
+        <!-- 5: CONTACT -->
+        <div class="caption-load" id="contact-caption-content">
+            <h3 class="caption-title">Contact Me</h3>
+            <p class="caption-p">{ daniel.berlin@comcast.net }<br>(302) 766-4251</p>
+        </div>
+
+        <!-- 5-A: CONTACT FORM AREA -->
+        <div class="contact-block">
+            <h3>Contact Form</h3>
+        </div>
+
+
+    </div> 
 
     <!-- JQuery -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
