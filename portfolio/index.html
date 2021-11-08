@@ -30,9 +30,19 @@
     <div class="main-section" id="main-section">
 
         <!-- CIRCLE 1: BIO -->
-        <a href="#sub-section">
-            <div class="circle" id="bio" onclick="bio()"></div>
-        </a>
+        <div class="circle" id="bio" onclick="bio()">
+            <div class="content bio">
+                <h3>I'm Dan, a freelance coder and developer from Philadelphia</h3>
+                <p><br>
+                    I specialize in HTML, CSS, and JavaScript, and I love pouring myself into interesting projects.
+                    <br><br>
+                    I have a background in the food and beverage industry and a wide range of hobbies and interests, which inspire me to design websites, games, and programs.
+                    <br><br>
+                    Feel free to contact me!
+                </p>
+                <div class="x-out"></div>
+            </div>
+        </div>
         
         <!-- CIRCLE 2: SAMMY -->
         <a class="sammy" href="http://www.sammyseal.com" target="new">
@@ -78,8 +88,8 @@
         
         <!-- 4: RANDO-COLOR -->
         <div class="caption-load" id="rando-color-caption-content">
-            <h3 class="caption-title">mystery button</h3>
-            <p class="caption-p">What does it do? Nobody knows...</p>
+            <h3 class="caption-title">Random RGB Color</h3>
+            <p class="caption-p">The more you click, the more fun it is...</p>
         </div>
 
         <!-- 5: CONTACT -->
@@ -90,7 +100,19 @@
 
         <!-- 5-A: CONTACT FORM AREA -->
         <div class="contact-block">
-            <h3>Contact Form</h3>
+            <h3>Say Hello!</h3>
+            <div class="form">
+                <input type="text" id="their-name" placeholder="Your Name..." title="Enter your name"/>
+                <input type="text" id="their-email" placeholder="Your Email..." title="Enter your email"/>
+            </div>
+            <div class="form">
+                <input type="text" id="their-subject" placeholder="Subject..." title="Enter message subject"/>
+            </div>
+            <div class="form message">
+                <!-- <input type="text"  placeholder="Do you have a project idea you'd like to discuss? Or you just want to say hi? Leave me a message!" title="Enter your message"/> -->
+                <textarea id="their-message" maxlength="2500" placeholder="Do you have a project idea you'd like to discuss? Or you just want to say hi? Leave me a message!" name="message"></textarea>
+            </div>
+
         </div>
 
 

@@ -61,7 +61,7 @@ const hover = () => {
         let id = $(`#${$id}-caption-content`);
         
         $(this).mouseenter(() => {
-            if ($('#contact.circle').hasClass('clicked')) {
+            if ($('#contact.circle').hasClass('clicked') || $('#bio.circle').hasClass('clicked')) {
                 return;
             } else if (!$(this).hasClass('clicked')) {
                 id.addClass('active');
@@ -73,7 +73,7 @@ const hover = () => {
             console.log('TEST OF SOME KIND')
             $(this).mouseleave(() => {
                 id.removeClass('active');
-                $(this).css({"z-index": "unset"});
+                $(this).css({"z-index": ""});
                 
             }) 
         } else {
@@ -86,16 +86,22 @@ const hover = () => {
 
 /* 2-C -- RANDOM COLOR CIRCLE */
 const randoColor = () => {
-    let r, g, b;
-    r = Math.floor(Math.random() * 256);
-    g = Math.floor(Math.random() * 256);
-    b = Math.floor(Math.random() * 256);
-    rgb = `rgb(${r}, ${g}, ${b})`;
-    // console.log(rgb);
-    $('#rando-color').css("background-color", `${rgb}`);
-    $('#rando-color').html('<h3>'+rgb+'</h3>')
-    if ((r<128 && g<128 && b<128) || (r+g<128 || g+b<128 || r+b<128)){
-        $('#rando-color h3').css("color", "whitesmoke");
+    if(!$('#contact').hasClass('clicked')) { // if contact button isnt clicked
+        let r, g, b;
+        r = Math.floor(Math.random() * 256);
+        g = Math.floor(Math.random() * 256);
+        b = Math.floor(Math.random() * 256);
+        rgb = `rgb(${r}, ${g}, ${b})`;
+        // console.log(rgb);
+        $('#rando-color').css("background-color", `${rgb}`);
+        $('#rando-color').html('<h3>'+rgb+'</h3>')
+        if ((r<128 && g<128 && b<128) || (r+g<128 || g+b<128 || r+b<128)){
+            $('#rando-color h3').css("color", "whitesmoke");
+        } else if (r+g>256 || g+b>256 || r+b>256) {
+            $('#rando-color h3').css("color", "black");
+        } else {
+            $('#rando-color h3').css("color", "black");
+        }
     }
 }
 /* END 2-C -- RANDOM COLOR CIRCLE */
@@ -117,13 +123,14 @@ const contactCircle = () => {
         $btn.css({  "top": "",
                     "background-color": "",
                     "filter": "",
-                    "transform": ""});
+                    "transform": "",
+                    "z-index": "1600"});
         $('#contact').removeClass('clicked');
         // CAPTION SECTION
         $captionSection.css({    "height": ""});
         // $deets.removeClass('clicked');
         // $deetsP.removeClass('clicked');
-        $deets.css({"display": "none"});
+        $deets.css({"display": ""});
         $deetsP.css({"display": "none"})
         $('.contact-block').css({"right": ""});
         // BIO CIRCLE
@@ -151,10 +158,11 @@ const contactCircle = () => {
     } else { 
     /* IF NOT CLICKED ALREADY */
         // CONTACT CIRCLE
-        $btn.css({  "top": "40vh",
+        $btn.css({  "top": "30vh",
                     "background-color": "black",
                     "filter": "var(--shadow-3c)",
-                    "transform": "scale(1.5)"})
+                    "transform": "scale(1.5)",
+                    "z-index": "1500"});
         $btn.addClass('clicked');
         $('#contact').addClass('clicked');
         // CAPTION SECTION
@@ -162,29 +170,30 @@ const contactCircle = () => {
         // $deets.addClass('clicked');
         // $deetsP.addClass('clicked');
         $('.contact-block').css({   "display": "flex",
-                                    "right": "10vw"});
+                                    "right": "5vw"});
         $deets.css({"display": "flex"});
-        $deetsP.css({"display": "flex"})
+        $deetsP.css({"display": "flex"});
     
         // BIO CIRCLE
-        $('#bio').css({ "top": "12vh",
-                            "left": "60vw",
-                            "filter": "var(--shadow-1c)",
+        $('#bio').css({ "top": "5vh",
+                            "left": "75vw",
+                            "filter": "var(--shadow-1`c`)",
                             "transition": "750ms filter ease-in-out, 350ms transform ease-in-out, 750ms top ease-out, 750ms left ease-out, 750ms width ease-out, 750ms height ease-out"});
         // SAMMY CIRCLE
         $('#sammy').css({ "top": "18vh",
-                            "left": "60vw",
+                            "left": "55vw",
                             "filter": "var(--shadow-2c)",
+                            "z-index": "15",
                             "transition": "750ms filter ease-in-out, 350ms transform ease-in-out, 750ms top ease-out, 750ms left ease-out, 750ms width ease-out, 750ms height ease-out"});
         // RECIPES CIRCLE
-        $('#recipes').css({ "top": "2vh",
+        $('#recipes').css({ "top": "0vh",
                             "left": "60vw",
                             "right": "15vw",
                             "filter": "var(--shadow-4c)",
                             "transition": "750ms filter ease-in-out, 350ms transform ease-in-out, 750ms top ease-out, 750ms left ease-out, 750ms width ease-out, 750ms height ease-out"});
         // RANDOM COLOR CIRCLE
         $('#rando-color').css({ "top": "8vh",
-                            "left": "60vw",
+                            "left": "70vw",
                             "filter": "var(--shadow-5c)",
                             "transition": "750ms filter ease-in-out, 350ms transform ease-in-out, 750ms top ease-out, 750ms left ease-out, 750ms width ease-out, 750ms height ease-out"});
         // MAIN SECTION
@@ -197,21 +206,45 @@ const contactCircle = () => {
 const bio = () => {
     let $bio = $('#bio');
     if($bio.hasClass('clicked')) {
+        /* IF CLICKED ALREADY */
         $bio.removeClass('clicked');
-            // reset
-        $bio.css({      "border-radius": "50%",
-                        "width": "",
-                        "height": "",
-                        "left": "15vw",
-                        "z-index": "1000"})
+        $bio.css({  "border-radius": "",
+                    "background-size": "",
+                    "top": "",
+                    "width": "",
+                    "height": "",
+                    "left": "",
+                    "z-index": "",
+                    "transition": "350ms filter ease-in-out, 350ms transform ease-in-out, 350ms border-radius ease-in-out, 750ms top ease-out, 750ms left ease-out, 500ms width ease-out, 750ms height ease-out, 750ms background-size ease-in-out"
+                });
+    const contentBio = () => {
+        $('.content.bio').removeClass('clicked');
+        $('.content.bio').css({ "display": "none"});
+    }
+    setTimeout(contentBio, 0);
 
     } else {
-        $bio.addClass('clicked')
-        $bio.css({  "border-radius": "15px",
-                    "width": "40vw",
-                    "height": "25vw",
-                    "left": "15vw",
-                    "z-index": "1000"})
+        if(!$('#contact').hasClass('clicked')) { // if contact button isnt clicked
+                /* IF NOT CLICKED ALREADY */
+            $bio.css({  "border-radius": "15px",
+                        "background-size": "26vw",
+                        "width": "65vw",
+                        "height": "25vw",
+                        "top": "14vh",
+                        "left": "15vw",
+                        "z-index": "1000",
+                        "transition": "350ms filter ease-in-out, 350ms transform ease-in-out, 350ms border-radius ease-in-out, 750ms top ease-out, 750ms left ease-out, 500ms width ease-out, 750ms height ease-out, 350ms background-size ease-in-out"
+                        })
+            $bio.addClass('clicked');
+            $('#contact').css({ "z-index": "1" });
+            const contentBio = () => {
+                if ($bio.hasClass('clicked')) { // Checks if the coast is clear
+                    $('.content.bio').addClass('clicked');
+                    $('.content.bio').css({ "display": "flex"});
+                }
+            }
+            setTimeout(contentBio, 550);
+        }
     }
 }
 /* END 2-E -- BIO CIRCLE ACTION */
