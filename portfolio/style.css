@@ -540,15 +540,17 @@ input:focus {
     justify-self: flex-start;
 }
 
-.message {
+.form.message {
     justify-content: flex-start;
     align-items: flex-start;
     /* height: 100%; */
+    width: 100%;
 }
 
 textarea {
     height: 150px;
     max-height: 190px;
+    width: 100%;
 }
 
 #their-message {
@@ -572,29 +574,54 @@ textarea {
     box-shadow: 5px 5px 4px #719ECE;
 }
 
-input#contact-submit {
+.button-container {
+    display: flex;
+    /* align-self: center; */
+    align-self: flex-end;
+    flex-flow: column;
+    /* align-items: center; */
+    /* justify-self: center; */
+    justify-self: flex-end;
+    height: 100%;
+    margin: 1vw;
+    width: max-content;
+}
+
+input#contact-submit, 
+#contact-reset {
+    display: flex;
+    justify-content: center;
+    width: 100%;
     font-family: "Fira Sans";
     align-self: flex-end;
     background-color: var(--orange-crayola);
     box-shadow: 5px 5px 4px #719ECE;
     transition: 125ms box-shadow ease-out,
                 125ms transform ease-out;
+    align-self: center;
 }
 
-input#contact-submit:hover {
+#contact-reset {
+    background-color: lightgray;
+}
+
+input#contact-submit:hover,
+#contact-reset:hover {
     background-color: var(--inchworm);
     box-shadow: 3px 3px 1px #719ECE;
     border-color: none;
 }
 
-input#contact-submit:active {
+input#contact-submit:active,
+#contact-reset:active {
     background-color: var(--bud-green);
     border-color: none;
     transform: translate(2px, 2px);
     box-shadow: none;
 }
 
-input#contact-submit:focus {
+input#contact-submit:focus,
+#contact-reset:focus {
     border-color: none;
 }
 

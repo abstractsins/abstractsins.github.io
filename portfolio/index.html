@@ -31,8 +31,12 @@
                 emailjs.sendForm('contact_service', 'contact_form', this)
                     .then(function() {
                         console.log('SUCCESS!');
+                        document.getElementById('contact-form').reset();
+                        window.alert('Your message was sent! Have a nice day.')
                     }, function(error) {
                         console.log('FAILED...', error);
+                        document.form.reset();
+                        window.alert('There was an error. Please try again.')
                     });
             });
         }
@@ -135,7 +139,10 @@
                 <div class="form message">
                     <!-- <input type="text"  placeholder="Do you have a project idea you'd like to discuss? Or you just want to say hi? Leave me a message!" title="Enter your message"/> -->
                     <textarea id="their-message" maxlength="2500" name="message" placeholder="Do you have a project idea you'd like to discuss? Or you just want to say hi? Leave me a message!" name="message"></textarea>
-                    <input id="contact-submit" type="submit" value="Send">
+                    <div class="button-container">
+                        <input id="contact-reset" type="button" value="Reset" onclick="form.reset()">
+                        <input id="contact-submit" type="submit" value="Send">
+                    </div>
                 </div>
             </form>
         </div>
