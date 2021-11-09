@@ -147,6 +147,7 @@ body {
 
 .circle {
     background-color: var(--bud-green);
+    /* background-color: var(--charcoal-2); */
     /* background-color: var(--dark-liver); */
     display: flex;
     position: absolute;
@@ -219,6 +220,7 @@ body {
     height: 100%;
     width: 54%;
     color: var(--charcoal);
+    /* color: white; */
     margin: 0 2vw;
     font-family: "Fira Sans";
     font-size: 1.3vw;
@@ -486,8 +488,14 @@ p.caption-p {
 }
 
 .contact-block h3 {
+    display: flex;
     font-size: 2.5vw;
     letter-spacing: 0.2ch;
+    margin: 1vw 2vw;
+}
+
+#contact-form {
+    width: 100%;
 }
 
 .form {
@@ -518,12 +526,12 @@ input:focus {
 }
 
 #their-name {
-    width: 25%;
+    width: 35%;
     justify-self: flex-start;
 }
 
 #their-email {
-    width: 50%;
+    width: 60%;
     justify-self: flex-end;
 }
 
@@ -539,8 +547,8 @@ input:focus {
 }
 
 textarea {
-    height: 120px;
-    max-height: 140px;
+    height: 150px;
+    max-height: 190px;
 }
 
 #their-message {
@@ -562,6 +570,32 @@ textarea {
     /* border: 2px solid var(--inchworm); */
     border: 3px solid var(--orange-crayola);
     box-shadow: 5px 5px 4px #719ECE;
+}
+
+input#contact-submit {
+    font-family: "Fira Sans";
+    align-self: flex-end;
+    background-color: var(--orange-crayola);
+    box-shadow: 5px 5px 4px #719ECE;
+    transition: 125ms box-shadow ease-out,
+                125ms transform ease-out;
+}
+
+input#contact-submit:hover {
+    background-color: var(--inchworm);
+    box-shadow: 3px 3px 1px #719ECE;
+    border-color: none;
+}
+
+input#contact-submit:active {
+    background-color: var(--bud-green);
+    border-color: none;
+    transform: translate(2px, 2px);
+    box-shadow: none;
+}
+
+input#contact-submit:focus {
+    border-color: none;
 }
 
 /* END 4-B -- CONTACT SECTION */

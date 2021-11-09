@@ -7,9 +7,11 @@
 // 1 -- Global Concerns
 // 1-A -- Up Button
 // 2 -- Circle Functions
-// 2-A -- Clicking Circles
+// 2-A -- Sammy Circle
 // 2-B -- Hovering on Circles
 // 2-C -- Random Color Circle
+// 2-D -- Contact Circle 
+// 2-E -- Bio Circle
 /* END TABLE OF CONTENTS */
 
 /* 1 -- GLOBAL CONCERNS*/
@@ -49,9 +51,14 @@ window.onscroll = () => { scrollFunction() };
 
 /* 2 -- CIRCLE FUNCTIONS */
 
-/* 2-A -- CLICKING CIRCLES */
-// $circle.click( function() { $(this).css("background-color", "black") })
-/* END 2-A -- CLICKING CIRCLES */
+/* 2-A -- SAMMY CIRCLE */
+const sammy = () => {
+    if (!$('#bio.circle').hasClass('clicked') && !$('#contact.circle').hasClass('clicked')) { // Checks if the coast is clear
+        console.log('SAMMY!');
+        window.open("http://sammyseal.com", "_blank");
+    }
+}
+/* END 2-A -- SAMMY CIRCLE */
 
 /* 2-B -- HOVERING ON CIRCLES */
 const hover = () => {
@@ -81,7 +88,6 @@ const hover = () => {
         }
     })  
 }
-
 /* END 2-B -- HOVERING ON CIRCLES */
 
 /* 2-C -- RANDOM COLOR CIRCLE */
@@ -97,7 +103,7 @@ const randoColor = () => {
         $('#rando-color').html('<h3>'+rgb+'</h3>')
         if ((r<128 && g<128 && b<128) || (r+g<128 || g+b<128 || r+b<128)){
             $('#rando-color h3').css("color", "whitesmoke");
-        } else if (r+g>256 || g+b>256 || r+b>256) {
+        } else if ((r+g>256 || g+b>256 || r+b>256) || (r>86 || g<86 || r>86)) {
             $('#rando-color h3').css("color", "black");
         } else {
             $('#rando-color h3').css("color", "black");
