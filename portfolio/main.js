@@ -12,6 +12,7 @@
 // 2-C -- Random Color Circle
 // 2-D -- Contact Circle 
 // 2-E -- Bio Circle
+// 2-F -- Recipe Circle
 /* END TABLE OF CONTENTS */
 
 /* 1 -- GLOBAL CONCERNS*/
@@ -192,7 +193,7 @@ const contactCircle = () => {
                             "z-index": "15",
                             "transition": "750ms filter ease-in-out, 350ms transform ease-in-out, 750ms top ease-out, 750ms left ease-out, 750ms width ease-out, 750ms height ease-out"});
         // RECIPES CIRCLE
-        $('#recipes').css({ "top": "0vh",
+        $('#recipes').css({ "top": "6vh",
                             "left": "60vw",
                             "right": "15vw",
                             "filter": "var(--shadow-4c)",
@@ -254,6 +255,15 @@ const bio = () => {
     }
 }
 /* END 2-E -- BIO CIRCLE ACTION */
+
+/* 2-F -- RECIPE CIRCLE */
+const recipes = () => {
+    if (!$('#bio.circle').hasClass('clicked') && !$('#contact.circle').hasClass('clicked')) { // Checks if the coast is clear
+        console.log('RECIPES!');
+        window.open("https://abstractsins.github.io/recipes", "_blank");
+    }
+}
+/* 2-F -- END RECIPE CIRCLE */
 
 /* END 2 -- CIRCLE FUNCTIONS */
 
