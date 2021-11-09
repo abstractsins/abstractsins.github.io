@@ -1,179 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <!-- Links to CSS and fonts -->
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Raleway:wght@300;400;500;700;800&family=Rubik:wght@300;400;500;700;800&display=swap" rel="stylesheet"><title>Mark S. Berlin</title>
-  
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js">
-            if (typeof jQuery === 'undefined')
-        document.write(unescape(<script src='./Assets/jquery-3.6.0.min.js' type='text/javascript'>))</script>
-        <script src="main.js" async></script> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Berlin</title>
+
+    <!-- LINKS -->
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Racing+Sans+One&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Old+Mincho:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- emailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_DLSkCNgHN04FokK85kkAN');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+
+</head>
+<body>
+    <!-- Up Button -->
+    <button onclick="topFunction()" id="upBtn" title="Go to top">Top</button>
+    
+    <!-- HEADER -->
+    <div class="header">
+        <h1 class="title">Daniel Berlin</h1>
+        <h2 class="sub-title">code guy, with divs4u!</h2>
+    </div>
 
 
-    </head>
-     <body>
+    <!-- MAIN SECTION -->
+    <div class="main-section" id="main-section">
 
-
-        <div class="header">
-            <div> 
-                <h1 id="name">Mark S. Berlin</h1>
-            </div>
-            <div class="nav">
-
-                <div class="dropdown">
-                    <button class="dropbtn">Navigation >>
-                    </button>
-                    <div class="dropdown-content">
-                        <a id="nav-drop-about" href="#about">about me</a>
-                        <a id="nav-drop-publications" href="#publications">publications</a>
-                        <a id="nav-drop-data" href="#data">data</a>
-                        <a id="nav-drop-teaching" href="#teaching">teaching</a>
-                        <a id="nav-drop-research" href="#research">research</a>
-                        <a id="nav-link-cv" href="https://www.marksberlin.com/uploads/5/2/2/4/52249639/berlin_cv.pdf" target="new">CV</a>
-                    </div> 
-                </div>
-
-                <ul>
-                    <li class="nav-link">
-                        <h3 id="nav-link-about"><a href="#about">about me</a></h3>
-                    </li>
-                    <li class="nav-link">
-                        <h3 id="nav-link-publications"><a href="#publications">publications</a></h3>
-                    </a></li>
-                    <li class="nav-link">
-                        <h3 id="nav-link-data"><a href="#data">data</a></h3>
-                    </a></li>
-                    <li class="nav-link">
-                        <h3 id="nav-link-teaching"><a href="#teaching">teaching</a></h3>
-                    </a></li>
-                    <li class="nav-link">
-                        <h3 id="nav-link-research"><a href="#research">research</a></h3>
-                    </a></li>                
-                    <li class="nav-link">
-                        <h3 id="nav-link-cv"><a href="https://www.marksberlin.com/uploads/5/2/2/4/52249639/berlin_cv.pdf" target="new">CV</a></h3>
-                    </a></li>   
-                </ul>
-            </div>
-        </div>
-
-        <div class="about-container" id="about">
-            <div class="about-block">
-                <div class="about-text-container">
-                    <p id="about-text">
-                    <span class="lead-text">I'm an assistant professor</span> in the <a href="http://www.marquette.edu/polisci/index.shtml" target="new">Department of Political Science</a> at Marquette University. I study politics at the intersections of international law, domestic law, and human rights, with a particular focus on accountability for violations of human rights and the laws of war.
+        <!-- CIRCLE 1: BIO -->
+        <div class="circle" id="bio" onclick="bio()">
+            <div class="content bio">
+                <h3>I'm Dan, a freelance coder and developer from Philadelphia</h3>
+                <p><br>
+                    I specialize in HTML, CSS, and JavaScript, and I love pouring myself into interesting projects.
                     <br><br>
-                    <span class="lead-text">My book,</span> <a href="https://global.oup.com/academic/product/criminalizing-atrocity-9780198850441" target="new">Criminalizing Atrocity: The Global Spread of Criminal Laws against International Crimes</a>, was recently published by Oxford University Press. My work has also been published in Law Society Review, Human Rights Quarterly, and the European Journal of International Law. My research has been supported by the National Science Foundation, and I was previously guest researcher at the <a href="http://www.hsfk.de/index.php?&L=1" target="new">Peace Research Institute Frankfurt</a> in Germany.
+                    I have a background in the food and beverage industry and a wide range of hobbies and interests, which inspire me to design websites, games, and programs.
                     <br><br>
-                    <span class="lead-text">I'm currently working on</span> a large research project that examines the decades-long persistence of torture in the Chicago Police Department and efforts to achieve justice for the survivors. 
-                    <br>​<br>​
-                    <span class="lead-text">You can contact me</span> at <a href="mailto:mark.berlin@marquette.edu" target ="new">mark.berlin@marquette.edu</a> or follow me on Twitter <a href="https://twitter.com/mark_berlin" target="new">@mark_berlin</a>.
-                    </p>
-                </div>
-                <div class="bio-pic-container">
-                    <img id="bio-pic" src="Assets/images/berlin-headshot-crop-small.png" alt="portrait photo" title="Mark S. Berlin
-                    ">
-                </div>
-            </div>
-        </div>
-
-        <div class="pub-container" id="publications">
-            <div class="book-pic-container">
-                <img id="book-pic" src="Assets/images/9780198850441_orig.jpeg" alt="book cover" title="cover photo of &quot;Criminalizing Atrocity&quot;">
-            </div>
-            <div class="pub-text">
-                <h2>Books</h2>
-                <p><a href="https://global.oup.com/academic/product/criminalizing-atrocity-9780198850441?cc=us&lang=en&" target="new" class="pub-title">Criminalizing Atrocity: The Global Spread of Criminal Laws against International Crimes</a> (Oxford University Press, 2020).
-                </p><br>
-                <h2>Peer-reviewed<br>journal articles</h2>
-                <p><a href="https://muse.jhu.edu/article/773448" target="new">"Revising the 'Hibernation' Narrative: Technocratic Legal Experts and the Cold War Origins of the 'Justice Cascade.'”</a> 2020. ​<span class="pub-title">Human Rights Quarterly</span> 42(4), 878-901.
-                <br><br>
-                <a href="https://academic.oup.com/ejil/article/30/2/481/5536735" target="new">"Who Studies International Law? Explaining Cross-National Variation in Compulsory International Legal Education"</a> (with Ryan Scoville). 2019. ​<span class="pub-title">European Journal of International Law</span> 30(2), 481-508.
-                <br><br>
-                <a href="http://onlinelibrary.wiley.com/wol1/doi/10.1111/lasr.12277/full" target="new">"The Difference Law Makes: Domestic Atrocity Laws and Human Rights Prosecutions"</a> (with Geoff Dancy). 2017. ​<span class="pub-title">Law & Society Review</span> 51(3), 533-566. 
-                <br><br>
-                <a href="http://www.tandfonline.com/doi/abs/10.1080/14754835.2015.1103160" target="new">"Why (not) Arrest? Third-Party State Compliance and Noncompliance with International Criminal Tribunals."</a> 2016. ​<span class="pub-title">Journal of Human Rights</span> 15(4), 509-532. 
-                </p><br>
-                <h2>Book chapters</h2>
-                <p><a href="https://books.google.com/books?id=ehcJ1t8yU88C&lpg=PA83&ots=BASkekAR68&lr&pg=PA83#v=onepage&q&f=false" target="new">"From Pirates to Pinochet: Universal Jurisdiction for Torture."</a> 2013. In ​<span class="pub-title">The Politics of the Globalization of Law: Getting from Rights to Justice,</span> edited by Alison Brysk. New York: Routledge.
+                    Feel free to contact me!
                 </p>
+                <div class="x-out"></div>
             </div>
         </div>
-                
-        <div class="data-container" id="data">
-            <div class="data-block">
-                <div id="data-left">
-                    <h4>The following are supplementary meterials and datasets for my published work:</h4>
-                    <span class="pub-title">Criminalizing Atrocity</span> (UOP 2020)
-                    <ul>
-                        <li><a href="https://www.marksberlin.com/uploads/5/2/2/4/52249639/atrocity_law_dataset_march_20.zip">Atrocity Law Dataset</a></li>
-                        <li><a href="https://www.marksberlin.com/uploads/5/2/2/4/52249639/atrocity_law_analysis_march_20.zip">Replication files for statistical analyses</a></li>
-                    </ul>
-                    "Why (not) Arrest?" <span class="pub-title">Journal of Human Rights</span> (2016)
-                    <ul>
-                        <li><a href="https://www.marksberlin.com/uploads/5/2/2/4/52249639/berlin_why_not_arrest_-_appendix.pdf" target="new">Online appendix</a></li>
-                    </ul>
-                </div>
-                <div id="data-right">
-                    <h2>Data</h2>
-                </div>
-            </div>
+        
+        <!-- CIRCLE 2: SAMMY -->
+        <div class="circle" id="sammy" onclick="sammy()">
         </div>
 
-        <div class="teaching-container" id="teaching">
-            <div class="teaching-block">
-                <div id="teaching-left">
-                    <h2>Teaching</h2>
-                    <img id="teaching-image" src="Assets/images/teaching-image.jpg">
-                </div>
-                <div id="teaching-right">
-                    <h4>I teach courses in the Department of Political Science and the Interdisciplinary Major in International Affairs. I have taught the following courses:</h4>
-                    <div class="data-underline"><span class="pub-title">Undergraduate</span></div>
-                    <ul>
-                        <li>International Law <a href="https://www.marksberlin.com/uploads/5/2/2/4/52249639/4601_syllabus_s18.pdf" target="new">(syllabus)</a></li>
-                        <li>International Organizations <a href="https://www.marksberlin.com/uploads/5/2/2/4/52249639/4611_syllabus_s17.pdf" target="new">(syllabus)</a></li>
-                        <li>The Politics of Torture <a href="https://www.marksberlin.com/uploads/5/2/2/4/52249639/berlin_-_torture_syllabus_f16.pdf" target="new">(syllabus)</a></li>
-                    </ul>
-                    <div class="teaching-underline">Graduate</span></div>
-                    <ul>
-                        <li>The Politics of Human Rights <a href="https://www.marksberlin.com/uploads/5/2/2/4/52249639/6651_syllabus_f17.pdf" target="new">(syllabus)</a></li>
-                    </ul>
-                </div>
-            </div>
+        <!-- CIRCLE 3: CONTACT -->
+        <div class="circle" id="contact" onclick="contactCircle()">
         </div>
 
-        <div class="research-preview-container" id="research">
-            <h2>Current Research</h2>
-            <div class="research-block">
-                <div id="research-left">
-                    <img id="chicago-map-image" src="/Assets/images/chicago-map.jpg" alt="map of chicago">
-                </div>
-                <div id="research-right">
-                    <span id="current-research-preview-title-1"></span>
-                    <p><span id="current-research-preview-1"></span>... <a href="research.html">(Read More...)</a></p>
-                </div>
-            </div>
+        <!-- CIRCLE 4: RECIPES -->
+        <div class="circle" id="recipes">
         </div>
 
-        <div class="footer">
-            <div id="credits">
-                <h6>Website by<br>Daniel Berlin</h6>
-            </div>
-            <div class="contact-info">
-                <p><a href="mailto:mark.berlin@marquette.edu" target="new">mark.berlin@marquette.edu</a>
-                <br>
-                Twitter: <a href="https://twitter.com/mark_berlin" target="new">@mark_berlin</a>
-                </p>
-            </div>
-            <div class="contact-h1">
-                <h1 id="contact">Contact</h1>
-            </div>
+        <!-- CIRCLE 5: RANDOM COLOR -->
+        <div class="circle" id="rando-color" onclick="randoColor()">
+            <h3>16.8 Million Colors</h3>
+        </div>
+        
+    </div>
+
+    <!-- CAPTION SECTION -->
+    <div class="caption-section" id="caption-section">
+
+        <!-- 1: BIO CAPTION -->
+        <div class="caption-load" id="bio-caption-content">
+            <h3 class="caption-title">about me</h3>
+            <p class="caption-p">Hey hey hey it's me lorem ipsom so fequitor my bros</p>
         </div>
 
-  </body>
+        <!-- 2: SAMMY -->
+        <div class="caption-load" id="sammy-caption-content">
+            <h3 class="caption-title">sammySeal.com</h3>
+            <p class="caption-p">This is sammy seal reporting live</p>
+        </div>
+
+        <!-- 3: RECIPES -->
+        <div class="caption-load" id="recipes-caption-content">
+            <h3 class="caption-title">my Recipe Box</h3>
+            <p class="caption-p">My big portfolio project. Try the biscuits.</p>
+        </div>
+        
+        <!-- 4: RANDO-COLOR -->
+        <div class="caption-load" id="rando-color-caption-content">
+            <h3 class="caption-title">Random RGB Color</h3>
+            <p class="caption-p">The more you click, the more fun it is...</p>
+        </div>
+
+        <!-- 5: CONTACT -->
+        <div class="caption-load" id="contact-caption-content">
+            <h3 class="caption-title">Contact Me</h3>
+            <p class="caption-p">{ daniel.berlin@comcast.net }<br>(302) 766-4251</p>
+        </div>
+
+        <!-- 5-A: CONTACT FORM AREA -->
+        <div class="contact-block">
+            <form id="contact-form">
+                <!-- <h3>Say Hello!</h3> -->
+                <input type="hidden" name="contact_number">
+                <div class="form">
+                    <input type="text" id="their-name" placeholder="Your Name..." title="Enter your name" name="user_name"/>
+                    <input type="email" id="their-email" placeholder="Your Email..." title="Enter your email" name="user_email"/>
+                </div>
+                <div class="form">
+                    <input type="text" id="their-subject" placeholder="Subject..." title="Enter message subject"/>
+                </div>
+                <div class="form message">
+                    <!-- <input type="text"  placeholder="Do you have a project idea you'd like to discuss? Or you just want to say hi? Leave me a message!" title="Enter your message"/> -->
+                    <textarea id="their-message" maxlength="2500" name="message" placeholder="Do you have a project idea you'd like to discuss? Or you just want to say hi? Leave me a message!" name="message"></textarea>
+                    <input id="contact-submit" type="submit" value="Send">
+                </div>
+            </form>
+        </div>
+
+
+    </div> 
+
+    <!-- JQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- JAVASCRIPT -->
+    <script type="text/JavaScript" src="main.js"></script>
+
+</body>
 </html>
