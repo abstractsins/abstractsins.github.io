@@ -24,7 +24,9 @@
 <body>
 
     <!-- Up Button -->
-    <button onclick="topFunction()" id="upBtn" title="Go to top"><h1>&lt&lt</h1></button>
+    <div class="up-button" onclick="topFunction()" id="upBtn" title="Go to top"></div>
+    <!-- Down Button -->
+    <div class="down-button" onclick="openIndex('down')" id="downBtn" title="Go to bottom"></div>
 
     <!-- Recipe Index -->
     <div class="index-window">
@@ -210,7 +212,7 @@
                                     <div class="recipe-header">
                                          <!-- Name -->
                                         <div class="recipe-title">
-                                            <h3 id="beef-1-title"></h3>
+                                            <span id="beef-1-title"></span>
                                         </div>
                                         <!-- Details -->
                                         <div class="recipe-details" id="beef-1-details">
@@ -774,6 +776,7 @@
                                                 <li class="tagly" id="dessert-3-tag-3"></li>
                                                 <li class="tagly" id="dessert-3-tag-4"></li>
                                                 <li class="tagly" id="dessert-3-tag-5"></li>
+                                                <li class="tagly" id="dessert-3-tag-6"></li>
                                             </ul>
                                         </div>  
                                     </div>     
@@ -1109,15 +1112,20 @@
 
     <!-- Master Index Section -->
     <div class="master-index-section" id="master-index-section">
+
+        <!-- Master Index Containter -->
         <div class="master-index-container" id="master-index-container">
-            <ul id="all-tags"></ul>
+            <!-- <ul id="all-tags"></ul> -->
         </div>
+
     </div>
 
     <!-- JQuery -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- JavaScript -->
     <script type="text/javascript" src="js/main.js"></script>
+    <!-- <script type="text/javascript" src="js/objects.js"></script> -->
+
 
 </body>
 </html>
