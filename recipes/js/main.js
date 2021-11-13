@@ -23,14 +23,16 @@ const upBtn = document.getElementById('upBtn');
 const topFunction = () => {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For real browsers
-	$('.index-window').show();
+	// $('.index-window').show();
 }
 
 const scrollFunction = () => {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         upBtn.style.display = "flex";
+        downBtn.style.display = "flex";
     } else {
         upBtn.style.display = "none";
+        downBtn.style.display = "none";
     }
 }
 
@@ -38,6 +40,7 @@ window.onscroll = () => { scrollFunction() };
 /* END 0 -- Up Button */
 
 /* 1 -- GLOBAL VARIABLES */
+let titlesArray = [];
 /* 1-A -- Slider Preview Objects */
 // BEEF
 let beef = {
@@ -60,8 +63,7 @@ let breadsArray = Object.values(breads);
 // DESSERTS
 let desserts = {
 	dessert1: 'cannoli',
-	dessert2: 'cookies',
-	dessert3: 'panna-cotta'
+	dessert2: 'cookies',dessert3: 'panna-cotta'
 }
 let dessertsArray = Object.values(desserts);
 // console.log(dessertsArray)
@@ -358,172 +360,33 @@ $('#cannoli-link-700').on('click', function() {
 
 
 // BEEF
-$('#beef-1-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(beefArray[0] + '.html')
-})
-$('#beef-2-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(beefArray[1] + '.html')
-})
-$('#beef-3-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(beefArray[2] + '.html')
-})
-$('#beef-4-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(beefArray[0] + '.html')
-})
-$('#beef-5-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(beefArray[1] + '.html')
-})
-$('#beef-6-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(beefArray[2] + '.html')
-})
-$('#beef-7-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(beefArray[0] + '.html')
-})
-$('#beef-8-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(beefArray[1] + '.html')
-})
-$('#beef-9-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(beefArray[2] + '.html')
-})
-$('#beef-10-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(beefArray[2] + '.html')
-})
-
+for (let i = 1; i <= beefArray.length; i++) {
+	$('#beef-'+i+'-link').on('click', function() {
+		$('.recipe-display-section').addClass('active');
+		$('#recipe-display-container').load(beefArray[i-1] + '.html')
+	})
+}
 // BREADS
-$('#bread-1-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(breadsArray[0] + '.html')
-})
-$('#bread-2-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(breadsArray[1] + '.html')
-})
-$('#bread-3-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(breadsArray[2] + '.html')
-})
-$('#bread-4-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(breadsArray[0] + '.html')
-})
-$('#bread-5-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(breadsArray[1] + '.html')
-})
-$('#bread-6-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(breadsArray[2] + '.html')
-})
-$('#bread-7-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(breadsArray[0] + '.html')
-})
-$('#bread-8-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(breadsArray[1] + '.html')
-})
-$('#bread-9-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(breadsArray[2] + '.html')
-})
-$('#bread-10-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(breadsArray[2] + '.html')
-})
-
+for (let i = 1; i <= breadsArray.length; i++) {
+	$('#bread-'+i+'-link').on('click', function() {
+		$('.recipe-display-section').addClass('active');
+		$('#recipe-display-container').load(breadsArray[i-1] + '.html')
+	})
+}
 // DESSERTS
-$('#dessert-1-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(dessertsArray[0] + '.html')
-})
-$('#dessert-2-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(dessertsArray[1] + '.html')
-})
-$('#dessert-3-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(dessertsArray[2] + '.html')
-})
-$('#dessert-4-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(dessertsArray[0] + '.html')
-})
-$('#dessert-5-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(dessertsArray[1] + '.html')
-})
-$('#dessert-6-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(dessertsArray[2] + '.html')
-})
-$('#dessert-7-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(dessertsArray[0] + '.html')
-})
-$('#dessert-8-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(dessertsArray[1] + '.html')
-})
-$('#dessert-9-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(dessertsArray[2] + '.html')
-})
-$('#dessert-10-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(dessertsArray[2] + '.html')
-})
-
+for (let i = 1; i <= dessertsArray.length; i++) {
+	$('#dessert-'+i+'-link').on('click', function() {
+		$('.recipe-display-section').addClass('active');
+		$('#recipe-display-container').load(dessertsArray[i-1] + '.html')
+	})
+}
 // SOUPS
-$('#soup-1-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(soupsArray[0] + '.html')
-})
-$('#soup-2-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(soupsArray[1] + '.html')
-})
-$('#soup-3-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(soupsArray[2] + '.html')
-})
-$('#soup-4-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(soupsArray[0] + '.html')
-})
-$('#soup-5-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(soupsArray[1] + '.html')
-})
-$('#soup-6-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(soupsArray[2] + '.html')
-})
-$('#soup-7-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(soupsArray[0] + '.html')
-})
-$('#soup-8-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(soupsArray[1] + '.html')
-})
-$('#soup-9-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(soupsArray[2] + '.html')
-})
-$('#soup-10-link').on('click', function() {
-	$('.recipe-display-section').addClass('active');
-	$('#recipe-display-container').load(soupsArray[2] + '.html')
-})
+for (let i = 1; i <= soupsArray.length; i++) {
+	$('#soup-'+i+'-link').on('click', function() {
+		$('.recipe-display-section').addClass('active');
+		$('#recipe-display-container').load(soupsArray[i-1] + '.html')
+	})
+}
 /* END 3-B -- SLIDER LINKS */
 
 /* 3-C -- TAB BROWSING */
@@ -568,7 +431,7 @@ $('.slider').each(function() {
 	const move = (newIndex) => {
 		let animateLeft, slideLeft;
 
-		advance();
+		advance(); // COMMENT OR UNCOMMENT THIS to toggle the timed advance
 
 		if ($group.is(':animated') || currentIndex === newIndex || $group.is(':hover')) {
 			return;
@@ -633,7 +496,7 @@ $('.slider').each(function() {
 	//In Memory of John -- (jscheuer1) -- Global Moderator at Dynamic Drive Forums
 	//who is still helping people, even after his death
 
-jQuery(function async($){
+// jQuery(function async($){
 	
 	// Iterating beef-1, beef-2, etc...
 	let dishSerials = [];
@@ -648,6 +511,7 @@ jQuery(function async($){
 
 	for (let i=0; i<dishSerials.length; i++) {
 			$('#'+dishSerials[i]+'-title').load(dishesArray[i] + '.html #recipe-name');
+			$('#'+dishSerials[i]+'-title').addClass('prime');
 			$('#'+dishSerials[i]+'-prep-time').load(dishesArray[i] + '.html #prep-time');
 			$('#'+dishSerials[i]+'-cook-time').load(dishesArray[i] + '.html #cook-time');
 			$('#'+dishSerials[i]+'-calories').load(dishesArray[i] + '.html #calories');
@@ -662,11 +526,15 @@ jQuery(function async($){
 			$('#'+dishSerials[i]+'-tag-3').load(dishesArray[i] + '.html #tag-3');
 			$('#'+dishSerials[i]+'-tag-4').load(dishesArray[i] + '.html #tag-4');
 			$('#'+dishSerials[i]+'-tag-5').load(dishesArray[i] + '.html #tag-5');
+			$('#'+dishSerials[i]+'-tag-6').load(dishesArray[i] + '.html #tag-6');
 	}
+	console.log('titlesArray: ' + titlesArray);
+	console.log($('.prime'));
 
 	let recipeDirectory = {};
 	dishSerials.forEach((key, i) => {
 		recipeDirectory[key] = `${dishesArray[i]}.html`;
+	
 	})
 	let recipeFileNames = Object.values(recipeDirectory);
 								console.log('dishesArray: ' + dishesArray);
@@ -680,7 +548,7 @@ jQuery(function async($){
 	// 	})
 	// };
 
-	});
+	// });
 /* END 4-B -- SLIDER INFO FUNCTIONS */
 
 /* END 4 -- SLIDERS */
@@ -689,12 +557,59 @@ jQuery(function async($){
 
 // Function for displaying tags without duplicates
 const openIndex = (tag) => {
-	$('.index-window').hide(); // hide the sidebar 
-	$('.master-index-section').addClass('active'); // open recipe index below after clicking on a tag
 	$('#master-index-container').load('master-index.html'); // load recipe index file into section
+	$('#master-index-section').addClass('active'); // open recipe index below after clicking on a tag
+	$('.index-window').hide(); // hide the sidebar 
+	window.open('#master-index-section', '_self');
 	let rand = Math.floor(Math.random() * 100) // testing
 	console.log(`You pressed: ${tag}\nRandom Number: ${rand}`); // testing
 }
+
+
+/* ATTENTION */
+/* OBJECTS MODULE IMPORT */
+let recipeArr = [];
+
+function Recipe(name, path, serial, tag0, tag1, tag2, tag3, tag4, tag5, tag6) {
+    this.name = name;
+    this.path = path;
+	this.serial = serial;
+	this.tag0 = tag0;
+	this.tag1 = tag1;
+	this.tag2 = tag2;
+	this.tag3 = tag3;
+	this.tag4 = tag4;
+	this.tag5 = tag5;
+	this.tag6 = tag6;
+    this.recipePush = function() {
+        recipeArr.push(this);
+    };
+}
+
+// Build new recipes here
+const recipeCollector = () => {
+    let biscuits = new Recipe('Best Biscuits', 'biscuits.html', 'bread-1','breads', 'quick bread', 'holidays', 'freeze extra', 'fallback').recipePush();
+    let cannoli = new Recipe('Stout Malted Cannoli', 'cannoli.html', 'dessert-1', 'desserts', 'large batch', 'pinky up', 'Italian-ish', 'very dairy').recipePush();
+    let cauliSoup = new Recipe('Moroccan Cauliflower Soup', 'cauliflower-soup.html', 'soup-1', 'soups', 'super simple', 'Winter potage', 'Mediterranean', 'creamy soup', 'very dairy').recipePush();
+    let challah = new Recipe('Challah', 'challah.html', 'bread-2', 'breads', 'fermentation', 'holidays', 'Jewish', 'rich dough', 'plan ahead').recipePush();
+    let chili = new Recipe('Kwiki-Mart Chili', 'chili.html', 'beef-2', 'beef', 'one pan', 'patience', 'low & slow', 'Winter potage', 'spicy?').recipePush();
+    let cookies = new Recipe('CCPB Cookies', 'cookies.html', 'dessert-2', 'desserts', 'cookies', 'whole wheat', 'super simple', 'fallback').recipePush();
+    let langos = new Recipe('Langos', 'langos.html', 'bread-3', 'breads', 'fermentation', 'lean dough', 'fallback', 'freeze extra', 'special occassion').recipePush();
+    let meatloaf = new Recipe('My Meatloaf', 'meatloaf.html', 'beef-1', 'beef', 'one pan', 'set/forget', 'breezy', 'fallback', 'Amber-approved').recipePush();
+    let shortRibs = new Recipe('Red Wine Short Ribs', 'short-ribs.html', 'beef-3', 'beef', 'patience', 'low & slow', 'plan ahead', 'Amber-approved').recipePush();
+    let shrimpBisque = new Recipe('Shrimp Bisque', 'shrimp-bisque.html', 'soup-3', 'soups', 'seafood', 'creamy soup', 'special occassion', 'very dairy').recipePush();
+    let pannaCotta = new Recipe('Panna Cotta', 'panna-cotta.html', 'dessert-3', 'desserts', 'fallback', 'super simple', 'plan ahead', 'very dairy', 'Italian-ish', 'Summer').recipePush();
+    let potLeek = new Recipe('Potato Leek Soup', 'potato-leek.html', 'soup-2', 'soups', 'Winter potage', 'creamy soup', 'super simple', 'very dairy').recipePush();
+}
+
+// FUNCTION CALLS
+recipeCollector();
+console.log(recipeArr);
+
+/* END OBJECTS MODULE IMPORT */
+/* ATTENTION */
+
+
 
 /* THIS SPACE INTENTIONALLY LEFT BLANK */
 //
