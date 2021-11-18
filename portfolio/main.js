@@ -1,8 +1,3 @@
-/* TO DO: */
-// 1) Make rando color circle display rgb numbers inside
-/* END TO DO: */
-
-
 /* TABLE OF CONTENTS */
 // 1 -- Global Concerns
 // 1-A -- Up Button
@@ -13,6 +8,7 @@
 // 2-D -- Contact Circle 
 // 2-E -- Bio Circle
 // 2-F -- Recipe Circle
+// 3 -- Email and Phone Click Functions
 /* END TABLE OF CONTENTS */
 
 /* 1 -- GLOBAL CONCERNS*/
@@ -116,7 +112,7 @@ const randoColor = () => {
 /* 2-D -- CONTACT CIRCLE ACTION */
 const contactCircle = () => {
     let $deets = $('#contact-caption-content');
-    let $deetsP = $('#contact-caption-content p');
+    let $deetsP = $('.caption-p');
     let $btn = $('#contact.circle');
     let $captionSection = $('.caption-section');
     $deets.addClass('active');
@@ -135,8 +131,6 @@ const contactCircle = () => {
         $('#contact').removeClass('clicked');
         // CAPTION SECTION
         $captionSection.css({    "height": ""});
-        // $deets.removeClass('clicked');
-        // $deetsP.removeClass('clicked');
         $deets.css({"display": ""});
         $deetsP.css({"display": "none"})
         $('.contact-block').css({"right": ""});
@@ -174,8 +168,6 @@ const contactCircle = () => {
         $('#contact').addClass('clicked');
         // CAPTION SECTION
         $captionSection.css({    "height": "100%"});
-        // $deets.addClass('clicked');
-        // $deetsP.addClass('clicked');
         $('.contact-block').css({   "display": "flex",
                                     "right": "5vw"});
         $deets.css({"display": "flex"});
@@ -234,9 +226,9 @@ const bio = () => {
         if(!$('#contact').hasClass('clicked')) { // if contact button isnt clicked
                 /* IF NOT CLICKED ALREADY */
             $bio.css({  "border-radius": "15px",
-                        "background-size": "26vw",
-                        "width": "65vw",
-                        "height": "25vw",
+                        "background-size": "36vw",
+                        "width": "70vw",
+                        "height": "35vw",
                         "top": "14vh",
                         "left": "15vw",
                         "z-index": "1000",
@@ -266,6 +258,18 @@ const recipes = () => {
 /* 2-F -- END RECIPE CIRCLE */
 
 /* END 2 -- CIRCLE FUNCTIONS */
+
+/* 3 -- EMAIL AND PHONE CLICK FUNCTIONS */
+const email = () => {
+    window.open("mailto:daniel.berlin@comcast.net?subject=Divs4u!");
+}
+
+const phone = () => {
+    window.open("tel:+13027664251");
+}
+
+/* END 3 -- EMAIL AND PHONE CLICK FUNCTIONS */
+
 
 /* FUNCTION CALLS */
 assignIDs();

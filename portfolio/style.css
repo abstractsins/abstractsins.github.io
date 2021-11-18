@@ -218,7 +218,7 @@ body {
     align-self: center;
     justify-content: center;
     height: 100%;
-    width: 54%;
+    width: 43%;
     color: var(--charcoal);
     /* color: white; */
     margin: 0 2vw;
@@ -285,6 +285,10 @@ body {
     height: fit-content;
     margin-bottom: 1vw;
     font-size: 2vw;
+}
+
+.content.bio p {
+    font-size: 1.75vw;
 }
 
 #sammy {
@@ -445,11 +449,38 @@ a.sammy {
     letter-spacing: 0.15ch;
 }
 
-p.caption-p {
+.caption-p {
+    display: none;
+    flex-flow: column;
+    align-items: flex-start;
     font-family: "Zen Old Mincho";
     font-size: 1.75vw;
     letter-spacing: 0.1ch;
 }
+
+.email, 
+.phone {
+    display: flex;
+    margin: 10px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: all 150ms ease;
+    width: max-content;
+}
+
+.email:hover,
+.phone:hover {
+    cursor: pointer;
+    background-color: var(--bud-green);
+
+}
+
+.email:active, .phone:active {
+    -webkit-box-shadow: inset 1px 1px 10px #333;
+    -moz-box-shadow:    inset 1px 1px 10px #333;
+    box-shadow:         inset 1px 1px 10px #333;
+}
+
 
 #contact-caption-content {
     justify-self: flex-end;
@@ -522,7 +553,7 @@ input:focus {
     background-color: lightyellow;
     outline: none !important;
     border: 3px solid var(--orange-crayola);
-    box-shadow: 5px 5px 4px #719ECE;
+    box-shadow: 2px 2px 4px #719ECE;
 }
 
 #their-name {
@@ -571,7 +602,7 @@ textarea {
     outline: none !important;
     /* border: 2px solid var(--inchworm); */
     border: 3px solid var(--orange-crayola);
-    box-shadow: 5px 5px 4px #719ECE;
+    box-shadow: 2px 2px 4px #719ECE;
 }
 
 .button-container {
@@ -587,7 +618,7 @@ textarea {
     width: max-content;
 }
 
-input#contact-submit, 
+#contact-submit, 
 #contact-reset {
     display: flex;
     justify-content: center;
@@ -595,7 +626,7 @@ input#contact-submit,
     font-family: "Fira Sans";
     align-self: flex-end;
     background-color: var(--orange-crayola);
-    box-shadow: 5px 5px 4px #719ECE;
+    box-shadow: 2px 2px 4px #719ECE;
     transition: 125ms box-shadow ease-out,
                 125ms transform ease-out;
     align-self: center;
@@ -605,14 +636,15 @@ input#contact-submit,
     background-color: lightgray;
 }
 
-input#contact-submit:hover,
+#contact-submit:hover,
 #contact-reset:hover {
     background-color: var(--inchworm);
-    box-shadow: 3px 3px 1px #719ECE;
+    cursor: pointer;
+    box-shadow: 2px 2px 1px #719ECE;
     border-color: none;
 }
 
-input#contact-submit:active,
+#contact-submit:active,
 #contact-reset:active {
     background-color: var(--bud-green);
     border-color: none;
@@ -620,15 +652,13 @@ input#contact-submit:active,
     box-shadow: none;
 }
 
-input#contact-submit:focus,
+#contact-submit:focus,
 #contact-reset:focus {
     border-color: none;
 }
 
 /* END 4-B -- CONTACT SECTION */
-
 /* END 4 -- CAPTION SECTION */
-
 
 /* 5 -- MEDIA QUERIES */
 
@@ -705,11 +735,13 @@ input#contact-submit:focus,
     }
 
     .header h1.title {
-        font-size: 8vw;
+        font-size: 10vw;
+        padding: 0;
     }
 
     .header h2.sub-title {
-        font-size: 4vw;
+        font-size: 4.5vw;
+        padding: 0;
     }
 
     .main-section {
@@ -722,27 +754,76 @@ input#contact-submit:focus,
 
     #bio {
         top: 20vh;
-        left: 21vw;
+        left: 5vw;
+        width: 25vw;
+        height: 25vw;
+        background-size: 26vw;
+
     }
 
     #sammy {
-        top: 33vh;
-        left: 36vw;
+        top: 36vh;
+        left: 34vw;
+        width: 15vw;
+        height: 15vw;
     }
 
     #contact {
         top: 19vh;
         left: 40vw;
+        width: 11vw;
+        height: 11vw;
+    }
+
+    .contact-block {
+        width: 80%;
+    }
+
+    .button-container {
+        margin: 0 20px 0 10px;
+    }
+
+    input,
+    #their-message {
+        font-size: 12px;
+    }
+
+    .caption-section {
+        align-items: flex-start;
+    }
+
+    #contact-caption-content {
+        padding: 0;
+        margin: 0 0 0 2vw;
+    }
+
+    #contact-caption-content > h3, 
+    #bio-caption-content > h3,
+    #rando-color-caption-content > h3 {
+        font-size: 4.5vw;
+    }
+
+    p.caption-p {
+        font-size: 18px;
+        letter-spacing: 0;;
     }
 
     #recipes {
-        top: 22vh;
-        left: 55vw;
+        top: 27vh;
+        left: 53vw;
+        width: 22vw;
+        height: 22vw;
     }
 
     #rando-color {
-        top: 40vh;
-        left: 50vw;
+        top: 35vh;
+        left: 77vw;
+        width: 18vw;
+        height: 18vw;
+    }
+
+    #rando-color h3 {
+        font-size: 1.75vw;
     }
 
 }
@@ -761,27 +842,34 @@ input#contact-submit:focus,
 
     #bio {
         top: 16vh;
-        left: 17vw;
+        left: 8vw;
+        width: 28vw;
+        height: 28vw;
+        background-size: 29vw;
     }
 
     #sammy {
         top: 26vh;
-        left: 42vw;
+        left: 37vw;
+        width: 18vw;
+        height: 18vw;
     }
 
     #contact {
-        top: 16vh;
-        left: 40vw;
+        top: 15vh;
+        left: 43vw;
+        width: 14vw;
+        height: 14vw;
     }
 
     #recipes {
         top: 19vh;
-        left: 60vw;
+        left: 59vw;
     }
 
     #rando-color {
-        top: 35vh;
-        left: 48vw;
+        top: 13vh;
+        left: 75vw;
     }
 
 
