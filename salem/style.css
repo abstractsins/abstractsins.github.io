@@ -1,5 +1,6 @@
 /* TABLE OF CONTENTS */
-/* 1 -- Global Concerns */
+/* 0 -- Global Concerns */
+/* 1 -- Select Screen */
 /* 2 -- Header Section */
 /* 3 -- Main Section */
 /* 3-A -- Player Number */
@@ -8,7 +9,7 @@
 /* 3-D -- Vision Output */
 /* END TABLE OF CONTENTS */
 
-/* 1 -- GLOBAL CONCERNS */
+/* 0 -- GLOBAL CONCERNS */
 * {
     /* border: 1px solid red; */
     /* 1-A -- CUSTOM COLORS */
@@ -37,7 +38,31 @@ body {
     align-items: center;
     background-color: var(--ocean-blue-2);
 }
-/* END 1 -- GLOBAL CONCERNS */
+/* END 0 -- GLOBAL CONCERNS */
+
+/* 1 -- SELECT SCREEN */
+.program-select {
+    background-color: var(--grape);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 125px;
+    margin: 15px;
+    filter: var(--button-shadow);
+}
+
+.program-select:hover {
+    background-color: var(--grape-2);
+    cursor: pointer;
+    filter: var(--button-shadow-2);
+}
+.program-select h3 {
+    text-align: center;
+    font-size: 35px;
+}
+/* END 1 -- SELECT SCREEN */
 
 /* 2 -- HEADER SECTION */
 .header {
@@ -238,7 +263,7 @@ label {
 }
 
 .vision-btn {
-    background-color: var(--grape-2);
+    background-color: var(--grape);
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -261,13 +286,13 @@ label {
 
 .vision-btn:hover {
     /* background-color: white; */
+    background-color: var(--grape-2);
     cursor: pointer;
     filter: var(--button-shadow-2);
 }
 
 .vision-btn:active {
     /* background-color: black; */
-    background-color: var(--grape);
     color: white;
     filter: none;
     transform: translate(2px, 2px)
