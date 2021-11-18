@@ -7,18 +7,14 @@
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Single+Day&display=swap" rel="stylesheet">    <!-- from lightSlider github -->
-
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Shrikhand&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Shrikhand&display=swap" rel="stylesheet">
+    
     <!-- CSS SHEETS -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="css/style2.css" /> -->
 
-    <title>Daniel's Kitchen</title>
+    <title>Recipe Box | My Signature Recipes</title>
+    <link rel="shortcut icon" type="image/jpg" href="./favicon-recipes.jpg"/>
 
 </head>
 <body>
@@ -31,6 +27,10 @@
     <!-- Recipe Index -->
     <div class="index-window">
 
+        <!-- Main Index Link -->
+        <h2 class="main-index-link" onclick="openIndex()">Master Index</h2>
+
+        <h3>or search...</h3>
         <!-- Search tab for hovering over -->
         <div class="index-tab">
             <h6>&lt&lt Recipe Index &gt&gt</h6>
@@ -82,67 +82,6 @@
             <!-- Z -->
         </ul>
     
-    </div>
-
-    <!-- Header Section -->
-    <div class="header">        
-
-        <!-- Recipe Index @ 700px -->
-        <div class="index-window-700">
-
-            <!-- Search tab for hovering over -->
-            <!-- <div class="index-tab-700">
-                <h6>&lt&lt Recipe Index &gt&gt</h6>
-            </div> -->
-        
-            <!-- Search box -->
-            <input type="text" id="recipe-search-700" onkeyup="search700()" placeholder="Find a recipe..." title="Recipe Search"/>
-        
-            <!-- Recipe List -->
-            <ul id="recipe-list-700">
-                <!-- A -->
-                <!-- B -->
-                <li><a href="#recipe-display-section" id="biscuits-link-700">Best Biscuits</a></li>
-                <!-- C -->
-                <li><a href="#recipe-display-section" id="cookies-link-700">CCPB Cookies</a></li>
-                <li><a href="#recipe-display-section" id="challah-link-700">Challah</a></li>
-                <!-- D -->
-                <!-- E -->
-                <!-- F -->
-                <!-- G -->
-                <!-- H -->
-                <!-- I -->
-                <!-- J -->
-                <!-- K -->
-                <li><a href="#recipe-display-section" id="chili-link-700">Kwiki-Mart Chili</a></li>
-                <!-- L -->
-                <li><a href="#recipe-display-section" id="langos-link-700">Langos</a></li>
-                <!-- M -->
-                <li><a href="#recipe-display-section" id="moroccan-cauli-link-700">Moroccan Cauliflower Soup</a></li>
-                <li><a href="#recipe-display-section" id="meatloaf-link-700">My Meatloaf</a></li>
-                <!-- N -->
-                <!-- N -->
-                <!-- O -->
-                <!-- P -->
-                <li><a href="#recipe-display-section" id="panna-cotta-link-700">Panna Cotta w/ Caramel</a></li>
-                <li><a href="#recipe-display-section" id="potato-leek-link-700">Potato Leek Soup</a></li>
-                <!-- Q -->
-                <!-- R -->
-                <li><a href="#recipe-display-section" id="short-ribs-link-700">Red Wine Short Ribs</a></li>
-                <!-- S -->
-                <li><a href="#recipe-display-section" id="shrimp-bisque-link-700">Shrimp Bisque</a></li>
-                <li><a href="#recipe-display-section" id="cannoli-link-700">Stout Malted Cannoli</a></li>
-                <!-- T -->
-                <!-- U -->
-                <!-- V -->
-                <!-- W -->
-                <!-- X -->
-                <!-- Y -->
-                <!-- Z -->
-            </ul>
-        
-        </div>
-
     </div>
 
     <!-- Main Section -->
@@ -1115,7 +1054,35 @@
 
         <!-- Master Index Containter -->
         <div class="master-index-container" id="master-index-container">
-            <!-- <ul id="all-tags"></ul> -->
+
+            <h1>Master Index</h1>
+            <div class="master-index-grid">
+                
+                <!-- TAGS LIST SECTION -->
+                <div class="all-tags">
+                    <h2>See Recipes By Tag...</h2>
+                    <ul id="all-tags">
+                    </ul>
+                </div>    
+        
+                <!-- TAGS RESULT SECTION -->
+                <div class="tag-results">
+                    <h2>Recipes That Share This Tag...</h2>
+                    <ul id="tag-results">
+                    </ul>
+                </div>
+        
+                <!-- ALPHABETICAL LISTING -->
+                <div class="alpha-listing">
+                    <h2>Alphabetical Listing...</h2>
+                    <!-- Search box -->
+                    <input type="text" id="recipe-search-master" onkeyup="searchMaster()" placeholder="Find a recipe..." title="Recipe Search"/>
+                    <ul id="alpha-listing">
+                    </ul>
+                </div>
+        
+            </div>
+
         </div>
 
     </div>
@@ -1124,8 +1091,6 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- JavaScript -->
     <script type="text/javascript" src="js/main.js"></script>
-    <!-- <script type="text/javascript" src="js/objects.js"></script> -->
-
 
 </body>
 </html>
