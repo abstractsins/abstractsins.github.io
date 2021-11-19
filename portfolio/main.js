@@ -112,7 +112,7 @@ const randoColor = () => {
 /* 2-D -- CONTACT CIRCLE ACTION */
 const contactCircle = () => {
     let $deets = $('#contact-caption-content');
-    let $deetsP = $('.caption-p');
+    let $deetsP = $('#contact-info');
     let $btn = $('#contact.circle');
     let $captionSection = $('.caption-section');
     $deets.addClass('active');

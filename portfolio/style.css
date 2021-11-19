@@ -450,12 +450,16 @@ a.sammy {
 }
 
 .caption-p {
-    display: none;
+    /* display: none; */
     flex-flow: column;
     align-items: flex-start;
     font-family: "Zen Old Mincho";
     font-size: 1.75vw;
     letter-spacing: 0.1ch;
+}
+
+#contact-info {
+    display: none;
 }
 
 .email, 
