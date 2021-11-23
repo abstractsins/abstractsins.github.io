@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Psychic Will Generator</title>
+    <title>Pirate Plunder Planner</title>
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
     <!-- HEADER SECTION -->
     <div class="header">
         <h1 class="title">Town of Salem</h1>
-        <h2 class="sub-title">fake psychic will generator</h2>
+        <h2 class="sub-title">pirate plunder planner</h2>
     </div>
 
     <!-- MAIN SECTION -->
@@ -135,21 +135,20 @@
 
         </div>
         
-        <!-- VISION OPTION BUTTONS -->
-        <div class="vision-options">
-            <h3>Choose your vision:</h3>
-            <div class="vision-btn-container">
-                <div class="vision-btn" id="evil" onclick="vision('evil')"><span class="btn-text">evil vision</span></div>
-                <div class="vision-btn" id="good" onclick="vision('good')"><span class="btn-text">good vision</span></div>
+        <!-- PLUNDER DIRECTIVE BUTTON -->
+        <div class="plunder-container">
+            <h3>Recieve your plunder directive:</h3>
+            <div class="plunder-btn-container">
+                <div class="plunder-btn" id="plunder-btn" onclick="plunder()"><span class="btn-text">Plunder!</span></div>
             </div>
+            <!-- OUTPUT -->
+            <div class="plunder-directive">
+                <h3>Your Directive:</h3>
+                <div class="directive" id="directive"></div> 
+            </div>
+            <!-- find how to have it added to clipboard -->
         </div>
         
-        <!-- OUTPUT -->
-        <div class="vision-output">
-            <h3>Vision Output:</h3>
-            <div class="reading"></div> 
-        </div>
-        <!-- find how to have it added to clipboard -->
         
     </div>
 
