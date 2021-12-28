@@ -8,6 +8,8 @@
 // 2-D -- Contact Circle 
 // 2-E -- Bio Circle
 // 2-F -- Recipe Circle
+// 2-G -- Salem Circle
+// 2-H -- Resume Circle
 // 3 -- Email and Phone Click Functions
 /* END TABLE OF CONTENTS */
 
@@ -74,7 +76,6 @@ const hover = () => {
             }
         });
         if (id != '#contact-caption-content') {
-            console.log('TEST OF SOME KIND')
             $(this).mouseleave(() => {
                 id.removeClass('active');
                 $(this).css({"z-index": ""});
@@ -154,6 +155,11 @@ const contactCircle = () => {
                             "left": "",
                             "filter": "",
                             "transition": ""});
+        // SALEM CIRCLE
+        $('#salem').css({ "top": "",
+                            "left": "",
+                            "filter": "",
+                            "transition": ""});                            
         // MAIN SECTION             
         $('.main-section').css("height", "");
     } else { 
@@ -194,6 +200,11 @@ const contactCircle = () => {
         $('#rando-color').css({ "top": "8vh",
                             "left": "70vw",
                             "filter": "var(--shadow-5c)",
+                            "transition": "750ms filter ease-in-out, 350ms transform ease-in-out, 750ms top ease-out, 750ms left ease-out, 750ms width ease-out, 750ms height ease-out"});
+        // SALEM CIRCLE
+        $('#salem').css({ "top": "8vh",
+                            "left": "63vw",
+                            "filter": "var(--shadow-2c)",
                             "transition": "750ms filter ease-in-out, 350ms transform ease-in-out, 750ms top ease-out, 750ms left ease-out, 750ms width ease-out, 750ms height ease-out"});
         // MAIN SECTION
         $('.main-section').css("height", "10vh");
@@ -256,6 +267,22 @@ const recipes = () => {
     }
 }
 /* 2-F -- END RECIPE CIRCLE */
+
+/* 2-G -- SALEM CIRCLE */
+const salem = () => {
+    if (!$('#bio.circle').hasClass('clicked') && !$('#contact.circle').hasClass('clicked')) { // Checks if the coast is clear
+        window.open("salem.html", "_blank");
+    }
+}
+/* END 2-G -- SALEM CIRCLE */
+
+/* 2-H -- RESUME CIRCLE */
+const resume = () => {
+    if (!$('#bio.circle').hasClass('clicked') && !$('#contact.circle').hasClass('clicked')) { // Checks if the coast is clear
+        window.open("https://abstractsins.github.io/resume", "_blank");
+    }
+}
+/* END 2-H -- RESUME CIRCLE */
 
 /* END 2 -- CIRCLE FUNCTIONS */
 
