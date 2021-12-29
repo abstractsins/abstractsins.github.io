@@ -32,12 +32,44 @@
 }
 
 body {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
+    /* display: flex; */
+    /* flex-flow: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
     background-color: var(--ocean-blue-2);
 }
+
+.body-container {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+
+.left-half {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding-top: 25px;
+    width: 50%;
+    height: 90vh;
+}
+
+.right-half {
+    display: flex;
+    /* height: 99vh; */
+    flex-flow: column;
+    align-items: center;
+    /* justify-content: center; */
+    /* overflow: scroll; */
+    padding-top: 25px;
+    width: 50%;
+    height: 95vh;
+    overflow-y: scroll;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    align-self: center;
+}
+
 /* END 0 -- GLOBAL CONCERNS */
 
 /* 1 -- SELECT SCREEN */
@@ -47,10 +79,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 400px;
-    height: 125px;
+    width: 300px;
+    height: 85px;
     margin: 15px;
     filter: var(--button-shadow);
+    transition: filter, background-color 125ms ease-in-out;
 }
 
 .program-select:hover {
@@ -58,9 +91,15 @@ body {
     cursor: pointer;
     filter: var(--button-shadow-2);
 }
+
+.program-select:active {
+    filter: none;
+    background-color: whitesmoke;
+}
+
 .program-select h3 {
     text-align: center;
-    font-size: 35px;
+    font-size: 22px;
 }
 /* END 1 -- SELECT SCREEN */
 
@@ -76,13 +115,15 @@ body {
 }
 
 .header h1.title {
-    font-size: 6.5vw;
+    font-size: 5vw;
+    padding: 15px;
+    text-align: center;
     color: var(--creepy-yellow);
     font-family: "Miltonian Tattoo", monospace;
 }
 
-.header h2.sub-title {
-    font-size: 3.75vw;
+h2.sub-title {
+    font-size: 2.75vw;
     font-family: "Overlock", sans-serif;
     color: var(--creepy-yellow);
     text-transform: capitalize;
@@ -142,6 +183,26 @@ h3 {
 
 .player-num h3 {
     width: unset;
+}
+
+.instructions {
+    margin-top: 25px;
+    width: 80%;
+    text-align: center;
+}
+
+#instructions-header {
+    padding: 15px;
+}
+
+p.normal {
+    color: whitesmoke;
+    font-family: "Cantora One", sans-serif;
+    /* font-weight: 400; */
+    line-height: 1.5;
+    font-size: 22px;
+    text-align: left;
+    padding: 10px;
 }
 
 .checkbox-container {
