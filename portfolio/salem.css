@@ -7,6 +7,7 @@
 /* 3-B -- Dead Numbers */
 /* 3-C -- Vision Selection */
 /* 3-D -- Vision Output */
+/* 4 -- Scroll Bar */
 /* END TABLE OF CONTENTS */
 
 /* 0 -- GLOBAL CONCERNS */
@@ -23,6 +24,7 @@
     --sick-yellow: rgb(228, 225, 92);
     --ocean-blue: #006994;
     --ocean-blue-2: #004d6b;
+    --ocean-blue-3: #7dd9fdb2;
     /* END 1-A -- CUSTOM COLORS */
     --button-shadow: drop-shadow(5px 5px 3px rgba(75, 75, 75, 0.4));
     --button-shadow-2: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.5));
@@ -32,10 +34,8 @@
 }
 
 body {
-    /* display: flex; */
-    /* flex-flow: column; */
-    /* justify-content: center; */
-    /* align-items: center; */
+    display: flex;
+    flex-flow: column;
     background-color: var(--ocean-blue-2);
 }
 
@@ -116,7 +116,7 @@ body {
 
 .header h1.title {
     font-size: 5vw;
-    padding: 15px;
+    padding-top: 15px;
     text-align: center;
     color: var(--creepy-yellow);
     font-family: "Miltonian Tattoo", monospace;
@@ -138,7 +138,7 @@ h2.sub-title {
     align-self: center;
     align-items: center;
     background-color: var(--lettuce-green);
-    width: 475px;
+    width: 430px;
     height: fit-content;
     padding: 15px;
     border-radius: 15px;;
@@ -395,3 +395,38 @@ label {
 
 /* END 3-D -- VISION OUTPUT */
 /* END 3 -- MAIN SECTION */
+
+.right-half p {
+    background-color: var(--ocean-blue-3);
+    font-family: "Cantora One";
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 30px;
+    padding: 30px;
+    border-radius: 15px;
+    width: 70%;
+}
+
+.right-half h3 {
+    font-size: 28px;
+    margin: 10px;
+    color: whitesmoke;
+}
+
+/* 4 -- SCROLL BAR */
+::-webkit-scrollbar {
+    width: 1.5em;
+}
+   
+::-webkit-scrollbar-track {
+    background-color: var(--lettuce-green);
+    box-shadow: inset 1px -1px 3px rgba(0, 0, 0, 1);
+}
+   
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: var(--charcoal);
+    /* background-color: var(--grape); */
+    /* outline: 3px solid black; */
+}
+/* END 4 -- SCROLL BAR */

@@ -294,7 +294,6 @@ const email = () => {
 const phone = () => {
     window.open("tel:+13027664251");
 }
-
 /* END 3 -- EMAIL AND PHONE CLICK FUNCTIONS */
 
 
