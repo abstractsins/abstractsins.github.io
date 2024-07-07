@@ -21,6 +21,7 @@ window.onload = function() {
 
         // google chart
         // doChart(oGym);
+        webUi(oGym);
 
     } else {
         console.error('######### gym data not loaded');       
@@ -53,7 +54,6 @@ async function fetchData(filePath) {
     oGym['loaded'] = true;
     getStarted(oGym);
     console.dir(oGym);
-    webUi(oGym);
     bigScreen();
     logStats(oGym);
 })();  
