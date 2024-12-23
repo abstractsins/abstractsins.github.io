@@ -1,0 +1,157 @@
+.blue-color-highlight .red {
+    background: #132361;
+}
+
+.blue-color-highlight .hamburger .line {
+    background-color: #132361;
+}
+
+.blue-color-highlight #mm-site-navigation {
+    background: #132361;
+}
+
+.blue-color-highlight #utility-menu > li:hover > a {
+    color: #00A6E9;
+}
+.blue-color-highlight footer .social-links li:hover svg,
+.blue-color-highlight #footer-menu a:hover {
+    color: #00A6E9;
+}
+
+.blue-color-highlight .filter-wrapper .filters.active .button:hover {
+    color: #132361;
+}
+.blue-color-highlight .filter-wrapper .filters:before {
+    background-color: #132361;
+}
+.blue-color-highlight .carousel-module h2.title,
+.blue-color-highlight .events-module.white h2,
+.blue-color-highlight .content-module h2,
+.blue-color-highlight .content-module h3,
+.blue-color-highlight .content-module h4 {
+    color: #132361;
+}
+/* Black modules */
+.blue-color-highlight .content-module.black .grid-x .cell h3 {
+    color: #fff;
+}
+.content-module.black {
+	background: transparent;
+}
+.content-module.black .cell .inner-cell {
+	height: 100%;
+	padding: 2rem;
+	background: url(https://www.dallaschamber.org/wp-content/uploads/2024/06/Asset-1@4x-100-scaled.jpg) no-repeat center/cover;
+}
+.content-module.black .cell .inner-cell h3, 
+.content-module.black .cell .inner-cell p {
+	text-shadow: 0px 1px 5px #000000;
+}
+.content-module.black .cell .inner-cell a {
+	color: #fff;
+}
+.blue-color-highlight .content-module.black p a:not(.button):visited,
+.blue-color-highlight .content-module.black div a:not(.button):visited{
+    color: #fff;
+}
+/* End black modules */
+.blue-color-highlight .content-module.red-white {
+    background: #132361;
+}
+.blue-color-highlight .accordion-module.grey .accordion-title::before,
+.blue-color-highlight .accordion-module.white .accordion-title::before {
+    border-color: #132361;
+}
+
+.blue-color-highlight .wli-affcode-listing-name {
+    color: #132361; !important;
+}
+
+.blue-color-highlight .video-module.fullwidth .content-wrapper.dark .title-wrapper {
+    color: #132361;
+}
+
+.blue-color-highlight .hero-module.module .banner-container {
+    background-color: #132361;
+}
+
+.blue-color-highlight .ctas-module h2.title,
+.blue-color-highlight .ctas-module .ctas h2.title {
+    color: #132361;
+}
+
+.blue-color-highlight .ctas-module h3.title,
+.blue-color-highlight .ctas-module .ctas h3.title {
+    color: #00A6E9;
+}
+
+
+.blue-color-highlight .ctas-module .ctas .read-more {
+    color: #132361;
+}
+
+.blue-color-highlight .ctas-module.black .ctas .read-more {
+    color: #00A6E9;
+}
+
+.blue-color-highlight .form-module.red input[type="submit"] {
+    background-color: #00A6E9;
+}
+
+.blue-color-highlight .form-module.black input[type="submit"] {
+    background-color: #00A6E9 !important;
+}
+
+.blue-color-highlight .icon-list-module .title {
+    color: #132361;
+}
+
+.blue-color-highlight .content-module div a:not(.button),
+.blue-color-highlight .content-module p a:not(.button) {
+    color: #00A6E9;
+}
+
+.blue-color-highlight .content-module p a:not(.button):visited,
+.blue-color-highlight .content-module div a:not(.button):visited{
+    color: #005BAA;
+}
+
+.blue-color-highlight .ctas-module .ctas. title {
+    color: #132361;
+}
+
+.blue-color-highlight #legal-menu li:hover a,
+.blue-color-highlight #site-navigation #primary-menu > li:hover > a,
+.blue-color-highlight #site-navigation #primary-menu > li > .sub-menu-wrap .sub-menu > li:hover a {
+    color: #00A6E9;
+}
+
+.blue-color-highlight .entry-title a {
+    color: #132361 !important
+}
+
+.blue-color-highlight .entry-title a:hover {
+    color: #00A6E9 !important
+}
+
+@media screen and (min-width: 1200px) {
+    .blue-color-highlight .hero-module.module.banner-outset .banner-container {
+        background-color: #132361;
+    }
+}
+@media screen and (min-width: 75rem) {
+    .blue-color-highlight #primary-menu > li > a {
+        color: #132361;
+    }
+    .blue-color-highlight #site-navigation #primary-menu > li .sub-menu-wrap .sub-menu {
+        background: #132361;
+    }
+}
+@media screen and (min-width: 768px) {
+    .blue-color-highlight #primary-menu > li > a {
+        color: #132361;
+    }
+    .blue-color-highlight #site-navigation #primary-menu > li .sub-menu-wrap .sub-menu {
+        background: #132361;
+    }
+}
