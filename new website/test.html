@@ -28,15 +28,19 @@
 
 <body class="home page-template page-template-template-flexible-content page-template-template-flexible-content-php page page-id-11 page-parent blue-color-highlight pojo-a11y-focusable">
 
-  <div id="hero-slider" class="hero-slider animated slick-initialized slick-slider" data-autoplay="true" data-timer="8000">
-      <button class="slick-prev slick-arrow" aria-label="Previous" type="button" style=""></button>
-      <list class="slick-list draggable">
-          <track id="slick-track" class="slick-track">
-            <!-- Inserted slides from javascript -->
-          </track>
-      </list>
-      <button class="slick-next slick-arrow" aria-label="Next" type="button" style=""></button>
-  </div>
+  <hero>
+    <div class="slider-wrapper">
+      <div id="slide-track" class="center-slider">
+        <!-- <div class="slide">Slide 1</div>
+        <div class="slide">Slide 2</div>
+        <div class="slide">Slide 3</div> -->
+      </div>
+    </div>
+    <button id="prev" class="slide-arrow slide-prev"></button>
+    <button id="next" class="slide-arrow slide-next"></button>
+  </hero>
+  
+  
   
 
     <script src="assets/jquery3_7_1.js" id="jquery-core-js"></script>

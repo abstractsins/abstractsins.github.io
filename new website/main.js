@@ -158,57 +158,28 @@ $(document).ready(function() {
         e.preventDefault()
         $(this).parent().parent().parent().parent().toggleClass('phone-active')
     })
-    $("#site-navigation").mmenu({
-        "extensions": ["fullscreen", "position-back", "position-right", "multiline", "border-none"],
-        "navbars": [{
-            "position": "top right",
-            "content": ["<div class='spacer'></div>", "close"]
-        }, {
-            "position": "top",
-            "content": ["<div class='mobile-menu-logo'></div>"]
-        }, {
-            "position": "bottom",
-            "content": ["prev"]
-        }]
-    }, {
-        clone: !0,
-        offCanvas: {
-            pageNodetype: "#page"
-        },
-        classNames: {
-            selected: "active"
-        }
-    });
-    if ($('.hero-slider.animated').length > 0) {
-        let autoplay = $('.hero-slider.animated').attr('data-autoplay')
-        let timer = $('.hero-slider').attr('data-timer')
-        let a = $.extend({}, {
-            dots: !1,
-            autoplay: autoplay ?? autoplay,
-            autoplaySpeed: timer ? timer : undefined,
-            responsive: [{
-                breakpoint: 768,
-                settings: {
-                    dots: !0,
-                    arrows: !1
-                }
-            }]
-        });
-        $('.hero-slider.animated').slick(a)
-    }
-    var API = $("#mm-site-navigation").data("mmenu");
-    $(window).on("resize", function() {
-        if (window.matchMedia("(min-width: 768px)").matches) {
-            API.close()
-        }
-    })
+    // $("#site-navigation").mmenu({
+    //     "extensions": ["fullscreen", "position-back", "position-right", "multiline", "border-none"],
+    //     "navbars": [{
+    //         "position": "top right",
+    //         "content": ["<div class='spacer'></div>", "close"]
+    //     }, {
+    //         "position": "top",
+    //         "content": ["<div class='mobile-menu-logo'></div>"]
+    //     }, {
+    //         "position": "bottom",
+    //         "content": ["prev"]
+    //     }]
+    // }, {
+    //     clone: !0,
+    //     offCanvas: {
+    //         pageNodetype: "#page"
+    //     },
+    //     classNames: {
+    //         selected: "active"
+    //     }
+    // });
 });
-$(document).ready(function() {
-    showButton()
-});
-function showButton() {
-    if (!$('.events-module div').hasClass('event-wrapper')) {
-        $(".no-event-heading").css("display", "block");
-        $(".no-event-heading").text("Thank you for your interest in our events. Upcoming events will be added here soon.")
-    }
-}
+
+
+
