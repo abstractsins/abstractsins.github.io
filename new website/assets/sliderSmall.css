@@ -1,0 +1,240 @@
+/* General Styles */
+* {
+    /* outline: 1px solid black; */
+}
+
+#smaller-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin-bottom: 30px;
+}
+
+.slider-wrapper-small {
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.center-slider-small {
+    /* height: 400px; */
+    width: 1100px;
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Slide */
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 25%;
+    color: black;
+    width: 275px;
+}
+
+
+div.image-wrapper {
+    padding: 1rem .5rem;
+}
+
+div.small-slider-image {
+    display: flex;
+    background-position: top;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    max-width: 275px;
+    width: 100%;
+    height: 156px;
+}
+
+
+
+
+
+
+
+/* Slide Arrows */
+.slide-arrow {
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    cursor: pointer;
+    outline: none;
+    border: solid 5px transparent;
+    border-bottom: none;
+    border-top-color: rgba(255, 255, 255, 0.75);
+    transform: translateY(-100%);
+    z-index: 10;
+}
+
+.slide-prev,
+.slide-next {
+    display: block;
+    transform: translateY(-25%);
+    border-color: rgba(255, 255, 255, 0.75);
+}
+
+.slide-prev {
+    border-left-color: rgba(255, 255, 255, 0.75);
+    transform: translateY(-25%) rotate(-45deg);
+    border-right: none;
+    left: 10px;
+}
+
+.slide-next {
+    border-right-color: rgba(255, 255, 255, 0.75);
+    border-left: none;
+    transform: translateY(-100%) rotate(45deg);
+    right: 10px;
+}
+
+.slide-arrow:hover {
+    border-top-color: white;
+}
+
+.slide-prev:hover {
+    border-left-color: white;
+}
+
+.slide-next:hover {
+    border-right-color: white;
+}
+
+
+/* Slide Content */
+a.slide-link-2 {
+    color: var(--blue);
+    font-size: 1rem;
+    font-weight: 800;
+    font-style: italic;
+    text-align: center;
+}
+
+h2.slide-header-2 {
+    font-family: "Open Sans";
+    font-size: 1.5rem;
+    color: var(--blue-2);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
+span.slide-sub-header-2 {
+    font-size: 1rem;
+    line-height: 1.35;
+    text-align: center;
+}
+
+div.slide-copy-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.content-area .slick-dots {
+    bottom: -30px;
+}
+.slick-dots {
+    position: absolute;
+    bottom: -25px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0.5;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+.content-area p, .content-area li, .content-area span, .content-area div {
+    line-height: 1.35;
+}
+
+.small-slider-arrow {
+    display: none;
+}
+
+.slick-dots {
+    list-style: none;
+}
+
+.content-area .slick-dots li.slick-active button:before {
+    color: #fff;
+}
+
+.ctas-module.white .slick-dots .slick-active button:before {
+    color: #95989A;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: #000;
+}
+.content-area .slick-dots li button:before {
+    font-size: .75rem;
+    color: #666 !important;
+}
+.slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 48px !important;
+    /* line-height: 48px; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    opacity: .25;
+    color: #000;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+
+/* MAX 75rem */
+@media screen and (max-width: 74.999rem) {
+    .small-slider-arrow {
+        display: flex;
+    }
+}
+
+/* MIN 1200px */
+@media screen and (min-width: 1200px) {
+    .ctas-module .ctas .image-wrapper img {
+        width: 100%;
+    }
+}
+
