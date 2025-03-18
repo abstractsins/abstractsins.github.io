@@ -24,24 +24,25 @@
     --bio-pic: url(./img/bio-pic.jpg);
     --sammy-pic: url(./img/sammy1.png);
     --recipes-pic: url(./img/recipes.jpg);
+    --gains-pic: url(./img/gains.png);
     --contact-img: url(./img/contact.png);
     --x-icon: url(./img/x-button.png);
     --x-icon-2: url(./img/x-button-2.png);
     /* CIRCLE SHADOWS */
-    --shadow-1: drop-shadow(5vh 5vw 5px var(--shadow-color));
-    --shadow-1b: drop-shadow(3vh 2vw 4px var(--shadow-b-color));
+    --shadow-1: drop-shadow(2vh 2vw 5px var(--shadow-color));
+    --shadow-1b: drop-shadow(3vh 3vw 4px var(--shadow-b-color));
     --shadow-1c: drop-shadow(1vh 1vw 2px var(--shadow-b-color));
 
-    --shadow-2: drop-shadow(3vh 3vw 10px var(--shadow-color));
-    --shadow-2b: drop-shadow(2vh 1vw 9px var(--shadow-b-color));
+    --shadow-2: drop-shadow(1vh 1vw 10px var(--shadow-color));
+    --shadow-2b: drop-shadow(2vh 2vw 9px var(--shadow-b-color));
     --shadow-2c: drop-shadow(1vh 1vw 4px var(--shadow-b-color));
 
-    --shadow-3: drop-shadow(4vh 8vw 15px var(--shadow-color));
-    --shadow-3b: drop-shadow(3vh 4vw 14px var(--shadow-b-color));
+    --shadow-3: drop-shadow(1vh 1vw 10px var(--shadow-color));
+    --shadow-3b: drop-shadow(3vh 3vw 14px var(--shadow-b-color));
     --shadow-3c: drop-shadow(1vh 1vw 5px var(--shadow-b-color));
 
-    --shadow-4: drop-shadow(3vh 5vw 6px var(--shadow-color));
-    --shadow-4b: drop-shadow(2vh 3vw 5px var(--shadow-b-color));
+    --shadow-4: drop-shadow(1vh 1vw 6px var(--shadow-color));
+    --shadow-4b: drop-shadow(2vh 2vw 5px var(--shadow-b-color));
     --shadow-4c: drop-shadow(1vh 1vw 2px var(--shadow-b-color));
 
     --shadow-5: drop-shadow(2vh 2vw 4px var(--shadow-color));
@@ -138,6 +139,7 @@ body {
 .caption-section {
     background-color: var(--ming);
     display: flex;
+    position: static;
     width: 100%;
     align-items: center;
     height: 20%;
@@ -179,12 +181,14 @@ body {
     display: flex;
     justify-content: flex-end;
     background-repeat: no-repeat;
-    background-size: 16vw;
-    background-position: left center;
-    left: 15vw;
-    top: 28vh;
-    width: 15vw;
-    height: 15vw;
+    background-size: cover;
+    background-position: center;
+    left: 5vw;
+    top: 30vh;
+    width: 12vw;
+    height: 12vw;
+    min-height: 208px;
+    min-width: 208px;
     filter: var(--shadow-1);
     transition: 350ms filter ease-in-out,
                 350ms transform ease-in-out,
@@ -208,6 +212,7 @@ body {
 }
 
 #bio.clicked {
+    background-position: left center;
     filter: initial;
     z-index: 1000;
 }
@@ -291,10 +296,12 @@ body {
     background-color: var(--inchworm);
     background-image: var(--sammy-pic);
     background-size: cover;
-    left: 32vw;
-    top: 43vh;
+    left: 20vw;
+    top: 35vh;
     width: 11vw;
     height: 11vw;
+    min-width: 200px;
+    min-height: 200px;
     filter: var(--shadow-2);
     transition: 350ms filter ease-in-out,
                 350ms transform ease-in-out,
@@ -325,9 +332,11 @@ a.sammy {
     justify-content: center;
     align-items: center;
     width: 7.5vw;
-    top: 20vh;
-    left: 36vw;
+    top: 17vh;
+    left: 35vw;
     height: 7.5vw;
+    min-height: 150px;
+    min-width: 150px;
     filter: var(--shadow-5);
     transition: 350ms filter ease-in-out,
                 350ms transform ease-in-out,
@@ -366,10 +375,12 @@ a.sammy {
     background-image: var(--recipes-pic);
     background-size: cover;
     background-position: center;
-    left: 44vw;
-    top: 25vh;
-    width: 20vw;
-    height: 20vw;
+    left: 68vw;
+    top: 20vh;
+    width: 16vw;
+    height: 16vw;
+    min-height: 278px;
+    min-width: 278px;
     filter: var(--shadow-3);
     transition: 350ms filter ease-in-out,
                 350ms transform ease-in-out,
@@ -384,13 +395,17 @@ a.sammy {
     filter: var(--shadow-3b);
 }
 
-#rando-color {
-    background-color: var(--dark-liver);
+#gains {
+    /* background-color: var(--dark-liver); */
+    background-image: var(--gains-pic);
+    background-position: top;
     color: whitesmoke;
-    width: 14vw;
-    height: 14vw;
-    top: 12vw;
-    left: 66vw;
+    width: 20vw;
+    height: 20vw;
+    min-width: 300px;
+    min-height: 300px;
+    top: 7vw;
+    left: 45vw;
     align-self: center;
     filter: var(--shadow-4);
     transition: 350ms filter ease-in-out,
@@ -401,18 +416,62 @@ a.sammy {
                 750ms height ease-out;    
 }
 
-#rando-color h3 {
+.no-click {
+    pointer-events: none;
+}
+
+#gains h3 {
     font-family: "Fira Sans";
     font-size: 1.4vw;
     font-weight: 400;
 }
 
-#rando-color:hover {
+#gains:hover {
     transform: scale(1.2);
     filter: unset;
     cursor: pointer;
 }
+
+#resume {
+    /* background-color: whitesmoke; */
+    /* color: black; */
+    background-color: black;
+    color: white;
+    width: 5.5vw;
+    height: 5.5vw;
+    top: 2vw;
+    left: 45vw;
+    align-self: center;
+    /* filter: var(--shadow-4); */
+    transition: 350ms filter ease-in-out,
+                350ms transform ease-in-out,
+                750ms top ease-out,
+                750ms left ease-out,
+                750ms width ease-out,
+                750ms height ease-out,
+                750ms background-color ease-out;
+}
+
+#resume h3 {
+    font-family: "Fira Sans";
+    font-size: 1.2vw;
+    font-weight: 600;
+    text-align: center;
+}
+
+#resume:hover {
+    transform: scale(1.2);
+    background-color: gray;
+    filter: unset;
+    cursor: pointer;
+}
+
+
+
 /* END 3 -- MAIN SECTION */
+
+
+
 
 /* 4 -- CAPTION SECTION */
 /* 4-A -- CAPTION SECTION PRIME */
@@ -425,7 +484,7 @@ a.sammy {
 #bio-caption-content,
 #sammy-caption-content,
 #recipes-caption-content,
-#rando-color-caption-content,
+#gains-caption-content,
 #contact-caption-content {
     display: none;
     flex-flow: column;
@@ -434,7 +493,7 @@ a.sammy {
 #bio-caption-content.active,
 #sammy-caption-content.active,
 #recipes-caption-content.active,
-#rando-color-caption-content.active,
+#gains-caption-content.active,
 #contact-caption-content.active {
     display: flex;
 }
@@ -470,7 +529,7 @@ p.caption-p {
     min-width: 325px;
     max-width: 750px;
     width: 50%;
-    height: 45vh;
+    height: fit-content;
     /* min-height: 100%; */
     max-height: 100%;
     border-radius: 10px;
@@ -603,3 +662,29 @@ input#contact-submit:focus {
 /* END 4 -- CAPTION SECTION */
 
 
+@media screen and (max-width: 1300px) {
+
+    .caption-section {
+        bottom: 75px;
+        position: absolute;
+    }
+
+    #bio {
+        top: 17vh;
+    }
+
+    #sammy {
+        top: 38vh;
+    }
+        
+    #recipes {
+        left: 75vw;
+        top: 35vh;
+    }
+
+    #gains {
+        left: 50vw;
+        top: 25vh;
+
+    }
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,38 +13,43 @@
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Racing+Sans+One&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Old+Mincho:wght@400;700;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Racing+Sans+One&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Old+Mincho:wght@400;700;900&display=swap"
+        rel="stylesheet">
     <!-- emailJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script type="text/javascript">
-        (function() {
+        (function () {
             // https://dashboard.emailjs.com/admin/integration
             emailjs.init('user_DLSkCNgHN04FokK85kkAN');
         })();
     </script>
     <script type="text/javascript">
-        window.onload = function() {
-            alert('test');
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
                 event.preventDefault();
                 // generate a five digit number for the contact_number variable
                 this.contact_number.value = Math.random() * 100000 | 0;
                 // these IDs from the previous steps
                 emailjs.sendForm('contact_service', 'contact_form', this)
-                    .then(function() {
+                    .then(function () {
                         console.log('SUCCESS!');
-                    }, function(error) {
+                        alert('Messege sent!')
+                        document.getElementById("contact-form").reset();
+                    }, function (error) {
                         console.log('FAILED...', error);
+                        alert('something went wrong, error 504');
                     });
             });
         }
     </script>
 
 </head>
+
 <body>
     <!-- Up Button -->
     <button onclick="topFunction()" id="upBtn" title="Go to top">Top</button>
-    
+
     <!-- HEADER -->
     <div class="header">
         <h1 class="title">Daniel Berlin</h1>
@@ -57,18 +63,22 @@
         <!-- CIRCLE 1: BIO -->
         <div class="circle" id="bio" onclick="bio()">
             <div class="content bio">
-                <h3>I'm Dan, a freelance coder and developer from Philadelphia</h3>
+                <h3>I'm Dan, a software developer based in Philadelphia</h3>
                 <p><br>
-                    I specialize in HTML, CSS, and JavaScript, and I love pouring myself into interesting projects.
+                    I like full stack, or really anything with JavaScript, and I love pouring myself into interesting
+                    projects.
                     <br><br>
-                    I have a background in the food and beverage industry and a wide range of hobbies and interests, which inspire me to design websites, games, and programs.
+                    I have a background in the food and beverage industry and a wide range of hobbies and interests,
+                    which inspire me to design websites, games, and programs.
+                    <br><br>
+                    Next.js, Vue.js, Node.js, Express.js, TypeScript and Vanilla!
                     <br><br>
                     Feel free to contact me!
                 </p>
                 <div class="x-out"></div>
             </div>
         </div>
-        
+
         <!-- CIRCLE 2: SAMMY -->
         <div class="circle" id="sammy" onclick="sammy()">
         </div>
@@ -77,15 +87,23 @@
         <div class="circle" id="contact" onclick="contactCircle()">
         </div>
 
-        <!-- CIRCLE 4: RECIPES -->
-        <div class="circle" id="recipes">
+        <!-- CIRCLE 4: GainsDB -->
+        <a href="http://www.gainsdb.com" target="new">
+            <div class="circle" id="gains">
+            </div>
+        </a>
+
+        <!-- CIRCLE 5: Recipes -->
+        <a href="./recipes" target="new">
+            <div class="circle" id="recipes">
+            </div>
+        </a>
+
+        <!-- CIRCLE 6: RESUME -->
+        <div class="circle" id="resume" onclick="resume()">
+            <h3>Resumé</h3>
         </div>
 
-        <!-- CIRCLE 5: RANDOM COLOR -->
-        <div class="circle" id="rando-color" onclick="randoColor()">
-            <h3>16.8 Million Colors</h3>
-        </div>
-        
     </div>
 
     <!-- CAPTION SECTION -->
@@ -93,7 +111,7 @@
 
         <!-- 1: BIO CAPTION -->
         <div class="caption-load" id="bio-caption-content">
-            <h3 class="caption-title">about me</h3>
+            <h3 class="caption-title">About Me</h3>
             <p class="caption-p">Hey hey hey it's me lorem ipsom so fequitor my bros</p>
         </div>
 
@@ -105,14 +123,14 @@
 
         <!-- 3: RECIPES -->
         <div class="caption-load" id="recipes-caption-content">
-            <h3 class="caption-title">my Recipe Box</h3>
-            <p class="caption-p">My big portfolio project. Try the biscuits.</p>
+            <h3 class="caption-title">My Recipe Box</h3>
+            <p class="caption-p">Homestyle recipe database. Try the biscuits.</p>
         </div>
-        
-        <!-- 4: RANDO-COLOR -->
-        <div class="caption-load" id="rando-color-caption-content">
-            <h3 class="caption-title">Random RGB Color</h3>
-            <p class="caption-p">The more you click, the more fun it is...</p>
+
+        <!-- 4: GAINS -->
+        <div class="caption-load" id="gains-caption-content">
+            <h3 class="caption-title">GainsDB</h3>
+            <p class="caption-p">Next.js App for Tracking Gym Progress</p>
         </div>
 
         <!-- 5: CONTACT -->
@@ -127,22 +145,26 @@
                 <!-- <h3>Say Hello!</h3> -->
                 <input type="hidden" name="contact_number">
                 <div class="form">
-                    <input type="text" id="their-name" placeholder="Your Name..." title="Enter your name" name="user_name"/>
-                    <input type="email" id="their-email" placeholder="Your Email..." title="Enter your email" name="user_email"/>
+                    <input type="text" id="their-name" placeholder="Your Name..." title="Enter your name"
+                        name="user_name" />
+                    <input type="email" id="their-email" placeholder="Your Email..." title="Enter your email"
+                        name="user_email" />
                 </div>
                 <div class="form">
-                    <input type="text" id="their-subject" placeholder="Subject..." title="Enter message subject"/>
+                    <input type="text" id="their-subject" placeholder="Subject..." title="Enter message subject" />
                 </div>
                 <div class="form message">
                     <!-- <input type="text"  placeholder="Do you have a project idea you'd like to discuss? Or you just want to say hi? Leave me a message!" title="Enter your message"/> -->
-                    <textarea id="their-message" maxlength="2500" name="message" placeholder="Do you have a project idea you'd like to discuss? Or you just want to say hi? Leave me a message!" name="message"></textarea>
+                    <textarea id="their-message" maxlength="2500" name="message"
+                        placeholder="Do you have a project idea you'd like to discuss? Or you just want to say hi? Leave me a message!"
+                        name="message"></textarea>
                     <input id="contact-submit" type="submit" value="Send">
                 </div>
             </form>
         </div>
 
 
-    </div> 
+    </div>
 
     <!-- JQuery -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -150,4 +172,5 @@
     <script type="text/JavaScript" src="main.js"></script>
 
 </body>
+
 </html>

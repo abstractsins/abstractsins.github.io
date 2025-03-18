@@ -195,7 +195,8 @@ h1.construction-text {
     padding: 30px 30px 10px 30px;
     align-items: flex-start;
     z-index: 100;
-    left: -330px;
+    width: 355px;
+    left: -355px;
     transition: left 500ms ease-in-out 150ms;
 }
 
@@ -212,11 +213,11 @@ h1.construction-text {
     justify-self: center;
     align-items: center;
     font-family: "Roboto Slab", serif;
-    font-size: 1.75vw;
+    font-size: 1em;
     color: whitesmoke;
     /* letter-spacing: 0.25ch; */
     margin: 1vw 0;
-    padding: .5vw 1vw;
+    padding: 5px 10px;
     font-weight: 600;
     justify-content: center;
     filter: var(--index-card-shadow-3);
@@ -230,7 +231,7 @@ h1.construction-text {
     background-color: var(--beef-red);
     filter: unset;
     cursor: pointer;
-    font-size: 2.25vw;
+    font-size: 1.25em;
 }
 
 .main-index-link:active {
@@ -247,7 +248,7 @@ h1.construction-text {
     font-family: "roboto condensed";
     color: whitesmoke;
     font-weight: 400;
-    font-size: 1.25vw;
+    font-size: 1.25em;
 }
 
 .index-tab {
@@ -417,7 +418,7 @@ h1.construction-text {
 h1.title {
     text-align: left;
     font-family: "Roboto Slab";
-    font-size: 4.25vw;
+    font-size: 3.25em;
     letter-spacing: 0.20ch;
     border-bottom: none;
 }
@@ -757,7 +758,7 @@ h3 {
 
 .recipe-details li {
     font-family: "Roboto Slab", sans-serif;
-    font-size: 1vw;
+    font-size: 1em;
     font-weight: 600;
     display: inline-flex;
     flex-flow: row nowrap;
@@ -810,7 +811,7 @@ h3 {
 .ingredients-hardware h4 {
     display: inline;
     color: var(--avocado);
-    font-size: 2.2vw;
+    font-size: 2em;
     padding-right: 8px;
     font-family: "Roboto Slab", sans-serif;
 }
@@ -841,8 +842,8 @@ h3 {
 .tags-container li {
     filter: none;
     margin: 2px;
-    font-size: 0.5em;
-    font-size: 1.5vw;
+    /* font-size: 0.5em; */
+    font-size: 1.25em;
     height: fit-content;
     margin: 2px;
 }
@@ -882,7 +883,7 @@ h3 {
 
 .tags h4 {
     font-family: "Indie Flower";
-    font-size: 2vw;
+    font-size: 1.25em;
     color: black;
     letter-spacing: 1ch;
     padding: 0;
@@ -1271,7 +1272,7 @@ h2.test-header {
     justify-self: center;
     justify-content: center;
     align-items: center;
-    font-size: 1vw;
+    font-size: 1em;
     padding: 30px;
     margin: 30px;
     border-radius: 10px;
@@ -1338,7 +1339,7 @@ h2.test-header {
     /* background-color: yellow; */
     font-family: "roboto condensed";
     padding-right: 2px;
-    font-size: 1.25vw;
+    font-size: 22px;
     line-height: 1.5;
 }
 
@@ -1543,7 +1544,7 @@ ul#additional-hardware.variations-list li {
     display: none;
     height: fit-content;
     min-height: 100vh;
-    width: 1200px;
+    width: 80%;
     background-color: var(--lettuce);
     justify-content: center;
     padding-bottom: 2%;
@@ -1576,7 +1577,7 @@ ul#additional-hardware.variations-list li {
     width: 100%;
     color: black;
     font-family: "Roboto Slab";
-    font-size: 6.5vw;
+    font-size: 4em;
     letter-spacing: 0.25ch;
 }
 
@@ -1613,7 +1614,7 @@ ul#additional-hardware.variations-list li {
 
 #all-tags {
     padding: 15px;
-    width: 100%;
+    width: 85%;
 }
 
 #tag-results {
@@ -1627,7 +1628,6 @@ ul#additional-hardware.variations-list li {
     align-items: center;
     flex-direction: column;
     padding: 15px;
-    width: 65%;
 }
 
 #alpha-listing a {
@@ -1648,7 +1648,7 @@ ul#additional-hardware.variations-list li {
     font-family: "Roboto Slab";
     color: var(--charcoal);
     /* font-size: 18px; */
-    font-size: 1.5vw;
+    font-size: 1.5em;
     font-weight: 600;
     letter-spacing: 0.15ch;
     text-transform: capitalize;
@@ -1714,7 +1714,7 @@ ul#additional-hardware.variations-list li {
     display: flex;
     font-family: "Roboto Condensed";
     text-align: center;
-    font-size: 2.5vw;
+    font-size: 2.5em;
     width: 100%;
     color: var(--charcoal);
 }
@@ -1729,10 +1729,10 @@ ul#additional-hardware.variations-list li {
     border: 2px solid black;
     font-family: "Roboto Slab";
     border-radius: 10px;
-    width: 60%;
+    /* width: 60%; */
     height: 40px;   
-    font-size: 18px;
-    padding: 1vw 2vw 1vw 6.5vw;
+    font-size: 18pt;
+    padding: 10px 20px 20px 80px;
     margin-top: 15px;
     justify-self: center;
 }
@@ -1745,6 +1745,9 @@ ul#additional-hardware.variations-list li {
 }
 
 /* END 8 -- MASTER INDEX SECTION */
+
+@media screen and (max-width: 3000px)  {
+}
 
 /* MEDIA QUERIES */
 /* 1150px wide */
@@ -1782,7 +1785,7 @@ ul#additional-hardware.variations-list li {
     }
 
     #recipe-display-container h1.title {
-        font-size: 5.5vw;
+        font-size: 3em;
         text-align: center;
         /* width: 100%; */
     }
@@ -1872,7 +1875,7 @@ ul#additional-hardware.variations-list li {
     }
 
     .tags-container li {
-        font-size: 2.5vw;
+        font-size: 2em;
     }
     
     .slide {
@@ -1888,7 +1891,7 @@ ul#additional-hardware.variations-list li {
     }
 
     .ingredients-hardware h4 {
-        font-size: 3vw;
+        font-size: 2.25em;
     }
 
     .overlay {
@@ -1911,11 +1914,11 @@ ul#additional-hardware.variations-list li {
     }
 
     .recipe-details li {
-        font-size: 2vw;
+        font-size: 2em;
     }
 
     h1.title {
-        font-size: 6vw;
+        font-size: 3em;
     }
 
     .recipe-title {
@@ -1943,7 +1946,6 @@ ul#additional-hardware.variations-list li {
     }
 
     .ingredients-hardware h4 {
-        font-size: 2.75;
     }
 
     .recipe-pic {
@@ -1958,7 +1960,7 @@ ul#additional-hardware.variations-list li {
     }
 
     .tags h4 {
-        font-size: 3vw;
+        font-size: 2em;
     }
 
     .recipe-display-variations, 
@@ -2065,7 +2067,7 @@ ul#additional-hardware.variations-list li {
         /* background-color: yellow; */
         display: inline-flex;
         width: fit-content;
-        font-size: 1.8vw;
+        font-size: 1em;
         margin: 5px;
     }
 
@@ -2115,7 +2117,7 @@ ul#additional-hardware.variations-list li {
 
     #servings-list li {
         /* background-color: yellow; */
-        font-size: 2vw;
+        font-size: 1.25em;
     }
 
     .recipe-display-ingredients h2 {
@@ -2123,7 +2125,7 @@ ul#additional-hardware.variations-list li {
         width: 90%;
         justify-content: center;
         align-self: center;
-        font-size: 3.25vw;
+        font-size: 2em;
     }
 
     .recipe-display-ingredients {
@@ -2148,7 +2150,7 @@ ul#additional-hardware.variations-list li {
 
     .ingredient, 
     .shopping-item {
-        font-size: 2.5vw;
+        font-size: 2em;
     }
 
     .servings-measurements-container {
@@ -2178,13 +2180,13 @@ ul#additional-hardware.variations-list li {
     }
 
     ul#additional-hardware.variations-list li {
-        font-size: 1.75vw;
+        font-size: 1em;
         line-height: 2;
     }
 
     p.blurb {
         padding: 15px;
-        font-size: 2.5vw;
+        font-size: 2em;
     }
 
     .servings-measurements-container {
@@ -2205,7 +2207,7 @@ ul#additional-hardware.variations-list li {
 
     .recipe-display-hardware ul li,
     .hardware-item {
-        font-size: 2.25vw;
+        font-size: 1.5em;
     }
 
     #hardware-list-main, 
@@ -2233,7 +2235,7 @@ ul#additional-hardware.variations-list li {
 @media screen and (max-width: 850px) {
 
     .tab-list {
-        font-size: 1vw;
+        font-size: 1em;
         letter-spacing: 0;
     }
 
@@ -2356,11 +2358,11 @@ ul#additional-hardware.variations-list li {
         width: fit-content;
     }    
     #recipe-display-details ul li {
-        font-size: 2vw;;
+        font-size: 1.25em;
     }
 
     .recipe-display-tags li.tag {
-        font-size: 3vw;
+        font-size: 1.5em;
     }
 }
 /* END 550px WIDE */
