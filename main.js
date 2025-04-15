@@ -17,7 +17,7 @@
 
 /* 1 -- GLOBAL CONCERNS*/
 // GLOBAL VARIABLES
-let $circles = $('.circle')
+let $circles = $('.circle');
 
 const assignIDs = () => {
     let $idsArr = [];
@@ -121,6 +121,9 @@ const contactCircle = () => {
     $deets.addClass('active');
     $deetsP.css({ 'display': 'unset' });
 
+    if ($captionSection.css('left')[0] !== '-') {
+        $captionSection.removeClass('show');
+    }
 
     if ($btn.hasClass('clicked')) {
         /* IF CLICKED ALREADY */
@@ -169,6 +172,13 @@ const contactCircle = () => {
             "filter": "",
             "transition": ""
         });
+        // RANDOM-COLOR CIRCLE
+        $('#puck-dropper').css({
+            "top": "",
+            "left": "",
+            "filter": "",
+            "transition": ""
+        });
         // MAIN SECTION             
         $('.main-section').css("height", "");
 
@@ -177,67 +187,84 @@ const contactCircle = () => {
         $('#resume').removeClass('no-click');
         $('#gains').removeClass('no-click');
         $('#recipes').removeClass('no-click');
+        $('#puck-dropper').removeClass('no-click');
+
 
     } else {
         /* IF NOT CLICKED ALREADY */
+        if ($captionSection.css('left')[0] === '-') {
+            $captionSection.addClass('show');
+        }
+
+
         // CONTACT CIRCLE
         $btn.css({
             "top": "30vh",
             "background-color": "black",
-            "filter": "var(--shadow-3c)",
+            "filter": "var(--shadow-5c)",
             "transform": "scale(1.5)",
             "z-index": "1500"
         });
         $btn.addClass('clicked');
         $('#contact').addClass('clicked');
-        // CAPTION SECTION
-        $captionSection.css({ "height": "100%" });
-        // $deets.addClass('clicked');
-        // $deetsP.addClass('clicked');
-        $('.contact-block').css({
-            "display": "flex",
-            "right": "5vw"
-        });
-        $deets.css({ "display": "flex" });
-        $deetsP.css({ "display": "flex" });
+        if (window.innerWidth > 1100) {
+            // CAPTION SECTION
+            $captionSection.css({ "height": "100%" });
+            // $deets.addClass('clicked');
+            // $deetsP.addClass('clicked');
+            $('.contact-block').css({
+                "display": "flex",
+                "right": "5vw"
+            });
+            $deets.css({ "display": "flex" });
+            $deetsP.css({ "display": "flex" });
 
-        // BIO CIRCLE
-        $('#bio').css({
-            "top": "5vh",
-            "left": "75vw",
-            "filter": "var(--shadow-1c)",
-            "transition": "750ms filter ease-in-out, 350ms transform ease-in-out, 750ms top ease-out, 750ms left ease-out, 750ms width ease-out, 750ms height ease-out"
-        });
-        $('#bio').addClass('no-click');
-        // SAMMY CIRCLE
-        $('#sammy').css({
-            "top": "18vh",
-            "left": "55vw",
-            "filter": "var(--shadow-2c)",
-            "z-index": "15",
-            "transition": "750ms filter ease-in-out, 350ms transform ease-in-out, 750ms top ease-out, 750ms left ease-out, 750ms width ease-out, 750ms height ease-out"
-        });
-        $('#sammy').addClass('no-click');
-        // RECIPES CIRCLE
-        $('#recipes').css({
-            "top": "0vh",
-            "left": "60vw",
-            "right": "15vw",
-            "filter": "var(--shadow-4c)",
-            "transition": "750ms filter ease-in-out, 350ms transform ease-in-out, 750ms top ease-out, 750ms left ease-out, 750ms width ease-out, 750ms height ease-out"
-        });
-        $('#recipes').addClass('no-click');
-        // GAINS CIRCLE
-        $('#gains').css({
-            "top": "8vh",
-            "left": "70vw",
-            "filter": "var(--shadow-5c)",
-            "transition": "750ms filter ease-in-out, 350ms transform ease-in-out, 750ms top ease-out, 750ms left ease-out, 750ms width ease-out, 750ms height ease-out"
-        });
-        $('#gains').addClass('no-click');
-        $('#resume').addClass('no-click');
-        // MAIN SECTION
-        $('.main-section').css("height", "10vh");
+            // BIO CIRCLE
+            $('#bio').css({
+                "top": "5vh",
+                "left": "75vw",
+                "filter": "var(--shadow-1c)",
+                "transition": "750ms filter ease-in-out, 350ms transform ease-in-out, 750ms top ease-out, 750ms left ease-out, 750ms width ease-out, 750ms height ease-out"
+            });
+            $('#bio').addClass('no-click');
+            // SAMMY CIRCLE
+            $('#sammy').css({
+                "top": "18vh",
+                "left": "55vw",
+                "filter": "var(--shadow-2c)",
+                "z-index": "15",
+                "transition": "750ms filter ease-in-out, 350ms transform ease-in-out, 750ms top ease-out, 750ms left ease-out, 750ms width ease-out, 750ms height ease-out"
+            });
+            $('#sammy').addClass('no-click');
+            // RECIPES CIRCLE
+            $('#recipes').css({
+                "top": "0vh",
+                "left": "60vw",
+                "right": "15vw",
+                "filter": "var(--shadow-4c)",
+                "transition": "750ms filter ease-in-out, 350ms transform ease-in-out, 750ms top ease-out, 750ms left ease-out, 750ms width ease-out, 750ms height ease-out"
+            });
+            $('#recipes').addClass('no-click');
+            // GAINS CIRCLE
+            $('#gains').css({
+                "top": "8vh",
+                "left": "70vw",
+                "filter": "var(--shadow-5c)",
+                "transition": "750ms filter ease-in-out, 350ms transform ease-in-out, 750ms top ease-out, 750ms left ease-out, 750ms width ease-out, 750ms height ease-out"
+            });
+            $('#gains').addClass('no-click');
+            // PUCKDROPPER CIRCLE
+            $('#puck-dropper').css({
+                "top": "8vh",
+                "left": "70vw",
+                "filter": "var(--shadow-3c)",
+                "transition": "750ms filter ease-in-out, 350ms transform ease-in-out, 750ms top ease-out, 750ms left ease-out, 750ms width ease-out, 750ms height ease-out"
+            });
+            $('#puck-dropper').addClass('no-click');
+            $('#resume').addClass('no-click');
+            // MAIN SECTION
+            $('.main-section').css("height", "10vh");
+        }
     }
 }
 /* END 2-D -- CONTACT CIRCLE ACTION */

@@ -13,7 +13,7 @@
     --beef-red: rgb(168, 0, 0);
     --bud-green: rgb(112, 174, 110);
     --charcoal: rgb(49, 49, 49);
-    --charcoal-2: #36454F;
+    --charcoal-2: #36454f;
     --dark-liver: rgb(72, 60, 70);
     --inchworm: rgb(190, 238, 98);
     --ming: rgb(60, 110, 113);
@@ -26,6 +26,7 @@
     --recipes-pic: url(./img/recipes.jpg);
     --gains-pic: url(./img/gains.png);
     --contact-img: url(./img/contact.png);
+    --puck-dropper-pic: url(./img/puckdropper.png);
     --x-icon: url(./img/x-button.png);
     --x-icon-2: url(./img/x-button-2.png);
     /* CIRCLE SHADOWS */
@@ -73,8 +74,8 @@ body {
 
 /* Up Button */
 #upBtn {
-    display: none; 
-    position: fixed; 
+    display: none;
+    position: fixed;
     bottom: 20px;
     right: 30px;
     z-index: 10;
@@ -133,7 +134,7 @@ body {
     justify-content: center;
     width: 100%;
     height: 40vh;
-    transition: 750ms height ease-out;  
+    transition: 750ms height ease-out;
 }
 
 .caption-section {
@@ -144,7 +145,7 @@ body {
     align-items: center;
     height: 20%;
     user-select: none;
-    transition: 750ms height ease-out;  
+    transition: 750ms height ease-out;
 }
 
 .circle {
@@ -159,7 +160,7 @@ body {
     border-radius: 50%;
     border: 3px solid var(--charcoal);
     z-index: 1;
-}    
+}
 
 .circle .active {
     background-color: black;
@@ -190,14 +191,15 @@ body {
     min-height: 208px;
     min-width: 208px;
     filter: var(--shadow-1);
-    transition: 350ms filter ease-in-out,
-                350ms transform ease-in-out,
-                350ms border-radius ease-in-out,
-                750ms top ease-out,
-                750ms left ease-out,
-                750ms width ease-out,
-                750ms height ease-out,
-                750ms background-size ease-in-out;
+    transition:
+        350ms filter ease-in-out,
+        350ms transform ease-in-out,
+        350ms border-radius ease-in-out,
+        750ms top ease-out,
+        750ms left ease-out,
+        750ms width ease-out,
+        750ms height ease-out,
+        750ms background-size ease-in-out;
     z-index: 1000;
 }
 
@@ -260,29 +262,49 @@ body {
 }
 
 @keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-  }
-  
-  @-moz-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-  }
-  
-  @-webkit-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-  }
-  
-  @-o-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-  }
-  
-  @-ms-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 .content.bio h3 {
     font-family: "Raleway";
@@ -303,13 +325,13 @@ body {
     min-width: 200px;
     min-height: 200px;
     filter: var(--shadow-2);
-    transition: 350ms filter ease-in-out,
-                350ms transform ease-in-out,
-                750ms top ease-out,
-                750ms left ease-out,
-                750ms width ease-out,
-                750ms height ease-out;
-    z-index: ;  
+    transition:
+        350ms filter ease-in-out,
+        350ms transform ease-in-out,
+        750ms top ease-out,
+        750ms left ease-out,
+        750ms width ease-out,
+        750ms height ease-out;
 }
 
 a.sammy {
@@ -337,15 +359,16 @@ a.sammy {
     height: 7.5vw;
     min-height: 150px;
     min-width: 150px;
-    filter: var(--shadow-5);
-    transition: 350ms filter ease-in-out,
-                350ms transform ease-in-out,
-                175ms background-color ease-in-out,
-                750ms top ease-in-out,
-                750ms left ease-in-out,
-                750ms width ease-out,
-                750ms height ease-out,
-                750ms scale ease-in-out;  
+    filter: var(--shadow-3);
+    transition:
+        350ms filter ease-in-out,
+        350ms transform ease-in-out,
+        175ms background-color ease-in-out,
+        750ms top ease-in-out,
+        750ms left ease-in-out,
+        750ms width ease-out,
+        750ms height ease-out,
+        750ms scale ease-in-out;
     z-index: 500;
 }
 
@@ -367,7 +390,7 @@ a.sammy {
 #contact:hover {
     cursor: pointer;
     transform: scale(1.2);
-    filter: var(--shadow-5b);
+    filter: var(--shadow-3b);
 }
 
 #recipes {
@@ -382,12 +405,13 @@ a.sammy {
     min-height: 278px;
     min-width: 278px;
     filter: var(--shadow-3);
-    transition: 350ms filter ease-in-out,
-                350ms transform ease-in-out,
-                750ms top ease-out,
-                750ms left ease-out,
-                750ms width ease-out,
-                750ms height ease-out;   
+    transition:
+        350ms filter ease-in-out,
+        350ms transform ease-in-out,
+        750ms top ease-out,
+        750ms left ease-out,
+        750ms width ease-out,
+        750ms height ease-out;
 }
 
 #recipes:hover {
@@ -398,6 +422,7 @@ a.sammy {
 #gains {
     /* background-color: var(--dark-liver); */
     background-image: var(--gains-pic);
+    background-size: cover;
     background-position: top;
     color: whitesmoke;
     width: 20vw;
@@ -408,14 +433,52 @@ a.sammy {
     left: 45vw;
     align-self: center;
     filter: var(--shadow-4);
-    transition: 350ms filter ease-in-out,
-                350ms transform ease-in-out,
-                750ms top ease-out,
-                750ms left ease-out,
-                750ms width ease-out,
-                750ms height ease-out;    
+    transition:
+        350ms filter ease-in-out,
+        350ms transform ease-in-out,
+        750ms top ease-out,
+        750ms left ease-out,
+        750ms width ease-out,
+        750ms height ease-out;
 }
 
+#puck-dropper {
+    background-image: var(--puck-dropper-pic);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    color: whitesmoke;
+    width: 10vw;
+    height: 10vw;
+    min-width: 150px;
+    min-height: 150px;
+    top: 17vw;
+    left: 34vw;
+    align-self: center;
+    z-index: 900 !important;
+    filter: var(--shadow-3);
+    transition:
+        350ms filter ease-in-out,
+        350ms transform ease-in-out,
+        750ms top ease-out,
+        750ms left ease-out,
+        750ms width ease-out,
+        750ms height ease-out;
+}
+
+#puck-dropper:hover {
+    transform: scale(1.2);
+    filter: var(--shadow-3b);
+    cursor: pointer;
+    z-index: 900;
+}
+
+#puck-dropper h3 {
+    font-family: "Fira Sans";
+    font-size: 1.4vw;
+    font-weight: 400;
+}
 .no-click {
     pointer-events: none;
 }
@@ -430,6 +493,7 @@ a.sammy {
     transform: scale(1.2);
     filter: unset;
     cursor: pointer;
+    z-index: 1000 !important;
 }
 
 #resume {
@@ -443,13 +507,14 @@ a.sammy {
     left: 45vw;
     align-self: center;
     /* filter: var(--shadow-4); */
-    transition: 350ms filter ease-in-out,
-                350ms transform ease-in-out,
-                750ms top ease-out,
-                750ms left ease-out,
-                750ms width ease-out,
-                750ms height ease-out,
-                750ms background-color ease-out;
+    transition:
+        350ms filter ease-in-out,
+        350ms transform ease-in-out,
+        750ms top ease-out,
+        750ms left ease-out,
+        750ms width ease-out,
+        750ms height ease-out,
+        750ms background-color ease-out;
 }
 
 #resume h3 {
@@ -466,12 +531,7 @@ a.sammy {
     cursor: pointer;
 }
 
-
-
 /* END 3 -- MAIN SECTION */
-
-
-
 
 /* 4 -- CAPTION SECTION */
 /* 4-A -- CAPTION SECTION PRIME */
@@ -485,6 +545,7 @@ a.sammy {
 #sammy-caption-content,
 #recipes-caption-content,
 #gains-caption-content,
+#puck-dropper-caption-content,
 #contact-caption-content {
     display: none;
     flex-flow: column;
@@ -494,6 +555,7 @@ a.sammy {
 #sammy-caption-content.active,
 #recipes-caption-content.active,
 #gains-caption-content.active,
+#puck-dropper-caption-content.active,
 #contact-caption-content.active {
     display: flex;
 }
@@ -538,12 +600,13 @@ p.caption-p {
     right: 150vw;
     z-index: 1;
     filter: var(--shadow-6);
-    transition: 350ms filter ease-in-out,
-                350ms transform ease-in-out,
-                750ms top ease-out,
-                750ms right ease-out,
-                750ms width ease-out,
-                750ms height ease-out;
+    transition:
+        350ms filter ease-in-out,
+        350ms transform ease-in-out,
+        750ms top ease-out,
+        750ms right ease-out,
+        750ms width ease-out,
+        750ms height ease-out;
 }
 
 .contact-block h3 {
@@ -581,7 +644,7 @@ input:focus {
     background-color: lightyellow;
     outline: none !important;
     border: 3px solid var(--orange-crayola);
-    box-shadow: 5px 5px 4px #719ECE;
+    box-shadow: 5px 5px 4px #719ece;
 }
 
 #their-name {
@@ -628,21 +691,22 @@ textarea {
     outline: none !important;
     /* border: 2px solid var(--inchworm); */
     border: 3px solid var(--orange-crayola);
-    box-shadow: 5px 5px 4px #719ECE;
+    box-shadow: 5px 5px 4px #719ece;
 }
 
 input#contact-submit {
     font-family: "Fira Sans";
     align-self: flex-end;
     background-color: var(--orange-crayola);
-    box-shadow: 5px 5px 4px #719ECE;
-    transition: 125ms box-shadow ease-out,
-                125ms transform ease-out;
+    box-shadow: 5px 5px 4px #719ece;
+    transition:
+        125ms box-shadow ease-out,
+        125ms transform ease-out;
 }
 
 input#contact-submit:hover {
     background-color: var(--inchworm);
-    box-shadow: 3px 3px 1px #719ECE;
+    box-shadow: 3px 3px 1px #719ece;
     border-color: none;
 }
 
@@ -661,12 +725,30 @@ input#contact-submit:focus {
 
 /* END 4 -- CAPTION SECTION */
 
+@media screen and (max-width: 2000px) {
+    #puck-dropper {
+        left: 34vw;
+        top: 35vh;
+    }
+}
+
+@media screen and (max-width: 1516px) {
+    #contact {
+        left: 30vw;
+        top: 19vh;
+    }
+
+    #puck-dropper {
+        left: 35vw;
+        top: 35vh;
+    }
+}
 
 @media screen and (max-width: 1300px) {
 
     .caption-section {
-        bottom: 75px;
-        position: absolute;
+        /* bottom: 75px; */
+        /* position: absolute; */
     }
 
     #bio {
@@ -676,7 +758,7 @@ input#contact-submit:focus {
     #sammy {
         top: 38vh;
     }
-        
+
     #recipes {
         left: 75vw;
         top: 35vh;
@@ -685,6 +767,393 @@ input#contact-submit:focus {
     #gains {
         left: 50vw;
         top: 25vh;
+    }
+
+    #puck-dropper {
+        left: 60vw;
+        top: 5vh;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #recipes {
+        left: 70vw;
+        top: 35vh;
+    }
+
+    #gains {
+        left: 42vw;
+        top: 25vh;
+    }
+}
+
+/* * TABLET/SMALL SIZING */
+@media screen and (max-width: 1100px) {
+
+    body {
+        height: unset;
+        padding: 0;
+        margin: 0;
+        padding-bottom: 200px;
+    }
+
+    div.header {
+        position: static;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    div.header h1.title {
+        font-size: 38pt;
+    }
+
+    div.header h2.sub-title {
+        font-size: 24pt;
+    }
+
+    div.circle:not([id="contact"]):not([id="resume"]) {
+        display: flex;
+        box-sizing: border-box;
+        /* display: none; */
+        min-height: 200px !important;
+        position: static;
+        width: 100% !important;
+        border-radius: 0;
+        filter: none !important;
+        transition:
+            350ms filter ease-in-out,
+            350ms transform ease-in-out,
+            350ms border-radius ease-in-out,
+            750ms top ease-out,
+            750ms left ease-out,
+            750ms width ease-out,
+            750ms height ease-out,
+            750ms background-size ease-in-out !important;
+    }
+
+    div.circle:not([id="contact"]):not([id="resume"]):hover {
+        transform: unset !important;
+    }
+
+    .header h1.title {
+        font-size: 24pt;
+    }
+    .header h2.sub-title {
+        font-size: 18pt;
+    }
+
+    #main-section {
+        flex-direction: column;
+        /* height: unset; */
+        height: 100%;
+    }
+
+    #bio {
+        background-size: 350px;
+        background-position: center left;
+        z-index: 90;
+    }
+
+    #sammy {
+        min-height: unset;
+        background-size: 160px;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-clip: padding-box;
+    }
+
+    #sammy:hover {
+        background-size: 35%;
+    }
+
+
+
+    #bio:hover {
+        background-size: 50%;
+    }
+
+    #gains {
+        height: 150px !important;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        min-height: unset;
+    }
+
+    #gains:hover {
+        background-size: 120%;
+    }
+
+
+    #gains::before {
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 15px;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: center;
+        content: "GainsDB.com";
+        font-family: "Racing Sans One";
+        -webkit-text-stroke: 0.5px rgb(160, 144, 255);
+        font-size: 62pt;
+        font-weight: 900;
+        display: flex;
+        color: black;
+        justify-content: flex-end;
+    }
+
+    #contact {
+        left: 77vw;
+        top: 50px;
+        width: 100px;
+        height: 100px;
+        min-height: 60px;
+        min-width: 60px;
+    }
+
+    .content.bio.clicked {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 69%;
+        height: 95%;
+    }
+
+    #bio.circle.clicked {
+        border-radius: unset !important;
+        width: 100%;
+        align-items: flex-end;
+        height: 300px !important;
+    }
+
+    .content.bio h3 {
+        font-size: 10pt;
+    }
+
+    #bio div.x-out {
+        display: none;
+    }
+
+    #bio::before {
+        content: "Click to learn a little more about me";
+        /* font-family: "Racing Sans One"; */
+        font-family: "Raleway";
+        font-size: 14pt;
+        font-weight: 800;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 10vw 0 0;
+    }
+
+    #bio.circle.clicked::before {
+        content: "";
+    }
+
+    #bio.circle.clicked p {
+        font-size: 10pt;
+        width: 100%;
+    }
+
+    #resume {
+        left: 59vw;
+        top: 50px;
+        width: 100px;
+        height: 100px;
+        min-height: 60px;
+        min-width: 60px;
+        filter: var(--shadow-3);
+    }
+
+    #resume h3 {
+        font-size: 10pt;
+        font-weight: normal;
+    }
+
+    #sammy::before {
+        font-family: "Racing Sans One";
+        content: "SammySeal.com";
+        font-size: 28pt;
+        font-weight: bold;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 0 0 10vw;
+    }
+
+    div#puck-dropper {
+        background-size: 25%;
+        background-color: black;
+        background-position: center;
+        height: 150px;
+    }
+
+    #puck-dropper::before {
+        font-family: "Racing Sans One";
+        content: "Puck";
+        font-size: 28pt;
+        font-weight: bold;
+        color: yellow;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 20vw 0 0vw;
+    }
+
+
+    #puck-dropper::after {
+        font-family: "Racing Sans One";
+        content: "Dropper";
+        font-size: 28pt;
+        font-weight: bold;
+        color: yellow;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 0 0 20vw;
+    }
+
+    #puck-dropper:hover {
+        background-size: 30%;
+    }
+
+    #recipes {
+        background-color: #CDE6A5;
+        background-size: 250px;
+        /* background-position-y: -375px; */
+        background-repeat: no-repeat;
+        background-position: -10px 10px;
+        transition: 350ms background-size ease, 350ms background-position ease !important;
 
     }
+
+    #recipes::before {
+        font-family: "Racing Sans One";
+        content: "Recipe Website";
+        font-size: 28pt;
+        font-weight: bold;
+        color: black;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 0vw 0 5vw;
+    }
+
+    #recipes:hover {
+        background-size: 35%;
+        background-position: -10px 0px;
+    }
+
+    .caption-section {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: -100vw;
+        flex-direction: column;
+        top: 200px;
+        /* height: 20vh !important; */
+        transition: 500ms left ease;
+        z-index: 100;
+    }
+
+    .contact-block {
+        display: none;
+        top: 20%;
+        left: 5vw;
+        width: 700px;
+        height: 40vh;
+    }
+
+    .caption-section.show {
+        display: flex;
+        left: 0;
+    }
+
+    .caption-section.show .contact-block {
+        display: flex;
+    }
+
+    .caption-load {
+    }
+
+    #their-message {
+        max-width: 550px;
+    }
+
+    #contact-caption-content {
+        display: flex;
+    }
+
+}
+
+/* * MOBILE SIZING */
+@media screen and (max-width: 760px) {
+    body {
+        /* display: none; */
+        padding-bottom: 10px;
+    }
+
+    div.header {
+        height: 125px !important;
+    }
+    /* div.circle:not([id="contact"]):not([id="resume"]):not([class="header"]) { */
+        /* height: 150px;         */
+    /* }; */
+
+
+    div.header h1.title {
+        font-size: 24pt;
+        padding-left: 10px;
+    }
+
+    div.header h2.sub-title {
+        font-size: 18pt;
+        padding-left: 10px;
+    }
+
+    #bio {
+        background-size: 100%;
+    }
+
+    #bio::before {
+        content: "";
+    }
+
+    #resume {
+        position: unset;
+        margin-top: 20px;
+    }
+
+    #contact {
+        left: 75vw;
+        width: 70px;
+        height: 70px;
+    }
+
+    #puck-dropper {
+        background-size: 50% !important;
+    }
+
+    #gains::before {
+        font-size: 36pt;
+    }
+
+    #sammy::before {
+        padding: 20px;
+        width: 100%;
+        font-size: 20pt;
+        justify-content: flex-start;
+    }
+
+    #recipes::before {
+        font-size: 20pt;
+        width: 100%;
+        justify-self: flex-end;
+        padding: 20px 20px 20px 60vw;
+    }
+
+    #recipes {
+        width: 100%;
+        display: flex;
+    }
+
+    #bio:hover {
+        background-size: 100%;
+    }
+
 }
