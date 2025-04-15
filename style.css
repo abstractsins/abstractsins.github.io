@@ -1156,4 +1156,28 @@ input#contact-submit:focus {
         background-size: 100%;
     }
 
+    .contact-block {
+        width: 90%;
+        left: 0;
+    }
+
+    .contact-block input,
+    .contact-block textarea#their-message {
+        font-size: 10pt;
+    }
+
+    #contact-caption-content {
+        width: 100%;        
+    }
+
+    #contact-caption-content h3 {
+        font-size: 16pt;
+
+    }
+
+    #contact-caption-content p {
+        font-size: 12pt;
+    }
+
+
 }
