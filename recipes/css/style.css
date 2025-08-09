@@ -73,21 +73,21 @@ body {
     --link-active-color: rgba(255, 163, 130, 0.856);
 
     /* Background Images */
-    --up-button: url('../img/up-button.png');
-    --up-button-2: url('../img/up-button-red.png');
-    --up-button-3: url('../img/up-button-3.png');
-    --down-button: url('../img/down-button.png');
-    --down-button-2: url('../img/down-button-red.png');
-    --down-button-3: url('../img/down-button-3.png');
+    --up-button: url('../img/up-button.webp');
+    --up-button-2: url('../img/up-button-red.webp');
+    --up-button-3: url('../img/up-button-3.webp');
+    --down-button: url('../img/down-button.webp');
+    --down-button-2: url('../img/down-button-red.webp');
+    --down-button-3: url('../img/down-button-3.webp');
     --hero-bg-1: url('../assets/sweet-pot-1.webp');
     --hero-bg-2: url('../assets/sweet-pot-2.webp');
     --hero-bg-3: url('../assets/sweet-pot-3.webp');
     --hero-bg-4: url('../assets/shrimp-tostada-1.webp');
     --hero-bg-5: url('../assets/shrimp-tostada-2.webp');
-    --search-icon-1: url('../css/search-icon.png');
+    --search-icon-1: url('../css/search-icon.webp');
     --search-icon-2: url('../css/search-icon-2.svg');
-    --search-icon-3: url('../css/search-icon-3.png');
-    --welcome-bg: url('../assets/welcome.png');
+    --search-icon-3: url('../css/search-icon-3.webp');
+    --welcome-bg: url('../assets/welcome.webp');
     --construction: url('../assets/construction.webp');
 
     /* RECIPE PICS */

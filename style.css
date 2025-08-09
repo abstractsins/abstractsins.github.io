@@ -22,13 +22,13 @@
     --shadow-b-color: rgba(21, 21, 21, 0.8);
     /* CIRCLE IMAGES */
     --bio-pic: url(./img/bio-pic.webp);
-    --sammy-pic: url(./img/sammy1.png);
+    --sammy-pic: url(./img/sammy1.webp);
     --recipes-pic: url(./img/recipes.webp);
-    --gains-pic: url(./img/gains.png);
-    --contact-img: url(./img/contact.png);
-    --puck-dropper-pic: url(./img/puckdropper.png);
-    --x-icon: url(./img/x-button.png);
-    --x-icon-2: url(./img/x-button-2.png);
+    --gains-pic: url(./img/gains.webp);
+    --contact-img: url(./img/contact.webp);
+    --puck-dropper-pic: url(./img/puckdropper.webp);
+    --x-icon: url(./img/x-button.webp);
+    --x-icon-2: url(./img/x-button-2.webp);
     /* CIRCLE SHADOWS */
     --shadow-1: drop-shadow(2vh 2vw 5px var(--shadow-color));
     --shadow-1b: drop-shadow(3vh 3vw 4px var(--shadow-b-color));

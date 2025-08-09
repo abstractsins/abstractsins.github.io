@@ -203,7 +203,7 @@ body,
 }
 
 .mobile-menu-logo:before {
-    content: url('/wp-content/themes/drc/images/logo-mobile-menu.png');
+    content: url('/wp-content/themes/drc/images/logo-mobile-menu.webp');
     width: 50px;
     height: 50px;
 }
