@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var sliderObj2 = {
         slide1: {
-            imageSrc: 'assets/img/guido-coppa-FPHo-LzhDqQ-unsplash.jpg',
+            imageSrc: 'assets/img/guido-coppa-FPHo-LzhDqQ-unsplash.webp',
             imageAlt: 'city skyline at night',
             headline: 'Priorities',
             subTitle: 'Subtitle of the first hero article - Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
             linkAddy: 'undefined',
         },
         slide2: {
-            imageSrc: 'assets/img/pedro-lastra-Nyvq2juw4_o-unsplash.jpg',
+            imageSrc: 'assets/img/pedro-lastra-Nyvq2juw4_o-unsplash.webp',
             imageAlt: 'convention attendees',
             headline: 'Why EEWDF',
             subTitle: 'Sed id lorem imperdiet, tristique justo ut, dapibus diam...',
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
             linkAddy: 'undefined',
         },
         slide3: {
-            imageSrc: 'assets/img/peter-f-HJpISHFSkJo-unsplash.jpg',
+            imageSrc: 'assets/img/peter-f-HJpISHFSkJo-unsplash.webp',
             imageAlt: 'video camera taping speaker',
             headline: 'join',
             subTitle: 'Ut augue mi, tincidunt at cursus et, luctus id nisi...',
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
             linkAddy: 'undefined',
         },
         slide4: {
-            imageSrc: 'assets/img/stephen-dawson-qwtCeJ5cLYs-unsplash.jpg',
+            imageSrc: 'assets/img/stephen-dawson-qwtCeJ5cLYs-unsplash.webp',
             imageAlt: 'video camera taping speaker',
             headline: 'industry data',
             subTitle: 'Nunc tristique dictum lorem, at aliquet purus imperdiet lacinia. Donec a maximus massa...',

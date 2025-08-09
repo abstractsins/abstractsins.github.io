@@ -79,33 +79,33 @@ body {
     --down-button: url('../img/down-button.png');
     --down-button-2: url('../img/down-button-red.png');
     --down-button-3: url('../img/down-button-3.png');
-    --hero-bg-1: url('../assets/sweet-pot-1.jpg');
-    --hero-bg-2: url('../assets/sweet-pot-2.jpg');
-    --hero-bg-3: url('../assets/sweet-pot-3.jpg');
-    --hero-bg-4: url('../assets/shrimp-tostada-1.jpg');
-    --hero-bg-5: url('../assets/shrimp-tostada-2.jpg');
+    --hero-bg-1: url('../assets/sweet-pot-1.webp');
+    --hero-bg-2: url('../assets/sweet-pot-2.webp');
+    --hero-bg-3: url('../assets/sweet-pot-3.webp');
+    --hero-bg-4: url('../assets/shrimp-tostada-1.webp');
+    --hero-bg-5: url('../assets/shrimp-tostada-2.webp');
     --search-icon-1: url('../css/search-icon.png');
     --search-icon-2: url('../css/search-icon-2.svg');
     --search-icon-3: url('../css/search-icon-3.png');
     --welcome-bg: url('../assets/welcome.png');
-    --construction: url('../assets/construction.jpg');
+    --construction: url('../assets/construction.webp');
 
     /* RECIPE PICS */
-    --beef-1-pic: url('../assets/recipes/meatloaf-1.jpg');
-    --beef-2-pic: url('../assets/recipes/chili-1.jpg');
-    --beef-3-pic: url('../assets/recipes/short-ribs-1.jpg');
-    --bread-1-pic: url('../assets/recipes/biscuits-1.jpg');
-    --bread-2-pic: url('../assets/recipes/challah-1.jpg');
-    --bread-3-pic: url('../assets/recipes/langos-1.jpg');
-    --dessert-1-pic: url('../assets/recipes/cannoli.jpg');
-    --dessert-2-pic: url('../assets/recipes/cookies.jpg');
-    --dessert-3-pic: url('../assets/recipes/panna-cotta-1.jpg');
-    /* --seafood-1-pic: url('../assets/recipes/-1.jpg'); */
-    /* --seafood-2-pic: url('../assets/recipes/-1.jpg'); */
-    /* --seafood-3-pic: url('../assets/recipes/-1.jpg'); */
-    --soup-1-pic: url('../assets/recipes/cauliflower-soup.jpg');
-    --soup-2-pic: url('../assets/recipes/potato-leek.jpg');
-    --soup-3-pic: url('../assets/recipes/shrimp-bisque.jpg');
+    --beef-1-pic: url('../assets/recipes/meatloaf-1.webp');
+    --beef-2-pic: url('../assets/recipes/chili-1.webp');
+    --beef-3-pic: url('../assets/recipes/short-ribs-1.webp');
+    --bread-1-pic: url('../assets/recipes/biscuits-1.webp');
+    --bread-2-pic: url('../assets/recipes/challah-1.webp');
+    --bread-3-pic: url('../assets/recipes/langos-1.webp');
+    --dessert-1-pic: url('../assets/recipes/cannoli.webp');
+    --dessert-2-pic: url('../assets/recipes/cookies.webp');
+    --dessert-3-pic: url('../assets/recipes/panna-cotta-1.webp');
+    /* --seafood-1-pic: url('../assets/recipes/-1.webp'); */
+    /* --seafood-2-pic: url('../assets/recipes/-1.webp'); */
+    /* --seafood-3-pic: url('../assets/recipes/-1.webp'); */
+    --soup-1-pic: url('../assets/recipes/cauliflower-soup.webp');
+    --soup-2-pic: url('../assets/recipes/potato-leek.webp');
+    --soup-3-pic: url('../assets/recipes/shrimp-bisque.webp');
 
     /* Background Colors */
     --header-bg: var(--avocado);

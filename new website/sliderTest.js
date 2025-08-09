@@ -8,7 +8,7 @@ startInterval();
 
 var sliderObj = {
     slide1: {
-        imageSrc: 'assets/img/muhammad-faiz-zulkeflee-ZzfHvRuYTZk-unsplash.jpg',
+        imageSrc: 'assets/img/muhammad-faiz-zulkeflee-ZzfHvRuYTZk-unsplash.webp',
         imageAlt: 'city skyline at night',
         headline: '2025 News Headline',
         subTitle: 'Subtitle of the first hero article - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -16,7 +16,7 @@ var sliderObj = {
         linkAddy: 'undefined',
     },
     slide2: {
-        imageSrc: 'assets/img/frames-for-your-heart-WwJEicqu9pI-unsplash.jpg',
+        imageSrc: 'assets/img/frames-for-your-heart-WwJEicqu9pI-unsplash.webp',
         imageAlt: 'convention attendees',
         headline: 'Vestibulum vel quam',
         subTitle: 'Sed id lorem imperdiet, tristique justo ut, dapibus diam. Suspendisse potenti. Nulla non scelerisque quam, id fermentum nisl. Etiam ultricies, erat quis sollicitudin lobortis, tellus nisl feugiat quam.',
@@ -24,7 +24,7 @@ var sliderObj = {
         linkAddy: 'undefined',
     },
     slide3: {
-        imageSrc: 'assets/img/product-school-nOvIa_x_tfo-unsplash.jpg',
+        imageSrc: 'assets/img/product-school-nOvIa_x_tfo-unsplash.webp',
         imageAlt: 'video camera taping speaker',
         headline: 'Phasellus mollis magna in ex fermentum',
         subTitle: 'Nunc tristique dictum lorem, at aliquet purus imperdiet lacinia. Donec a maximus massa, facilisis varius libero. Ut augue mi, tincidunt at cursus et, luctus id nisi. Donec nec metus non erat placerat volutpat.',

@@ -22,13 +22,13 @@
     --shadow-color: rgba(42, 42, 42, 0.6);
     --shadow-b-color: rgba(21, 21, 21, 0.8);
     /* CIRCLE IMAGES */
-    --bio-pic: url(./img/bio-pic.jpg);
+    --bio-pic: url(./img/bio-pic.webp);
     --sammy-pic: url(./img/sammy1.png);
-    --recipes-pic: url(./img/recipes.jpg);
+    --recipes-pic: url(./img/recipes.webp);
     --contact-img: url(./img/contact.png);
-    --salem-pic: url(./img/salem.jpg);
-    --salem2-pic: url(./img/salem2.jpg);
-    --salem3-pic: url(./img/salem3.jpg);
+    --salem-pic: url(./img/salem.webp);
+    --salem2-pic: url(./img/salem2.webp);
+    --salem3-pic: url(./img/salem3.webp);
     --x-icon: url(./img/x-button.png);
     --x-icon-2: url(./img/x-button-2.png);
     /* CIRCLE SHADOWS */

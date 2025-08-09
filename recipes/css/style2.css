@@ -15,15 +15,15 @@
     --link-hover-color: rgba(255, 68, 0, 0.856);
     --link-active-color: rgba(255, 163, 130, 0.856);
     /* Background Images */
-    --hero-bg-1: url('../assets/sweet-pot-1.jpg');
-    --hero-bg-2: url('../assets/sweet-pot-2.jpg');
-    --hero-bg-3: url('../assets/sweet-pot-3.jpg');
-    --hero-bg-4: url('../assets/shrimp-tostada-1.jpg');
-    --hero-bg-5: url('../assets/shrimp-tostada-2.jpg');
+    --hero-bg-1: url('../assets/sweet-pot-1.webp');
+    --hero-bg-2: url('../assets/sweet-pot-2.webp');
+    --hero-bg-3: url('../assets/sweet-pot-3.webp');
+    --hero-bg-4: url('../assets/shrimp-tostada-1.webp');
+    --hero-bg-5: url('../assets/shrimp-tostada-2.webp');
     /* RECIPE PICS */
-    --beef-1-pic: url('/assets/recipes/meatloaf-1.jpg');
-    --beef-2-pic: url('/assets/recipes/chili-1.jpg');
-    --beef-3-pic: url('/assets/recipes/short-ribs-1.jpg');
+    --beef-1-pic: url('/assets/recipes/meatloaf-1.webp');
+    --beef-2-pic: url('/assets/recipes/chili-1.webp');
+    --beef-3-pic: url('/assets/recipes/short-ribs-1.webp');
     /* Background Colors */
     --header-bg: var(--lettuce);
     --categories-bg: var(--header-bg);
